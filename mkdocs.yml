@@ -2,7 +2,42 @@ site_name: Basis Wiki
 
 nav:
   - Übersicht: index.md
-  - Topic 1: content/1.md
+  
+  - Module I Das Konzept und die Theorie:
+    - Open Source & Proprietäre Software: content/module1/OpenSource&Linux-Community.md
+    - Open-Source-Software und Lizenzierung: content/module1/opensource_lizenzen.md
+    - Linux Evolution und beliebte Betriebssysteme: content/module1/linux_evolution.md
+    - Das Linux-Betriebssystem: content/module1/das_linux_betriebssystem.md
+    - Dateisystem-Hierarchie: content/7.md
+    - Netzwerk: content/8.md
+
+
+  - Module II Die Grundlagen der Command-Line:
+    - Grundlagen der Kommandozeile: content/3.md
+    - Die Kommandozeile zur Hilfe nutzen: content/4.md    
+    - Verzeichnissen und Anzeigen von Dateien: content/4.md    
+    - Erstellen, Verschieben und Löschen von Dateien: content/4.md 
+
+  - Module III Automatisierung und Skripting:
+    - Verknüpfung von Befehlen: content/3.md
+    - Archivierung von Dateien in der Kommandozeile: content/4.md    
+    - Suchen und Extrahieren von Daten aus Dateien: content/4.md    
+    - Befehle in ein Skript umwandeln: content/4.md 
+    - Automatisierung von Aufgaben mit Cron: content/4.md
+    - Fortgeschrittenes Skripting: content/4.md
+  
+  - Module IV Systemadministration und Sicherheit:
+    - Benutzer- und Gruppenverwaltung: content/3.md
+    - Verwalten von Dateiberechtigungen und Eigentum: content/4.md
+    - Systemüberwachung und Protokollierung: content/4.md    
+    - Softwareinstallation und -verwaltung: content/4.md    
+    - Netzwerksicherheit und Firewall-Konfiguration: content/4.md 
+    - Backup-Strategien und Wiederherstellung: content/4.md
+
+  - Module V Zusammenführung und Zielsetzung:
+    - Wichtige Open-Source-Anwendungen: content/3.md
+    - ICT-Fähigkeiten und Arbeiten in Linux: content/4.md
+ 
 
 
 theme:
@@ -28,6 +63,7 @@ markdown_extensions:
   - pymdownx.keys
   - admonition
   - pymdownx.details
+  - footnotes
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid

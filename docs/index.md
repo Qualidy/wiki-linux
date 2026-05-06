@@ -10,13 +10,15 @@ hide:
 
 <div markdown>
 
-# Basis Wiki
+# Linux Schulung
+
 
 <div class="grid cards fancy grid--cols-1" markdown >
-- [:material-call-split: **Topic 1**](content/1.md)
-- [:material-call-split: **Topic 1**](content/1.md)
-- [:material-call-split: **Topic 1**](content/1.md)
-- [:material-call-split: **Topic 1**](content/1.md)
+- [:material-call-split: **Module I: Das Konzept und die Theorie**](content/module1/OpenSource&Linux-Community.md)
+- [:material-call-split: **Module II: Die Grundlagen der Command-Line**](content/module2.md)
+- [:material-call-split: **Module III: Die Automatisierung**](content/module3.md)
+- [:material-call-split: **Module IV: Systemadministration und Sicherheit**](content/module4.md)
+- [:material-call-split: **Module V: Zusammenführung und Zielsetzung**](content/module5.md)
 </div>
 
 </div>
@@ -41,4 +43,8 @@ Hier können weitere Inhalte rein.
 [Subscribe to our newsletter](#){ .md-button }
 
 [Subscribe to our newsletter](#){ .md-button .md-button--primary }
+
+
 </div>
+
+
