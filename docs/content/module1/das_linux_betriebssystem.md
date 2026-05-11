@@ -497,7 +497,7 @@ In Linux haben **alle** Dateien und Ordner spezifische Berechtigungen. Diese bes
 
 ## Wissenscheck
 
-### Frage: Was macht ein System zu einem "Mehrben Benutzersystem"?
+### Frage: Was macht ein System zu einem "Multi-User Betriebssystem"?
 
 ??? success "Antwort"
     Dass mehrere Benutzer gleichzeitig auf einem System arbeiten können, wobei jeder seine eigenen Dateien besitzt und die Rechte (Lesen, Schreiben, Ausführen) den Zugriff auf die Daten der anderen kontrollieren.

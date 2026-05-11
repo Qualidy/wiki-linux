@@ -6,6 +6,7 @@
 ## Open Source
 
 ### Die Grundlagen – Was bedeutet "Quellcode"?
+{{ youtube_video("https://www.youtube.com/embed/bxYGvADd5OU?si=G2s0cqlqPf99Ochy") }}
 Der Quellcode enthält eine Reihe von Befehlen, die logisch miteinander verbunden sind. Er beschreibt, was das Programm tun soll:
 
 **Input**: Was wird benötigt (z. B. die Eingabe eines Benutzers).
@@ -27,11 +28,6 @@ flowchart LR
 **Compiler**: (z. B. bei C++ oder Java) Ein Compiler liest den gesamten Quellcode einmal und übersetzt ihn dann vollständig in eine separate ausführbare Datei (.exe unter Windows). Dieser Code besteht nur noch aus Nullen und Einsen (Maschinensprache) und kann vom Computer direkt ausgeführt werden.
 
 **Interpreter**: (z. B. bei Python oder JavaScript) Ein Interpreter liest den Quellcode Zeile für Zeile. Er führt jede Zeile aus und geht dann zur nächsten. Es gibt keine separate, fertige ausführbare Datei.
-
-| Spaltenöberschrift 1 | spalte 2 |
-|----------------------| -|
-| twat | hshua| 
-
 
 
 Unterschiede von Quellcode Proprietär und Open Source
