@@ -1,0 +1,2109 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>Backup - Basis Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/logo.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/grid.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/video_admonition.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/python_tutor_admonition.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/mermaid.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="amber" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#modul-iv-systemadministration-und-sicherheit" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Basis Wiki" class="md-header__button md-logo" aria-label="Basis Wiki" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Basis Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Backup
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Basis Wiki" class="md-nav__button md-logo" aria-label="Basis Wiki" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    Basis Wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übersicht
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module I Das Konzept und die Theorie
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Module I Das Konzept und die Theorie
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module1/OpenSource%26Linux-Community/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Open Source & Proprietäre Software
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module1/opensource_lizenzen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Open-Source-Software und Lizenzierung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module1/linux_evolution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Linux Evolution und beliebte Betriebssysteme
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module1/das_linux_betriebssystem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Das Linux-Betriebssystem
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../7.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dateisystem-Hierarchie
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../8.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Netzwerk
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module II Die Grundlagen der Command-Line
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Module II Die Grundlagen der Command-Line
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Grundlagen der Kommandozeile
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Die Kommandozeile zur Hilfe nutzen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Verzeichnissen und Anzeigen von Dateien
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Erstellen, Verschieben und Löschen von Dateien
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module III Automatisierung und Skripting
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Module III Automatisierung und Skripting
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Verknüpfung von Befehlen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Archivierung von Dateien in der Kommandozeile
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Suchen und Extrahieren von Daten aus Dateien
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Befehle in ein Skript umwandeln
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Automatisierung von Aufgaben mit Cron
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fortgeschrittenes Skripting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module IV Systemadministration und Sicherheit
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Module IV Systemadministration und Sicherheit
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Benutzer- und Gruppenverwaltung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Verwalten von Dateiberechtigungen und Eigentum
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Systemüberwachung und Protokollierung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Softwareinstallation und -verwaltung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Netzwerksicherheit und Firewall-Konfiguration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Backup-Strategien und Wiederherstellung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module V Zusammenführung und Zielsetzung
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Module V Zusammenführung und Zielsetzung
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Wichtige Open-Source-Anwendungen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ICT-Fähigkeiten und Arbeiten in Linux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Backup</h1>
+
+<h3 id="modul-iv-systemadministration-und-sicherheit"><strong>Modul IV: Systemadministration und Sicherheit</strong><a class="headerlink" href="#modul-iv-systemadministration-und-sicherheit" title="Permanent link">&para;</a></h3>
+<h3 id="thema-backup-strategien-und-wiederherstellung"><strong>Thema: Backup-Strategien und Wiederherstellung</strong><a class="headerlink" href="#thema-backup-strategien-und-wiederherstellung" title="Permanent link">&para;</a></h3>
+<hr />
+<h4 id="1-einfuhrung-in-backup-strategien"><strong>1. Einführung in Backup-Strategien</strong><a class="headerlink" href="#1-einfuhrung-in-backup-strategien" title="Permanent link">&para;</a></h4>
+<p>Backups sind ein <strong>kritischer Bestandteil</strong> der Systemadministration und Datenverwaltung. Sie schützen vor:
+- <strong>Datenverlust</strong> (z. B. durch Hardwarefehler, menschliche Fehler oder Malware).
+- <strong>Systemausfällen</strong> (z. B. durch Festplattencrash oder Stromausfall).
+- <strong>Sicherheitsvorfällen</strong> (z. B. Ransomware-Angriffe).</p>
+<p>Eine <strong>gute Backup-Strategie</strong> sollte folgende Prinzipien beachten:
+1. <strong>3-2-1-Regel</strong>:
+   - <strong>3 Kopien</strong> Ihrer Daten (Original + 2 Backups).
+   - <strong>2 verschiedene Medientypen</strong> (z. B. Festplatte + Cloud).
+   - <strong>1 Backup außerhalb des Standorts</strong> (z. B. Cloud oder externes Laufwerk).
+2. <strong>Automatisierung</strong>: Backups sollten <strong>automatisch</strong> und regelmäßig durchgeführt werden.
+3. <strong>Testen</strong>: Backups müssen <strong>regelmäßig getestet</strong> werden, um sicherzustellen, dass sie wiederhergestellt werden können.
+4. <strong>Dokumentation</strong>: Backup-Prozesse und -Standorte sollten <strong>dokumentiert</strong> sein.</p>
+<hr />
+<h4 id="2-backup-typen"><strong>2. Backup-Typen</strong><a class="headerlink" href="#2-backup-typen" title="Permanent link">&para;</a></h4>
+<p>Es gibt verschiedene <strong>Backup-Typen</strong>, die sich in <strong>Umfang, Geschwindigkeit und Speicherbedarf</strong> unterscheiden:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Backup-Typ</strong></th>
+<th><strong>Beschreibung</strong></th>
+<th><strong>Vorteile</strong></th>
+<th><strong>Nachteile</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Vollbackup (Full Backup)</strong></td>
+<td>Sichert <strong>alle ausgewählten Daten</strong>.</td>
+<td>Einfache Wiederherstellung, keine Abhängigkeiten.</td>
+<td>Langsam, hoher Speicherbedarf.</td>
+</tr>
+<tr>
+<td><strong>Differenzielles Backup</strong></td>
+<td>Sichert <strong>alle Änderungen seit dem letzten Vollbackup</strong>.</td>
+<td>Schneller als Vollbackup, weniger Speicherbedarf.</td>
+<td>Wiederherstellung erfordert Vollbackup + differenzielles Backup.</td>
+</tr>
+<tr>
+<td><strong>Inkrementelles Backup</strong></td>
+<td>Sichert <strong>nur die Änderungen seit dem letzten Backup (Voll- oder Inkrementell)</strong>.</td>
+<td>Sehr schnell, geringer Speicherbedarf.</td>
+<td>Wiederherstellung erfordert alle Backups seit dem letzten Vollbackup.</td>
+</tr>
+<tr>
+<td><strong>Snapshot-Backup</strong></td>
+<td>Erstellt einen <strong>Schnappschuss des Dateisystems</strong> zu einem bestimmten Zeitpunkt.</td>
+<td>Sehr schnell, minimaler Speicherbedarf (nur Änderungen).</td>
+<td>Benötigt spezielle Dateisysteme (z. B. Btrfs, ZFS).</td>
+</tr>
+<tr>
+<td><strong>Spiegelung (Mirroring)</strong></td>
+<td>Erstellt eine <strong>exakte Kopie</strong> der Daten.</td>
+<td>Einfache Wiederherstellung, Echtzeit-Synchronisation möglich.</td>
+<td>Hoher Speicherbedarf, keine Versionierung.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<hr />
+<h4 id="3-backup-tools-unter-linux"><strong>3. Backup-Tools unter Linux</strong><a class="headerlink" href="#3-backup-tools-unter-linux" title="Permanent link">&para;</a></h4>
+<p>Linux bietet eine Vielzahl von <strong>Backup-Tools</strong>, die für verschiedene Szenarien geeignet sind. Hier sind die wichtigsten:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Tool</strong></th>
+<th><strong>Beschreibung</strong></th>
+<th><strong>Backup-Typ</strong></th>
+<th><strong>Vorteile</strong></th>
+<th><strong>Nachteile</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><code>tar</code></strong></td>
+<td>Erstellt <strong>Archive</strong> von Dateien und Verzeichnissen.</td>
+<td>Vollbackup</td>
+<td>Einfach, in allen Linux-Distributionen verfügbar.</td>
+<td>Keine Inkrementelle Backups, keine Kompression standardmäßig.</td>
+</tr>
+<tr>
+<td><strong><code>rsync</code></strong></td>
+<td>Synchronisiert <strong>Dateien und Verzeichnisse</strong> (lokal oder remote).</td>
+<td>Spiegelung, Inkrementell (mit <code>--link-dest</code>)</td>
+<td>Schnell, effizient, unterstützt Remote-Backups.</td>
+<td>Keine native Versionierung, komplexere Konfiguration für Inkrementelle Backups.</td>
+</tr>
+<tr>
+<td><strong><code>dd</code></strong></td>
+<td>Erstellt <strong>Bit-für-Bit-Kopien</strong> von Festplatten oder Partitionen.</td>
+<td>Vollbackup</td>
+<td>Exakte Kopie, auch für Bootloader geeignet.</td>
+<td>Langsam, hoher Speicherbedarf, keine Selektion einzelner Dateien.</td>
+</tr>
+<tr>
+<td><strong><code>BorgBackup</code></strong></td>
+<td><strong>Deduplizierendes Backup-Tool</strong> mit Kompression und Verschlüsselung.</td>
+<td>Vollbackup, Inkrementell</td>
+<td>Deduplizierung, Kompression, Verschlüsselung, Versionierung.</td>
+<td>Komplexere Einrichtung, höhere CPU-Last.</td>
+</tr>
+<tr>
+<td><strong><code>Duplicati</code></strong></td>
+<td><strong>Grafisches Backup-Tool</strong> mit Cloud-Unterstützung.</td>
+<td>Vollbackup, Inkrementell</td>
+<td>Benutzerfreundlich, Cloud-Integration, Verschlüsselung.</td>
+<td>Langsamer als CLI-Tools, höhere Ressourcenlast.</td>
+</tr>
+<tr>
+<td><strong><code>Bacula</code></strong></td>
+<td><strong>Enterprise-Backup-Lösung</strong> für komplexe Umgebungen.</td>
+<td>Vollbackup, Differenziell, Inkrementell</td>
+<td>Skalierbar, zentralisierte Verwaltung, Unterstützung für verschiedene Speichermedien.</td>
+<td>Komplexe Einrichtung, hohe Lernkurve.</td>
+</tr>
+<tr>
+<td><strong><code>Timeshift</code></strong></td>
+<td><strong>Snapshot-Backup-Tool</strong> für Linux-Systeme.</td>
+<td>Snapshot</td>
+<td>Einfache Wiederherstellung des Systems, unterstützt Btrfs und Rsync.</td>
+<td>Nur für System-Backups, nicht für einzelne Dateien.</td>
+</tr>
+<tr>
+<td><strong><code>Déjà Dup</code></strong></td>
+<td><strong>Einfaches Backup-Tool</strong> mit grafischer Oberfläche.</td>
+<td>Vollbackup, Inkrementell</td>
+<td>Benutzerfreundlich, unterstützt Cloud-Speicher, Verschlüsselung.</td>
+<td>Begrenzte Funktionen für fortgeschrittene Nutzer.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<hr />
+<h4 id="4-backup-mit-tar"><strong>4. Backup mit <code>tar</code></strong><a class="headerlink" href="#4-backup-mit-tar" title="Permanent link">&para;</a></h4>
+<p><code>tar</code> (<strong>Tape Archive</strong>) ist ein <strong>klassisches Tool</strong> zum Erstellen von Archiven. Es unterstützt <strong>Kompression</strong> (z. B. mit <code>gzip</code> oder <code>bzip2</code>) und ist in <strong>allen Linux-Distributionen</strong> verfügbar.</p>
+<hr />
+<h5 id="41-grundlagen-von-tar"><strong>4.1 Grundlagen von <code>tar</code></strong><a class="headerlink" href="#41-grundlagen-von-tar" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th><strong>Option</strong></th>
+<th><strong>Beschreibung</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-c</code></td>
+<td><strong>Erstellt</strong> ein neues Archiv.</td>
+</tr>
+<tr>
+<td><code>-x</code></td>
+<td><strong>Extrahiert</strong> Dateien aus einem Archiv.</td>
+</tr>
+<tr>
+<td><code>-t</code></td>
+<td><strong>Listet</strong> den Inhalt eines Archivs auf.</td>
+</tr>
+<tr>
+<td><code>-f [datei]</code></td>
+<td>Gibt den <strong>Archivnamen</strong> an.</td>
+</tr>
+<tr>
+<td><code>-v</code></td>
+<td><strong>Ausführliche Ausgabe</strong> (verbose).</td>
+</tr>
+<tr>
+<td><code>-z</code></td>
+<td>Komprimiert das Archiv mit <strong><code>gzip</code></strong>.</td>
+</tr>
+<tr>
+<td><code>-j</code></td>
+<td>Komprimiert das Archiv mit <strong><code>bzip2</code></strong>.</td>
+</tr>
+<tr>
+<td><code>-J</code></td>
+<td>Komprimiert das Archiv mit <strong><code>xz</code></strong>.</td>
+</tr>
+<tr>
+<td><code>-p</code></td>
+<td><strong>Behält Berechtigungen</strong> bei.</td>
+</tr>
+<tr>
+<td><code>-P</code></td>
+<td><strong>Behält absolute Pfade</strong> bei (Vorsicht: Kann Probleme bei der Wiederherstellung verursachen!).</td>
+</tr>
+<tr>
+<td><code>--exclude=[muster]</code></td>
+<td><strong>Schließt Dateien</strong> aus, die dem Muster entsprechen.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h5 id="42-beispiele-fur-tar"><strong>4.2 Beispiele für <code>tar</code></strong><a class="headerlink" href="#42-beispiele-fur-tar" title="Permanent link">&para;</a></h5>
+<h6 id="421-vollbackup-eines-verzeichnisses-erstellen"><strong>4.2.1 Vollbackup eines Verzeichnisses erstellen</strong><a class="headerlink" href="#421-vollbackup-eines-verzeichnisses-erstellen" title="Permanent link">&para;</a></h6>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Erstellen eines unkomprimierten tar-Archivs</span>
+tar<span class="w"> </span>-cvf<span class="w"> </span>backup.tar<span class="w"> </span>/pfad/zum/verzeichnis
+
+<span class="c1"># Erstellen eines komprimierten tar.gz-Archivs (gzip)</span>
+tar<span class="w"> </span>-czvf<span class="w"> </span>backup.tar.gz<span class="w"> </span>/pfad/zum/verzeichnis
+
+<span class="c1"># Erstellen eines komprimierten tar.bz2-Archivs (bzip2)</span>
+tar<span class="w"> </span>-cjvf<span class="w"> </span>backup.tar.bz2<span class="w"> </span>/pfad/zum/verzeichnis
+
+<span class="c1"># Erstellen eines komprimierten tar.xz-Archivs (xz)</span>
+tar<span class="w"> </span>-cJvf<span class="w"> </span>backup.tar.xz<span class="w"> </span>/pfad/zum/verzeichnis
+</code></pre></div></td></tr></table></div>
+<h6 id="422-backup-mit-ausschluss-von-dateien"><strong>4.2.2 Backup mit Ausschluss von Dateien</strong><a class="headerlink" href="#422-backup-mit-ausschluss-von-dateien" title="Permanent link">&para;</a></h6>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Ausschließen von temporären Dateien und Logs</span>
+tar<span class="w"> </span>-czvf<span class="w"> </span>backup.tar.gz<span class="w"> </span>--exclude<span class="o">=</span><span class="s1">&#39;*.log&#39;</span><span class="w"> </span>--exclude<span class="o">=</span><span class="s1">&#39;/tmp/*&#39;</span><span class="w"> </span>/pfad/zum/verzeichnis
+</code></pre></div></td></tr></table></div>
+<h6 id="423-backup-eines-gesamten-systems-ohne-dev-proc-sys-tmp"><strong>4.2.3 Backup eines gesamten Systems (ohne <code>/dev</code>, <code>/proc</code>, <code>/sys</code>, <code>/tmp</code>)</strong><a class="headerlink" href="#423-backup-eines-gesamten-systems-ohne-dev-proc-sys-tmp" title="Permanent link">&para;</a></h6>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>tar<span class="w"> </span>-czvf<span class="w"> </span>full_system_backup.tar.gz<span class="w"> </span>--exclude<span class="o">=</span>/dev<span class="w"> </span>--exclude<span class="o">=</span>/proc<span class="w"> </span>--exclude<span class="o">=</span>/sys<span class="w"> </span>--exclude<span class="o">=</span>/tmp<span class="w"> </span>--exclude<span class="o">=</span>/mnt<span class="w"> </span>--exclude<span class="o">=</span>/media<span class="w"> </span>/
+</code></pre></div></td></tr></table></div>
+<h6 id="424-archiv-extrahieren"><strong>4.2.4 Archiv extrahieren</strong><a class="headerlink" href="#424-archiv-extrahieren" title="Permanent link">&para;</a></h6>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Extrahiere ein tar-Archiv</span>
+tar<span class="w"> </span>-xvf<span class="w"> </span>backup.tar
+
+<span class="c1"># Extrahiere ein tar.gz-Archiv</span>
+tar<span class="w"> </span>-xzvf<span class="w"> </span>backup.tar.gz
+
+<span class="c1"># Extrahiere ein tar.bz2-Archiv</span>
+tar<span class="w"> </span>-xjvf<span class="w"> </span>backup.tar.bz2
+
+<span class="c1"># Extrahiere ein tar.xz-Archiv</span>
+tar<span class="w"> </span>-xJvf<span class="w"> </span>backup.tar.xz
+</code></pre></div></td></tr></table></div>
+<h6 id="425-inkrementelles-backup-mit-tar-begrenzt"><strong>4.2.5 Inkrementelles Backup mit <code>tar</code> (begrenzt)</strong><a class="headerlink" href="#425-inkrementelles-backup-mit-tar-begrenzt" title="Permanent link">&para;</a></h6>
+<p><code>tar</code> unterstützt <strong>keine echten inkrementellen Backups</strong>, aber Sie können <strong>neuere Dateien</strong> basierend auf dem <strong>Änderungsdatum</strong> sichern:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Sichere nur Dateien, die in den letzten 24 Stunden geändert wurden</span>
+tar<span class="w"> </span>-czvf<span class="w"> </span>incremental_backup.tar.gz<span class="w"> </span>-N<span class="w"> </span><span class="s2">&quot;2026-06-01&quot;</span><span class="w"> </span>/pfad/zum/verzeichnis
+</code></pre></div></td></tr></table></div>
+- <strong><code>-N [datum]</code></strong>: Sichert nur Dateien, die <strong>neuer als das angegebene Datum</strong> sind.</p>
+<h2 id="-">---<a class="headerlink" href="#-" title="Permanent link">&para;</a></h2>
+<h4 id="5-backup-mit-rsync"><strong>5. Backup mit <code>rsync</code></strong><a class="headerlink" href="#5-backup-mit-rsync" title="Permanent link">&para;</a></h4>
+<p><code>rsync</code> (<strong>Remote Sync</strong>) ist ein <strong>leistungsstarkes Tool</strong> zum <strong>Synchronisieren von Dateien und Verzeichnissen</strong> (lokal oder remote). Es unterstützt:
+- <strong>Inkrementelle Backups</strong> (nur Änderungen werden übertragen).
+- <strong>Kompression</strong> während der Übertragung.
+- <strong>Remote-Backups</strong> (über SSH).
+- <strong>Bandbreitenbegrenzung</strong>.</p>
+<hr />
+<h5 id="51-grundlagen-von-rsync"><strong>5.1 Grundlagen von <code>rsync</code></strong><a class="headerlink" href="#51-grundlagen-von-rsync" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th><strong>Option</strong></th>
+<th><strong>Beschreibung</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-a</code></td>
+<td><strong>Archivmodus</strong> (behält Berechtigungen, Eigentümer, Zeitstempel bei).</td>
+</tr>
+<tr>
+<td><code>-v</code></td>
+<td><strong>Ausführliche Ausgabe</strong> (verbose).</td>
+</tr>
+<tr>
+<td><code>-z</code></td>
+<td><strong>Komprimiert</strong> Daten während der Übertragung.</td>
+</tr>
+<tr>
+<td><code>-h</code></td>
+<td>Zeigt <strong>menschlich lesbare Größen</strong> an.</td>
+</tr>
+<tr>
+<td><code>--delete</code></td>
+<td><strong>Löscht Dateien</strong> im Ziel, die nicht mehr in der Quelle existieren.</td>
+</tr>
+<tr>
+<td><code>--link-dest=[pfad]</code></td>
+<td>Erstellt <strong>Hardlinks</strong> zu unveränderten Dateien (für inkrementelle Backups).</td>
+</tr>
+<tr>
+<td><code>--exclude=[muster]</code></td>
+<td><strong>Schließt Dateien</strong> aus, die dem Muster entsprechen.</td>
+</tr>
+<tr>
+<td><code>-P</code></td>
+<td>Zeigt <strong>Fortschritt</strong> an und setzt <strong>teilweise Übertragungen</strong> fort.</td>
+</tr>
+<tr>
+<td><code>-e ssh</code></td>
+<td>Verwendet <strong>SSH</strong> für die Übertragung.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h5 id="52-beispiele-fur-rsync"><strong>5.2 Beispiele für <code>rsync</code></strong><a class="headerlink" href="#52-beispiele-fur-rsync" title="Permanent link">&para;</a></h5>
+<h6 id="521-lokales-backup-eines-verzeichnisses"><strong>5.2.1 Lokales Backup eines Verzeichnisses</strong><a class="headerlink" href="#521-lokales-backup-eines-verzeichnisses" title="Permanent link">&para;</a></h6>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>rsync<span class="w"> </span>-avz<span class="w"> </span>/pfad/zur/quelle<span class="w"> </span>/pfad/zum/ziel
+</code></pre></div></td></tr></table></div>
+- <strong><code>-a</code></strong>: Archivmodus (behält Metadaten bei).
+- <strong><code>-v</code></strong>: Ausführliche Ausgabe.
+- <strong><code>-z</code></strong>: Kompression während der Übertragung.</p>
+<h6 id="522-remote-backup-uber-ssh"><strong>5.2.2 Remote-Backup über SSH</strong><a class="headerlink" href="#522-remote-backup-uber-ssh" title="Permanent link">&para;</a></h6>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>rsync<span class="w"> </span>-avz<span class="w"> </span>-e<span class="w"> </span>ssh<span class="w"> </span>/pfad/zur/quelle<span class="w"> </span>user@remote-host:/pfad/zum/ziel
+</code></pre></div></td></tr></table></div>
+- <strong><code>-e ssh</code></strong>: Verwendet SSH für die Übertragung.</p>
+<h6 id="523-inkrementelles-backup-mit-link-dest"><strong>5.2.3 Inkrementelles Backup mit <code>--link-dest</code></strong><a class="headerlink" href="#523-inkrementelles-backup-mit-link-dest" title="Permanent link">&para;</a></h6>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Erstes Vollbackup</span>
+rsync<span class="w"> </span>-avz<span class="w"> </span>/pfad/zur/quelle<span class="w"> </span>/pfad/zum/ziel/full_backup
+
+<span class="c1"># Inkrementelles Backup (nur Änderungen seit dem letzten Backup)</span>
+rsync<span class="w"> </span>-avz<span class="w"> </span>--link-dest<span class="o">=</span>/pfad/zum/ziel/full_backup<span class="w"> </span>/pfad/zur/quelle<span class="w"> </span>/pfad/zum/ziel/incremental_backup_1
+</code></pre></div></td></tr></table></div>
+- <strong><code>--link-dest</code></strong>: Erstellt Hardlinks zu unveränderten Dateien im <strong>Vollbackup</strong>, um Speicherplatz zu sparen.</p>
+<h6 id="524-backup-mit-ausschluss-von-dateien"><strong>5.2.4 Backup mit Ausschluss von Dateien</strong><a class="headerlink" href="#524-backup-mit-ausschluss-von-dateien" title="Permanent link">&para;</a></h6>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>rsync<span class="w"> </span>-avz<span class="w"> </span>--exclude<span class="o">=</span><span class="s1">&#39;*.log&#39;</span><span class="w"> </span>--exclude<span class="o">=</span><span class="s1">&#39;/tmp/*&#39;</span><span class="w"> </span>/pfad/zur/quelle<span class="w"> </span>/pfad/zum/ziel
+</code></pre></div></td></tr></table></div>
+<h6 id="525-bandbreitenbegrenzung"><strong>5.2.5 Bandbreitenbegrenzung</strong><a class="headerlink" href="#525-bandbreitenbegrenzung" title="Permanent link">&para;</a></h6>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>rsync<span class="w"> </span>-avz<span class="w"> </span>--bwlimit<span class="o">=</span><span class="m">1000</span><span class="w"> </span>/pfad/zur/quelle<span class="w"> </span>/pfad/zum/ziel
+</code></pre></div></td></tr></table></div>
+- <strong><code>--bwlimit=1000</code></strong>: Begrenzt die Bandbreite auf <strong>1000 KB/s</strong>.</p>
+<h6 id="526-backup-mit-loschung-geloschter-dateien"><strong>5.2.6 Backup mit Löschung gelöschter Dateien</strong><a class="headerlink" href="#526-backup-mit-loschung-geloschter-dateien" title="Permanent link">&para;</a></h6>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>rsync<span class="w"> </span>-avz<span class="w"> </span>--delete<span class="w"> </span>/pfad/zur/quelle<span class="w"> </span>/pfad/zum/ziel
+</code></pre></div></td></tr></table></div>
+- <strong><code>--delete</code></strong>: Löscht Dateien im Ziel, die nicht mehr in der Quelle existieren.</p>
+<h2 id="-_1">---<a class="headerlink" href="#-_1" title="Permanent link">&para;</a></h2>
+<h4 id="6-backup-mit-dd"><strong>6. Backup mit <code>dd</code></strong><a class="headerlink" href="#6-backup-mit-dd" title="Permanent link">&para;</a></h4>
+<p><code>dd</code> ist ein <strong>niedriges Level-Tool</strong>, das <strong>Bit-für-Bit-Kopien</strong> von Festplatten, Partitionen oder Dateien erstellt. Es ist besonders nützlich für:
+- <strong>Vollständige Festplatten-Backups</strong> (inkl. Bootloader).
+- <strong>Klonen von Festplatten</strong>.
+- <strong>Erstellen von Images</strong> für virtuelle Maschinen.</p>
+<hr />
+<h5 id="61-grundlagen-von-dd"><strong>6.1 Grundlagen von <code>dd</code></strong><a class="headerlink" href="#61-grundlagen-von-dd" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th><strong>Option</strong></th>
+<th><strong>Beschreibung</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>if=[datei]</code></td>
+<td><strong>Input-Datei</strong> (Quelle).</td>
+</tr>
+<tr>
+<td><code>of=[datei]</code></td>
+<td><strong>Output-Datei</strong> (Ziel).</td>
+</tr>
+<tr>
+<td><code>bs=[größe]</code></td>
+<td><strong>Blockgröße</strong> (z. B. <code>bs=4M</code> für 4 MiB).</td>
+</tr>
+<tr>
+<td><code>count=[anzahl]</code></td>
+<td><strong>Anzahl der Blöcke</strong>, die kopiert werden sollen.</td>
+</tr>
+<tr>
+<td><code>status=progress</code></td>
+<td>Zeigt <strong>Fortschritt</strong> an.</td>
+</tr>
+<tr>
+<td><code>conv=sync,noerror</code></td>
+<td><strong>Synchronisiert Blöcke</strong> und ignoriert Fehler.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h5 id="62-beispiele-fur-dd"><strong>6.2 Beispiele für <code>dd</code></strong><a class="headerlink" href="#62-beispiele-fur-dd" title="Permanent link">&para;</a></h5>
+<h6 id="621-backup-einer-gesamten-festplatte"><strong>6.2.1 Backup einer gesamten Festplatte</strong><a class="headerlink" href="#621-backup-einer-gesamten-festplatte" title="Permanent link">&para;</a></h6>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>dd<span class="w"> </span><span class="k">if</span><span class="o">=</span>/dev/sda<span class="w"> </span><span class="nv">of</span><span class="o">=</span>/pfad/zur/backup.img<span class="w"> </span><span class="nv">bs</span><span class="o">=</span>4M<span class="w"> </span><span class="nv">status</span><span class="o">=</span>progress
+</code></pre></div></td></tr></table></div>
+- <strong><code>if=/dev/sda</code></strong>: Quelle (Festplatte <code>/dev/sda</code>).
+- <strong><code>of=/pfad/zur/backup.img</code></strong>: Ziel (Backup-Datei).
+- <strong><code>bs=4M</code></strong>: Blockgröße von 4 MiB für bessere Performance.
+- <strong><code>status=progress</code></strong>: Zeigt den Fortschritt an.</p>
+<h6 id="622-backup-einer-partition"><strong>6.2.2 Backup einer Partition</strong><a class="headerlink" href="#622-backup-einer-partition" title="Permanent link">&para;</a></h6>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>dd<span class="w"> </span><span class="k">if</span><span class="o">=</span>/dev/sda1<span class="w"> </span><span class="nv">of</span><span class="o">=</span>/pfad/zur/partition_backup.img<span class="w"> </span><span class="nv">bs</span><span class="o">=</span>4M<span class="w"> </span><span class="nv">status</span><span class="o">=</span>progress
+</code></pre></div></td></tr></table></div>
+<h6 id="623-backup-komprimieren-mit-gzip"><strong>6.2.3 Backup komprimieren (mit <code>gzip</code>)</strong><a class="headerlink" href="#623-backup-komprimieren-mit-gzip" title="Permanent link">&para;</a></h6>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>dd<span class="w"> </span><span class="k">if</span><span class="o">=</span>/dev/sda<span class="w"> </span><span class="nv">bs</span><span class="o">=</span>4M<span class="w"> </span><span class="nv">status</span><span class="o">=</span>progress<span class="w"> </span><span class="p">|</span><span class="w"> </span>gzip<span class="w"> </span>&gt;<span class="w"> </span>/pfad/zur/backup.img.gz
+</code></pre></div></td></tr></table></div>
+- <strong><code>| gzip</code></strong>: Komprimiert die Ausgabe mit <code>gzip</code>.</p>
+<h6 id="624-backup-einer-festplatte-auf-eine-andere-festplatte-klonen"><strong>6.2.4 Backup einer Festplatte auf eine andere Festplatte klonen</strong><a class="headerlink" href="#624-backup-einer-festplatte-auf-eine-andere-festplatte-klonen" title="Permanent link">&para;</a></h6>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>dd<span class="w"> </span><span class="k">if</span><span class="o">=</span>/dev/sda<span class="w"> </span><span class="nv">of</span><span class="o">=</span>/dev/sdb<span class="w"> </span><span class="nv">bs</span><span class="o">=</span>4M<span class="w"> </span><span class="nv">status</span><span class="o">=</span>progress
+</code></pre></div></td></tr></table></div>
+- <strong>Achtung</strong>: Dies <strong>überschreibt alle Daten auf <code>/dev/sdb</code>!</strong></p>
+<h6 id="625-backup-wiederherstellen"><strong>6.2.5 Backup wiederherstellen</strong><a class="headerlink" href="#625-backup-wiederherstellen" title="Permanent link">&para;</a></h6>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>dd<span class="w"> </span><span class="k">if</span><span class="o">=</span>/pfad/zur/backup.img<span class="w"> </span><span class="nv">of</span><span class="o">=</span>/dev/sda<span class="w"> </span><span class="nv">bs</span><span class="o">=</span>4M<span class="w"> </span><span class="nv">status</span><span class="o">=</span>progress
+</code></pre></div></td></tr></table></div>
+- <strong>Achtung</strong>: Dies <strong>überschreibt alle Daten auf <code>/dev/sda</code>!</strong></p>
+<h2 id="-_2">---<a class="headerlink" href="#-_2" title="Permanent link">&para;</a></h2>
+<h4 id="7-backup-mit-borgbackup"><strong>7. Backup mit <code>BorgBackup</code></strong><a class="headerlink" href="#7-backup-mit-borgbackup" title="Permanent link">&para;</a></h4>
+<p><code>BorgBackup</code> ist ein <strong>modernes, deduplizierendes Backup-Tool</strong> mit <strong>Kompression und Verschlüsselung</strong>. Es ist besonders für <strong>effiziente, sichere Backups</strong> geeignet.</p>
+<hr />
+<h5 id="71-installation-von-borgbackup"><strong>7.1 Installation von <code>BorgBackup</code></strong><a class="headerlink" href="#71-installation-von-borgbackup" title="Permanent link">&para;</a></h5>
+<ul>
+<li><strong>Debian/Ubuntu:</strong>
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>borgbackup
+</code></pre></div></td></tr></table></div></li>
+<li><strong>RHEL/CentOS:</strong>
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>yum<span class="w"> </span>install<span class="w"> </span>borgbackup
+</code></pre></div></td></tr></table></div></li>
+<li><strong>Arch Linux:</strong>
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>pacman<span class="w"> </span>-S<span class="w"> </span>borg
+</code></pre></div></td></tr></table></div></li>
+</ul>
+<hr />
+<h5 id="72-grundlagen-von-borgbackup"><strong>7.2 Grundlagen von <code>BorgBackup</code></strong><a class="headerlink" href="#72-grundlagen-von-borgbackup" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th><strong>Befehl</strong></th>
+<th><strong>Beschreibung</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>borg init [repository]</code></td>
+<td><strong>Initialisiert</strong> ein neues Repository.</td>
+</tr>
+<tr>
+<td><code>borg create [repository]::[archivname] [quelle]</code></td>
+<td><strong>Erstellt</strong> ein neues Backup-Archiv.</td>
+</tr>
+<tr>
+<td><code>borg list [repository]</code></td>
+<td><strong>Listet</strong> alle Archive in einem Repository auf.</td>
+</tr>
+<tr>
+<td><code>borg extract [repository]::[archivname]</code></td>
+<td><strong>Extrahiert</strong> ein Archiv.</td>
+</tr>
+<tr>
+<td><code>borg delete [repository]::[archivname]</code></td>
+<td><strong>Löscht</strong> ein Archiv.</td>
+</tr>
+<tr>
+<td><code>borg prune [repository]</code></td>
+<td><strong>Bereinigt</strong> alte Archive (z. B. nach Zeit oder Anzahl).</td>
+</tr>
+<tr>
+<td><code>borg check [repository]</code></td>
+<td><strong>Überprüft</strong> die Integrität eines Repositorys.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h5 id="73-beispiele-fur-borgbackup"><strong>7.3 Beispiele für <code>BorgBackup</code></strong><a class="headerlink" href="#73-beispiele-fur-borgbackup" title="Permanent link">&para;</a></h5>
+<h6 id="731-repository-initialisieren"><strong>7.3.1 Repository initialisieren</strong><a class="headerlink" href="#731-repository-initialisieren" title="Permanent link">&para;</a></h6>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Erstellen eines lokalen Repositorys</span>
+borg<span class="w"> </span>init<span class="w"> </span>--encryption<span class="o">=</span>repokey<span class="w"> </span>/pfad/zum/repository
+
+<span class="c1"># Erstellen eines Remote-Repositorys (über SSH)</span>
+borg<span class="w"> </span>init<span class="w"> </span>--encryption<span class="o">=</span>repokey<span class="w"> </span>user@remote-host:/pfad/zum/repository
+</code></pre></div></td></tr></table></div>
+- <strong><code>--encryption=repokey</code></strong>: Verschlüsselt das Repository mit einem <strong>Schlüssel, der im Repository gespeichert wird</strong>.</p>
+<h6 id="732-vollbackup-erstellen"><strong>7.3.2 Vollbackup erstellen</strong><a class="headerlink" href="#732-vollbackup-erstellen" title="Permanent link">&para;</a></h6>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>borg<span class="w"> </span>create<span class="w"> </span>--stats<span class="w"> </span>--progress<span class="w"> </span>/pfad/zum/repository::full_backup-2026-06-01<span class="w"> </span>/pfad/zur/quelle
+</code></pre></div></td></tr></table></div>
+- <strong><code>--stats</code></strong>: Zeigt Statistiken nach dem Backup an.
+- <strong><code>--progress</code></strong>: Zeigt den Fortschritt an.
+- <strong><code>full_backup-2026-06-01</code></strong>: Name des Archivs (kann frei gewählt werden).</p>
+<h6 id="733-inkrementelles-backup-erstellen"><strong>7.3.3 Inkrementelles Backup erstellen</strong><a class="headerlink" href="#733-inkrementelles-backup-erstellen" title="Permanent link">&para;</a></h6>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>borg<span class="w"> </span>create<span class="w"> </span>--stats<span class="w"> </span>--progress<span class="w"> </span>/pfad/zum/repository::incremental_backup-2026-06-02<span class="w"> </span>/pfad/zur/quelle
+</code></pre></div></td></tr></table></div>
+- <code>BorgBackup</code> <strong>erkennt automatisch</strong>, welche Dateien sich geändert haben.</p>
+<h6 id="734-archive-auflisten"><strong>7.3.4 Archive auflisten</strong><a class="headerlink" href="#734-archive-auflisten" title="Permanent link">&para;</a></h6>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>borg<span class="w"> </span>list<span class="w"> </span>/pfad/zum/repository
+</code></pre></div></td></tr></table></div>
+<h6 id="735-backup-wiederherstellen"><strong>7.3.5 Backup wiederherstellen</strong><a class="headerlink" href="#735-backup-wiederherstellen" title="Permanent link">&para;</a></h6>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Extrahiere ein bestimmtes Archiv</span>
+borg<span class="w"> </span>extract<span class="w"> </span>/pfad/zum/repository::full_backup-2026-06-01
+
+<span class="c1"># Extrahiere ein bestimmtes Verzeichnis aus einem Archiv</span>
+borg<span class="w"> </span>extract<span class="w"> </span>/pfad/zum/repository::full_backup-2026-06-01<span class="w"> </span>pfad/zur/datei
+</code></pre></div></td></tr></table></div>
+<h6 id="736-alte-archive-bereinigen"><strong>7.3.6 Alte Archive bereinigen</strong><a class="headerlink" href="#736-alte-archive-bereinigen" title="Permanent link">&para;</a></h6>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Behalte nur die letzten 7 Tage, 4 Wochen und 6 Monate</span>
+borg<span class="w"> </span>prune<span class="w"> </span>--keep-daily<span class="w"> </span><span class="m">7</span><span class="w"> </span>--keep-weekly<span class="w"> </span><span class="m">4</span><span class="w"> </span>--keep-monthly<span class="w"> </span><span class="m">6</span><span class="w"> </span>/pfad/zum/repository
+</code></pre></div></td></tr></table></div>
+<h6 id="737-repository-uberprufen"><strong>7.3.7 Repository überprüfen</strong><a class="headerlink" href="#737-repository-uberprufen" title="Permanent link">&para;</a></h6>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>borg<span class="w"> </span>check<span class="w"> </span>/pfad/zum/repository
+</code></pre></div></td></tr></table></div>
+<h2 id="-_3">---<a class="headerlink" href="#-_3" title="Permanent link">&para;</a></h2>
+<h4 id="8-backup-mit-timeshift"><strong>8. Backup mit <code>Timeshift</code></strong><a class="headerlink" href="#8-backup-mit-timeshift" title="Permanent link">&para;</a></h4>
+<p><code>Timeshift</code> ist ein <strong>Snapshot-Backup-Tool</strong>, das <strong>System-Backups</strong> (nicht Benutzerdaten) erstellt. Es unterstützt:
+- <strong>Btrfs-Snapshots</strong> (sehr effizient, nur Änderungen werden gespeichert).
+- <strong>Rsync-Snapshots</strong> (für Dateisysteme, die Btrfs nicht unterstützen).</p>
+<hr />
+<h5 id="81-installation-von-timeshift"><strong>8.1 Installation von <code>Timeshift</code></strong><a class="headerlink" href="#81-installation-von-timeshift" title="Permanent link">&para;</a></h5>
+<ul>
+<li><strong>Debian/Ubuntu:</strong>
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>timeshift
+</code></pre></div></td></tr></table></div></li>
+<li><strong>RHEL/CentOS:</strong>
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>yum<span class="w"> </span>install<span class="w"> </span>timeshift
+</code></pre></div></td></tr></table></div></li>
+<li><strong>Arch Linux:</strong>
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>pacman<span class="w"> </span>-S<span class="w"> </span>timeshift
+</code></pre></div></td></tr></table></div></li>
+</ul>
+<hr />
+<h5 id="82-grundlagen-von-timeshift"><strong>8.2 Grundlagen von <code>Timeshift</code></strong><a class="headerlink" href="#82-grundlagen-von-timeshift" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th><strong>Befehl</strong></th>
+<th><strong>Beschreibung</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sudo timeshift --create</code></td>
+<td><strong>Erstellt</strong> einen neuen Snapshot.</td>
+</tr>
+<tr>
+<td><code>sudo timeshift --list</code></td>
+<td><strong>Listet</strong> alle Snapshots auf.</td>
+</tr>
+<tr>
+<td><code>sudo timeshift --restore</code></td>
+<td><strong>Stellt</strong> einen Snapshot wieder her.</td>
+</tr>
+<tr>
+<td><code>sudo timeshift --delete</code></td>
+<td><strong>Löscht</strong> einen Snapshot.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h5 id="83-beispiele-fur-timeshift"><strong>8.3 Beispiele für <code>Timeshift</code></strong><a class="headerlink" href="#83-beispiele-fur-timeshift" title="Permanent link">&para;</a></h5>
+<h6 id="831-snapshot-erstellen-btrfs-oder-rsync"><strong>8.3.1 Snapshot erstellen (Btrfs oder Rsync)</strong><a class="headerlink" href="#831-snapshot-erstellen-btrfs-oder-rsync" title="Permanent link">&para;</a></h6>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Erstellen eines Snapshots (automatisch erkanntes Dateisystem)</span>
+sudo<span class="w"> </span>timeshift<span class="w"> </span>--create<span class="w"> </span>--comments<span class="w"> </span><span class="s2">&quot;Vor Update&quot;</span><span class="w"> </span>--tags<span class="w"> </span>D
+
+<span class="c1"># Erstellen eines Snapshots mit Rsync (für nicht-Btrfs-Systeme)</span>
+sudo<span class="w"> </span>timeshift<span class="w"> </span>--create<span class="w"> </span>--snapshot-type<span class="w"> </span>rsync<span class="w"> </span>--comments<span class="w"> </span><span class="s2">&quot;Vor Update&quot;</span><span class="w"> </span>--tags<span class="w"> </span>D
+</code></pre></div></td></tr></table></div>
+- <strong><code>--comments</code></strong>: Fügt einen Kommentar hinzu.
+- <strong><code>--tags D</code></strong>: Markiert den Snapshot als "D" (täglich).</p>
+<h6 id="832-snapshots-auflisten"><strong>8.3.2 Snapshots auflisten</strong><a class="headerlink" href="#832-snapshots-auflisten" title="Permanent link">&para;</a></h6>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>timeshift<span class="w"> </span>--list
+</code></pre></div></td></tr></table></div>
+<h6 id="833-snapshot-wiederherstellen"><strong>8.3.3 Snapshot wiederherstellen</strong><a class="headerlink" href="#833-snapshot-wiederherstellen" title="Permanent link">&para;</a></h6>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Wähle einen Snapshot aus der Liste aus</span>
+sudo<span class="w"> </span>timeshift<span class="w"> </span>--restore<span class="w"> </span>--snapshot<span class="w"> </span><span class="s2">&quot;2026-06-01_10-00-00&quot;</span>
+</code></pre></div></td></tr></table></div>
+- <strong>Achtung</strong>: Die Wiederherstellung <strong>überschreibt das aktuelle System</strong>!</p>
+<h6 id="834-snapshot-loschen"><strong>8.3.4 Snapshot löschen</strong><a class="headerlink" href="#834-snapshot-loschen" title="Permanent link">&para;</a></h6>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>timeshift<span class="w"> </span>--delete<span class="w"> </span>--snapshot<span class="w"> </span><span class="s2">&quot;2026-06-01_10-00-00&quot;</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="-_4">---<a class="headerlink" href="#-_4" title="Permanent link">&para;</a></h2>
+<h4 id="9-backup-strategien-in-der-praxis"><strong>9. Backup-Strategien in der Praxis</strong><a class="headerlink" href="#9-backup-strategien-in-der-praxis" title="Permanent link">&para;</a></h4>
+<hr />
+<h5 id="91-3-2-1-backup-strategie-umsetzen"><strong>9.1 3-2-1-Backup-Strategie umsetzen</strong><a class="headerlink" href="#91-3-2-1-backup-strategie-umsetzen" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th><strong>Schritt</strong></th>
+<th><strong>Aktion</strong></th>
+<th><strong>Tool</strong></th>
+<th><strong>Beispiel</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1. Lokales Backup</strong></td>
+<td>Erstellen Sie ein <strong>Vollbackup</strong> auf einer externen Festplatte.</td>
+<td><code>rsync</code>, <code>tar</code></td>
+<td><code>rsync -avz /home /mnt/backup/home</code></td>
+</tr>
+<tr>
+<td><strong>2. Zweites Backup</strong></td>
+<td>Erstellen Sie ein <strong>inkrementelles Backup</strong> auf einem NAS oder einem zweiten Server.</td>
+<td><code>BorgBackup</code>, <code>rsync</code></td>
+<td><code>borg create /mnt/nas/backup::home-2026-06-01 /home</code></td>
+</tr>
+<tr>
+<td><strong>3. Cloud-Backup</strong></td>
+<td>Sichern Sie kritische Daten in der <strong>Cloud</strong> (z. B. AWS S3, Backblaze B2).</td>
+<td><code>rclone</code>, <code>Duplicati</code></td>
+<td><code>rclone copy /home remote:backup/home</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h5 id="92-automatisierte-backups-mit-cron"><strong>9.2 Automatisierte Backups mit <code>cron</code></strong><a class="headerlink" href="#92-automatisierte-backups-mit-cron" title="Permanent link">&para;</a></h5>
+<p>Verwenden Sie <code>cron</code>, um <strong>Backups automatisch</strong> durchzuführen.</p>
+<p><strong>Beispiel: Tägliches Backup mit <code>rsync</code></strong>
+1. Bearbeiten Sie die Crontab:
+   <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>crontab<span class="w"> </span>-e
+</code></pre></div></td></tr></table></div>
+2. Fügen Sie eine Zeile hinzu:
+   <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="m">0</span><span class="w"> </span><span class="m">2</span><span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>/usr/bin/rsync<span class="w"> </span>-avz<span class="w"> </span>--delete<span class="w"> </span>/home<span class="w"> </span>/mnt/backup/home<span class="w"> </span>&gt;&gt;<span class="w"> </span>/var/log/backup.log<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span>
+</code></pre></div></td></tr></table></div>
+   - <strong><code>0 2 * * *</code></strong>: Führt den Befehl <strong>täglich um 2:00 Uhr</strong> aus.
+   - <strong><code>&gt;&gt; /var/log/backup.log 2&gt;&amp;1</code></strong>: Leitet die Ausgabe in eine <strong>Log-Datei</strong> um.</p>
+<p><strong>Beispiel: Wöchentliches Vollbackup mit <code>tar</code></strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="m">0</span><span class="w"> </span><span class="m">3</span><span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span><span class="m">0</span><span class="w"> </span>/usr/bin/tar<span class="w"> </span>-czvf<span class="w"> </span>/mnt/backup/full_backup-<span class="k">$(</span>date<span class="w"> </span>+<span class="se">\%</span>Y-<span class="se">\%</span>m-<span class="se">\%</span>d<span class="k">)</span>.tar.gz<span class="w"> </span>/home<span class="w"> </span>&gt;&gt;<span class="w"> </span>/var/log/backup.log<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span>
+</code></pre></div></td></tr></table></div>
+- <strong><code>0 3 * * 0</code></strong>: Führt den Befehl <strong>sonntags um 3:00 Uhr</strong> aus.
+- <strong><code>$(date +\%Y-\%m-\%d)</code></strong>: Fügt das <strong>aktuelle Datum</strong> zum Dateinamen hinzu.</p>
+<hr />
+<h5 id="93-backup-uberprufung-und-testen"><strong>9.3 Backup-Überprüfung und Testen</strong><a class="headerlink" href="#93-backup-uberprufung-und-testen" title="Permanent link">&para;</a></h5>
+<ul>
+<li><strong>Regelmäßige Überprüfung</strong>:</li>
+<li>Testen Sie <strong>Wiederherstellungen</strong> in einer <strong>Testumgebung</strong>.</li>
+<li>Überprüfen Sie <strong>Backup-Logs</strong> auf Fehler.</li>
+<li><strong>Integritätsprüfung</strong>:</li>
+<li>Verwenden Sie <code>borg check</code> für BorgBackup-Repositorys.</li>
+<li>Verwenden Sie <code>sha256sum</code> für tar-Archive:
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sha256sum<span class="w"> </span>/pfad/zur/backup.tar.gz
+</code></pre></div></td></tr></table></div></li>
+<li><strong>Wiederherstellungstest</strong>:</li>
+<li>Stellen Sie ein Backup in einer <strong>virtuellen Maschine</strong> wieder her, um sicherzustellen, dass es funktioniert.</li>
+</ul>
+<h2 id="-_5">---<a class="headerlink" href="#-_5" title="Permanent link">&para;</a></h2>
+<h4 id="10-ubungsaufgaben"><strong>10. Übungsaufgaben</strong><a class="headerlink" href="#10-ubungsaufgaben" title="Permanent link">&para;</a></h4>
+<hr />
+<h5 id="frage-1"><strong>Frage 1</strong><a class="headerlink" href="#frage-1" title="Permanent link">&para;</a></h5>
+<p>Wie können Sie ein <strong>Vollbackup</strong> des Verzeichnisses <code>/home</code> mit <code>tar</code> erstellen und in <code>/mnt/backup/home.tar.gz</code> speichern?</p>
+<details class="success">
+<summary>Antwort</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>tar<span class="w"> </span>-czvf<span class="w"> </span>/mnt/backup/home.tar.gz<span class="w"> </span>/home
+</code></pre></div></td></tr></table></div>
+</details>
+<hr />
+<h5 id="frage-2"><strong>Frage 2</strong><a class="headerlink" href="#frage-2" title="Permanent link">&para;</a></h5>
+<p>Wie können Sie ein <strong>inkrementelles Backup</strong> mit <code>rsync</code> erstellen, das nur Änderungen seit dem letzten Backup in <code>/mnt/backup/full_backup</code> berücksichtigt?</p>
+<details class="success">
+<summary>Antwort</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>rsync<span class="w"> </span>-avz<span class="w"> </span>--link-dest<span class="o">=</span>/mnt/backup/full_backup<span class="w"> </span>/home<span class="w"> </span>/mnt/backup/incremental_backup
+</code></pre></div></td></tr></table></div>
+</details>
+<hr />
+<h5 id="frage-3"><strong>Frage 3</strong><a class="headerlink" href="#frage-3" title="Permanent link">&para;</a></h5>
+<p>Wie können Sie eine <strong>Bit-für-Bit-Kopie</strong> der Festplatte <code>/dev/sda</code> in die Datei <code>/mnt/backup/sda.img</code> erstellen?</p>
+<details class="success">
+<summary>Antwort</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>dd<span class="w"> </span><span class="k">if</span><span class="o">=</span>/dev/sda<span class="w"> </span><span class="nv">of</span><span class="o">=</span>/mnt/backup/sda.img<span class="w"> </span><span class="nv">bs</span><span class="o">=</span>4M<span class="w"> </span><span class="nv">status</span><span class="o">=</span>progress
+</code></pre></div></td></tr></table></div>
+</details>
+<hr />
+<h5 id="frage-4"><strong>Frage 4</strong><a class="headerlink" href="#frage-4" title="Permanent link">&para;</a></h5>
+<p>Wie können Sie ein <strong>BorgBackup-Repository</strong> in <code>/mnt/backup/borg_repo</code> initialisieren und ein <strong>Vollbackup</strong> von <code>/home</code> erstellen?</p>
+<details class="success">
+<summary>Antwort</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>borg<span class="w"> </span>init<span class="w"> </span>--encryption<span class="o">=</span>repokey<span class="w"> </span>/mnt/backup/borg_repo
+borg<span class="w"> </span>create<span class="w"> </span>--stats<span class="w"> </span>--progress<span class="w"> </span>/mnt/backup/borg_repo::home-2026-06-01<span class="w"> </span>/home
+</code></pre></div></td></tr></table></div>
+</details>
+<hr />
+<h5 id="frage-5"><strong>Frage 5</strong><a class="headerlink" href="#frage-5" title="Permanent link">&para;</a></h5>
+<p>Wie können Sie ein <strong>Timeshift-Snapshot</strong> mit dem Kommentar "Vor Systemupdate" erstellen?</p>
+<details class="success">
+<summary>Antwort</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>timeshift<span class="w"> </span>--create<span class="w"> </span>--comments<span class="w"> </span><span class="s2">&quot;Vor Systemupdate&quot;</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<hr />
+<h5 id="frage-6"><strong>Frage 6</strong><a class="headerlink" href="#frage-6" title="Permanent link">&para;</a></h5>
+<p>Wie können Sie ein <strong>tägliches Backup</strong> von <code>/home</code> mit <code>cron</code> und <code>rsync</code> um 3:00 Uhr einrichten?</p>
+<details class="success">
+<summary>Antwort</summary>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>crontab<span class="w"> </span>-e
+</code></pre></div></td></tr></table></div>
+Fügen Sie folgende Zeile hinzu:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="m">0</span><span class="w"> </span><span class="m">3</span><span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>/usr/bin/rsync<span class="w"> </span>-avz<span class="w"> </span>/home<span class="w"> </span>/mnt/backup/home<span class="w"> </span>&gt;&gt;<span class="w"> </span>/var/log/backup.log<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span>
+</code></pre></div></td></tr></table></div></p>
+</details>
+<hr />
+<h5 id="frage-7"><strong>Frage 7</strong><a class="headerlink" href="#frage-7" title="Permanent link">&para;</a></h5>
+<p>Wie können Sie ein <strong>komprimiertes Backup</strong> einer Partition <code>/dev/sda1</code> mit <code>dd</code> und <code>gzip</code> erstellen?</p>
+<details class="success">
+<summary>Antwort</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>dd<span class="w"> </span><span class="k">if</span><span class="o">=</span>/dev/sda1<span class="w"> </span><span class="nv">bs</span><span class="o">=</span>4M<span class="w"> </span><span class="nv">status</span><span class="o">=</span>progress<span class="w"> </span><span class="p">|</span><span class="w"> </span>gzip<span class="w"> </span>&gt;<span class="w"> </span>/mnt/backup/sda1.img.gz
+</code></pre></div></td></tr></table></div>
+</details>
+<hr />
+<h5 id="frage-8"><strong>Frage 8</strong><a class="headerlink" href="#frage-8" title="Permanent link">&para;</a></h5>
+<p>Wie können Sie <strong>alle BorgBackup-Archive</strong> in <code>/mnt/backup/borg_repo</code> auflisten?</p>
+<details class="success">
+<summary>Antwort</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>borg<span class="w"> </span>list<span class="w"> </span>/mnt/backup/borg_repo
+</code></pre></div></td></tr></table></div>
+</details>
+<hr />
+<h5 id="frage-9"><strong>Frage 9</strong><a class="headerlink" href="#frage-9" title="Permanent link">&para;</a></h5>
+<p>Wie können Sie ein <strong>Backup-Archiv</strong> mit <code>tar</code> extrahieren, das in <code>/mnt/backup/home.tar.gz</code> gespeichert ist?</p>
+<details class="success">
+<summary>Antwort</summary>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>tar<span class="w"> </span>-xzvf<span class="w"> </span>/mnt/backup/home.tar.gz<span class="w"> </span>-C<span class="w"> </span>/
+</code></pre></div></td></tr></table></div>
+- <strong><code>-C /</code></strong>: Extrahiere in das <strong>Root-Verzeichnis</strong>.</p>
+</details>
+<hr />
+<h5 id="frage-10"><strong>Frage 10</strong><a class="headerlink" href="#frage-10" title="Permanent link">&para;</a></h5>
+<p>Wie können Sie <strong>alte BorgBackup-Archive</strong> bereinigen, sodass nur die letzten <strong>7 Tage, 4 Wochen und 6 Monate</strong> behalten werden?</p>
+<details class="success">
+<summary>Antwort</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>borg<span class="w"> </span>prune<span class="w"> </span>--keep-daily<span class="w"> </span><span class="m">7</span><span class="w"> </span>--keep-weekly<span class="w"> </span><span class="m">4</span><span class="w"> </span>--keep-monthly<span class="w"> </span><span class="m">6</span><span class="w"> </span>/mnt/backup/borg_repo
+</code></pre></div></td></tr></table></div>
+</details>
+<h2 id="-_6">---<a class="headerlink" href="#-_6" title="Permanent link">&para;</a></h2>
+<h4 id="11-praktische-beispiele"><strong>11. Praktische Beispiele</strong><a class="headerlink" href="#11-praktische-beispiele" title="Permanent link">&para;</a></h4>
+<hr />
+<h5 id="beispiel-1-vollstandiges-system-backup-mit-tar"><strong>Beispiel 1: Vollständiges System-Backup mit <code>tar</code></strong><a class="headerlink" href="#beispiel-1-vollstandiges-system-backup-mit-tar" title="Permanent link">&para;</a></h5>
+<p><strong>Szenario:</strong> Sie möchten ein <strong>Vollbackup des gesamten Systems</strong> (außer <code>/dev</code>, <code>/proc</code>, <code>/sys</code>, <code>/tmp</code>) erstellen.</p>
+<p><strong>Lösung:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>tar<span class="w"> </span>-czvf<span class="w"> </span>/mnt/backup/full_system_backup-<span class="k">$(</span>date<span class="w"> </span>+%Y-%m-%d<span class="k">)</span>.tar.gz<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--exclude<span class="o">=</span>/dev<span class="w"> </span>--exclude<span class="o">=</span>/proc<span class="w"> </span>--exclude<span class="o">=</span>/sys<span class="w"> </span>--exclude<span class="o">=</span>/tmp<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--exclude<span class="o">=</span>/mnt<span class="w"> </span>--exclude<span class="o">=</span>/media<span class="w"> </span>/
+</code></pre></div></td></tr></table></div></p>
+<hr />
+<h5 id="beispiel-2-inkrementelles-backup-mit-rsync-und-link-dest"><strong>Beispiel 2: Inkrementelles Backup mit <code>rsync</code> und <code>--link-dest</code></strong><a class="headerlink" href="#beispiel-2-inkrementelles-backup-mit-rsync-und-link-dest" title="Permanent link">&para;</a></h5>
+<p><strong>Szenario:</strong> Sie möchten <strong>tägliche inkrementelle Backups</strong> von <code>/home</code> erstellen, wobei unveränderte Dateien als <strong>Hardlinks</strong> gespeichert werden.</p>
+<p><strong>Lösung:</strong>
+1. <strong>Erstes Vollbackup:</strong>
+   <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>rsync<span class="w"> </span>-avz<span class="w"> </span>/home<span class="w"> </span>/mnt/backup/home/full_backup
+</code></pre></div></td></tr></table></div>
+2. <strong>Tägliches inkrementelles Backup:</strong>
+   <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>rsync<span class="w"> </span>-avz<span class="w"> </span>--link-dest<span class="o">=</span>/mnt/backup/home/full_backup<span class="w"> </span>/home<span class="w"> </span>/mnt/backup/home/incremental_<span class="k">$(</span>date<span class="w"> </span>+%Y-%m-%d<span class="k">)</span>
+</code></pre></div></td></tr></table></div></p>
+<hr />
+<h5 id="beispiel-3-automatisiertes-backup-mit-borgbackup-und-cron"><strong>Beispiel 3: Automatisiertes Backup mit <code>BorgBackup</code> und <code>cron</code></strong><a class="headerlink" href="#beispiel-3-automatisiertes-backup-mit-borgbackup-und-cron" title="Permanent link">&para;</a></h5>
+<p><strong>Szenario:</strong> Sie möchten <strong>tägliche Backups</strong> von <code>/home</code> mit <code>BorgBackup</code> erstellen und <strong>alte Backups bereinigen</strong>.</p>
+<p><strong>Lösung:</strong>
+1. <strong>Repository initialisieren:</strong>
+   <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>borg<span class="w"> </span>init<span class="w"> </span>--encryption<span class="o">=</span>repokey<span class="w"> </span>/mnt/backup/borg_repo
+</code></pre></div></td></tr></table></div>
+2. <strong>Cron-Job einrichten:</strong>
+   <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>crontab<span class="w"> </span>-e
+</code></pre></div></td></tr></table></div>
+   Fügen Sie folgende Zeilen hinzu:
+   <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Tägliches Backup um 2:00 Uhr</span>
+<span class="m">0</span><span class="w"> </span><span class="m">2</span><span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>/usr/bin/borg<span class="w"> </span>create<span class="w"> </span>--stats<span class="w"> </span>/mnt/backup/borg_repo::home-<span class="k">$(</span>date<span class="w"> </span>+<span class="se">\%</span>Y-<span class="se">\%</span>m-<span class="se">\%</span>d<span class="k">)</span><span class="w"> </span>/home<span class="w"> </span>&gt;&gt;<span class="w"> </span>/var/log/borg_backup.log<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span>
+
+<span class="c1"># Wöchentliche Bereinigung um 3:00 Uhr sonntags</span>
+<span class="m">0</span><span class="w"> </span><span class="m">3</span><span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span><span class="m">0</span><span class="w"> </span>/usr/bin/borg<span class="w"> </span>prune<span class="w"> </span>--keep-daily<span class="w"> </span><span class="m">7</span><span class="w"> </span>--keep-weekly<span class="w"> </span><span class="m">4</span><span class="w"> </span>--keep-monthly<span class="w"> </span><span class="m">6</span><span class="w"> </span>/mnt/backup/borg_repo<span class="w"> </span>&gt;&gt;<span class="w"> </span>/var/log/borg_prune.log<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span>
+</code></pre></div></td></tr></table></div></p>
+<hr />
+<h5 id="beispiel-4-festplatten-image-mit-dd-und-kompression"><strong>Beispiel 4: Festplatten-Image mit <code>dd</code> und Kompression</strong><a class="headerlink" href="#beispiel-4-festplatten-image-mit-dd-und-kompression" title="Permanent link">&para;</a></h5>
+<p><strong>Szenario:</strong> Sie möchten ein <strong>komprimiertes Image</strong> der Festplatte <code>/dev/sda</code> erstellen.</p>
+<p><strong>Lösung:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>dd<span class="w"> </span><span class="k">if</span><span class="o">=</span>/dev/sda<span class="w"> </span><span class="nv">bs</span><span class="o">=</span>4M<span class="w"> </span><span class="nv">status</span><span class="o">=</span>progress<span class="w"> </span><span class="p">|</span><span class="w"> </span>gzip<span class="w"> </span>&gt;<span class="w"> </span>/mnt/backup/sda-<span class="k">$(</span>date<span class="w"> </span>+%Y-%m-%d<span class="k">)</span>.img.gz
+</code></pre></div></td></tr></table></div></p>
+<hr />
+<h5 id="beispiel-5-timeshift-fur-system-snapshots"><strong>Beispiel 5: Timeshift für System-Snapshots</strong><a class="headerlink" href="#beispiel-5-timeshift-fur-system-snapshots" title="Permanent link">&para;</a></h5>
+<p><strong>Szenario:</strong> Sie möchten <strong>tägliche Snapshots</strong> Ihres Systems mit <code>Timeshift</code> erstellen.</p>
+<p><strong>Lösung:</strong>
+1. <strong>Timeshift installieren und konfigurieren:</strong>
+   <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>timeshift
+sudo<span class="w"> </span>timeshift<span class="w"> </span>--create<span class="w"> </span>--snapshot-type<span class="w"> </span>rsync<span class="w"> </span>--comments<span class="w"> </span><span class="s2">&quot;Erster Snapshot&quot;</span><span class="w"> </span>--tags<span class="w"> </span>D
+</code></pre></div></td></tr></table></div>
+2. <strong>Automatische Snapshots einrichten:</strong>
+   - Öffnen Sie die <strong>Timeshift-GUI</strong> oder bearbeiten Sie die Konfiguration in <code>/etc/timeshift/timeshift.json</code>.
+   - Aktivieren Sie <strong>tägliche Snapshots</strong>.</p>
+<h2 id="-_7">---<a class="headerlink" href="#-_7" title="Permanent link">&para;</a></h2>
+<h4 id="12-haufige-fehler-und-losungen"><strong>12. Häufige Fehler und Lösungen</strong><a class="headerlink" href="#12-haufige-fehler-und-losungen" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th><strong>Problem</strong></th>
+<th><strong>Ursache</strong></th>
+<th><strong>Lösung</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><code>tar: Cowardly refusing to create an empty archive</code></strong></td>
+<td>Keine Dateien zum Sichern gefunden.</td>
+<td>Überprüfen Sie den Pfad zur Quelle.</td>
+</tr>
+<tr>
+<td><strong><code>rsync: failed to set permissions on</code></strong></td>
+<td>Berechtigungsprobleme beim Ziel.</td>
+<td>Verwenden Sie <code>sudo</code> oder passen Sie die Berechtigungen an.</td>
+</tr>
+<tr>
+<td><strong><code>dd: No space left on device</code></strong></td>
+<td>Nicht genug Speicherplatz für das Backup.</td>
+<td>Freien Speicherplatz prüfen oder Backup auf ein größeres Laufwerk umleiten.</td>
+</tr>
+<tr>
+<td><strong><code>BorgBackup: Repository not initialized</code></strong></td>
+<td>Repository wurde nicht initialisiert.</td>
+<td>Führen Sie <code>borg init</code> aus.</td>
+</tr>
+<tr>
+<td><strong><code>Timeshift: No snapshots found</code></strong></td>
+<td>Keine Snapshots erstellt.</td>
+<td>Überprüfen Sie die Timeshift-Konfiguration und erstellen Sie manuell einen Snapshot.</td>
+</tr>
+<tr>
+<td><strong><code>cron: command not found</code></strong></td>
+<td>Pfad zu <code>rsync</code> oder <code>tar</code> ist nicht in <code>$PATH</code>.</td>
+<td>Verwenden Sie absolute Pfade (z. B. <code>/usr/bin/rsync</code>).</td>
+</tr>
+<tr>
+<td><strong>Backup-Datei ist beschädigt</strong></td>
+<td>Übertragungsfehler oder Festplattenproblem.</td>
+<td>Überprüfen Sie die Integrität mit <code>sha256sum</code> oder <code>borg check</code>.</td>
+</tr>
+<tr>
+<td><strong><code>Permission denied</code> beim Wiederherstellen</strong></td>
+<td>Berechtigungsprobleme.</td>
+<td>Verwenden Sie <code>sudo</code> oder passen Sie die Berechtigungen an.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="-_8">---<a class="headerlink" href="#-_8" title="Permanent link">&para;</a></h2>
+<h4 id="13-vertiefung-backup-in-der-cloud"><strong>13. Vertiefung: Backup in der Cloud</strong><a class="headerlink" href="#13-vertiefung-backup-in-der-cloud" title="Permanent link">&para;</a></h4>
+<hr />
+<h5 id="131-rclone-synchronisation-mit-cloud-speicher"><strong>13.1 <code>rclone</code> – Synchronisation mit Cloud-Speicher</strong><a class="headerlink" href="#131-rclone-synchronisation-mit-cloud-speicher" title="Permanent link">&para;</a></h5>
+<p><code>rclone</code> ist ein <strong>Kommandozeilen-Tool</strong> zum <strong>Synchronisieren von Dateien mit Cloud-Speicherdiensten</strong> wie:
+- <strong>AWS S3</strong>
+- <strong>Google Drive</strong>
+- <strong>Backblaze B2</strong>
+- <strong>Dropbox</strong>
+- <strong>Microsoft OneDrive</strong></p>
+<p><strong>Installation:</strong>
+- <strong>Debian/Ubuntu:</strong>
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>rclone
+</code></pre></div></td></tr></table></div>
+- <strong>RHEL/CentOS:</strong>
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>yum<span class="w"> </span>install<span class="w"> </span>rclone
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Konfiguration:</strong>
+1. Führen Sie <code>rclone config</code> aus und folgen Sie den Anweisungen, um einen <strong>Cloud-Speicher</strong> einzurichten.
+2. Testen Sie die Verbindung:
+   <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>rclone<span class="w"> </span>lsd<span class="w"> </span>remote:
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Beispiel: Backup in AWS S3</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Vollbackup in S3 hochladen</span>
+rclone<span class="w"> </span>copy<span class="w"> </span>/mnt/backup/home<span class="w"> </span>remote:backup/home
+
+<span class="c1"># Inkrementelles Backup (nur neue/geänderte Dateien)</span>
+rclone<span class="w"> </span>sync<span class="w"> </span>/mnt/backup/home<span class="w"> </span>remote:backup/home
+</code></pre></div></td></tr></table></div></p>
+<hr />
+<h5 id="132-duplicati-grafisches-backup-tool-fur-die-cloud"><strong>13.2 <code>Duplicati</code> – Grafisches Backup-Tool für die Cloud</strong><a class="headerlink" href="#132-duplicati-grafisches-backup-tool-fur-die-cloud" title="Permanent link">&para;</a></h5>
+<p><code>Duplicati</code> ist ein <strong>grafisches Backup-Tool</strong>, das <strong>Verschlüsselung, Kompression und Cloud-Integration</strong> unterstützt.</p>
+<p><strong>Installation:</strong>
+- <strong>Debian/Ubuntu:</strong>
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>duplicati
+</code></pre></div></td></tr></table></div>
+- <strong>RHEL/CentOS:</strong>
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>yum<span class="w"> </span>install<span class="w"> </span>duplicati
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Konfiguration:</strong>
+1. Starten Sie Duplicati:
+   <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>duplicati
+</code></pre></div></td></tr></table></div>
+2. Erstellen Sie ein <strong>neues Backup</strong> und wählen Sie einen <strong>Cloud-Anbieter</strong> (z. B. Backblaze B2, AWS S3).
+3. Konfigurieren Sie <strong>Verschlüsselung</strong> und <strong>Zeitplan</strong>.</p>
+<h2 id="-_9">---<a class="headerlink" href="#-_9" title="Permanent link">&para;</a></h2>
+<h4 id="14-zusammenfassung-der-wichtigsten-befehle"><strong>14. Zusammenfassung der wichtigsten Befehle</strong><a class="headerlink" href="#14-zusammenfassung-der-wichtigsten-befehle" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th><strong>Aktion</strong></th>
+<th><strong><code>tar</code></strong></th>
+<th><strong><code>rsync</code></strong></th>
+<th><strong><code>dd</code></strong></th>
+<th><strong><code>BorgBackup</code></strong></th>
+<th><strong><code>Timeshift</code></strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Vollbackup erstellen</strong></td>
+<td><code>tar -czvf backup.tar.gz /pfad</code></td>
+<td><code>rsync -avz /quelle /ziel</code></td>
+<td><code>dd if=/dev/sda of=backup.img</code></td>
+<td><code>borg create repo::archiv /pfad</code></td>
+<td><code>timeshift --create</code></td>
+</tr>
+<tr>
+<td><strong>Inkrementelles Backup</strong></td>
+<td><code>tar -czvf backup.tar.gz -N "datum" /pfad</code></td>
+<td><code>rsync -avz --link-dest=/vollbackup /quelle /ziel</code></td>
+<td>–</td>
+<td><code>borg create repo::archiv /pfad</code></td>
+<td>–</td>
+</tr>
+<tr>
+<td><strong>Backup extrahieren</strong></td>
+<td><code>tar -xzvf backup.tar.gz</code></td>
+<td>–</td>
+<td><code>dd if=backup.img of=/dev/sda</code></td>
+<td><code>borg extract repo::archiv</code></td>
+<td><code>timeshift --restore</code></td>
+</tr>
+<tr>
+<td><strong>Backup löschen</strong></td>
+<td><code>rm backup.tar.gz</code></td>
+<td><code>rm -rf /ziel</code></td>
+<td><code>rm backup.img</code></td>
+<td><code>borg delete repo::archiv</code></td>
+<td><code>timeshift --delete</code></td>
+</tr>
+<tr>
+<td><strong>Backup prüfen</strong></td>
+<td><code>tar -tvf backup.tar.gz</code></td>
+<td>–</td>
+<td>–</td>
+<td><code>borg check repo</code></td>
+<td><code>timeshift --list</code></td>
+</tr>
+<tr>
+<td><strong>Automatisierung</strong></td>
+<td><code>cron</code> + <code>tar</code></td>
+<td><code>cron</code> + <code>rsync</code></td>
+<td><code>cron</code> + <code>dd</code></td>
+<td><code>cron</code> + <code>borg</code></td>
+<td><code>cron</code> + <code>timeshift</code></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Qualidy GmbH
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.kununu.com/de/qualidy" target="_blank" rel="noopener" title="www.kununu.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M311 86.3c12.3-12.7 12-32.9-.7-45.2s-32.9-12-45.2.7C143.4 167.2 76.4 236.3 64 249V64c0-17.7-14.3-32-32-32S0 46.3 0 64v384c0 17.7 14.3 32 32 32s32-14.3 32-32V341l64.7-66.7 133 192c10.1 14.5 30 18.1 44.5 8.1s18.1-30 8.1-44.5L174.1 227.4z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://de.linkedin.com/company/qualidy" target="_blank" rel="noopener" title="de.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.google.com/search?sca_esv=7e6ba2047fcb60f3&uds=AMwkrPtyB8MsmozA4Lwzqy2G2HCu-abqzc6moOG48q3gP5dtjTRzC2Ws0eSwcyLXDfZNuYCrZ7ByIreHLG9th3vKLekPoVeey0tumAbet4cVLQRLzdRFhUbOGbnyp3xo1V0hzzaNmkCN&si=AKbGX_rcuucMgom2rba1cdwsvM2SVoIkP2btyqGMV4t0GuHIs4sGV_1tpuqR0YHG4Rzd9SdJcL-lW6E-2aJA5azZLTKkIOrZ2j2aWwoBkVbdEJ0o0GPcQhs%3D&q=Qualidy+GmbH+Rezensionen&sa=X&ved=2ahUKEwibsbnSgcmFAxXNQvEDHaVYCiAQ3PALegQIRxAF" target="_blank" rel="noopener" title="www.google.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.35 11.1h-9.17v2.73h6.51c-.33 3.81-3.5 5.44-6.5 5.44C8.36 19.27 5 16.25 5 12c0-4.1 3.2-7.27 7.2-7.27 3.09 0 4.9 1.97 4.9 1.97L19 4.72S16.56 2 12.1 2C6.42 2 2.03 6.8 2.03 12c0 5.05 4.13 10 10.22 10 5.35 0 9.25-3.67 9.25-9.09 0-1.15-.15-1.81-.15-1.81"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://qualidy.de" target="_blank" rel="noopener" title="qualidy.de" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M351.9 280H161c2.9 64.5 17.2 123.9 37.5 167.4 11.4 24.5 23.7 41.8 35.1 52.4 11.2 10.5 18.9 12.2 22.9 12.2s11.7-1.7 22.9-12.2c11.4-10.6 23.7-28 35.1-52.4 20.3-43.5 34.6-102.9 37.5-167.4zm-191-48h190.9c-2.8-64.5-17.1-123.9-37.4-167.4-11.4-24.4-23.7-41.8-35.1-52.4C268.1 1.7 260.4 0 256.4 0s-11.7 1.7-22.9 12.2c-11.4 10.6-23.7 28-35.1 52.4-20.3 43.5-34.6 102.9-37.5 167.4m-48 0c3.5-85.6 25.6-165.1 57.9-217.3C78.7 47.3 10.9 131.2 1.5 232zM1.5 280c9.4 100.8 77.2 184.7 169.3 217.3-32.3-52.2-54.4-131.7-57.9-217.3zm398.4 0c-3.5 85.6-25.6 165.1-57.9 217.3 92.1-32.7 159.9-116.5 169.3-217.3zm111.4-48C501.9 131.2 434.1 47.3 342 14.7c32.3 52.2 54.4 131.7 57.9 217.3z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tracking", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

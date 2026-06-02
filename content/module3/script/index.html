@@ -1,0 +1,3316 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>Modul III.4: Befehle in ein Skript umwandeln - Basis Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/logo.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/grid.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/video_admonition.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/python_tutor_admonition.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/mermaid.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="amber" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#modul-iii4-befehle-in-ein-skript-umwandeln" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Basis Wiki" class="md-header__button md-logo" aria-label="Basis Wiki" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Basis Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Modul III.4: Befehle in ein Skript umwandeln
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Basis Wiki" class="md-nav__button md-logo" aria-label="Basis Wiki" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    Basis Wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übersicht
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module I Das Konzept und die Theorie
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Module I Das Konzept und die Theorie
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module1/OpenSource%26Linux-Community/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Open Source & Proprietäre Software
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module1/opensource_lizenzen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Open-Source-Software und Lizenzierung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module1/linux_evolution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Linux Evolution und beliebte Betriebssysteme
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module1/das_linux_betriebssystem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Das Linux-Betriebssystem
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../7.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dateisystem-Hierarchie
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../8.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Netzwerk
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module II Die Grundlagen der Command-Line
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Module II Die Grundlagen der Command-Line
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Grundlagen der Kommandozeile
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Die Kommandozeile zur Hilfe nutzen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Verzeichnissen und Anzeigen von Dateien
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Erstellen, Verschieben und Löschen von Dateien
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module III Automatisierung und Skripting
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Module III Automatisierung und Skripting
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Verknüpfung von Befehlen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Archivierung von Dateien in der Kommandozeile
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Suchen und Extrahieren von Daten aus Dateien
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Befehle in ein Skript umwandeln
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Automatisierung von Aufgaben mit Cron
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fortgeschrittenes Skripting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module IV Systemadministration und Sicherheit
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Module IV Systemadministration und Sicherheit
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Benutzer- und Gruppenverwaltung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Verwalten von Dateiberechtigungen und Eigentum
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Systemüberwachung und Protokollierung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Softwareinstallation und -verwaltung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Netzwerksicherheit und Firewall-Konfiguration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Backup-Strategien und Wiederherstellung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module V Zusammenführung und Zielsetzung
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Module V Zusammenführung und Zielsetzung
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Wichtige Open-Source-Anwendungen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ICT-Fähigkeiten und Arbeiten in Linux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="modul-iii4-befehle-in-ein-skript-umwandeln">Modul III.4: Befehle in ein Skript umwandeln<a class="headerlink" href="#modul-iii4-befehle-in-ein-skript-umwandeln" title="Permanent link">&para;</a></h1>
+<h2 id="einleitung">Einleitung<a class="headerlink" href="#einleitung" title="Permanent link">&para;</a></h2>
+<p>Das <strong>Umwandeln von Befehlen in ein Skript</strong> ist ein entscheidender Schritt, um <strong>wiederkehrende Aufgaben zu automatisieren</strong> und <strong>komplexe Abläufe zu vereinfachen</strong>. Ein Skript ist eine <strong>Sammlung von Befehlen</strong>, die in einer Datei gespeichert und als Programm ausgeführt werden können.</p>
+<p>In diesem Modul lernst du:</p>
+<ul>
+<li>Wie du <strong>einfache Bash-Skripte</strong> erstellst.</li>
+<li>Wie du <strong>Variablen, Bedingungen und Schleifen</strong> in Skripten verwendest.</li>
+<li>Wie du <strong>Benutzereingaben</strong> und <strong>Argumenten</strong> verarbeitest.</li>
+<li><strong>Best Practices</strong> für die Skripterstellung.</li>
+<li><strong>Fehlerbehandlung</strong> und <strong>Debugging</strong> in Skripten.</li>
+</ul>
+<h2 id="1-grundlagen-von-bash-skripten">1. Grundlagen von Bash-Skripten<a class="headerlink" href="#1-grundlagen-von-bash-skripten" title="Permanent link">&para;</a></h2>
+<h3 id="11-was-ist-ein-bash-skript">1.1 Was ist ein Bash-Skript?<a class="headerlink" href="#11-was-ist-ein-bash-skript" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Ein <strong>Bash-Skript</strong> ist eine <strong>Textdatei</strong>, die eine Reihe von <strong>Bash-Befehlen</strong> enthält.</li>
+<li>Die Datei wird von der <strong>Bash-Shell</strong> interpretiert und ausgeführt.</li>
+<li>Skripte ermöglichen:</li>
+<li><strong>Automatisierung</strong> von wiederkehrenden Aufgaben.</li>
+<li><strong>Komplexe Logik</strong> (Bedingungen, Schleifen, Funktionen).</li>
+<li><strong>Wiederverwendbarkeit</strong> von Code.</li>
+</ul>
+<hr />
+<h3 id="12-erstes-skript-erstellen">1.2 Erstes Skript erstellen<a class="headerlink" href="#12-erstes-skript-erstellen" title="Permanent link">&para;</a></h3>
+<h4 id="schritt-1-skriptdatei-erstellen">Schritt 1: Skriptdatei erstellen<a class="headerlink" href="#schritt-1-skriptdatei-erstellen" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Erstelle eine Datei mit der Endung <code>.sh</code> (z. B. <code>mein_skript.sh</code>).</li>
+<li>
+<p>Nutze einen <strong>Texteditor</strong> wie <code>nano</code>, <code>vim</code> oder <code>gedit</code>.</p>
+<p><strong>Beispiel:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>nano mein_skript.sh
+</code></pre></div></td></tr></table></div>
+</li>
+</ul>
+<h4 id="schritt-2-shebang-hinzufugen">Schritt 2: Shebang hinzufügen<a class="headerlink" href="#schritt-2-shebang-hinzufugen" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Die <strong>erste Zeile</strong> eines Skripts sollte die <strong>Shebang</strong> (<code>#!</code>) enthalten, die angibt, welche Shell das Skript ausführen soll.</li>
+<li>Für Bash-Skripte:
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+</code></pre></div></td></tr></table></div></li>
+</ul>
+<h4 id="schritt-3-befehle-hinzufugen">Schritt 3: Befehle hinzufügen<a class="headerlink" href="#schritt-3-befehle-hinzufugen" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Füge die <strong>Befehle</strong> hinzu, die das Skript ausführen soll.</p>
+<p><strong>Beispiel:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Hallo, Welt!&quot;</span>
+date
+</code></pre></div></td></tr></table></div>
+</li>
+</ul>
+<h4 id="schritt-4-skript-ausfuhrbar-machen">Schritt 4: Skript ausführbar machen<a class="headerlink" href="#schritt-4-skript-ausfuhrbar-machen" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Nutze <code>chmod</code>, um die <strong>Ausführungsrechte</strong> zu setzen:
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>chmod +x mein_skript.sh
+</code></pre></div></td></tr></table></div></li>
+</ul>
+<h4 id="schritt-5-skript-ausfuhren">Schritt 5: Skript ausführen<a class="headerlink" href="#schritt-5-skript-ausfuhren" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Führe das Skript aus, indem du den <strong>Pfad zur Datei</strong> angibst:
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>./mein_skript.sh
+</code></pre></div></td></tr></table></div></li>
+<li><code>./</code> bedeutet: "Führe die Datei im <strong>aktuellen Verzeichnis</strong> aus."</li>
+</ul>
+<h3 id="13-beispiel-einfaches-skript">1.3 Beispiel: Einfaches Skript<a class="headerlink" href="#13-beispiel-einfaches-skript" title="Permanent link">&para;</a></h3>
+<p><strong>Skriptname:</strong> <code>begrüßung.sh</code></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1"># Ein einfaches Begrüßungsskript</span>
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Hallo, </span><span class="nv">$USER</span><span class="s2">!&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Heute ist </span><span class="k">$(</span>date<span class="w"> </span>+%A<span class="k">)</span><span class="s2">, der </span><span class="k">$(</span>date<span class="w"> </span>+%d.%m.%Y<span class="k">)</span><span class="s2">.&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Aktuelles Verzeichnis: </span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span><span class="s2">&quot;</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>Ausführung:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>chmod<span class="w"> </span>+x<span class="w"> </span>begrüßung.sh
+./begrüßung.sh
+</code></pre></div></td></tr></table></div>
+<p><strong>Ausgabe:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>Hallo, Sadik!
+Heute ist Montag, der 11.05.2026.
+Aktuelles Verzeichnis: /home/sadik
+</code></pre></div></td></tr></table></div>
+<h2 id="2-variablen-in-skripten">2. Variablen in Skripten<a class="headerlink" href="#2-variablen-in-skripten" title="Permanent link">&para;</a></h2>
+<h3 id="21-was-sind-variablen">2.1 Was sind Variablen?<a class="headerlink" href="#21-was-sind-variablen" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Variablen</strong> speichern <strong>Werte</strong>, die in einem Skript verwendet werden können.</li>
+<li>Variablen werden <strong>ohne Leerzeichen</strong> zugewiesen:
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nv">VARIABLE</span><span class="o">=</span><span class="s2">&quot;Wert&quot;</span>
+</code></pre></div></td></tr></table></div></li>
+<li>Auf Variablen wird mit <code>$</code> zugegriffen:
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="nv">$VARIABLE</span>
+</code></pre></div></td></tr></table></div></li>
+</ul>
+<h3 id="22-arten-von-variablen">2.2 Arten von Variablen<a class="headerlink" href="#22-arten-von-variablen" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Typ</th>
+<th>Beschreibung</th>
+<th>Beispiel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Benutzerdefinierte Variablen</strong></td>
+<td>Vom Skriptautor definiert.</td>
+<td><code>NAME="Sadik"</code></td>
+</tr>
+<tr>
+<td><strong>Umgebungsvariablen</strong></td>
+<td>Vom System bereitgestellt (z. B. <code>$USER</code>, <code>$HOME</code>, <code>$PATH</code>).</td>
+<td><code>echo $HOME</code></td>
+</tr>
+<tr>
+<td><strong>Positionale Parameter</strong></td>
+<td>Argumente, die beim Aufruf des Skripts übergeben werden (<code>$1</code>, <code>$2</code>, ...).</td>
+<td><code>echo $1</code> (erstes Argument)</td>
+</tr>
+<tr>
+<td><strong>Spezielle Variablen</strong></td>
+<td>Von der Shell bereitgestellt (z. B. <code>$0</code>, <code>$#</code>, <code>$?</code>).</td>
+<td><code>echo $0</code> (Name des Skripts)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="23-spezielle-variablen-in-bash">2.3 Spezielle Variablen in Bash<a class="headerlink" href="#23-spezielle-variablen-in-bash" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Beschreibung</th>
+<th>Beispiel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$0</code></td>
+<td>Name des Skripts.</td>
+<td><code>echo "Skriptname: $0"</code></td>
+</tr>
+<tr>
+<td><code>$1</code>, <code>$2</code>, ...</td>
+<td><strong>Positionale Parameter</strong> (Argumente, die beim Aufruf übergeben werden).</td>
+<td><code>echo "Erstes Argument: $1"</code></td>
+</tr>
+<tr>
+<td><code>$#</code></td>
+<td>Anzahl der <strong>übergebenen Argumente</strong>.</td>
+<td><code>echo "Anzahl Argumente: $#"</code></td>
+</tr>
+<tr>
+<td><code>$*</code></td>
+<td>Alle Argumente als <strong>eine Zeichenkette</strong>.</td>
+<td><code>echo "Alle Argumente: $*"</code></td>
+</tr>
+<tr>
+<td><code>$@</code></td>
+<td>Alle Argumente als <strong>einzelne Zeichenketten</strong> (für Schleifen geeignet).</td>
+<td><code>for arg in "$@"; do echo "$arg"; done</code></td>
+</tr>
+<tr>
+<td><code>$?</code></td>
+<td><strong>Rückgabewert</strong> des letzten Befehls (<code>0</code> = Erfolg, <code>≠ 0</code> = Fehler).</td>
+<td><code>if [ $? -eq 0 ]; then echo "Erfolg"; fi</code></td>
+</tr>
+<tr>
+<td><code>$$</code></td>
+<td><strong>Prozess-ID (PID)</strong> des aktuellen Skripts.</td>
+<td><code>echo "PID: $$"</code></td>
+</tr>
+<tr>
+<td><code>$USER</code></td>
+<td>Aktueller Benutzername.</td>
+<td><code>echo "Benutzer: $USER"</code></td>
+</tr>
+<tr>
+<td><code>$HOME</code></td>
+<td>Home-Verzeichnis des aktuellen Benutzers.</td>
+<td><code>echo "Home: $HOME"</code></td>
+</tr>
+<tr>
+<td><code>$PWD</code></td>
+<td>Aktuelles Arbeitsverzeichnis.</td>
+<td><code>echo "Verzeichnis: $PWD"</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="24-praxisbeispiele-mit-variablen">2.4 Praxisbeispiele mit Variablen<a class="headerlink" href="#24-praxisbeispiele-mit-variablen" title="Permanent link">&para;</a></h3>
+<h4 id="beispiel-1-benutzerdefinierte-variablen">Beispiel 1: Benutzerdefinierte Variablen<a class="headerlink" href="#beispiel-1-benutzerdefinierte-variablen" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="nv">NAME</span><span class="o">=</span><span class="s2">&quot;Sadik&quot;</span>
+<span class="nv">ALTER</span><span class="o">=</span><span class="m">30</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Hallo, </span><span class="nv">$NAME</span><span class="s2">! Du bist </span><span class="nv">$ALTER</span><span class="s2"> Jahre alt.&quot;</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="beispiel-2-umgebungsvariablen">Beispiel 2: Umgebungsvariablen<a class="headerlink" href="#beispiel-2-umgebungsvariablen" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Benutzer: </span><span class="nv">$USER</span><span class="s2">&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Home-Verzeichnis: </span><span class="nv">$HOME</span><span class="s2">&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Aktuelles Verzeichnis: </span><span class="nv">$PWD</span><span class="s2">&quot;</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="beispiel-3-positionale-parameter">Beispiel 3: Positionale Parameter<a class="headerlink" href="#beispiel-3-positionale-parameter" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Skriptname: </span><span class="nv">$0</span><span class="s2">&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Erstes Argument: </span><span class="nv">$1</span><span class="s2">&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Zweites Argument: </span><span class="nv">$2</span><span class="s2">&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Anzahl Argumente: </span><span class="nv">$#</span><span class="s2">&quot;</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>Aufruf:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>./skript.sh<span class="w"> </span>Hallo<span class="w"> </span>Welt
+</code></pre></div></td></tr></table></div>
+<p><strong>Ausgabe:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>Skriptname: ./skript.sh
+Erstes Argument: Hallo
+Zweites Argument: Welt
+Anzahl Argumente: 2
+</code></pre></div></td></tr></table></div>
+<h4 id="beispiel-4-ruckgabewert-prufen">Beispiel 4: Rückgabewert prüfen<a class="headerlink" href="#beispiel-4-ruckgabewert-prufen" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+ls<span class="w"> </span>/nonexistent
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$?</span><span class="w"> </span>-eq<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Verzeichnis existiert.&quot;</span>
+<span class="k">else</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Verzeichnis existiert nicht.&quot;</span>
+<span class="k">fi</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="25-variablen-und-benutzereingaben">2.5 Variablen und Benutzereingaben<a class="headerlink" href="#25-variablen-und-benutzereingaben" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Mit <code>read</code> kannst du <strong>Benutzereingaben</strong> in einer Variablen speichern.</li>
+</ul>
+<p><strong>Beispiel:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Wie heißt du?&quot;</span>
+<span class="nb">read</span><span class="w"> </span>NAME
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Hallo, </span><span class="nv">$NAME</span><span class="s2">!&quot;</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>Beispiel mit Passwortabfrage (unsichtbare Eingabe):</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="nb">read</span><span class="w"> </span>-s<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Gib dein Passwort ein: &quot;</span><span class="w"> </span>PASSWORT
+<span class="nb">echo</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Passwort eingegeben (wird nicht angezeigt).&quot;</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="3-bedingungen-in-skripten">3. Bedingungen in Skripten<a class="headerlink" href="#3-bedingungen-in-skripten" title="Permanent link">&para;</a></h2>
+<h3 id="31-if-bedingungen">3.1 <code>if</code>-Bedingungen<a class="headerlink" href="#31-if-bedingungen" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>**if</code>-Bedingungen<strong> ermöglichen es, </strong>verschiedene Aktionen** basierend auf einer Bedingung auszuführen.</li>
+</ul>
+<h4 id="grundlegende-syntax">Grundlegende Syntax:<a class="headerlink" href="#grundlegende-syntax" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>Bedingung<span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">  </span><span class="c1"># Befehle, wenn Bedingung wahr ist</span>
+<span class="k">elif</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>Bedingung<span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">  </span><span class="c1"># Befehle, wenn die erste Bedingung falsch ist, aber die zweite wahr ist</span>
+<span class="k">else</span>
+<span class="w">  </span><span class="c1"># Befehle, wenn keine Bedingung wahr ist</span>
+<span class="k">fi</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="32-vergleichsoperatoren">3.2 Vergleichsoperatoren<a class="headerlink" href="#32-vergleichsoperatoren" title="Permanent link">&para;</a></h3>
+<h4 id="fur-zeichenketten">Für <strong>Zeichenketten</strong>:<a class="headerlink" href="#fur-zeichenketten" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Beschreibung</th>
+<th>Beispiel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>=</code></td>
+<td><strong>Gleich</strong> (Achtung: **kein <code>==**</code> in Bash!).</td>
+<td><code>[ "$A" = "$B" ]</code></td>
+</tr>
+<tr>
+<td><code>!=</code></td>
+<td><strong>Ungleich</strong>.</td>
+<td><code>[ "$A" != "$B" ]</code></td>
+</tr>
+<tr>
+<td><code>-z</code></td>
+<td><strong>Zeichenkette ist leer</strong>.</td>
+<td><code>[ -z "$A" ]</code></td>
+</tr>
+<tr>
+<td><code>-n</code></td>
+<td><strong>Zeichenkette ist nicht leer</strong>.</td>
+<td><code>[ -n "$A" ]</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="fur-zahlen">Für <strong>Zahlen</strong>:<a class="headerlink" href="#fur-zahlen" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Beschreibung</th>
+<th>Beispiel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-eq</code></td>
+<td><strong>Gleich</strong>.</td>
+<td><code>[ $A -eq $B ]</code></td>
+</tr>
+<tr>
+<td><code>-ne</code></td>
+<td><strong>Ungleich</strong>.</td>
+<td><code>[ $A -ne $B ]</code></td>
+</tr>
+<tr>
+<td><code>-lt</code></td>
+<td><strong>Kleiner als</strong>.</td>
+<td><code>[ $A -lt $B ]</code></td>
+</tr>
+<tr>
+<td><code>-le</code></td>
+<td><strong>Kleiner oder gleich</strong>.</td>
+<td><code>[ $A -le $B ]</code></td>
+</tr>
+<tr>
+<td><code>-gt</code></td>
+<td><strong>Größer als</strong>.</td>
+<td><code>[ $A -gt $B ]</code></td>
+</tr>
+<tr>
+<td><code>-ge</code></td>
+<td><strong>Größer oder gleich</strong>.</td>
+<td><code>[ $A -ge $B ]</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="fur-dateien">Für <strong>Dateien</strong>:<a class="headerlink" href="#fur-dateien" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Beschreibung</th>
+<th>Beispiel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-e</code></td>
+<td><strong>Datei existiert</strong>.</td>
+<td><code>[ -e "$DATEI" ]</code></td>
+</tr>
+<tr>
+<td><code>-f</code></td>
+<td><strong>Datei existiert und ist eine reguläre Datei</strong>.</td>
+<td><code>[ -f "$DATEI" ]</code></td>
+</tr>
+<tr>
+<td><code>-d</code></td>
+<td><strong>Datei existiert und ist ein Verzeichnis</strong>.</td>
+<td><code>[ -d "$VERZEICHNIS" ]</code></td>
+</tr>
+<tr>
+<td><code>-s</code></td>
+<td><strong>Datei existiert und ist nicht leer</strong>.</td>
+<td><code>[ -s "$DATEI" ]</code></td>
+</tr>
+<tr>
+<td><code>-r</code></td>
+<td><strong>Datei existiert und ist lesbar</strong>.</td>
+<td><code>[ -r "$DATEI" ]</code></td>
+</tr>
+<tr>
+<td><code>-w</code></td>
+<td><strong>Datei existiert und ist beschreibbar</strong>.</td>
+<td><code>[ -w "$DATEI" ]</code></td>
+</tr>
+<tr>
+<td><code>-x</code></td>
+<td><strong>Datei existiert und ist ausführbar</strong>.</td>
+<td><code>[ -x "$DATEI" ]</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="33-logische-operatoren">3.3 Logische Operatoren<a class="headerlink" href="#33-logische-operatoren" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Beschreibung</th>
+<th>Beispiel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&amp;&amp;</code></td>
+<td><strong>Logisches UND</strong>.</td>
+<td><code>[ $A -gt 0 ] &amp;&amp; [ $B -lt 10 ]</code></td>
+</tr>
+<tr>
+<td><code>||</code></td>
+<td><strong>Logisches ODER</strong>.</td>
+<td><code>[ $A -eq 0 ] || [ $B -eq 0 ]</code></td>
+</tr>
+<tr>
+<td><code>!</code></td>
+<td><strong>Logisches NICHT</strong>.</td>
+<td><code>[ ! -f "$DATEI" ]</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="34-praxisbeispiele-mit-bedingungen">3.4 Praxisbeispiele mit Bedingungen<a class="headerlink" href="#34-praxisbeispiele-mit-bedingungen" title="Permanent link">&para;</a></h3>
+<h4 id="beispiel-1-einfache-if-bedingung">Beispiel 1: Einfache <code>if</code>-Bedingung<a class="headerlink" href="#beispiel-1-einfache-if-bedingung" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$USER</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;root&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Du bist der Root-Benutzer.&quot;</span>
+<span class="k">else</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Du bist kein Root-Benutzer.&quot;</span>
+<span class="k">fi</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="beispiel-2-zahlen-vergleichen">Beispiel 2: Zahlen vergleichen<a class="headerlink" href="#beispiel-2-zahlen-vergleichen" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="nv">A</span><span class="o">=</span><span class="m">10</span>
+<span class="nv">B</span><span class="o">=</span><span class="m">20</span>
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$A</span><span class="w"> </span>-lt<span class="w"> </span><span class="nv">$B</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$A</span><span class="s2"> ist kleiner als </span><span class="nv">$B</span><span class="s2">.&quot;</span>
+<span class="k">elif</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$A</span><span class="w"> </span>-eq<span class="w"> </span><span class="nv">$B</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$A</span><span class="s2"> ist gleich </span><span class="nv">$B</span><span class="s2">.&quot;</span>
+<span class="k">else</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$A</span><span class="s2"> ist größer als </span><span class="nv">$B</span><span class="s2">.&quot;</span>
+<span class="k">fi</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="beispiel-3-datei-prufen">Beispiel 3: Datei prüfen<a class="headerlink" href="#beispiel-3-datei-prufen" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="nv">DATEI</span><span class="o">=</span><span class="s2">&quot;/etc/passwd&quot;</span>
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-f<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$DATEI</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$DATEI</span><span class="s2"> existiert und ist eine Datei.&quot;</span>
+<span class="k">elif</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-d<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$DATEI</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$DATEI</span><span class="s2"> existiert und ist ein Verzeichnis.&quot;</span>
+<span class="k">else</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$DATEI</span><span class="s2"> existiert nicht.&quot;</span>
+<span class="k">fi</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="beispiel-4-logische-operatoren">Beispiel 4: Logische Operatoren<a class="headerlink" href="#beispiel-4-logische-operatoren" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="nv">ALTER</span><span class="o">=</span><span class="m">25</span>
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$ALTER</span><span class="w"> </span>-ge<span class="w"> </span><span class="m">18</span><span class="w"> </span><span class="o">]</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$ALTER</span><span class="w"> </span>-le<span class="w"> </span><span class="m">65</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Du bist im erwerbsfähigen Alter.&quot;</span>
+<span class="k">else</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Du bist nicht im erwerbsfähigen Alter.&quot;</span>
+<span class="k">fi</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="beispiel-5-benutzereingabe-prufen">Beispiel 5: Benutzereingabe prüfen<a class="headerlink" href="#beispiel-5-benutzereingabe-prufen" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="nb">read</span><span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Gib eine Zahl ein: &quot;</span><span class="w"> </span>ZAHL
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$ZAHL</span><span class="w"> </span>-gt<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$ZAHL</span><span class="s2"> ist positiv.&quot;</span>
+<span class="k">elif</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$ZAHL</span><span class="w"> </span>-lt<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$ZAHL</span><span class="s2"> ist negativ.&quot;</span>
+<span class="k">else</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$ZAHL</span><span class="s2"> ist null.&quot;</span>
+<span class="k">fi</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="35-case-anweisungen">3.5 <code>case</code>-Anweisungen<a class="headerlink" href="#35-case-anweisungen" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>**case</code>-Anweisungen<strong> sind eine Alternative zu <code>if-elif-else</code> für </strong>mehrere Bedingungen**.</li>
+</ul>
+<h4 id="grundlegende-syntax_1">Grundlegende Syntax:<a class="headerlink" href="#grundlegende-syntax_1" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">case</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$VARIABLE</span><span class="s2">&quot;</span><span class="w"> </span><span class="k">in</span>
+<span class="w">  </span>Muster1<span class="o">)</span>
+<span class="w">    </span><span class="c1"># Befehle für Muster1</span>
+<span class="w">    </span><span class="p">;;</span>
+<span class="w">  </span>Muster2<span class="o">)</span>
+<span class="w">    </span><span class="c1"># Befehle für Muster2</span>
+<span class="w">    </span><span class="p">;;</span>
+<span class="w">  </span>*<span class="o">)</span>
+<span class="w">    </span><span class="c1"># Standardfall (wenn kein Muster passt)</span>
+<span class="w">    </span><span class="p">;;</span>
+<span class="k">esac</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="beispiel">Beispiel:<a class="headerlink" href="#beispiel" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="nb">read</span><span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Wähle eine Option (a/b/c): &quot;</span><span class="w"> </span>OPTION
+<span class="k">case</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$OPTION</span><span class="s2">&quot;</span><span class="w"> </span><span class="k">in</span>
+<span class="w">  </span>a<span class="o">)</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Du hast Option A gewählt.&quot;</span>
+<span class="w">    </span><span class="p">;;</span>
+<span class="w">  </span>b<span class="o">)</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Du hast Option B gewählt.&quot;</span>
+<span class="w">    </span><span class="p">;;</span>
+<span class="w">  </span>c<span class="o">)</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Du hast Option C gewählt.&quot;</span>
+<span class="w">    </span><span class="p">;;</span>
+<span class="w">  </span>*<span class="o">)</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Ungültige Option.&quot;</span>
+<span class="w">    </span><span class="p">;;</span>
+<span class="k">esac</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="4-schleifen-in-skripten">4. Schleifen in Skripten<a class="headerlink" href="#4-schleifen-in-skripten" title="Permanent link">&para;</a></h2>
+<h3 id="41-for-schleifen">4.1 <code>for</code>-Schleifen<a class="headerlink" href="#41-for-schleifen" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>for</code>-Schleifen<strong> führen eine </strong>Aktion für jedes Element in einer Liste** aus.</li>
+</ul>
+<h4 id="grundlegende-syntax_2">Grundlegende Syntax:<a class="headerlink" href="#grundlegende-syntax_2" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span><span class="w"> </span>VARIABLE<span class="w"> </span><span class="k">in</span><span class="w"> </span>Liste<span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">  </span><span class="c1"># Befehle</span>
+<span class="k">done</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="beispiel-1-einfache-for-schleife">Beispiel 1: Einfache <code>for</code>-Schleife<a class="headerlink" href="#beispiel-1-einfache-for-schleife" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="k">for</span><span class="w"> </span>NAME<span class="w"> </span><span class="k">in</span><span class="w"> </span>Alice<span class="w"> </span>Bob<span class="w"> </span>Charlie<span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Hallo, </span><span class="nv">$NAME</span><span class="s2">!&quot;</span>
+<span class="k">done</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="beispiel-2-for-schleife-mit-bereich">Beispiel 2: <code>for</code>-Schleife mit Bereich<a class="headerlink" href="#beispiel-2-for-schleife-mit-bereich" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="o">{</span><span class="m">1</span>..5<span class="o">}</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Zahl: </span><span class="nv">$i</span><span class="s2">&quot;</span>
+<span class="k">done</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="beispiel-3-for-schleife-mit-dateien">Beispiel 3: <code>for</code>-Schleife mit Dateien<a class="headerlink" href="#beispiel-3-for-schleife-mit-dateien" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="k">for</span><span class="w"> </span>DATEI<span class="w"> </span><span class="k">in</span><span class="w"> </span>*.txt<span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Verarbeite Datei: </span><span class="nv">$DATEI</span><span class="s2">&quot;</span>
+<span class="k">done</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="beispiel-4-for-schleife-mit-seq">Beispiel 4: <code>for</code>-Schleife mit <code>seq</code><a class="headerlink" href="#beispiel-4-for-schleife-mit-seq" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="k">$(</span>seq<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">10</span><span class="k">)</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Zahl: </span><span class="nv">$i</span><span class="s2">&quot;</span>
+<span class="k">done</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="beispiel-5-for-schleife-mit-positionalen-parametern">Beispiel 5: <code>for</code>-Schleife mit Positionalen Parametern<a class="headerlink" href="#beispiel-5-for-schleife-mit-positionalen-parametern" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="k">for</span><span class="w"> </span>ARG<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$@</span><span class="s2">&quot;</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Argument: </span><span class="nv">$ARG</span><span class="s2">&quot;</span>
+<span class="k">done</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="42-while-schleifen">4.2 <code>while</code>-Schleifen<a class="headerlink" href="#42-while-schleifen" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>while</code>-Schleifen<strong> führen eine </strong>Aktion aus, solange eine Bedingung wahr ist**.</li>
+</ul>
+<h4 id="grundlegende-syntax_3">Grundlegende Syntax:<a class="headerlink" href="#grundlegende-syntax_3" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">while</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>Bedingung<span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">  </span><span class="c1"># Befehle</span>
+<span class="k">done</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="beispiel-1-einfache-while-schleife">Beispiel 1: Einfache <code>while</code>-Schleife<a class="headerlink" href="#beispiel-1-einfache-while-schleife" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="nv">ZAHL</span><span class="o">=</span><span class="m">1</span>
+<span class="k">while</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$ZAHL</span><span class="w"> </span>-le<span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Zahl: </span><span class="nv">$ZAHL</span><span class="s2">&quot;</span>
+<span class="w">  </span><span class="nv">ZAHL</span><span class="o">=</span><span class="k">$((</span><span class="nv">ZAHL</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span><span class="k">))</span>
+<span class="k">done</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="beispiel-2-while-schleife-mit-benutzereingabe">Beispiel 2: <code>while</code>-Schleife mit Benutzereingabe<a class="headerlink" href="#beispiel-2-while-schleife-mit-benutzereingabe" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="nb">read</span><span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Gib eine Zahl ein (0 zum Beenden): &quot;</span><span class="w"> </span>ZAHL
+<span class="k">while</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$ZAHL</span><span class="w"> </span>-ne<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Du hast </span><span class="nv">$ZAHL</span><span class="s2"> eingegeben.&quot;</span>
+<span class="w">  </span><span class="nb">read</span><span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Gib eine weitere Zahl ein (0 zum Beenden): &quot;</span><span class="w"> </span>ZAHL
+<span class="k">done</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Programm beendet.&quot;</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="beispiel-3-while-schleife-mit-datei-inhalt">Beispiel 3: <code>while</code>-Schleife mit Datei-Inhalt<a class="headerlink" href="#beispiel-3-while-schleife-mit-datei-inhalt" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="k">while</span><span class="w"> </span><span class="nb">read</span><span class="w"> </span>ZEILE<span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Zeile: </span><span class="nv">$ZEILE</span><span class="s2">&quot;</span>
+<span class="k">done</span><span class="w"> </span>&lt;<span class="w"> </span>datei.txt
+</code></pre></div></td></tr></table></div>
+<h3 id="43-until-schleifen">4.3 <code>until</code>-Schleifen<a class="headerlink" href="#43-until-schleifen" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>until</code>-Schleifen<strong> führen eine </strong>Aktion aus, bis eine Bedingung wahr ist** (Gegenteil von <code>while</code>).</li>
+</ul>
+<h4 id="grundlegende-syntax_4">Grundlegende Syntax:<a class="headerlink" href="#grundlegende-syntax_4" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">until</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>Bedingung<span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">  </span><span class="c1"># Befehle</span>
+<span class="k">done</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="beispiel_1">Beispiel:<a class="headerlink" href="#beispiel_1" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="nv">ZAHL</span><span class="o">=</span><span class="m">1</span>
+<span class="k">until</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$ZAHL</span><span class="w"> </span>-gt<span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Zahl: </span><span class="nv">$ZAHL</span><span class="s2">&quot;</span>
+<span class="w">  </span><span class="nv">ZAHL</span><span class="o">=</span><span class="k">$((</span><span class="nv">ZAHL</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span><span class="k">))</span>
+<span class="k">done</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="44-schleifen-steuern">4.4 Schleifen steuern<a class="headerlink" href="#44-schleifen-steuern" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Befehl</th>
+<th>Beschreibung</th>
+<th>Beispiel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>break</code></td>
+<td><strong>Beendet die Schleife</strong> sofort.</td>
+<td><code>if [ $i -eq 3 ]; then break; fi</code></td>
+</tr>
+<tr>
+<td><code>continue</code></td>
+<td><strong>Überspringt den Rest der aktuellen Iteration</strong> und fährt mit der nächsten fort.</td>
+<td><code>if [ $i -eq 3 ]; then continue; fi</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="beispiel_2">Beispiel:<a class="headerlink" href="#beispiel_2" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="o">{</span><span class="m">1</span>..5<span class="o">}</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$i</span><span class="w"> </span>-eq<span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="k">continue</span><span class="w">  </span><span class="c1"># Überspringt die 3</span>
+<span class="w">  </span><span class="k">fi</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Zahl: </span><span class="nv">$i</span><span class="s2">&quot;</span>
+<span class="k">done</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="5-funktionen-in-skripten">5. Funktionen in Skripten<a class="headerlink" href="#5-funktionen-in-skripten" title="Permanent link">&para;</a></h2>
+<h3 id="51-was-sind-funktionen">5.1 Was sind Funktionen?<a class="headerlink" href="#51-was-sind-funktionen" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Funktionen</strong> sind <strong>wiederverwendbare Codeblöcke</strong>, die du in deinem Skript definieren kannst.</li>
+<li>Funktionen ermöglichen:</li>
+<li><strong>Modularisierung</strong> von Code.</li>
+<li><strong>Wiederverwendbarkeit</strong> von Logik.</li>
+<li><strong>Bessere Lesbarkeit</strong> des Skripts.</li>
+</ul>
+<h3 id="52-grundlegende-syntax-von-funktionen">5.2 Grundlegende Syntax von Funktionen<a class="headerlink" href="#52-grundlegende-syntax-von-funktionen" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>funktionsname<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">  </span><span class="c1"># Befehle</span>
+<span class="o">}</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="beispiel-1-einfache-funktion">Beispiel 1: Einfache Funktion<a class="headerlink" href="#beispiel-1-einfache-funktion" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+begrüßen<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Hallo, </span><span class="nv">$1</span><span class="s2">!&quot;</span>
+<span class="o">}</span>
+
+begrüßen<span class="w"> </span><span class="s2">&quot;Sadik&quot;</span>
+begrüßen<span class="w"> </span><span class="s2">&quot;Alice&quot;</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="beispiel-2-funktion-mit-ruckgabewert">Beispiel 2: Funktion mit Rückgabewert<a class="headerlink" href="#beispiel-2-funktion-mit-ruckgabewert" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+addieren<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">  </span><span class="nb">local</span><span class="w"> </span><span class="nv">ERGEBNIS</span><span class="o">=</span><span class="k">$((</span><span class="w"> </span><span class="nv">$1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">$2</span><span class="w"> </span><span class="k">))</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$ERGEBNIS</span>
+<span class="o">}</span>
+
+<span class="nv">SUMME</span><span class="o">=</span><span class="k">$(</span>addieren<span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="m">3</span><span class="k">)</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;5 + 3 = </span><span class="nv">$SUMME</span><span class="s2">&quot;</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+<li><code>local</code>: Deklariert eine <strong>lokale Variable</strong>, die nur innerhalb der Funktion gültig ist.</li>
+<li><code>echo</code>: Gibt den Rückgabewert der Funktion zurück.</li>
+</ul>
+<h4 id="beispiel-3-funktion-mit-standardwerten">Beispiel 3: Funktion mit Standardwerten<a class="headerlink" href="#beispiel-3-funktion-mit-standardwerten" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+begrüßen<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">  </span><span class="nb">local</span><span class="w"> </span><span class="nv">NAME</span><span class="o">=</span><span class="si">${</span><span class="nv">1</span><span class="k">:-</span><span class="s2">&quot;Gast&quot;</span><span class="si">}</span><span class="w">  </span><span class="c1"># Standardwert: &quot;Gast&quot;</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Hallo, </span><span class="nv">$NAME</span><span class="s2">!&quot;</span>
+<span class="o">}</span>
+
+begrüßen<span class="w"> </span><span class="s2">&quot;Sadik&quot;</span>
+begrüßen<span class="w">  </span><span class="c1"># Gibt &quot;Hallo, Gast!&quot; aus</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="53-funktionen-mit-ruckgabewerten">5.3 Funktionen mit Rückgabewerten<a class="headerlink" href="#53-funktionen-mit-ruckgabewerten" title="Permanent link">&para;</a></h3>
+<ul>
+<li>In Bash geben Funktionen <strong>keinen Rückgabewert</strong> wie in anderen Programmiersprachen zurück.</li>
+<li>Stattdessen kannst du:</li>
+<li><code>**echo**</code> verwenden, um einen Wert zurückzugeben.</li>
+<li><code>**return**</code> verwenden, um einen <strong>Exit-Code</strong> (0-255) zurückzugeben.</li>
+</ul>
+<h4 id="beispiel_3">Beispiel:<a class="headerlink" href="#beispiel_3" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+ist_gerade<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="k">$((</span><span class="w"> </span><span class="nv">$1</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="k">))</span><span class="w"> </span>-eq<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Ja&quot;</span>
+<span class="w">  </span><span class="k">else</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Nein&quot;</span>
+<span class="w">  </span><span class="k">fi</span>
+<span class="o">}</span>
+
+<span class="nv">ERGEBNIS</span><span class="o">=</span><span class="k">$(</span>ist_gerade<span class="w"> </span><span class="m">4</span><span class="k">)</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Ist 4 gerade? </span><span class="nv">$ERGEBNIS</span><span class="s2">&quot;</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="6-argumente-und-optionen-verarbeiten">6. Argumente und Optionen verarbeiten<a class="headerlink" href="#6-argumente-und-optionen-verarbeiten" title="Permanent link">&para;</a></h2>
+<h3 id="61-positionale-parameter">6.1 Positionale Parameter<a class="headerlink" href="#61-positionale-parameter" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Positionale Parameter</strong> (<code>$1</code>, <code>$2</code>, ...) sind die <strong>Argumente</strong>, die beim Aufruf des Skripts übergeben werden.</li>
+</ul>
+<h4 id="beispiel_4">Beispiel:<a class="headerlink" href="#beispiel_4" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Skriptname: </span><span class="nv">$0</span><span class="s2">&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Erstes Argument: </span><span class="nv">$1</span><span class="s2">&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Zweites Argument: </span><span class="nv">$2</span><span class="s2">&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Alle Argumente: </span><span class="nv">$@</span><span class="s2">&quot;</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>Aufruf:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>./skript.sh<span class="w"> </span>Hallo<span class="w"> </span>Welt
+</code></pre></div></td></tr></table></div>
+<h3 id="62-getopts-fur-optionen">6.2 <code>getopts</code> für Optionen<a class="headerlink" href="#62-getopts-fur-optionen" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>**getopts**</code> ermöglicht das <strong>Parsen von Kommandozeilenoptionen</strong> (z. B. <code>-h</code>, <code>-v</code>).</li>
+</ul>
+<h4 id="grundlegende-syntax_5">Grundlegende Syntax:<a class="headerlink" href="#grundlegende-syntax_5" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">while</span><span class="w"> </span><span class="nb">getopts</span><span class="w"> </span><span class="s2">&quot;Optionen&quot;</span><span class="w"> </span>OPT<span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$OPT</span><span class="s2">&quot;</span><span class="w"> </span><span class="k">in</span>
+<span class="w">    </span>OPTION1<span class="o">)</span>
+<span class="w">      </span><span class="c1"># Befehle für Option1</span>
+<span class="w">      </span><span class="p">;;</span>
+<span class="w">    </span>OPTION2<span class="o">)</span>
+<span class="w">      </span><span class="c1"># Befehle für Option2</span>
+<span class="w">      </span><span class="p">;;</span>
+<span class="w">    </span>*<span class="o">)</span>
+<span class="w">      </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Unbekannte Option: </span><span class="nv">$OPT</span><span class="s2">&quot;</span>
+<span class="w">      </span><span class="p">;;</span>
+<span class="w">  </span><span class="k">esac</span>
+<span class="k">done</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="beispiel_5">Beispiel:<a class="headerlink" href="#beispiel_5" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="k">while</span><span class="w"> </span><span class="nb">getopts</span><span class="w"> </span><span class="s2">&quot;hvn:&quot;</span><span class="w"> </span>OPT<span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$OPT</span><span class="s2">&quot;</span><span class="w"> </span><span class="k">in</span>
+<span class="w">    </span>h<span class="o">)</span>
+<span class="w">      </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Hilfemenü:&quot;</span>
+<span class="w">      </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;  -h: Hilfe anzeigen&quot;</span>
+<span class="w">      </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;  -v: Verbose-Modus aktivieren&quot;</span>
+<span class="w">      </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;  -n NAME: Name angeben&quot;</span>
+<span class="w">      </span><span class="nb">exit</span><span class="w"> </span><span class="m">0</span>
+<span class="w">      </span><span class="p">;;</span>
+<span class="w">    </span>v<span class="o">)</span>
+<span class="w">      </span><span class="nv">VERBOSE</span><span class="o">=</span><span class="m">1</span>
+<span class="w">      </span><span class="p">;;</span>
+<span class="w">    </span>n<span class="o">)</span>
+<span class="w">      </span><span class="nv">NAME</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$OPTARG</span><span class="s2">&quot;</span>
+<span class="w">      </span><span class="p">;;</span>
+<span class="w">    </span>*<span class="o">)</span>
+<span class="w">      </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Unbekannte Option: </span><span class="nv">$OPT</span><span class="s2">&quot;</span>
+<span class="w">      </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="w">      </span><span class="p">;;</span>
+<span class="w">  </span><span class="k">esac</span>
+<span class="k">done</span>
+
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$VERBOSE</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Verbose-Modus aktiviert.&quot;</span>
+<span class="k">fi</span>
+
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$NAME</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Hallo, </span><span class="nv">$NAME</span><span class="s2">!&quot;</span>
+<span class="k">else</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Kein Name angegeben.&quot;</span>
+<span class="k">fi</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>Aufruf:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>./skript.sh<span class="w"> </span>-h
+./skript.sh<span class="w"> </span>-v<span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;Sadik&quot;</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="63-shift-fur-die-verarbeitung-aller-argumente">6.3 <code>shift</code> für die Verarbeitung aller Argumente<a class="headerlink" href="#63-shift-fur-die-verarbeitung-aller-argumente" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>**shift**</code> verschiebt die <strong>positionalen Parameter</strong> um eine Position nach links.</li>
+<li>Nützlich, um <strong>alle Argumente in einer Schleife</strong> zu verarbeiten.</li>
+</ul>
+<h4 id="beispiel_6">Beispiel:<a class="headerlink" href="#beispiel_6" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="k">while</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$#</span><span class="w"> </span>-gt<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Argument: </span><span class="nv">$1</span><span class="s2">&quot;</span>
+<span class="w">  </span><span class="nb">shift</span>
+<span class="k">done</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="7-fehlerbehandlung-und-debugging">7. Fehlerbehandlung und Debugging<a class="headerlink" href="#7-fehlerbehandlung-und-debugging" title="Permanent link">&para;</a></h2>
+<h3 id="71-ruckgabewerte-prufen">7.1 Rückgabewerte prüfen<a class="headerlink" href="#71-ruckgabewerte-prufen" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Jeder Befehl gibt einen <strong>Rückgabewert</strong> (<code>Exit-Code</code>) zurück:</li>
+<li><code>0</code>: Erfolg.</li>
+<li><code>1-255</code>: Fehler (je nach Befehl).</li>
+</ul>
+<h4 id="beispiel_7">Beispiel:<a class="headerlink" href="#beispiel_7" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>!<span class="w"> </span>-f<span class="w"> </span><span class="s2">&quot;datei.txt&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Fehler: datei.txt existiert nicht.&quot;</span>
+<span class="w">  </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="k">fi</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="72-set-e-fur-automatische-fehlerbehandlung">7.2 <code>set -e</code> für automatische Fehlerbehandlung<a class="headerlink" href="#72-set-e-fur-automatische-fehlerbehandlung" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>**set -e**</code> beendet das Skript <strong>sofort</strong>, wenn ein Befehl einen Fehler zurückgibt.</li>
+</ul>
+<h4 id="beispiel_8">Beispiel:<a class="headerlink" href="#beispiel_8" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="nb">set</span><span class="w"> </span>-e<span class="w">  </span><span class="c1"># Beende das Skript bei Fehlern</span>
+
+<span class="c1"># Dieser Befehl wird nur ausgeführt, wenn der vorherige erfolgreich war</span>
+ls<span class="w"> </span>/nonexistent
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Diese Zeile wird nicht ausgeführt.&quot;</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="73-trap-fur-signalbehandlung">7.3 <code>trap</code> für Signalbehandlung<a class="headerlink" href="#73-trap-fur-signalbehandlung" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>**trap**</code> ermöglicht es, <strong>Signale</strong> (z. B. <code>SIGINT</code> für <code>Strg+C</code>) abzufangen und zu behandeln.</li>
+</ul>
+<h4 id="beispiel_9">Beispiel:<a class="headerlink" href="#beispiel_9" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1"># Fange Strg+C ab</span>
+<span class="nb">trap</span><span class="w"> </span><span class="s1">&#39;echo &quot;Skript wurde durch Strg+C abgebrochen.&quot;; exit 1&#39;</span><span class="w"> </span>SIGINT
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Drücke Strg+C, um das Skript abzubrechen.&quot;</span>
+sleep<span class="w"> </span><span class="m">10</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Skript wurde erfolgreich beendet.&quot;</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="74-debugging-mit-set-x">7.4 Debugging mit <code>set -x</code><a class="headerlink" href="#74-debugging-mit-set-x" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>**set -x**</code> aktiviert den <strong>Debug-Modus</strong>, der jeden ausgeführten Befehl anzeigt.</li>
+</ul>
+<h4 id="beispiel_10">Beispiel:<a class="headerlink" href="#beispiel_10" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="nb">set</span><span class="w"> </span>-x<span class="w">  </span><span class="c1"># Debug-Modus aktivieren</span>
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Hallo&quot;</span>
+<span class="nv">DATEI</span><span class="o">=</span><span class="s2">&quot;datei.txt&quot;</span>
+ls<span class="w"> </span><span class="nv">$DATEI</span>
+
+<span class="nb">set</span><span class="w"> </span>+x<span class="w">  </span><span class="c1"># Debug-Modus deaktivieren</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Debug-Modus deaktiviert.&quot;</span>
+</code></pre></div></td></tr></table></div>
+<p>-</p>
+<h3 id="75-logging-in-skripten">7.5 Logging in Skripten<a class="headerlink" href="#75-logging-in-skripten" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Nutze <code>**echo</code> oder <code>logger**</code>, um <strong>Log-Nachrichten</strong> in dein Skript einzufügen.</li>
+</ul>
+<h4 id="beispiel_11">Beispiel:<a class="headerlink" href="#beispiel_11" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="nv">LOG_DATEI</span><span class="o">=</span><span class="s2">&quot;skript.log&quot;</span>
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Skript gestartet: </span><span class="k">$(</span>date<span class="k">)</span><span class="s2">&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$LOG_DATEI</span><span class="s2">&quot;</span>
+
+<span class="c1"># Skript-Logik hier</span>
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Skript beendet: </span><span class="k">$(</span>date<span class="k">)</span><span class="s2">&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$LOG_DATEI</span><span class="s2">&quot;</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="8-praktische-beispiele-befehle-in-skripte-umwandeln">8. Praktische Beispiele: Befehle in Skripte umwandeln<a class="headerlink" href="#8-praktische-beispiele-befehle-in-skripte-umwandeln" title="Permanent link">&para;</a></h2>
+<h3 id="81-beispiel-1-backup-skript">8.1 Beispiel 1: Backup-Skript<a class="headerlink" href="#81-beispiel-1-backup-skript" title="Permanent link">&para;</a></h3>
+<p><strong>Aufgabe:</strong> Erstelle ein Skript, das ein <strong>Backup eines Verzeichnisses</strong> erstellt und in ein Zielverzeichnis kopiert.</p>
+<p><strong>Skriptname:</strong> <code>backup.sh</code></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="c1"># Überprüfe, ob Quelle und Ziel angegeben wurden</span>
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$#</span><span class="w"> </span>-ne<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Verwendung: </span><span class="nv">$0</span><span class="s2"> &lt;Quelle&gt; &lt;Ziel&gt;&quot;</span>
+<span class="w">  </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="k">fi</span>
+
+<span class="nv">QUELLE</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span>
+<span class="nv">ZIEL</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$2</span><span class="s2">&quot;</span>
+<span class="nv">DATUM</span><span class="o">=</span><span class="k">$(</span>date<span class="w"> </span>+%Y-%m-%d_%H-%M-%S<span class="k">)</span>
+<span class="nv">BACKUP_NAME</span><span class="o">=</span><span class="s2">&quot;backup_</span><span class="nv">$DATUM</span><span class="s2">.tar.gz&quot;</span>
+
+<span class="c1"># Überprüfe, ob die Quelle existiert</span>
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>!<span class="w"> </span>-d<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$QUELLE</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Fehler: Quelle &#39;</span><span class="nv">$QUELLE</span><span class="s2">&#39; existiert nicht oder ist kein Verzeichnis.&quot;</span>
+<span class="w">  </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="k">fi</span>
+
+<span class="c1"># Erstelle das Zielverzeichnis, falls es nicht existiert</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$ZIEL</span><span class="s2">&quot;</span>
+
+<span class="c1"># Erstelle das Backup</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Erstelle Backup von </span><span class="nv">$QUELLE</span><span class="s2">...&quot;</span>
+tar<span class="w"> </span>-czvf<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$ZIEL</span><span class="s2">/</span><span class="nv">$BACKUP_NAME</span><span class="s2">&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$QUELLE</span><span class="s2">&quot;</span>
+
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$?</span><span class="w"> </span>-eq<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Backup erfolgreich erstellt: </span><span class="nv">$ZIEL</span><span class="s2">/</span><span class="nv">$BACKUP_NAME</span><span class="s2">&quot;</span>
+<span class="k">else</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Fehler beim Erstellen des Backups.&quot;</span>
+<span class="w">  </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="k">fi</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>Aufruf:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>./backup.sh<span class="w"> </span>~/dokumente<span class="w"> </span>/backup
+</code></pre></div></td></tr></table></div>
+<hr />
+<h3 id="82-beispiel-2-log-analyse-skript">8.2 Beispiel 2: Log-Analyse-Skript<a class="headerlink" href="#82-beispiel-2-log-analyse-skript" title="Permanent link">&para;</a></h3>
+<p><strong>Aufgabe:</strong> Erstelle ein Skript, das <strong>Fehler in einer Log-Datei zählt</strong> und die <strong>häufigsten Fehler</strong> anzeigt.</p>
+<p><strong>Skriptname:</strong> <code>log_analyse.sh</code></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="c1"># Überprüfe, ob eine Log-Datei angegeben wurde</span>
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$#</span><span class="w"> </span>-ne<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Verwendung: </span><span class="nv">$0</span><span class="s2"> &lt;Log-Datei&gt;&quot;</span>
+<span class="w">  </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="k">fi</span>
+
+<span class="nv">LOG_DATEI</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span>
+
+<span class="c1"># Überprüfe, ob die Log-Datei existiert</span>
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>!<span class="w"> </span>-f<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$LOG_DATEI</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Fehler: Log-Datei &#39;</span><span class="nv">$LOG_DATEI</span><span class="s2">&#39; existiert nicht.&quot;</span>
+<span class="w">  </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="k">fi</span>
+
+<span class="c1"># Zähle die Anzahl der Fehler</span>
+<span class="nv">FEHLER_ANZAHL</span><span class="o">=</span><span class="k">$(</span>grep<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;error&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$LOG_DATEI</span><span class="s2">&quot;</span><span class="k">)</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Anzahl der Fehler: </span><span class="nv">$FEHLER_ANZAHL</span><span class="s2">&quot;</span>
+
+<span class="c1"># Zeige die 10 häufigsten Fehler an</span>
+<span class="nb">echo</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;\nHäufigste Fehler:&quot;</span>
+grep<span class="w"> </span><span class="s2">&quot;error&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$LOG_DATEI</span><span class="s2">&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;{print $5}&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span><span class="p">|</span><span class="w"> </span>uniq<span class="w"> </span>-c<span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span>-nr<span class="w"> </span><span class="p">|</span><span class="w"> </span>head<span class="w"> </span>-n<span class="w"> </span><span class="m">10</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>Aufruf:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>./log_analyse.sh<span class="w"> </span>/var/log/syslog
+</code></pre></div></td></tr></table></div>
+<hr />
+<h3 id="83-beispiel-3-benutzerverwaltungsskript">8.3 Beispiel 3: Benutzerverwaltungsskript<a class="headerlink" href="#83-beispiel-3-benutzerverwaltungsskript" title="Permanent link">&para;</a></h3>
+<p><strong>Aufgabe:</strong> Erstelle ein Skript, das <strong>Benutzer hinzufügt, löscht oder auflistet</strong>.</p>
+<p><strong>Skriptname:</strong> <code>benutzer_verwalten.sh</code></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="c1"># Hilfemenü</span>
+hilfe<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Verwendung: </span><span class="nv">$0</span><span class="s2"> [OPTION] [BENUTZERNAME]&quot;</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Optionen:&quot;</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;  -a, --add    Benutzer hinzufügen&quot;</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;  -d, --delete Benutzer löschen&quot;</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;  -l, --list   Benutzer auflisten&quot;</span>
+<span class="w">  </span><span class="nb">exit</span><span class="w"> </span><span class="m">0</span>
+<span class="o">}</span>
+
+<span class="c1"># Benutzer hinzufügen</span>
+benutzer_hinzufügen<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-z<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Fehler: Kein Benutzername angegeben.&quot;</span>
+<span class="w">    </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="w">  </span><span class="k">fi</span>
+<span class="w">  </span>sudo<span class="w"> </span>useradd<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$?</span><span class="w"> </span>-eq<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Benutzer &#39;</span><span class="nv">$1</span><span class="s2">&#39; wurde erfolgreich hinzugefügt.&quot;</span>
+<span class="w">  </span><span class="k">else</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Fehler: Benutzer &#39;</span><span class="nv">$1</span><span class="s2">&#39; konnte nicht hinzugefügt werden.&quot;</span>
+<span class="w">    </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="w">  </span><span class="k">fi</span>
+<span class="o">}</span>
+
+<span class="c1"># Benutzer löschen</span>
+benutzer_löschen<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-z<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Fehler: Kein Benutzername angegeben.&quot;</span>
+<span class="w">    </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="w">  </span><span class="k">fi</span>
+<span class="w">  </span>sudo<span class="w"> </span>userdel<span class="w"> </span>-r<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$?</span><span class="w"> </span>-eq<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Benutzer &#39;</span><span class="nv">$1</span><span class="s2">&#39; wurde erfolgreich gelöscht.&quot;</span>
+<span class="w">  </span><span class="k">else</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Fehler: Benutzer &#39;</span><span class="nv">$1</span><span class="s2">&#39; konnte nicht gelöscht werden.&quot;</span>
+<span class="w">    </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="w">  </span><span class="k">fi</span>
+<span class="o">}</span>
+
+<span class="c1"># Benutzer auflisten</span>
+benutzer_auflisten<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Benutzer auf diesem System:&quot;</span>
+<span class="w">  </span>cut<span class="w"> </span>-d<span class="s2">&quot;:&quot;</span><span class="w"> </span>-f1<span class="w"> </span>/etc/passwd
+<span class="o">}</span>
+
+<span class="c1"># Hauptprogramm</span>
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$#</span><span class="w"> </span>-eq<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">  </span>hilfe
+<span class="k">fi</span>
+
+<span class="k">case</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span><span class="w"> </span><span class="k">in</span>
+<span class="w">  </span>-a<span class="p">|</span>--add<span class="o">)</span>
+<span class="w">    </span>benutzer_hinzufügen<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$2</span><span class="s2">&quot;</span>
+<span class="w">    </span><span class="p">;;</span>
+<span class="w">  </span>-d<span class="p">|</span>--delete<span class="o">)</span>
+<span class="w">    </span>benutzer_löschen<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$2</span><span class="s2">&quot;</span>
+<span class="w">    </span><span class="p">;;</span>
+<span class="w">  </span>-l<span class="p">|</span>--list<span class="o">)</span>
+<span class="w">    </span>benutzer_auflisten
+<span class="w">    </span><span class="p">;;</span>
+<span class="w">  </span>-h<span class="p">|</span>--help<span class="o">)</span>
+<span class="w">    </span>hilfe
+<span class="w">    </span><span class="p">;;</span>
+<span class="w">  </span>*<span class="o">)</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Unbekannte Option: </span><span class="nv">$1</span><span class="s2">&quot;</span>
+<span class="w">    </span>hilfe
+<span class="w">    </span><span class="p">;;</span>
+<span class="k">esac</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>Aufruf:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>./benutzer_verwalten.sh<span class="w"> </span>--add<span class="w"> </span>testuser
+./benutzer_verwalten.sh<span class="w"> </span>--list
+./benutzer_verwalten.sh<span class="w"> </span>--delete<span class="w"> </span>testuser
+</code></pre></div></td></tr></table></div>
+<hr />
+<h3 id="84-beispiel-4-datei-suchskript">8.4 Beispiel 4: Datei-Suchskript<a class="headerlink" href="#84-beispiel-4-datei-suchskript" title="Permanent link">&para;</a></h3>
+<p><strong>Aufgabe:</strong> Erstelle ein Skript, das <strong>Dateien nach einem Muster sucht</strong> und die Ergebnisse in einer Datei speichert.</p>
+<p><strong>Skriptname:</strong> <code>datei_suche.sh</code></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="c1"># Überprüfe, ob Suchmuster und Verzeichnis angegeben wurden</span>
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$#</span><span class="w"> </span>-ne<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Verwendung: </span><span class="nv">$0</span><span class="s2"> &lt;Suchmuster&gt; &lt;Verzeichnis&gt;&quot;</span>
+<span class="w">  </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="k">fi</span>
+
+<span class="nv">MUSTER</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span>
+<span class="nv">VERZEICHNIS</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$2</span><span class="s2">&quot;</span>
+<span class="nv">ERGEBNIS_DATEI</span><span class="o">=</span><span class="s2">&quot;suchergebnisse_</span><span class="k">$(</span>date<span class="w"> </span>+%Y-%m-%d<span class="k">)</span><span class="s2">.txt&quot;</span>
+
+<span class="c1"># Überprüfe, ob das Verzeichnis existiert</span>
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>!<span class="w"> </span>-d<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$VERZEICHNIS</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Fehler: Verzeichnis &#39;</span><span class="nv">$VERZEICHNIS</span><span class="s2">&#39; existiert nicht.&quot;</span>
+<span class="w">  </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="k">fi</span>
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Suche nach &#39;</span><span class="nv">$MUSTER</span><span class="s2">&#39; in </span><span class="nv">$VERZEICHNIS</span><span class="s2">...&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Suchergebnisse:&quot;</span><span class="w"> </span>&gt;<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$ERGEBNIS_DATEI</span><span class="s2">&quot;</span>
+grep<span class="w"> </span>-r<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$MUSTER</span><span class="s2">&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$VERZEICHNIS</span><span class="s2">&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$ERGEBNIS_DATEI</span><span class="s2">&quot;</span>
+
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$?</span><span class="w"> </span>-eq<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Suche abgeschlossen. Ergebnisse in &#39;</span><span class="nv">$ERGEBNIS_DATEI</span><span class="s2">&#39; gespeichert.&quot;</span>
+<span class="k">else</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Keine Treffer gefunden.&quot;</span>
+<span class="k">fi</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>Aufruf:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>./datei_suche.sh<span class="w"> </span><span class="s2">&quot;error&quot;</span><span class="w"> </span>/var/log
+</code></pre></div></td></tr></table></div>
+<h3 id="85-beispiel-5-systemuberwachungsskript">8.5 Beispiel 5: Systemüberwachungsskript<a class="headerlink" href="#85-beispiel-5-systemuberwachungsskript" title="Permanent link">&para;</a></h3>
+<p><strong>Aufgabe:</strong> Erstelle ein Skript, das <strong>Systeminformationen</strong> (CPU, Speicher, Festplatten) anzeigt.</p>
+<p><strong>Skriptname:</strong> <code>system_info.sh</code></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="c1"># Farben für die Ausgabe</span>
+<span class="nv">GRÜN</span><span class="o">=</span><span class="s1">&#39;\033[0;32m&#39;</span>
+<span class="nv">GELB</span><span class="o">=</span><span class="s1">&#39;\033[1;33m&#39;</span>
+<span class="nv">NC</span><span class="o">=</span><span class="s1">&#39;\033[0m&#39;</span><span class="w"> </span><span class="c1"># No Color</span>
+
+<span class="c1"># Funktion für CPU-Informationen</span>
+cpu_info<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">GRÜN</span><span class="si">}</span><span class="s2">=== CPU-Informationen ===</span><span class="si">${</span><span class="nv">NC</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Modell: </span><span class="k">$(</span>grep<span class="w"> </span><span class="s2">&quot;model name&quot;</span><span class="w"> </span>/proc/cpuinfo<span class="w"> </span><span class="p">|</span><span class="w"> </span>head<span class="w"> </span>-n<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>cut<span class="w"> </span>-d<span class="s2">&quot;:&quot;</span><span class="w"> </span>-f2<span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="k">)</span><span class="s2">&quot;</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Anzahl Kerne: </span><span class="k">$(</span>grep<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;processor&quot;</span><span class="w"> </span>/proc/cpuinfo<span class="k">)</span><span class="s2">&quot;</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Auslastung: </span><span class="k">$(</span>top<span class="w"> </span>-bn1<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s2">&quot;Cpu(s)&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;{print $2 + $4 &quot;%&quot;}&#39;</span><span class="k">)</span><span class="s2">&quot;</span>
+<span class="o">}</span>
+
+<span class="c1"># Funktion für Speicherinformationen</span>
+speicher_info<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">GRÜN</span><span class="si">}</span><span class="s2">=== Speicherinformationen ===</span><span class="si">${</span><span class="nv">NC</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="w">  </span>free<span class="w"> </span>-h<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;/^Mem:/ {print &quot;Gesamt: &quot; $2 &quot;, Verwendet: &quot; $3 &quot;, Frei: &quot; $4}&#39;</span>
+<span class="o">}</span>
+
+<span class="c1"># Funktion für Festplatteninformationen</span>
+festplatte_info<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">GRÜN</span><span class="si">}</span><span class="s2">=== Festplatteninformationen ===</span><span class="si">${</span><span class="nv">NC</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="w">  </span>df<span class="w"> </span>-h<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-v<span class="w"> </span><span class="s2">&quot;tmpfs&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-v<span class="w"> </span><span class="s2">&quot;udev&quot;</span>
+<span class="o">}</span>
+
+<span class="c1"># Funktion für Systemlast</span>
+systemlast_info<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">GRÜN</span><span class="si">}</span><span class="s2">=== Systemlast ===</span><span class="si">${</span><span class="nv">NC</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="w">  </span>uptime
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Durchschnittliche Last: </span><span class="k">$(</span>cat<span class="w"> </span>/proc/loadavg<span class="k">)</span><span class="s2">&quot;</span>
+<span class="o">}</span>
+
+<span class="c1"># Hauptprogramm</span>
+cpu_info
+<span class="nb">echo</span>
+speicher_info
+<span class="nb">echo</span>
+festplatte_info
+<span class="nb">echo</span>
+systemlast_info
+</code></pre></div></td></tr></table></div>
+<p><strong>Aufruf:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>./system_info.sh
+</code></pre></div></td></tr></table></div>
+<h2 id="9-ubungsaufgaben">9. Übungsaufgaben<a class="headerlink" href="#9-ubungsaufgaben" title="Permanent link">&para;</a></h2>
+<h3 id="ubung-1-einfaches-skript-erstellen">Übung 1: Einfaches Skript erstellen<a class="headerlink" href="#ubung-1-einfaches-skript-erstellen" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Erstelle ein Skript namens <code>begrüßung.sh</code>, das:</li>
+<li>Den Benutzer nach seinem Namen fragt.</li>
+<li>Eine Begrüßung ausgibt (z. B. "Hallo, [Name]!").</li>
+</ol>
+<details class="success">
+<summary>Lösung</summary>
+<p><code>#!/bin/bash</code>   <br />
+<code>read -p "Wie heißt du? " NAME</code>   <br />
+<code>echo "Hallo, $NAME!"</code>     </p>
+</details>
+<h3 id="ubung-2-skript-mit-argumenten">Übung 2: Skript mit Argumenten<a class="headerlink" href="#ubung-2-skript-mit-argumenten" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Erstelle ein Skript namens <code>addieren.sh</code>, das:</li>
+<li>Zwei Zahlen als Argumente entgegennimmt.</li>
+<li>Die Summe der beiden Zahlen ausgibt.</li>
+</ol>
+<details class="success">
+<summary>Lösung</summary>
+</details>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$#</span><span class="w"> </span>-ne<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Verwendung: </span><span class="nv">$0</span><span class="s2"> &lt;Zahl1&gt; &lt;Zahl2&gt;&quot;</span>
+<span class="w">    </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="k">fi</span>
+
+<span class="nv">ERGEBNIS</span><span class="o">=</span><span class="k">$((</span><span class="w"> </span><span class="nv">$1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">$2</span><span class="w"> </span><span class="k">))</span>
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2"> + </span><span class="nv">$2</span><span class="s2"> = </span><span class="nv">$ERGEBNIS</span><span class="s2">&quot;</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="ubung-3-skript-mit-bedingungen">Übung 3: Skript mit Bedingungen<a class="headerlink" href="#ubung-3-skript-mit-bedingungen" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Erstelle ein Skript namens <code>zahl_prüfen.sh</code>, das:</li>
+<li>Eine Zahl als Argument entgegennimmt.</li>
+<li>Prüft, ob die Zahl <strong>positiv, negativ oder null</strong> ist.</li>
+<li>Eine entsprechende Meldung ausgibt.</li>
+</ol>
+<details class="success">
+<summary>Lösung</summary>
+</details>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$#</span><span class="w"> </span>-ne<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Verwendung: </span><span class="nv">$0</span><span class="s2"> &lt;Zahl&gt;&quot;</span>
+<span class="w">    </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="k">fi</span>
+
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$1</span><span class="w"> </span>-gt<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2"> ist positiv.&quot;</span>
+<span class="k">elif</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$1</span><span class="w"> </span>-lt<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2"> ist negativ.&quot;</span>
+<span class="k">else</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2"> ist null.&quot;</span>
+<span class="k">fi</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="ubung-4-skript-mit-for-schleife">Übung 4: Skript mit <code>for</code>-Schleife<a class="headerlink" href="#ubung-4-skript-mit-for-schleife" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Erstelle ein Skript namens <code>dateien_auflisten.sh</code>, das:</li>
+<li>Alle <code>.txt</code>-Dateien im aktuellen Verzeichnis auflistet.</li>
+<li>Für jede Datei eine Meldung ausgibt (z. B. "Verarbeite datei1.txt").</li>
+</ol>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="k">for</span><span class="w"> </span>DATEI<span class="w"> </span><span class="k">in</span><span class="w"> </span>*.txt<span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Verarbeite </span><span class="nv">$DATEI</span><span class="s2">&quot;</span>
+<span class="k">done</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<h3 id="ubung-5-skript-mit-while-schleife">Übung 5: Skript mit <code>while</code>-Schleife<a class="headerlink" href="#ubung-5-skript-mit-while-schleife" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Erstelle ein Skript namens <code>zählen.sh</code>, das:</li>
+<li>Eine Zahl als Argument entgegennimmt.</li>
+<li>Von 1 bis zu dieser Zahl zählt und jede Zahl ausgibt.</li>
+</ol>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$#</span><span class="w"> </span>-ne<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Verwendung: </span><span class="nv">$0</span><span class="s2"> &lt;Zahl&gt;&quot;</span>
+<span class="w">    </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="k">fi</span>
+
+
+<span class="nv">i</span><span class="o">=</span><span class="m">1</span>
+
+<span class="k">while</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$i</span><span class="w"> </span>-le<span class="w"> </span><span class="nv">$1</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$i</span>
+<span class="w">    </span><span class="nv">i</span><span class="o">=</span><span class="k">$((</span><span class="nv">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span><span class="k">))</span>
+<span class="k">done</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<h3 id="ubung-6-skript-mit-funktion">Übung 6: Skript mit Funktion<a class="headerlink" href="#ubung-6-skript-mit-funktion" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Erstelle ein Skript namens <code>flaeche.sh</code>, das:</li>
+<li>Eine Funktion <code>berechne_flaeche</code> definiert, die die Fläche eines Rechtecks berechnet (Länge × Breite).</li>
+<li>Die Funktion mit zwei Argumenten aufruft und das Ergebnis ausgibt.</li>
+</ol>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+berechne_flaeche<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="c1"># Nutzt lokale Variablen, was gut ist.</span>
+<span class="w">    </span><span class="nb">local</span><span class="w"> </span><span class="nv">FLAECHE</span><span class="o">=</span><span class="k">$((</span><span class="w"> </span><span class="nv">$1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nv">$2</span><span class="w"> </span><span class="k">))</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$FLAECHE</span>
+<span class="o">}</span>
+
+<span class="nb">read</span><span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Gib die Länge ein: &quot;</span><span class="w"> </span>LAENGE
+<span class="nb">read</span><span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Gib die Breite ein: &quot;</span><span class="w"> </span>BREITE
+
+<span class="nv">ERGEBNIS</span><span class="o">=</span><span class="k">$(</span>berechne_flaeche<span class="w"> </span><span class="nv">$LAENGE</span><span class="w"> </span><span class="nv">$BREITE</span><span class="k">)</span>
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Die Fläche beträgt: </span><span class="nv">$ERGEBNIS</span><span class="s2">&quot;</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<h3 id="ubung-7-skript-mit-getopts">Übung 7: Skript mit <code>getopts</code><a class="headerlink" href="#ubung-7-skript-mit-getopts" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Erstelle ein Skript namens <code>optionen.sh</code>, das:</li>
+<li>Die Optionen <code>-h</code> (Hilfe), <code>-n NAME</code> (Name) und <code>-a ALTER</code> (Alter) unterstützt.</li>
+<li>Eine Begrüßung ausgibt (z. B. "Hallo, [Name]! Du bist [Alter] Jahre alt.").</li>
+</ol>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="k">while</span><span class="w"> </span><span class="nb">getopts</span><span class="w"> </span><span class="s2">&quot;hn:a:&quot;</span><span class="w"> </span>OPT<span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$OPT</span><span class="s2">&quot;</span><span class="w"> </span><span class="k">in</span>
+<span class="w">        </span>h<span class="o">)</span>
+<span class="w">            </span><span class="c1"># Hilfe anzeigen und beenden</span>
+<span class="w">            </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Verwendung: </span><span class="nv">$0</span><span class="s2"> [-h] [-n NAME] [-a ALTER]&quot;</span>
+<span class="w">            </span><span class="nb">exit</span><span class="w"> </span><span class="m">0</span>
+<span class="w">            </span><span class="p">;;</span>
+<span class="w">        </span>n<span class="o">)</span>
+<span class="w">            </span><span class="c1"># Speichert den Wert des Flags -n</span>
+<span class="w">            </span><span class="nv">NAME</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$OPTARG</span><span class="s2">&quot;</span>
+<span class="w">            </span><span class="p">;;</span>
+<span class="w">        </span>a<span class="o">)</span>
+<span class="w">            </span><span class="c1"># Speichert den Wert des Flags -a</span>
+<span class="w">            </span><span class="nv">ALTER</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$OPTARG</span><span class="s2">&quot;</span>
+<span class="w">            </span><span class="p">;;</span>
+<span class="w">        </span>*<span class="o">)</span>
+<span class="w">            </span><span class="c1"># Fehlerbehandlung bei unbekannten Optionen</span>
+<span class="w">            </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Fehler: Unbekannte Option: </span><span class="nv">$OPT</span><span class="s2">&quot;</span>
+<span class="w">            </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="w">            </span><span class="p">;;</span>
+<span class="w">    </span><span class="k">esac</span>
+<span class="k">done</span>
+
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$NAME</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$ALTER</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Hallo, </span><span class="nv">$NAME</span><span class="s2">! Du bist </span><span class="nv">$ALTER</span><span class="s2"> Jahre alt.&quot;</span>
+<span class="k">else</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Fehler: Bitte gib sowohl Name (-n) als auch Alter (-a) an.&quot;</span>
+<span class="w">    </span><span class="c1"># Man könnte hier auch einen Exit-Code setzen, wenn die Argumente fehlen</span>
+<span class="k">fi</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<h3 id="ubung-8-backup-skript-mit-fehlerbehandlung">Übung 8: Backup-Skript mit Fehlerbehandlung<a class="headerlink" href="#ubung-8-backup-skript-mit-fehlerbehandlung" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Erstelle ein Skript namens <code>sicheres_backup.sh</code>, das:</li>
+<li>Ein Verzeichnis als Argument entgegennimmt.</li>
+<li>Ein Backup des Verzeichnisses als <code>.tar.gz</code>-Archiv erstellt.</li>
+<li>Fehler behandelt (z. B. wenn das Verzeichnis nicht existiert).</li>
+</ol>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$#</span><span class="w"> </span>-ne<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Fehler: Bitte gib genau ein Argument an (das Verzeichnis zum sichern).&quot;</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Verwendung: </span><span class="nv">$0</span><span class="s2"> &lt;Verzeichnis_Pfad&gt;&quot;</span>
+<span class="w">    </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="k">fi</span>
+
+
+<span class="nv">VERZEICHNIS</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span>
+
+<span class="nv">BACKUP_NAME</span><span class="o">=</span><span class="s2">&quot;backup_</span><span class="k">$(</span>date<span class="w"> </span>+%Y-%m-%d<span class="k">)</span><span class="s2">.tar.gz&quot;</span>
+
+
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>!<span class="w"> </span>-d<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$VERZEICHNIS</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Fehler: Das Verzeichnis &#39;</span><span class="nv">$VERZEICHNIS</span><span class="s2">&#39; wurde nicht gefunden oder ist kein Verzeichnis.&quot;</span>
+<span class="w">    </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="k">fi</span>
+
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Starte Backup von &#39;</span><span class="nv">$VERZEICHNIS</span><span class="s2">&#39; nach </span><span class="nv">$BACKUP_NAME</span><span class="s2"> ...&quot;</span>
+
+tar<span class="w"> </span>-czvf<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$BACKUP_NAME</span><span class="s2">&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$VERZEICHNIS</span><span class="s2">&quot;</span>
+
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$?</span><span class="w"> </span>-eq<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;=======================================&quot;</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;✅ Erfolg: Backup erfolgreich erstellt: </span><span class="nv">$BACKUP_NAME</span><span class="s2">&quot;</span>
+<span class="k">else</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;=======================================&quot;</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;❌ Fehler: Beim Erstellen des Backups ist ein Fehler aufgetreten.&quot;</span>
+<span class="w">    </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="k">fi</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<h3 id="ubung-9-log-analyse-skript">Übung 9: Log-Analyse-Skript<a class="headerlink" href="#ubung-9-log-analyse-skript" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Erstelle ein Skript namens <code>fehler_zählen.sh</code>, das:</li>
+<li>Eine Log-Datei als Argument entgegennimmt.</li>
+<li>Die Anzahl der Zeilen zählt, die das Wort <strong>"error"</strong> enthalten.</li>
+</ol>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="c1"># Überprüft, ob genau ein Argument (der Pfad zur Log-Datei) übergeben wurde.</span>
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$#</span><span class="w"> </span>-ne<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Fehler: Bitte gib den Pfad zu einer Log-Datei an.&quot;</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Verwendung: </span><span class="nv">$0</span><span class="s2"> &lt;Pfad_zur_Log_Datei&gt;&quot;</span>
+<span class="w">    </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="k">fi</span>
+
+<span class="c1"># ---------------------------------------------------</span>
+
+<span class="c1"># Variable wird mit dem ersten Argument (der Datei) gesetzt</span>
+<span class="nv">LOG_DATEI</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span>
+
+
+<span class="c1"># Stellt sicher, dass die angegebene Datei existiert und tatsächlich eine Datei ist.</span>
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>!<span class="w"> </span>-f<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$LOG_DATEI</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Fehler: Die angegebliche Log-Datei &#39;</span><span class="nv">$LOG_DATEI</span><span class="s2">&#39; existiert nicht.&quot;</span>
+<span class="w">    </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="k">fi</span>
+
+
+<span class="c1"># Grep zählt (`-c`) die Zeilen, die das Wort &quot;error&quot; enthalten.</span>
+<span class="nv">FEHLER_ANZAHL</span><span class="o">=</span><span class="k">$(</span>grep<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;error&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$LOG_DATEI</span><span class="s2">&quot;</span><span class="k">)</span>
+
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Analyse abgeschlossen.&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Die Log-Datei &#39;</span><span class="nv">$LOG_DATEI</span><span class="s2">&#39; enthält insgesamt </span><span class="nv">$FEHLER_ANZAHL</span><span class="s2"> Fehler.&quot;</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<h2 id="10-best-practices-fur-bash-skripte">10. Best Practices für Bash-Skripte<a class="headerlink" href="#10-best-practices-fur-bash-skripte" title="Permanent link">&para;</a></h2>
+<h3 id="101-skript-header">10.1 Skript-Header<a class="headerlink" href="#101-skript-header" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Beginne jedes Skript mit einem <strong>Header</strong>, der <strong>Beschreibung, Autor, Datum und Version</strong> enthält.</li>
+</ul>
+<p><strong>Beispiel:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1"># Skriptname: backup.sh</span>
+<span class="c1"># Beschreibung: Erstellt ein Backup eines Verzeichnisses.</span>
+<span class="c1"># Autor: Sadik Altuneriten</span>
+<span class="c1"># Datum: 11.05.2026</span>
+<span class="c1"># Version: 1.0</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="102-fehlerbehandlung">10.2 Fehlerbehandlung<a class="headerlink" href="#102-fehlerbehandlung" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Überprüfe Argumente</strong> auf Gültigkeit.</li>
+<li><strong>Nutze</strong> <code>set -e</code>, um das Skript bei Fehlern zu beenden.</li>
+<li><strong>Gib sinnvolle Fehlermeldungen</strong> aus.</li>
+</ul>
+<p><strong>Beispiel:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="nb">set</span><span class="w"> </span>-e<span class="w">  </span><span class="c1"># Beende das Skript bei Fehlern</span>
+
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$#</span><span class="w"> </span>-ne<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Fehler: Falsche Anzahl an Argumenten.&quot;</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Verwendung: </span><span class="nv">$0</span><span class="s2"> &lt;Verzeichnis&gt;&quot;</span>
+<span class="w">  </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="k">fi</span>
+
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>!<span class="w"> </span>-d<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Fehler: Verzeichnis &#39;</span><span class="nv">$1</span><span class="s2">&#39; existiert nicht.&quot;</span>
+<span class="w">  </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="k">fi</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="103-variablen-validieren">10.3 Variablen validieren<a class="headerlink" href="#103-variablen-validieren" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Überprüfe, ob Variablen gesetzt sind</strong>, bevor du sie verwendest.</li>
+</ul>
+<p><strong>Beispiel:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-z<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$VARIABLE</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Fehler: VARIABLE ist nicht gesetzt.&quot;</span>
+<span class="w">  </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="k">fi</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="104-kommentare-verwenden">10.4 Kommentare verwenden<a class="headerlink" href="#104-kommentare-verwenden" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Kommentare</strong> (<code>#</code>) machen dein Skript <strong>lesbarer</strong> und <strong>wartbarer</strong>.</li>
+</ul>
+<p><strong>Beispiel:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1"># Dies ist ein Kommentar</span>
+<span class="nv">NAME</span><span class="o">=</span><span class="s2">&quot;Daniela&quot;</span><span class="w">  </span><span class="c1"># Benutzername</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="105-skripte-dokumentieren">10.5 Skripte dokumentieren<a class="headerlink" href="#105-skripte-dokumentieren" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Dokumentiere die Verwendung</strong> deines Skripts mit einem <strong>Hilfemenü</strong> (<code>-h</code> oder <code>--help</code>).</li>
+</ul>
+<p><strong>Beispiel:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+hilfe<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Verwendung: </span><span class="nv">$0</span><span class="s2"> [OPTION]&quot;</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Optionen:&quot;</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;  -h, --help    Hilfe anzeigen&quot;</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;  -v, --verbose Verbose-Modus aktivieren&quot;</span>
+<span class="w">  </span><span class="nb">exit</span><span class="w"> </span><span class="m">0</span>
+<span class="o">}</span>
+
+<span class="k">while</span><span class="w"> </span><span class="nb">getopts</span><span class="w"> </span><span class="s2">&quot;hv&quot;</span><span class="w"> </span>OPT<span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$OPT</span><span class="s2">&quot;</span><span class="w"> </span><span class="k">in</span>
+<span class="w">    </span>h<span class="o">)</span>
+<span class="w">      </span>hilfe
+<span class="w">      </span><span class="p">;;</span>
+<span class="w">    </span>v<span class="o">)</span>
+<span class="w">      </span><span class="nv">VERBOSE</span><span class="o">=</span><span class="m">1</span>
+<span class="w">      </span><span class="p">;;</span>
+<span class="w">    </span>*<span class="o">)</span>
+<span class="w">      </span>hilfe
+<span class="w">      </span><span class="p">;;</span>
+<span class="w">  </span><span class="k">esac</span>
+<span class="k">done</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="106-skripte-in-usrlocalbin-installieren">10.6 Skripte in <code>/usr/local/bin</code> installieren<a class="headerlink" href="#106-skripte-in-usrlocalbin-installieren" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Wenn du ein Skript <strong>systemweit verfügbar</strong> machen möchtest, kopiere es nach <code>/usr/local/bin/</code> und mache es ausführbar.</li>
+</ul>
+<p><strong>Beispiel:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>cp<span class="w"> </span>mein_skript.sh<span class="w"> </span>/usr/local/bin/mein_skript
+sudo<span class="w"> </span>chmod<span class="w"> </span>+x<span class="w"> </span>/usr/local/bin/mein_skript
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>Jetzt kannst du das Skript <strong>von überall</strong> mit <code>mein_skript</code> aufrufen.</li>
+</ul>
+<h3 id="107-skripte-mit-cron-automatisieren">10.7 Skripte mit <code>cron</code> automatisieren<a class="headerlink" href="#107-skripte-mit-cron-automatisieren" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Nutze <code>**cron**</code>, um Skripte <strong>automatisch zu festgelegten Zeiten</strong> auszuführen.</li>
+</ul>
+<p><strong>Beispiel:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Bearbeite die Crontab</span>
+crontab<span class="w"> </span>-e
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>Füge eine Zeile hinzu, um das Skript <strong>täglich um 2 Uhr morgens</strong> auszuführen:
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>0 2 * * * /pfad/zum/skript.sh
+</code></pre></div></td></tr></table></div></li>
+</ul>
+<h2 id="11-zusammenfassung-und-tipps">11. Zusammenfassung und Tipps<a class="headerlink" href="#11-zusammenfassung-und-tipps" title="Permanent link">&para;</a></h2>
+<h3 id="wichtige-konzepte-im-uberblick">Wichtige Konzepte im Überblick<a class="headerlink" href="#wichtige-konzepte-im-uberblick" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Konzept</th>
+<th>Beschreibung</th>
+<th>Beispiel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Shebang</strong></td>
+<td>Gibt an, welche Shell das Skript ausführen soll.</td>
+<td><code>#!/bin/bash</code></td>
+</tr>
+<tr>
+<td><strong>Variablen</strong></td>
+<td>Speichern Werte für die spätere Verwendung.</td>
+<td><code>NAME="Daniela"</code></td>
+</tr>
+<tr>
+<td><strong>Positionale Parameter</strong></td>
+<td>Argumente, die beim Aufruf übergeben werden.</td>
+<td><code>$1</code>, <code>$2</code>, <code>$@</code></td>
+</tr>
+<tr>
+<td><strong>Bedingungen (<code>if</code>)</strong></td>
+<td>Führen Aktionen basierend auf Bedingungen aus.</td>
+<td><code>if [ $A -gt $B ]; then ... fi</code></td>
+</tr>
+<tr>
+<td><strong>Schleifen (<code>for</code>, <code>while</code>)</strong></td>
+<td>Führen Aktionen wiederholt aus.</td>
+<td><code>for i in {1..5}; do ... done</code></td>
+</tr>
+<tr>
+<td><strong>Funktionen</strong></td>
+<td>Wiederverwendbare Codeblöcke.</td>
+<td><code>meine_funktion() { ... }</code></td>
+</tr>
+<tr>
+<td><code>**getopts**</code></td>
+<td>Verarbeitet Kommandozeilenoptionen.</td>
+<td><code>while getopts "ab:" OPT; do ... done</code></td>
+</tr>
+<tr>
+<td><strong>Fehlerbehandlung</strong></td>
+<td>Behandelt Fehler und gibt sinnvolle Meldungen aus.</td>
+<td><code>if [ ! -f "$DATEI" ]; then exit 1; fi</code></td>
+</tr>
+<tr>
+<td><strong>Debugging</strong></td>
+<td>Hilft, Fehler in Skripten zu finden.</td>
+<td><code>set -x</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="tipps-fur-die-praxis">Tipps für die Praxis<a class="headerlink" href="#tipps-fur-die-praxis" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Beginne klein</strong>:</li>
+<li>Erstelle <strong>einfache Skripte</strong> und baue sie schrittweise aus.</li>
+<li><strong>Teste häufig</strong>:</li>
+<li>Teste dein Skript <strong>nach jeder Änderung</strong>, um Fehler früh zu erkennen.</li>
+<li><strong>Nutze Variablen sinnvoll</strong>:</li>
+<li>Variablen machen dein Skript <strong>flexibler und lesbarer</strong>.</li>
+<li><strong>Fehlerbehandlung nicht vergessen</strong>:</li>
+<li>Überprüfe <strong>Argumente, Dateien und Befehle</strong> auf Gültigkeit.</li>
+<li><strong>Dokumentiere dein Skript</strong>:</li>
+<li>Füge <strong>Kommentare und ein Hilfemenü</strong> hinzu, um die Verwendung zu erklären.</li>
+<li><strong>Nutze Funktionen für wiederkehrende Aufgaben</strong>:</li>
+<li>Funktionen machen dein Skript <strong>modularer und wartbarer</strong>.</li>
+<li>**Automatisiere mit <code>cron**</code>:</li>
+<li>Nutze <code>cron</code>, um Skripte <strong>automatisch auszuführen</strong> (z. B. für Backups).</li>
+<li><strong>Sicherheit beachten</strong>:</li>
+<li>Vermeide <code>**sudo</code> in Skripten**, es sei denn, es ist absolut notwendig.</li>
+<li>Nutze <code>**set -e**</code>, um Skripte bei Fehlern zu beenden.</li>
+</ol>
+<h3 id="haufige-fallstricke">Häufige Fallstricke<a class="headerlink" href="#haufige-fallstricke" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Problem</th>
+<th>Lösung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Shebang fehlt</strong></td>
+<td>Füge <code>#!/bin/bash</code> als erste Zeile hinzu.</td>
+</tr>
+<tr>
+<td><strong>Skript ist nicht ausführbar</strong></td>
+<td>Nutze <code>chmod +x skript.sh</code>.</td>
+</tr>
+<tr>
+<td><strong>Falsche Pfade</strong></td>
+<td>Nutze <strong>absolute Pfade</strong> oder <code>./</code> für relative Pfade.</td>
+</tr>
+<tr>
+<td><strong>Variablen nicht gesetzt</strong></td>
+<td>Überprüfe mit <code>[ -z "$VAR" ]</code>, ob eine Variable gesetzt ist.</td>
+</tr>
+<tr>
+<td><strong>Leerzeichen in Variablen</strong></td>
+<td>Nutze <strong>Anführungszeichen</strong>: <code>echo "$VAR"</code>.</td>
+</tr>
+<tr>
+<td><strong>Fehlende Fehlerbehandlung</strong></td>
+<td>Überprüfe Rückgabewerte (<code>$?</code>) und nutze <code>set -e</code>.</td>
+</tr>
+<tr>
+<td><strong>Endlose Schleifen</strong></td>
+<td>Nutze <code>break</code> oder <code>continue</code>, um Schleifen zu steuern.</td>
+</tr>
+<tr>
+<td><strong>Falsche Berechtigungen</strong></td>
+<td>Nutze <code>sudo</code> nur, wenn nötig, und setze Berechtigungen mit <code>chmod</code>.</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Qualidy GmbH
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.kununu.com/de/qualidy" target="_blank" rel="noopener" title="www.kununu.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M311 86.3c12.3-12.7 12-32.9-.7-45.2s-32.9-12-45.2.7C143.4 167.2 76.4 236.3 64 249V64c0-17.7-14.3-32-32-32S0 46.3 0 64v384c0 17.7 14.3 32 32 32s32-14.3 32-32V341l64.7-66.7 133 192c10.1 14.5 30 18.1 44.5 8.1s18.1-30 8.1-44.5L174.1 227.4z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://de.linkedin.com/company/qualidy" target="_blank" rel="noopener" title="de.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.google.com/search?sca_esv=7e6ba2047fcb60f3&uds=AMwkrPtyB8MsmozA4Lwzqy2G2HCu-abqzc6moOG48q3gP5dtjTRzC2Ws0eSwcyLXDfZNuYCrZ7ByIreHLG9th3vKLekPoVeey0tumAbet4cVLQRLzdRFhUbOGbnyp3xo1V0hzzaNmkCN&si=AKbGX_rcuucMgom2rba1cdwsvM2SVoIkP2btyqGMV4t0GuHIs4sGV_1tpuqR0YHG4Rzd9SdJcL-lW6E-2aJA5azZLTKkIOrZ2j2aWwoBkVbdEJ0o0GPcQhs%3D&q=Qualidy+GmbH+Rezensionen&sa=X&ved=2ahUKEwibsbnSgcmFAxXNQvEDHaVYCiAQ3PALegQIRxAF" target="_blank" rel="noopener" title="www.google.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.35 11.1h-9.17v2.73h6.51c-.33 3.81-3.5 5.44-6.5 5.44C8.36 19.27 5 16.25 5 12c0-4.1 3.2-7.27 7.2-7.27 3.09 0 4.9 1.97 4.9 1.97L19 4.72S16.56 2 12.1 2C6.42 2 2.03 6.8 2.03 12c0 5.05 4.13 10 10.22 10 5.35 0 9.25-3.67 9.25-9.09 0-1.15-.15-1.81-.15-1.81"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://qualidy.de" target="_blank" rel="noopener" title="qualidy.de" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M351.9 280H161c2.9 64.5 17.2 123.9 37.5 167.4 11.4 24.5 23.7 41.8 35.1 52.4 11.2 10.5 18.9 12.2 22.9 12.2s11.7-1.7 22.9-12.2c11.4-10.6 23.7-28 35.1-52.4 20.3-43.5 34.6-102.9 37.5-167.4zm-191-48h190.9c-2.8-64.5-17.1-123.9-37.4-167.4-11.4-24.4-23.7-41.8-35.1-52.4C268.1 1.7 260.4 0 256.4 0s-11.7 1.7-22.9 12.2c-11.4 10.6-23.7 28-35.1 52.4-20.3 43.5-34.6 102.9-37.5 167.4m-48 0c3.5-85.6 25.6-165.1 57.9-217.3C78.7 47.3 10.9 131.2 1.5 232zM1.5 280c9.4 100.8 77.2 184.7 169.3 217.3-32.3-52.2-54.4-131.7-57.9-217.3zm398.4 0c-3.5 85.6-25.6 165.1-57.9 217.3 92.1-32.7 159.9-116.5 169.3-217.3zm111.4-48C501.9 131.2 434.1 47.3 342 14.7c32.3 52.2 54.4 131.7 57.9 217.3z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tracking", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,2832 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>Opensource - Basis Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/logo.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/grid.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/video_admonition.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/python_tutor_admonition.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/mermaid.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="amber" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#modul-v-zusammenfuhrung-und-zielsetzung" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Basis Wiki" class="md-header__button md-logo" aria-label="Basis Wiki" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Basis Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Opensource
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Basis Wiki" class="md-nav__button md-logo" aria-label="Basis Wiki" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    Basis Wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übersicht
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module I Das Konzept und die Theorie
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Module I Das Konzept und die Theorie
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module1/OpenSource%26Linux-Community/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Open Source & Proprietäre Software
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module1/opensource_lizenzen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Open-Source-Software und Lizenzierung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module1/linux_evolution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Linux Evolution und beliebte Betriebssysteme
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module1/das_linux_betriebssystem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Das Linux-Betriebssystem
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../7.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dateisystem-Hierarchie
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../8.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Netzwerk
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module II Die Grundlagen der Command-Line
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Module II Die Grundlagen der Command-Line
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Grundlagen der Kommandozeile
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Die Kommandozeile zur Hilfe nutzen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Verzeichnissen und Anzeigen von Dateien
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Erstellen, Verschieben und Löschen von Dateien
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module III Automatisierung und Skripting
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Module III Automatisierung und Skripting
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Verknüpfung von Befehlen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Archivierung von Dateien in der Kommandozeile
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Suchen und Extrahieren von Daten aus Dateien
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Befehle in ein Skript umwandeln
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Automatisierung von Aufgaben mit Cron
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fortgeschrittenes Skripting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module IV Systemadministration und Sicherheit
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Module IV Systemadministration und Sicherheit
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Benutzer- und Gruppenverwaltung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Verwalten von Dateiberechtigungen und Eigentum
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Systemüberwachung und Protokollierung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Softwareinstallation und -verwaltung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Netzwerksicherheit und Firewall-Konfiguration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Backup-Strategien und Wiederherstellung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module V Zusammenführung und Zielsetzung
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Module V Zusammenführung und Zielsetzung
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Wichtige Open-Source-Anwendungen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ICT-Fähigkeiten und Arbeiten in Linux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Opensource</h1>
+
+<h3 id="modul-v-zusammenfuhrung-und-zielsetzung"><strong>Modul V: Zusammenführung und Zielsetzung</strong><a class="headerlink" href="#modul-v-zusammenfuhrung-und-zielsetzung" title="Permanent link">&para;</a></h3>
+<h3 id="thema-wichtige-open-source-anwendungen"><strong>Thema: Wichtige Open-Source-Anwendungen</strong><a class="headerlink" href="#thema-wichtige-open-source-anwendungen" title="Permanent link">&para;</a></h3>
+<hr />
+<hr />
+<h4 id="1-einfuhrung-in-open-source-software"><strong>1. Einführung in Open-Source-Software</strong><a class="headerlink" href="#1-einfuhrung-in-open-source-software" title="Permanent link">&para;</a></h4>
+<p><strong>Open-Source-Software (OSS)</strong> ist Software, deren <strong>Quellcode öffentlich zugänglich</strong> ist und von der <strong>Community weiterentwickelt, getestet und verbessert</strong> werden kann. Open-Source-Software bietet folgende Vorteile:
+- <strong>Kostenlos</strong>: Keine Lizenzgebühren.
+- <strong>Transparenz</strong>: Der Quellcode kann überprüft werden (Sicherheit, Datenschutz).
+- <strong>Anpassbarkeit</strong>: Software kann an individuelle Bedürfnisse angepasst werden.
+- <strong>Community-Unterstützung</strong>: Große Gemeinschaft von Entwicklern und Nutzern.
+- <strong>Sicherheit</strong>: Schnellere Fehlerbehebung durch viele Augen (Linus’s Law: <em>"Given enough eyeballs, all bugs are shallow"</em>).</p>
+<hr />
+<h5 id="11-open-source-lizenzen"><strong>1.1 Open-Source-Lizenzen</strong><a class="headerlink" href="#11-open-source-lizenzen" title="Permanent link">&para;</a></h5>
+<p>Open-Source-Software wird unter verschiedenen <strong>Lizenzen</strong> veröffentlicht, die die Nutzung, Modifikation und Weitergabe regeln. Hier sind die wichtigsten:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Lizenz</strong></th>
+<th><strong>Beschreibung</strong></th>
+<th><strong>Anforderungen</strong></th>
+<th><strong>Beispiele</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>MIT-Lizenz</strong></td>
+<td>Sehr permissiv, erlaubt fast jede Nutzung.</td>
+<td>Beibehaltung des Lizenzhinweises.</td>
+<td>Ruby, .NET Core, React</td>
+</tr>
+<tr>
+<td><strong>GPL (GNU General Public License)</strong></td>
+<td>Copyleft-Lizenz, erfordert, dass Modifikationen ebenfalls unter GPL veröffentlicht werden.</td>
+<td>Quellcode muss offen bleiben.</td>
+<td>Linux-Kernel, GIMP, Blender</td>
+</tr>
+<tr>
+<td><strong>AGPL (Affero General Public License)</strong></td>
+<td>Wie GPL, aber auch für <strong>Netzwerkanwendungen</strong> (z. B. SaaS).</td>
+<td>Quellcode muss offen bleiben, auch bei Netzwerknutzung.</td>
+<td>Nextcloud, Mastodon</td>
+</tr>
+<tr>
+<td><strong>Apache-Lizenz 2.0</strong></td>
+<td>Permissiv, aber mit <strong>Patentschutz</strong>.</td>
+<td>Lizenzhinweis beibehalten, Änderungen dokumentieren.</td>
+<td>Android, Kubernetes, Apache HTTP Server</td>
+</tr>
+<tr>
+<td><strong>BSD-Lizenzen</strong> (2-Clause, 3-Clause)</td>
+<td>Sehr permissiv, ähnlich wie MIT.</td>
+<td>Lizenzhinweis beibehalten (3-Clause: auch Werbung verbieten).</td>
+<td>FreeBSD, OpenBSD, NetBSD</td>
+</tr>
+<tr>
+<td><strong>LGPL (Lesser GPL)</strong></td>
+<td>Erlaubt die <strong>Verknüpfung mit proprietärer Software</strong>.</td>
+<td>Änderungen am LGPL-Code müssen offen bleiben.</td>
+<td>GTK, libpng</td>
+</tr>
+<tr>
+<td><strong>Mozilla Public License (MPL)</strong></td>
+<td>Erlaubt <strong>Modifikationen und kommerzielle Nutzung</strong>.</td>
+<td>Änderungen müssen offen bleiben.</td>
+<td>Firefox, Thunderbird</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h5 id="12-open-source-vs-freie-software"><strong>1.2 Open-Source vs. Freie Software</strong><a class="headerlink" href="#12-open-source-vs-freie-software" title="Permanent link">&para;</a></h5>
+<ul>
+<li><strong>Open-Source-Software</strong> (OSI-Definition): Betont <strong>praktische Vorteile</strong> (z. B. Qualität, Sicherheit, Kosten).</li>
+<li><strong>Freie Software</strong> (FSF-Definition): Betont <strong>ethische Aspekte</strong> (Freiheit, Kontrolle über die Software).
+  Die <strong>4 Freiheiten</strong> nach Richard Stallman:</li>
+<li><strong>Freiheit 0</strong>: Die Freiheit, das Programm <strong>für jeden Zweck</strong> auszuführen.</li>
+<li><strong>Freiheit 1</strong>: Die Freiheit, die <strong>Funktionsweise des Programms</strong> zu untersuchen und an die eigenen Bedürfnisse anzupassen.</li>
+<li><strong>Freiheit 2</strong>: Die Freiheit, <strong>Kopien weiterzugeben</strong>.</li>
+<li><strong>Freiheit 3</strong>: Die Freiheit, das Programm <strong>zu verbessern und diese Verbesserungen der Öffentlichkeit zugänglich zu machen</strong>.</li>
+</ul>
+<h2 id="-">---<a class="headerlink" href="#-" title="Permanent link">&para;</a></h2>
+<h4 id="2-kategorien-von-open-source-anwendungen"><strong>2. Kategorien von Open-Source-Anwendungen</strong><a class="headerlink" href="#2-kategorien-von-open-source-anwendungen" title="Permanent link">&para;</a></h4>
+<p>Open-Source-Software deckt <strong>nahezu alle Bereiche</strong> der IT ab. Hier sind die wichtigsten Kategorien mit Beispielen:</p>
+<hr />
+<h5 id="21-betriebssysteme"><strong>2.1 Betriebssysteme</strong><a class="headerlink" href="#21-betriebssysteme" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th><strong>Anwendung</strong></th>
+<th><strong>Beschreibung</strong></th>
+<th><strong>Website</strong></th>
+<th><strong>Lizenz</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Linux</strong></td>
+<td>Open-Source-Betriebssystemkernel, Basis für viele Distributionen.</td>
+<td><a href="https://www.kernel.org/">kernel.org</a></td>
+<td>GPLv2</td>
+</tr>
+<tr>
+<td><strong>GNU/Linux-Distributionen</strong></td>
+<td>Komplette Betriebssysteme basierend auf dem Linux-Kernel.</td>
+<td>–</td>
+<td>Verschieden</td>
+</tr>
+<tr>
+<td><strong>Debian</strong></td>
+<td>Eine der ältesten und stabilsten Linux-Distributionen.</td>
+<td><a href="https://www.debian.org/">debian.org</a></td>
+<td>GPL, MIT, etc.</td>
+</tr>
+<tr>
+<td><strong>Ubuntu</strong></td>
+<td>Benutzerfreundliche Linux-Distribution basierend auf Debian.</td>
+<td><a href="https://ubuntu.com/">ubuntu.com</a></td>
+<td>GPL, MIT, etc.</td>
+</tr>
+<tr>
+<td><strong>Fedora</strong></td>
+<td>Innovative Linux-Distribution von Red Hat.</td>
+<td><a href="https://fedoraproject.org/">fedoraproject.org</a></td>
+<td>GPL, MIT, etc.</td>
+</tr>
+<tr>
+<td><strong>Arch Linux</strong></td>
+<td>Rolling-Release-Distribution für fortgeschrittene Nutzer.</td>
+<td><a href="https://archlinux.org/">archlinux.org</a></td>
+<td>GPL, MIT, etc.</td>
+</tr>
+<tr>
+<td><strong>FreeBSD</strong></td>
+<td>Unix-ähnliches Betriebssystem mit Fokus auf Stabilität.</td>
+<td><a href="https://www.freebsd.org/">freebsd.org</a></td>
+<td>BSD</td>
+</tr>
+<tr>
+<td><strong>OpenBSD</strong></td>
+<td>Betriebssystem mit Fokus auf Sicherheit.</td>
+<td><a href="https://www.openbsd.org/">openbsd.org</a></td>
+<td>BSD</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h5 id="22-buroanwendungen"><strong>2.2 Büroanwendungen</strong><a class="headerlink" href="#22-buroanwendungen" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th><strong>Anwendung</strong></th>
+<th><strong>Beschreibung</strong></th>
+<th><strong>Website</strong></th>
+<th><strong>Lizenz</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>LibreOffice</strong></td>
+<td>Komplettes Office-Paket (Text, Tabellen, Präsentationen, Datenbanken).</td>
+<td><a href="https://www.libreoffice.org/">libreoffice.org</a></td>
+<td>MPL</td>
+</tr>
+<tr>
+<td><strong>OnlyOffice</strong></td>
+<td>Office-Suite mit Kollaborationsfunktionen.</td>
+<td><a href="https://www.onlyoffice.com/">onlyoffice.com</a></td>
+<td>AGPL</td>
+</tr>
+<tr>
+<td><strong>Calligra Suite</strong></td>
+<td>Office-Suite für KDE.</td>
+<td><a href="https://calligra.org/">calligra.org</a></td>
+<td>LGPL</td>
+</tr>
+<tr>
+<td><strong>Joplin</strong></td>
+<td>Open-Source-Notiz-App mit Markdown-Unterstützung.</td>
+<td><a href="https://joplinapp.org/">joplinapp.org</a></td>
+<td>MIT</td>
+</tr>
+<tr>
+<td><strong>LaTeX</strong></td>
+<td>Typesetting-System für wissenschaftliche Dokumente.</td>
+<td><a href="https://www.latex-project.org/">latex-project.org</a></td>
+<td>LPPL</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h5 id="23-grafik-und-design"><strong>2.3 Grafik und Design</strong><a class="headerlink" href="#23-grafik-und-design" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th><strong>Anwendung</strong></th>
+<th><strong>Beschreibung</strong></th>
+<th><strong>Website</strong></th>
+<th><strong>Lizenz</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>GIMP</strong></td>
+<td>Bildbearbeitungsprogramm (Alternativ zu Photoshop).</td>
+<td><a href="https://www.gimp.org/">gimp.org</a></td>
+<td>GPL</td>
+</tr>
+<tr>
+<td><strong>Inkscape</strong></td>
+<td>Vektorgrafik-Editor (Alternativ zu Adobe Illustrator).</td>
+<td><a href="https://inkscape.org/">inkscape.org</a></td>
+<td>GPL</td>
+</tr>
+<tr>
+<td><strong>Krita</strong></td>
+<td>Digitales Malprogramm für Künstler.</td>
+<td><a href="https://krita.org/">krita.org</a></td>
+<td>GPL</td>
+</tr>
+<tr>
+<td><strong>Blender</strong></td>
+<td>3D-Modellierungs- und Animationssoftware.</td>
+<td><a href="https://www.blender.org/">blender.org</a></td>
+<td>GPL</td>
+</tr>
+<tr>
+<td><strong>Scribus</strong></td>
+<td>Desktop-Publishing-Software.</td>
+<td><a href="https://www.scribus.net/">scribus.net</a></td>
+<td>GPL</td>
+</tr>
+<tr>
+<td><strong>Darktable</strong></td>
+<td>RAW-Bildbearbeitung (Alternativ zu Lightroom).</td>
+<td><a href="https://www.darktable.org/">darktable.org</a></td>
+<td>GPL</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h5 id="24-multimedia"><strong>2.4 Multimedia</strong><a class="headerlink" href="#24-multimedia" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th><strong>Anwendung</strong></th>
+<th><strong>Beschreibung</strong></th>
+<th><strong>Website</strong></th>
+<th><strong>Lizenz</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>VLC Media Player</strong></td>
+<td>Universeller Medienplayer.</td>
+<td><a href="https://www.videolan.org/">videolan.org</a></td>
+<td>GPL</td>
+</tr>
+<tr>
+<td><strong>Kdenlive</strong></td>
+<td>Videobearbeitungssoftware.</td>
+<td><a href="https://kdenlive.org/">kdenlive.org</a></td>
+<td>GPL</td>
+</tr>
+<tr>
+<td><strong>Audacity</strong></td>
+<td>Audiobearbeitungssoftware.</td>
+<td><a href="https://www.audacityteam.org/">audacityteam.org</a></td>
+<td>GPL</td>
+</tr>
+<tr>
+<td><strong>OBS Studio</strong></td>
+<td>Software für Bildschirmaufnahmen und Live-Streaming.</td>
+<td><a href="https://obsproject.com/">obsproject.com</a></td>
+<td>GPL</td>
+</tr>
+<tr>
+<td><strong>HandBrake</strong></td>
+<td>Videokonvertierungs-Tool.</td>
+<td><a href="https://handbrake.fr/">handbrake.fr</a></td>
+<td>GPL</td>
+</tr>
+<tr>
+<td><strong>LMMS</strong></td>
+<td>Musikproduktionssoftware.</td>
+<td><a href="https://lmms.io/">lmms.io</a></td>
+<td>GPL</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h5 id="25-entwicklungstools"><strong>2.5 Entwicklungstools</strong><a class="headerlink" href="#25-entwicklungstools" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th><strong>Anwendung</strong></th>
+<th><strong>Beschreibung</strong></th>
+<th><strong>Website</strong></th>
+<th><strong>Lizenz</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Visual Studio Code</strong></td>
+<td>Code-Editor von Microsoft (Open-Source-Kern).</td>
+<td><a href="https://code.visualstudio.com/">code.visualstudio.com</a></td>
+<td>MIT</td>
+</tr>
+<tr>
+<td><strong>Eclipse</strong></td>
+<td>Integrierte Entwicklungsumgebung (IDE) für Java und andere Sprachen.</td>
+<td><a href="https://www.eclipse.org/">eclipse.org</a></td>
+<td>EPL</td>
+</tr>
+<tr>
+<td><strong>IntelliJ IDEA (Community Edition)</strong></td>
+<td>IDE für Java, Kotlin, Python, etc.</td>
+<td><a href="https://www.jetbrains.com/idea/">jetbrains.com/idea</a></td>
+<td>Apache 2.0</td>
+</tr>
+<tr>
+<td><strong>Git</strong></td>
+<td>Versionskontrollsystem.</td>
+<td><a href="https://git-scm.com/">git-scm.com</a></td>
+<td>GPL</td>
+</tr>
+<tr>
+<td><strong>GitLab</strong></td>
+<td>Plattform für DevOps und Versionskontrolle.</td>
+<td><a href="https://about.gitlab.com/">gitlab.com</a></td>
+<td>MIT</td>
+</tr>
+<tr>
+<td><strong>GitHub</strong></td>
+<td>Plattform für Hosting von Git-Repositories.</td>
+<td><a href="https://github.com/">github.com</a></td>
+<td>MIT (für Open-Source-Projekte)</td>
+</tr>
+<tr>
+<td><strong>Docker</strong></td>
+<td>Container-Plattform.</td>
+<td><a href="https://www.docker.com/">docker.com</a></td>
+<td>Apache 2.0</td>
+</tr>
+<tr>
+<td><strong>Kubernetes</strong></td>
+<td>System zur Automatisierung von Container-Bereitstellung.</td>
+<td><a href="https://kubernetes.io/">kubernetes.io</a></td>
+<td>Apache 2.0</td>
+</tr>
+<tr>
+<td><strong>Postman</strong></td>
+<td>API-Test-Tool.</td>
+<td><a href="https://www.postman.com/">postman.com</a></td>
+<td>Apache 2.0 (Open-Source-Version)</td>
+</tr>
+<tr>
+<td><strong>Jupyter Notebook</strong></td>
+<td>Interaktive Entwicklungsumgebung für Python, R, etc.</td>
+<td><a href="https://jupyter.org/">jupyter.org</a></td>
+<td>BSD</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h5 id="26-datenbanken"><strong>2.6 Datenbanken</strong><a class="headerlink" href="#26-datenbanken" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th><strong>Anwendung</strong></th>
+<th><strong>Beschreibung</strong></th>
+<th><strong>Website</strong></th>
+<th><strong>Lizenz</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>MySQL</strong></td>
+<td>Relationales Datenbanksystem.</td>
+<td><a href="https://www.mysql.com/">mysql.com</a></td>
+<td>GPL</td>
+</tr>
+<tr>
+<td><strong>MariaDB</strong></td>
+<td>Fork von MySQL.</td>
+<td><a href="https://mariadb.org/">mariadb.org</a></td>
+<td>GPL</td>
+</tr>
+<tr>
+<td><strong>PostgreSQL</strong></td>
+<td>Objekt-relationales Datenbanksystem.</td>
+<td><a href="https://www.postgresql.org/">postgresql.org</a></td>
+<td>PostgreSQL License</td>
+</tr>
+<tr>
+<td><strong>SQLite</strong></td>
+<td>Leichtgewichtige, serverlose Datenbank.</td>
+<td><a href="https://www.sqlite.org/">sqlite.org</a></td>
+<td>Public Domain</td>
+</tr>
+<tr>
+<td><strong>MongoDB</strong></td>
+<td>NoSQL-Datenbank (Dokumentenorientiert).</td>
+<td><a href="https://www.mongodb.com/">mongodb.com</a></td>
+<td>AGPL</td>
+</tr>
+<tr>
+<td><strong>Redis</strong></td>
+<td>In-Memory-Datenbank für Caching und Echtzeit-Anwendungen.</td>
+<td><a href="https://redis.io/">redis.io</a></td>
+<td>BSD</td>
+</tr>
+<tr>
+<td><strong>Elasticsearch</strong></td>
+<td>Such- und Analysedatenbank.</td>
+<td><a href="https://www.elastic.co/">elastic.co</a></td>
+<td>Apache 2.0</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h5 id="27-webserver-und-webanwendungen"><strong>2.7 Webserver und Webanwendungen</strong><a class="headerlink" href="#27-webserver-und-webanwendungen" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th><strong>Anwendung</strong></th>
+<th><strong>Beschreibung</strong></th>
+<th><strong>Website</strong></th>
+<th><strong>Lizenz</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Apache HTTP Server</strong></td>
+<td>Beliebter Webserver.</td>
+<td><a href="https://httpd.apache.org/">apache.org</a></td>
+<td>Apache 2.0</td>
+</tr>
+<tr>
+<td><strong>Nginx</strong></td>
+<td>Hochperformanter Webserver und Reverse Proxy.</td>
+<td><a href="https://www.nginx.org/">nginx.org</a></td>
+<td>BSD</td>
+</tr>
+<tr>
+<td><strong>WordPress</strong></td>
+<td>Content-Management-System (CMS) für Blogs und Websites.</td>
+<td><a href="https://wordpress.org/">wordpress.org</a></td>
+<td>GPL</td>
+</tr>
+<tr>
+<td><strong>Joomla</strong></td>
+<td>CMS für Websites.</td>
+<td><a href="https://www.joomla.org/">joomla.org</a></td>
+<td>GPL</td>
+</tr>
+<tr>
+<td><strong>Drupal</strong></td>
+<td>CMS für komplexe Websites.</td>
+<td><a href="https://www.drupal.org/">drupal.org</a></td>
+<td>GPL</td>
+</tr>
+<tr>
+<td><strong>Nextcloud</strong></td>
+<td>Selbstgehostete Cloud-Plattform.</td>
+<td><a href="https://nextcloud.com/">nextcloud.com</a></td>
+<td>AGPL</td>
+</tr>
+<tr>
+<td><strong>ownCloud</strong></td>
+<td>Selbstgehostete Cloud-Plattform.</td>
+<td><a href="https://owncloud.com/">owncloud.com</a></td>
+<td>AGPL</td>
+</tr>
+<tr>
+<td><strong>Mastodon</strong></td>
+<td>Dezentrales soziales Netzwerk.</td>
+<td><a href="https://joinmastodon.org/">joinmastodon.org</a></td>
+<td>AGPL</td>
+</tr>
+<tr>
+<td><strong>Discourse</strong></td>
+<td>Forum-Software.</td>
+<td><a href="https://www.discourse.org/">discourse.org</a></td>
+<td>GPL</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h5 id="28-netzwerk-und-sicherheit"><strong>2.8 Netzwerk und Sicherheit</strong><a class="headerlink" href="#28-netzwerk-und-sicherheit" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th><strong>Anwendung</strong></th>
+<th><strong>Beschreibung</strong></th>
+<th><strong>Website</strong></th>
+<th><strong>Lizenz</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Wireshark</strong></td>
+<td>Netzwerkprotokoll-Analysator.</td>
+<td><a href="https://www.wireshark.org/">wireshark.org</a></td>
+<td>GPL</td>
+</tr>
+<tr>
+<td><strong>OpenVPN</strong></td>
+<td>VPN-Software für sichere Verbindungen.</td>
+<td><a href="https://openvpn.net/">openvpn.net</a></td>
+<td>GPL</td>
+</tr>
+<tr>
+<td><strong>WireGuard</strong></td>
+<td>Modernes, schnelles VPN.</td>
+<td><a href="https://www.wireguard.com/">wireguard.com</a></td>
+<td>GPL</td>
+</tr>
+<tr>
+<td><strong>Snort</strong></td>
+<td>Intrusion Detection System (IDS).</td>
+<td><a href="https://www.snort.org/">snort.org</a></td>
+<td>GPL</td>
+</tr>
+<tr>
+<td><strong>Suricata</strong></td>
+<td>Intrusion Detection/Prevention System (IDS/IPS).</td>
+<td><a href="https://suricata.io/">suricata.io</a></td>
+<td>GPL</td>
+</tr>
+<tr>
+<td><strong>Fail2Ban</strong></td>
+<td>Schutz vor Brute-Force-Angriffen.</td>
+<td><a href="https://www.fail2ban.org/">fail2ban.org</a></td>
+<td>GPL</td>
+</tr>
+<tr>
+<td><strong>ClamAV</strong></td>
+<td>Antiviren-Software.</td>
+<td><a href="https://www.clamav.net/">clamav.net</a></td>
+<td>GPL</td>
+</tr>
+<tr>
+<td><strong>Let’s Encrypt</strong></td>
+<td>Kostenlose SSL/TLS-Zertifikate.</td>
+<td><a href="https://letsencrypt.org/">letsencrypt.org</a></td>
+<td>Apache 2.0</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h5 id="29-virtualisierung-und-container"><strong>2.9 Virtualisierung und Container</strong><a class="headerlink" href="#29-virtualisierung-und-container" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th><strong>Anwendung</strong></th>
+<th><strong>Beschreibung</strong></th>
+<th><strong>Website</strong></th>
+<th><strong>Lizenz</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>QEMU</strong></td>
+<td>Open-Source-Emulator und Virtualisierungsplattform.</td>
+<td><a href="https://www.qemu.org/">qemu.org</a></td>
+<td>GPL</td>
+</tr>
+<tr>
+<td><strong>KVM (Kernel-based Virtual Machine)</strong></td>
+<td>Virtualisierungslösung für Linux.</td>
+<td><a href="https://www.linux-kvm.org/">linux-kvm.org</a></td>
+<td>GPL</td>
+</tr>
+<tr>
+<td><strong>VirtualBox</strong></td>
+<td>Virtualisierungssoftware von Oracle.</td>
+<td><a href="https://www.virtualbox.org/">virtualbox.org</a></td>
+<td>GPL</td>
+</tr>
+<tr>
+<td><strong>Proxmox VE</strong></td>
+<td>Enterprise-Virtualisierungsplattform.</td>
+<td><a href="https://www.proxmox.com/">proxmox.com</a></td>
+<td>AGPL</td>
+</tr>
+<tr>
+<td><strong>LXC (Linux Containers)</strong></td>
+<td>Container-Plattform.</td>
+<td><a href="https://linuxcontainers.org/">linuxcontainers.org</a></td>
+<td>Apache 2.0</td>
+</tr>
+<tr>
+<td><strong>Podman</strong></td>
+<td>Container-Engine (Docker-Alternative).</td>
+<td><a href="https://podman.io/">podman.io</a></td>
+<td>Apache 2.0</td>
+</tr>
+<tr>
+<td><strong>LXD</strong></td>
+<td>Container-basierte Virtualisierungsplattform.</td>
+<td><a href="https://linuxcontainers.org/lxd/">linuxcontainers.org/lxd</a></td>
+<td>Apache 2.0</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h5 id="210-wissenschaft-und-bildung"><strong>2.10 Wissenschaft und Bildung</strong><a class="headerlink" href="#210-wissenschaft-und-bildung" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th><strong>Anwendung</strong></th>
+<th><strong>Beschreibung</strong></th>
+<th><strong>Website</strong></th>
+<th><strong>Lizenz</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Moodle</strong></td>
+<td>Lernplattform (LMS).</td>
+<td><a href="https://moodle.org/">moodle.org</a></td>
+<td>GPL</td>
+</tr>
+<tr>
+<td><strong>Open edX</strong></td>
+<td>Plattform für Online-Kurse.</td>
+<td><a href="https://openedx.org/">openedx.org</a></td>
+<td>AGPL</td>
+</tr>
+<tr>
+<td><strong>Kiwix</strong></td>
+<td>Offline-Reader für Wikipedia und andere Inhalte.</td>
+<td><a href="https://www.kiwix.org/">kiwix.org</a></td>
+<td>GPL</td>
+</tr>
+<tr>
+<td><strong>Stellarium</strong></td>
+<td>Planetarium-Software.</td>
+<td><a href="https://stellarium.org/">stellarium.org</a></td>
+<td>GPL</td>
+</tr>
+<tr>
+<td><strong>GNU Octave</strong></td>
+<td>Mathematische Berechnungssoftware (Matlab-Alternative).</td>
+<td><a href="https://www.gnu.org/software/octave/">octave.org</a></td>
+<td>GPL</td>
+</tr>
+<tr>
+<td><strong>R</strong></td>
+<td>Statistiksoftware.</td>
+<td><a href="https://www.r-project.org/">r-project.org</a></td>
+<td>GPL</td>
+</tr>
+<tr>
+<td><strong>JupyterLab</strong></td>
+<td>Web-basierte Entwicklungsumgebung für Datenwissenschaft.</td>
+<td><a href="https://jupyter.org/">jupyter.org</a></td>
+<td>BSD</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h5 id="211-spiele"><strong>2.11 Spiele</strong><a class="headerlink" href="#211-spiele" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th><strong>Anwendung</strong></th>
+<th><strong>Beschreibung</strong></th>
+<th><strong>Website</strong></th>
+<th><strong>Lizenz</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>0 A.D.</strong></td>
+<td>Echtzeit-Strategiespiel.</td>
+<td><a href="https://play0ad.com/">play0ad.com</a></td>
+<td>GPL</td>
+</tr>
+<tr>
+<td><strong>SuperTux</strong></td>
+<td>2D-Jump-and-Run-Spiel (Mario-Klon).</td>
+<td><a href="https://www.supertux.org/">supertux.org</a></td>
+<td>GPL</td>
+</tr>
+<tr>
+<td><strong>FreeCiv</strong></td>
+<td>Strategiespiel (Civilization-Klon).</td>
+<td><a href="https://www.freeciv.org/">freeciv.org</a></td>
+<td>GPL</td>
+</tr>
+<tr>
+<td><strong>Wesnoth</strong></td>
+<td>Rundenbasiertes Strategiespiel.</td>
+<td><a href="https://www.wesnoth.org/">wesnoth.org</a></td>
+<td>GPL</td>
+</tr>
+<tr>
+<td><strong>OpenTTD</strong></td>
+<td>Transport-Simulationsspiel (Transport Tycoon Deluxe-Klon).</td>
+<td><a href="https://www.openttd.org/">openttd.org</a></td>
+<td>GPL</td>
+</tr>
+<tr>
+<td><strong>Godot Engine</strong></td>
+<td>Spiel-Engine für 2D- und 3D-Spiele.</td>
+<td><a href="https://godotengine.org/">godotengine.org</a></td>
+<td>MIT</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h5 id="212-kommunikation-und-kollaboration"><strong>2.12 Kommunikation und Kollaboration</strong><a class="headerlink" href="#212-kommunikation-und-kollaboration" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th><strong>Anwendung</strong></th>
+<th><strong>Beschreibung</strong></th>
+<th><strong>Website</strong></th>
+<th><strong>Lizenz</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Thunderbird</strong></td>
+<td>E-Mail-Client von Mozilla.</td>
+<td><a href="https://www.thunderbird.net/">thunderbird.net</a></td>
+<td>MPL</td>
+</tr>
+<tr>
+<td><strong>Signal</strong></td>
+<td>Verschlüsselte Messaging-App.</td>
+<td><a href="https://signal.org/">signal.org</a></td>
+<td>GPL</td>
+</tr>
+<tr>
+<td><strong>Element (Matrix)</strong></td>
+<td>Dezentrale Messaging-App.</td>
+<td><a href="https://element.io/">element.io</a></td>
+<td>Apache 2.0</td>
+</tr>
+<tr>
+<td><strong>Jitsi Meet</strong></td>
+<td>Videokonferenz-Software.</td>
+<td><a href="https://jitsi.org/">jitsi.org</a></td>
+<td>Apache 2.0</td>
+</tr>
+<tr>
+<td><strong>BigBlueButton</strong></td>
+<td>Webkonferenz-System für Bildung.</td>
+<td><a href="https://bigbluebutton.org/">bigbluebutton.org</a></td>
+<td>LGPL</td>
+</tr>
+<tr>
+<td><strong>Mattermost</strong></td>
+<td>Selbstgehosteter Slack-Alternative.</td>
+<td><a href="https://mattermost.com/">mattermost.com</a></td>
+<td>AGPL</td>
+</tr>
+<tr>
+<td><strong>Rocket.Chat</strong></td>
+<td>Selbstgehosteter Chat-Server.</td>
+<td><a href="https://rocket.chat/">rocket.chat</a></td>
+<td>MIT</td>
+</tr>
+</tbody>
+</table>
+<h2 id="-_1">---<a class="headerlink" href="#-_1" title="Permanent link">&para;</a></h2>
+<h4 id="3-open-source-anwendungen-fur-spezifische-anwendungsfalle"><strong>3. Open-Source-Anwendungen für spezifische Anwendungsfälle</strong><a class="headerlink" href="#3-open-source-anwendungen-fur-spezifische-anwendungsfalle" title="Permanent link">&para;</a></h4>
+<hr />
+<h5 id="31-open-source-fur-unternehmen"><strong>3.1 Open-Source für Unternehmen</strong><a class="headerlink" href="#31-open-source-fur-unternehmen" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th><strong>Anwendung</strong></th>
+<th><strong>Beschreibung</strong></th>
+<th><strong>Website</strong></th>
+<th><strong>Lizenz</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ERPNext</strong></td>
+<td>Enterprise Resource Planning (ERP)-System.</td>
+<td><a href="https://erpnext.com/">erpnext.com</a></td>
+<td>MIT</td>
+</tr>
+<tr>
+<td><strong>Odoo</strong></td>
+<td>ERP- und CRM-System.</td>
+<td><a href="https://www.odoo.com/">odoo.com</a></td>
+<td>LGPL</td>
+</tr>
+<tr>
+<td><strong>SuiteCRM</strong></td>
+<td>Customer Relationship Management (CRM).</td>
+<td><a href="https://suitecrm.com/">suitecrm.com</a></td>
+<td>AGPL</td>
+</tr>
+<tr>
+<td><strong>Nextcloud Groupware</strong></td>
+<td>Kollaborationssuite (E-Mail, Kalender, Kontakte).</td>
+<td><a href="https://nextcloud.com/">nextcloud.com</a></td>
+<td>AGPL</td>
+</tr>
+<tr>
+<td><strong>Zimbra</strong></td>
+<td>E-Mail- und Kollaborationsplattform.</td>
+<td><a href="https://www.zimbra.com/">zimbra.com</a></td>
+<td>GPL</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h5 id="32-open-source-fur-entwickler"><strong>3.2 Open-Source für Entwickler</strong><a class="headerlink" href="#32-open-source-fur-entwickler" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th><strong>Anwendung</strong></th>
+<th><strong>Beschreibung</strong></th>
+<th><strong>Website</strong></th>
+<th><strong>Lizenz</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>GitLab CE</strong></td>
+<td>Selbstgehostete Git-Repository-Verwaltung.</td>
+<td><a href="https://about.gitlab.com/">gitlab.com</a></td>
+<td>MIT</td>
+</tr>
+<tr>
+<td><strong>Gitea</strong></td>
+<td>Leichtgewichtige Git-Repository-Verwaltung.</td>
+<td><a href="https://gitea.io/">gitea.io</a></td>
+<td>MIT</td>
+</tr>
+<tr>
+<td><strong>Jenkins</strong></td>
+<td>Automatisierungsserver für CI/CD.</td>
+<td><a href="https://www.jenkins.io/">jenkins.io</a></td>
+<td>MIT</td>
+</tr>
+<tr>
+<td><strong>SonarQube</strong></td>
+<td>Code-Qualitätsanalyse.</td>
+<td><a href="https://www.sonarqube.org/">sonarqube.org</a></td>
+<td>LGPL</td>
+</tr>
+<tr>
+<td><strong>Sentry</strong></td>
+<td>Fehlerüberwachung für Anwendungen.</td>
+<td><a href="https://sentry.io/">sentry.io</a></td>
+<td>BSD</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h5 id="33-open-source-fur-devops"><strong>3.3 Open-Source für DevOps</strong><a class="headerlink" href="#33-open-source-fur-devops" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th><strong>Anwendung</strong></th>
+<th><strong>Beschreibung</strong></th>
+<th><strong>Website</strong></th>
+<th><strong>Lizenz</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Ansible</strong></td>
+<td>Automatisierungstool für Konfiguration und Bereitstellung.</td>
+<td><a href="https://www.ansible.com/">ansible.com</a></td>
+<td>GPL</td>
+</tr>
+<tr>
+<td><strong>Terraform</strong></td>
+<td>Infrastructure as Code (IaC).</td>
+<td><a href="https://www.terraform.io/">terraform.io</a></td>
+<td>MPL</td>
+</tr>
+<tr>
+<td><strong>Prometheus</strong></td>
+<td>Monitoring- und Alerting-Toolkit.</td>
+<td><a href="https://prometheus.io/">prometheus.io</a></td>
+<td>Apache 2.0</td>
+</tr>
+<tr>
+<td><strong>Grafana</strong></td>
+<td>Visualisierungsplattform für Metriken.</td>
+<td><a href="https://grafana.com/">grafana.com</a></td>
+<td>AGPL</td>
+</tr>
+<tr>
+<td><strong>ELK Stack</strong> (Elasticsearch, Logstash, Kibana)</td>
+<td>Log-Management und Analyse.</td>
+<td><a href="https://www.elastic.co/">elastic.co</a></td>
+<td>Apache 2.0</td>
+</tr>
+<tr>
+<td><strong>Nagios</strong></td>
+<td>Monitoring-System für Server und Dienste.</td>
+<td><a href="https://www.nagios.org/">nagios.org</a></td>
+<td>GPL</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h5 id="34-open-source-fur-ki-und-machine-learning"><strong>3.4 Open-Source für KI und Machine Learning</strong><a class="headerlink" href="#34-open-source-fur-ki-und-machine-learning" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th><strong>Anwendung</strong></th>
+<th><strong>Beschreibung</strong></th>
+<th><strong>Website</strong></th>
+<th><strong>Lizenz</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>TensorFlow</strong></td>
+<td>Machine-Learning-Framework von Google.</td>
+<td><a href="https://www.tensorflow.org/">tensorflow.org</a></td>
+<td>Apache 2.0</td>
+</tr>
+<tr>
+<td><strong>PyTorch</strong></td>
+<td>Machine-Learning-Framework von Facebook.</td>
+<td><a href="https://pytorch.org/">pytorch.org</a></td>
+<td>BSD</td>
+</tr>
+<tr>
+<td><strong>scikit-learn</strong></td>
+<td>Machine-Learning-Bibliothek für Python.</td>
+<td><a href="https://scikit-learn.org/">scikit-learn.org</a></td>
+<td>BSD</td>
+</tr>
+<tr>
+<td><strong>Keras</strong></td>
+<td>Hochlevel-Machine-Learning-API.</td>
+<td><a href="https://keras.io/">keras.io</a></td>
+<td>MIT</td>
+</tr>
+<tr>
+<td><strong>Hugging Face Transformers</strong></td>
+<td>Bibliothek für NLP (Natural Language Processing).</td>
+<td><a href="https://huggingface.co/">huggingface.co</a></td>
+<td>Apache 2.0</td>
+</tr>
+<tr>
+<td><strong>Jupyter Notebook</strong></td>
+<td>Interaktive Entwicklungsumgebung für Datenwissenschaft.</td>
+<td><a href="https://jupyter.org/">jupyter.org</a></td>
+<td>BSD</td>
+</tr>
+</tbody>
+</table>
+<h2 id="-_2">---<a class="headerlink" href="#-_2" title="Permanent link">&para;</a></h2>
+<h4 id="4-open-source-alternativen-zu-proprietarer-software"><strong>4. Open-Source-Alternativen zu proprietärer Software</strong><a class="headerlink" href="#4-open-source-alternativen-zu-proprietarer-software" title="Permanent link">&para;</a></h4>
+<p>Viele <strong>proprietäre Softwarelösungen</strong> haben <strong>Open-Source-Alternativen</strong>, die oft <strong>kostenlos, sicherer und anpassbarer</strong> sind.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Proprietäre Software</strong></th>
+<th><strong>Open-Source-Alternative</strong></th>
+<th><strong>Beschreibung</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Microsoft Windows</strong></td>
+<td>Linux (Ubuntu, Fedora, etc.)</td>
+<td>Betriebssystem.</td>
+</tr>
+<tr>
+<td><strong>Microsoft Office</strong></td>
+<td>LibreOffice, OnlyOffice</td>
+<td>Office-Suite.</td>
+</tr>
+<tr>
+<td><strong>Adobe Photoshop</strong></td>
+<td>GIMP, Krita</td>
+<td>Bildbearbeitung.</td>
+</tr>
+<tr>
+<td><strong>Adobe Illustrator</strong></td>
+<td>Inkscape</td>
+<td>Vektorgrafik.</td>
+</tr>
+<tr>
+<td><strong>Adobe Premiere Pro</strong></td>
+<td>Kdenlive, OpenShot</td>
+<td>Videobearbeitung.</td>
+</tr>
+<tr>
+<td><strong>Adobe After Effects</strong></td>
+<td>Blender (für 3D/Animation)</td>
+<td>3D-Animation und Effekte.</td>
+</tr>
+<tr>
+<td><strong>AutoCAD</strong></td>
+<td>FreeCAD, LibreCAD</td>
+<td>CAD-Software.</td>
+</tr>
+<tr>
+<td><strong>Microsoft Visual Studio</strong></td>
+<td>Visual Studio Code, Eclipse</td>
+<td>IDE.</td>
+</tr>
+<tr>
+<td><strong>GitHub (Enterprise)</strong></td>
+<td>GitLab, Gitea</td>
+<td>Git-Repository-Verwaltung.</td>
+</tr>
+<tr>
+<td><strong>Slack</strong></td>
+<td>Mattermost, Rocket.Chat</td>
+<td>Team-Kollaboration.</td>
+</tr>
+<tr>
+<td><strong>Microsoft Teams</strong></td>
+<td>Jitsi Meet, Element</td>
+<td>Videokonferenz.</td>
+</tr>
+<tr>
+<td><strong>Zoom</strong></td>
+<td>Jitsi Meet, BigBlueButton</td>
+<td>Videokonferenz.</td>
+</tr>
+<tr>
+<td><strong>Dropbox</strong></td>
+<td>Nextcloud, ownCloud</td>
+<td>Cloud-Speicher.</td>
+</tr>
+<tr>
+<td><strong>Google Drive</strong></td>
+<td>Nextcloud, ownCloud</td>
+<td>Cloud-Speicher.</td>
+</tr>
+<tr>
+<td><strong>Notion</strong></td>
+<td>Joplin, AppFlowy</td>
+<td>Notiz- und Wissensmanagement.</td>
+</tr>
+<tr>
+<td><strong>Evernote</strong></td>
+<td>Joplin, Zim</td>
+<td>Notiz-App.</td>
+</tr>
+<tr>
+<td><strong>Trello</strong></td>
+<td>Taiga, OpenProject</td>
+<td>Projektmanagement.</td>
+</tr>
+<tr>
+<td><strong>Jira</strong></td>
+<td>Redmine, OpenProject</td>
+<td>Projektmanagement.</td>
+</tr>
+<tr>
+<td><strong>Photoshop Lightroom</strong></td>
+<td>Darktable, RawTherapee</td>
+<td>RAW-Bildbearbeitung.</td>
+</tr>
+<tr>
+<td><strong>Final Cut Pro</strong></td>
+<td>Kdenlive, OpenShot</td>
+<td>Videobearbeitung.</td>
+</tr>
+<tr>
+<td><strong>Sublime Text</strong></td>
+<td>Visual Studio Code, Kate</td>
+<td>Texteditor.</td>
+</tr>
+<tr>
+<td><strong>WinRAR / 7-Zip</strong></td>
+<td>File Roller, PeaZip</td>
+<td>Archivierung.</td>
+</tr>
+<tr>
+<td><strong>Microsoft SQL Server</strong></td>
+<td>PostgreSQL, MySQL</td>
+<td>Datenbank.</td>
+</tr>
+<tr>
+<td><strong>Oracle Database</strong></td>
+<td>PostgreSQL, MariaDB</td>
+<td>Datenbank.</td>
+</tr>
+<tr>
+<td><strong>SAP</strong></td>
+<td>ERPNext, Odoo</td>
+<td>ERP-System.</td>
+</tr>
+<tr>
+<td><strong>Salesforce</strong></td>
+<td>SuiteCRM, Odoo</td>
+<td>CRM-System.</td>
+</tr>
+<tr>
+<td><strong>Matlab</strong></td>
+<td>GNU Octave, Python (NumPy, SciPy)</td>
+<td>Mathematische Berechnungen.</td>
+</tr>
+<tr>
+<td><strong>SPSS</strong></td>
+<td>R, Jamovi</td>
+<td>Statistiksoftware.</td>
+</tr>
+<tr>
+<td><strong>Tableau</strong></td>
+<td>Metabase, Superset</td>
+<td>Datenvisualisierung.</td>
+</tr>
+<tr>
+<td><strong>Power BI</strong></td>
+<td>Metabase, Superset</td>
+<td>Business Intelligence.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="-_3">---<a class="headerlink" href="#-_3" title="Permanent link">&para;</a></h2>
+<h4 id="5-open-source-in-der-praxis-fallstudien"><strong>5. Open-Source in der Praxis: Fallstudien</strong><a class="headerlink" href="#5-open-source-in-der-praxis-fallstudien" title="Permanent link">&para;</a></h4>
+<hr />
+<h5 id="51-open-source-im-unternehmen-nextcloud"><strong>5.1 Open-Source im Unternehmen: Nextcloud</strong><a class="headerlink" href="#51-open-source-im-unternehmen-nextcloud" title="Permanent link">&para;</a></h5>
+<p><strong>Szenario:</strong> Ein Unternehmen möchte eine <strong>selbstgehostete Cloud-Lösung</strong> für Dateispeicherung, Kollaboration und Kommunikation nutzen.</p>
+<p><strong>Lösung:</strong>
+- <strong>Nextcloud</strong> installieren:
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Beispiel für Debian/Ubuntu</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>nextcloud
+</code></pre></div></td></tr></table></div>
+- <strong>Webserver (Apache/Nginx) und Datenbank (MySQL/MariaDB/PostgreSQL) konfigurieren</strong>.
+- <strong>Apps installieren</strong> (z. B. OnlyOffice für Dokumentenbearbeitung, Talk für Videokonferenzen).
+- <strong>Benutzer und Gruppen verwalten</strong>.
+- <strong>Backups einrichten</strong> (z. B. mit <code>rsync</code> oder <code>BorgBackup</code>).</p>
+<p><strong>Vorteile:</strong>
+- <strong>Datenhoheit</strong>: Alle Daten bleiben im Unternehmen.
+- <strong>Sicherheit</strong>: Verschlüsselung, Zertifikate (Let’s Encrypt), Firewall.
+- <strong>Kosten</strong>: Keine Lizenzgebühren.
+- <strong>Erweiterbarkeit</strong>: Viele Plugins und Integrationen.</p>
+<hr />
+<h5 id="52-open-source-fur-entwickler-gitlab"><strong>5.2 Open-Source für Entwickler: GitLab</strong><a class="headerlink" href="#52-open-source-fur-entwickler-gitlab" title="Permanent link">&para;</a></h5>
+<p><strong>Szenario:</strong> Ein Entwicklungsteam möchte eine <strong>selbstgehostete Git-Repository-Verwaltung</strong> mit CI/CD-Pipelines nutzen.</p>
+<p><strong>Lösung:</strong>
+- <strong>GitLab CE (Community Edition) installieren</strong>:
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Beispiel für Debian/Ubuntu</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>gitlab-ce
+</code></pre></div></td></tr></table></div>
+- <strong>Konfiguration anpassen</strong> (<code>/etc/gitlab/gitlab.rb</code>).
+- <strong>CI/CD-Pipelines einrichten</strong> (<code>.gitlab-ci.yml</code>).
+- <strong>Runner registrieren</strong> für die Ausführung von Jobs.</p>
+<p><strong>Vorteile:</strong>
+- <strong>Zentrale Code-Verwaltung</strong>: Alle Projekte an einem Ort.
+- <strong>CI/CD</strong>: Automatisierte Tests und Bereitstellungen.
+- <strong>Issue-Tracking</strong>: Integriertes Projektmanagement.
+- <strong>Selbstgehostet</strong>: Keine Abhängigkeit von externen Anbietern.</p>
+<hr />
+<h5 id="53-open-source-fur-bildung-moodle"><strong>5.3 Open-Source für Bildung: Moodle</strong><a class="headerlink" href="#53-open-source-fur-bildung-moodle" title="Permanent link">&para;</a></h5>
+<p><strong>Szenario:</strong> Eine Schule oder Universität möchte eine <strong>Lernplattform</strong> für Online-Kurse einrichten.</p>
+<p><strong>Lösung:</strong>
+- <strong>Moodle installieren</strong>:
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Beispiel für Debian/Ubuntu</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>moodle
+</code></pre></div></td></tr></table></div>
+- <strong>Webserver (Apache/Nginx) und Datenbank (MySQL/MariaDB/PostgreSQL) konfigurieren</strong>.
+- <strong>Kurse und Benutzer anlegen</strong>.
+- <strong>Plugins installieren</strong> (z. B. für Videokonferenzen mit BigBlueButton).</p>
+<p><strong>Vorteile:</strong>
+- <strong>Flexibilität</strong>: Anpassung an individuelle Bedürfnisse.
+- <strong>Kosten</strong>: Keine Lizenzgebühren.
+- <strong>Community</strong>: Große Gemeinschaft mit vielen Plugins und Themen.</p>
+<hr />
+<h5 id="54-open-source-fur-devops-docker-kubernetes"><strong>5.4 Open-Source für DevOps: Docker + Kubernetes</strong><a class="headerlink" href="#54-open-source-fur-devops-docker-kubernetes" title="Permanent link">&para;</a></h5>
+<p><strong>Szenario:</strong> Ein Unternehmen möchte <strong>Container-basierte Anwendungen</strong> bereitzustellen und zu verwalten.</p>
+<p><strong>Lösung:</strong>
+1. <strong>Docker installieren</strong>:
+   <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Beispiel für Debian/Ubuntu</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>docker.io
+sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>--now<span class="w"> </span>docker
+</code></pre></div></td></tr></table></div>
+2. <strong>Kubernetes installieren</strong> (z. B. mit <code>kubeadm</code>):
+   <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>kubeadm<span class="w"> </span>kubelet<span class="w"> </span>kubectl
+sudo<span class="w"> </span>kubeadm<span class="w"> </span>init
+</code></pre></div></td></tr></table></div>
+3. <strong>Container-Images erstellen</strong> (mit <code>Dockerfile</code>).
+4. <strong>Anwendungen in Kubernetes bereitzustellen</strong> (mit <code>kubectl apply -f deployment.yaml</code>).</p>
+<p><strong>Vorteile:</strong>
+- <strong>Skalierbarkeit</strong>: Einfaches Skalieren von Anwendungen.
+- <strong>Portabilität</strong>: Container laufen auf jedem System mit Docker/Kubernetes.
+- <strong>Automatisierung</strong>: CI/CD-Pipelines für Container-Images.
+- <strong>Ressourceneffizienz</strong>: Geringerer Overhead im Vergleich zu virtuellen Maschinen.</p>
+<h2 id="-_4">---<a class="headerlink" href="#-_4" title="Permanent link">&para;</a></h2>
+<h4 id="6-open-source-communities-und-ressourcen"><strong>6. Open-Source-Communities und Ressourcen</strong><a class="headerlink" href="#6-open-source-communities-und-ressourcen" title="Permanent link">&para;</a></h4>
+<hr />
+<h5 id="61-wichtige-open-source-communities"><strong>6.1 Wichtige Open-Source-Communities</strong><a class="headerlink" href="#61-wichtige-open-source-communities" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th><strong>Community</strong></th>
+<th><strong>Beschreibung</strong></th>
+<th><strong>Website</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>GitHub</strong></td>
+<td>Plattform für Hosting von Open-Source-Projekten.</td>
+<td><a href="https://github.com/">github.com</a></td>
+</tr>
+<tr>
+<td><strong>GitLab</strong></td>
+<td>Plattform für DevOps und Open-Source-Projekte.</td>
+<td><a href="https://about.gitlab.com/">gitlab.com</a></td>
+</tr>
+<tr>
+<td><strong>SourceForge</strong></td>
+<td>Plattform für Open-Source-Projekte.</td>
+<td><a href="https://sourceforge.net/">sourceforge.net</a></td>
+</tr>
+<tr>
+<td><strong>Open Source Initiative (OSI)</strong></td>
+<td>Organisation, die Open-Source-Software fördert.</td>
+<td><a href="https://opensource.org/">opensource.org</a></td>
+</tr>
+<tr>
+<td><strong>Free Software Foundation (FSF)</strong></td>
+<td>Organisation, die freie Software fördert.</td>
+<td><a href="https://www.fsf.org/">fsf.org</a></td>
+</tr>
+<tr>
+<td><strong>Linux Foundation</strong></td>
+<td>Organisation, die Linux und Open-Source-Projekte unterstützt.</td>
+<td><a href="https://www.linuxfoundation.org/">linuxfoundation.org</a></td>
+</tr>
+<tr>
+<td><strong>Apache Software Foundation</strong></td>
+<td>Organisation, die Apache-Projekte unterstützt.</td>
+<td><a href="https://www.apache.org/">apache.org</a></td>
+</tr>
+<tr>
+<td><strong>Eclipse Foundation</strong></td>
+<td>Organisation, die Eclipse-Projekte unterstützt.</td>
+<td><a href="https://www.eclipse.org/">eclipse.org</a></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h5 id="62-ressourcen-fur-open-source-software"><strong>6.2 Ressourcen für Open-Source-Software</strong><a class="headerlink" href="#62-ressourcen-fur-open-source-software" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th><strong>Ressource</strong></th>
+<th><strong>Beschreibung</strong></th>
+<th><strong>Website</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>GitHub Explore</strong></td>
+<td>Entdecken Sie Open-Source-Projekte.</td>
+<td><a href="https://github.com/explore">github.com/explore</a></td>
+</tr>
+<tr>
+<td><strong>Open Hub</strong></td>
+<td>Analysiert Open-Source-Projekte.</td>
+<td><a href="https://www.openhub.net/">openhub.net</a></td>
+</tr>
+<tr>
+<td><strong>AlternativeTo</strong></td>
+<td>Finden Sie Open-Source-Alternativen zu proprietärer Software.</td>
+<td><a href="https://alternativeto.net/">alternativeto.net</a></td>
+</tr>
+<tr>
+<td><strong>DistroWatch</strong></td>
+<td>Informationen über Linux-Distributionen.</td>
+<td><a href="https://distrowatch.com/">distrowatch.com</a></td>
+</tr>
+<tr>
+<td><strong>FOSS Post</strong></td>
+<td>Nachrichten und Artikel über Open-Source-Software.</td>
+<td><a href="https://fosspost.com/">fosspost.com</a></td>
+</tr>
+<tr>
+<td><strong>LWN.net</strong></td>
+<td>Nachrichten und Artikel über Linux und Open-Source.</td>
+<td><a href="https://lwn.net/">lwn.net</a></td>
+</tr>
+<tr>
+<td><strong>OpenSource.com</strong></td>
+<td>Artikel und Ressourcen über Open-Source.</td>
+<td><a href="https://opensource.com/">opensource.com</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="-_5">---<a class="headerlink" href="#-_5" title="Permanent link">&para;</a></h2>
+<h4 id="7-ubungsaufgaben"><strong>7. Übungsaufgaben</strong><a class="headerlink" href="#7-ubungsaufgaben" title="Permanent link">&para;</a></h4>
+<hr />
+<h5 id="frage-1"><strong>Frage 1</strong><a class="headerlink" href="#frage-1" title="Permanent link">&para;</a></h5>
+<p>Was ist der Hauptunterschied zwischen <strong>Open-Source-Software</strong> und <strong>Freier Software</strong>?</p>
+<details class="success">
+<summary>Antwort</summary>
+<p><strong>Open-Source-Software</strong> betont <strong>praktische Vorteile</strong> (z. B. Qualität, Sicherheit, Kosten), während <strong>Freie Software</strong> (nach der Definition der FSF) <strong>ethische Aspekte</strong> wie die <strong>4 Freiheiten</strong> (Nutzung, Anpassung, Weitergabe, Verbesserung) in den Vordergrund stellt.</p>
+</details>
+<hr />
+<h5 id="frage-2"><strong>Frage 2</strong><a class="headerlink" href="#frage-2" title="Permanent link">&para;</a></h5>
+<p>Nennen Sie <strong>drei Open-Source-Alternativen</strong> zu Microsoft Office.</p>
+<details class="success">
+<summary>Antwort</summary>
+<ol>
+<li><strong>LibreOffice</strong></li>
+<li><strong>OnlyOffice</strong></li>
+<li><strong>Calligra Suite</strong></li>
+</ol>
+</details>
+<hr />
+<h5 id="frage-3"><strong>Frage 3</strong><a class="headerlink" href="#frage-3" title="Permanent link">&para;</a></h5>
+<p>Welche <strong>Open-Source-Lizenz</strong> erfordert, dass Modifikationen ebenfalls unter der gleichen Lizenz veröffentlicht werden?</p>
+<details class="success">
+<summary>Antwort</summary>
+<p><strong>GPL (GNU General Public License)</strong> und <strong>AGPL (Affero General Public License)</strong>.</p>
+</details>
+<hr />
+<h5 id="frage-4"><strong>Frage 4</strong><a class="headerlink" href="#frage-4" title="Permanent link">&para;</a></h5>
+<p>Welche <strong>Open-Source-Anwendung</strong> können Sie für <strong>Bildbearbeitung</strong> verwenden, die eine Alternative zu Adobe Photoshop ist?</p>
+<details class="success">
+<summary>Antwort</summary>
+<p><strong>GIMP (GNU Image Manipulation Program)</strong>.</p>
+</details>
+<hr />
+<h5 id="frage-5"><strong>Frage 5</strong><a class="headerlink" href="#frage-5" title="Permanent link">&para;</a></h5>
+<p>Wie können Sie <strong>Nextcloud</strong> auf einem Debian/Ubuntu-System installieren?</p>
+<details class="success">
+<summary>Antwort</summary>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>nextcloud
+</code></pre></div></td></tr></table></div>
+Anschließend müssen Sie einen <strong>Webserver (Apache/Nginx)</strong> und eine <strong>Datenbank (MySQL/MariaDB/PostgreSQL)</strong> konfigurieren.</p>
+</details>
+<hr />
+<h5 id="frage-6"><strong>Frage 6</strong><a class="headerlink" href="#frage-6" title="Permanent link">&para;</a></h5>
+<p>Welche <strong>Open-Source-Anwendung</strong> können Sie für <strong>Videobearbeitung</strong> verwenden?</p>
+<details class="success">
+<summary>Antwort</summary>
+<p><strong>Kdenlive</strong> oder <strong>OpenShot</strong>.</p>
+</details>
+<hr />
+<h5 id="frage-7"><strong>Frage 7</strong><a class="headerlink" href="#frage-7" title="Permanent link">&para;</a></h5>
+<p>Nennen Sie <strong>drei Open-Source-Datenbanken</strong>.</p>
+<details class="success">
+<summary>Antwort</summary>
+<ol>
+<li><strong>MySQL</strong> / <strong>MariaDB</strong></li>
+<li><strong>PostgreSQL</strong></li>
+<li><strong>MongoDB</strong> (NoSQL)</li>
+</ol>
+</details>
+<hr />
+<h5 id="frage-8"><strong>Frage 8</strong><a class="headerlink" href="#frage-8" title="Permanent link">&para;</a></h5>
+<p>Welche <strong>Open-Source-Anwendung</strong> können Sie für <strong>Containerisierung</strong> verwenden?</p>
+<details class="success">
+<summary>Antwort</summary>
+<p><strong>Docker</strong> oder <strong>Podman</strong>.</p>
+</details>
+<hr />
+<h5 id="frage-9"><strong>Frage 9</strong><a class="headerlink" href="#frage-9" title="Permanent link">&para;</a></h5>
+<p>Wie können Sie <strong>GitLab CE</strong> auf einem Debian/Ubuntu-System installieren?</p>
+<details class="success">
+<summary>Antwort</summary>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>gitlab-ce
+</code></pre></div></td></tr></table></div>
+Anschließend müssen Sie die <strong>Konfiguration anpassen</strong> (<code>/etc/gitlab/gitlab.rb</code>) und GitLab neu starten:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>gitlab-ctl<span class="w"> </span>reconfigure
+</code></pre></div></td></tr></table></div></p>
+</details>
+<hr />
+<h5 id="frage-10"><strong>Frage 10</strong><a class="headerlink" href="#frage-10" title="Permanent link">&para;</a></h5>
+<p>Welche <strong>Open-Source-Anwendung</strong> können Sie für <strong>Monitoring und Alerting</strong> verwenden?</p>
+<details class="success">
+<summary>Antwort</summary>
+<p><strong>Prometheus</strong> (für Metriken) und <strong>Grafana</strong> (für Visualisierung).</p>
+</details>
+<h2 id="-_6">---<a class="headerlink" href="#-_6" title="Permanent link">&para;</a></h2>
+<h4 id="8-praktische-beispiele"><strong>8. Praktische Beispiele</strong><a class="headerlink" href="#8-praktische-beispiele" title="Permanent link">&para;</a></h4>
+<hr />
+<h5 id="beispiel-1-installation-von-libreoffice"><strong>Beispiel 1: Installation von LibreOffice</strong><a class="headerlink" href="#beispiel-1-installation-von-libreoffice" title="Permanent link">&para;</a></h5>
+<p><strong>Szenario:</strong> Sie möchten <strong>LibreOffice</strong> auf einem Ubuntu-System installieren.</p>
+<p><strong>Lösung:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>update
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>libreoffice
+</code></pre></div></td></tr></table></div></p>
+<hr />
+<h5 id="beispiel-2-installation-von-gimp"><strong>Beispiel 2: Installation von GIMP</strong><a class="headerlink" href="#beispiel-2-installation-von-gimp" title="Permanent link">&para;</a></h5>
+<p><strong>Szenario:</strong> Sie möchten <strong>GIMP</strong> für Bildbearbeitung installieren.</p>
+<p><strong>Lösung:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Debian/Ubuntu</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>gimp
+
+<span class="c1"># RHEL/CentOS</span>
+sudo<span class="w"> </span>yum<span class="w"> </span>install<span class="w"> </span>gimp
+
+<span class="c1"># Arch Linux</span>
+sudo<span class="w"> </span>pacman<span class="w"> </span>-S<span class="w"> </span>gimp
+</code></pre></div></td></tr></table></div></p>
+<hr />
+<h5 id="beispiel-3-installation-von-nextcloud-mit-docker"><strong>Beispiel 3: Installation von Nextcloud mit Docker</strong><a class="headerlink" href="#beispiel-3-installation-von-nextcloud-mit-docker" title="Permanent link">&para;</a></h5>
+<p><strong>Szenario:</strong> Sie möchten <strong>Nextcloud</strong> in einem Docker-Container ausführen.</p>
+<p><strong>Lösung:</strong>
+1. <strong>Docker installieren</strong> (falls nicht vorhanden):
+   <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>docker.io
+sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>--now<span class="w"> </span>docker
+</code></pre></div></td></tr></table></div>
+2. <strong>Nextcloud-Container starten</strong>:
+   <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--name<span class="w"> </span>nextcloud<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-p<span class="w"> </span><span class="m">8080</span>:80<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-v<span class="w"> </span>/pfad/zur/daten:/var/www/html<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--restart<span class="w"> </span>unless-stopped<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>nextcloud:latest
+</code></pre></div></td></tr></table></div>
+3. <strong>Nextcloud im Browser öffnen</strong>:
+   - Öffnen Sie <code>http://&lt;Ihre-IP&gt;:8080</code> und folgen Sie den Installationsanweisungen.</p>
+<hr />
+<h5 id="beispiel-4-installation-von-gitlab-mit-docker"><strong>Beispiel 4: Installation von GitLab mit Docker</strong><a class="headerlink" href="#beispiel-4-installation-von-gitlab-mit-docker" title="Permanent link">&para;</a></h5>
+<p><strong>Szenario:</strong> Sie möchten <strong>GitLab CE</strong> in Docker-Containern ausführen.</p>
+<p><strong>Lösung:</strong>
+1. <strong>Docker installieren</strong> (falls nicht vorhanden).
+2. <strong>GitLab-Container starten</strong>:
+   <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--hostname<span class="w"> </span>gitlab.example.com<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--publish<span class="w"> </span><span class="m">443</span>:443<span class="w"> </span>--publish<span class="w"> </span><span class="m">80</span>:80<span class="w"> </span>--publish<span class="w"> </span><span class="m">22</span>:22<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--name<span class="w"> </span>gitlab<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--restart<span class="w"> </span>always<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--volume<span class="w"> </span>/srv/gitlab/config:/etc/gitlab<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--volume<span class="w"> </span>/srv/gitlab/logs:/var/log/gitlab<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--volume<span class="w"> </span>/srv/gitlab/data:/var/opt/gitlab<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>gitlab/gitlab-ce:latest
+</code></pre></div></td></tr></table></div>
+3. <strong>GitLab im Browser öffnen</strong>:
+   - Öffnen Sie <code>http://&lt;Ihre-IP&gt;</code> und folgen Sie den Installationsanweisungen.</p>
+<hr />
+<h5 id="beispiel-5-installation-von-moodle"><strong>Beispiel 5: Installation von Moodle</strong><a class="headerlink" href="#beispiel-5-installation-von-moodle" title="Permanent link">&para;</a></h5>
+<p><strong>Szenario:</strong> Sie möchten <strong>Moodle</strong> für eine Lernplattform installieren.</p>
+<p><strong>Lösung:</strong>
+1. <strong>Abhängigkeiten installieren</strong> (Apache, MySQL, PHP):
+   <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>apache2<span class="w"> </span>mysql-server<span class="w"> </span>php<span class="w"> </span>php-mysql<span class="w"> </span>libapache2-mod-php<span class="w"> </span>php-gd<span class="w"> </span>php-curl<span class="w"> </span>php-mbstring<span class="w"> </span>php-xml<span class="w"> </span>php-xmlrpc<span class="w"> </span>php-soap<span class="w"> </span>php-intl<span class="w"> </span>php-zip
+</code></pre></div></td></tr></table></div>
+2. <strong>Moodle herunterladen und entpacken</strong>:
+   <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>wget<span class="w"> </span>https://download.moodle.org/stable403/moodle-4.3.0.tgz
+tar<span class="w"> </span>-xzvf<span class="w"> </span>moodle-4.3.0.tgz
+sudo<span class="w"> </span>mv<span class="w"> </span>moodle<span class="w"> </span>/var/www/html/
+</code></pre></div></td></tr></table></div>
+3. <strong>Datenbank und Benutzer erstellen</strong>:
+   <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>mysql<span class="w"> </span>-u<span class="w"> </span>root<span class="w"> </span>-p
+</code></pre></div></td></tr></table></div>
+   <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="n">moodle</span><span class="p">;</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="s1">&#39;moodleuser&#39;</span><span class="o">@</span><span class="s1">&#39;localhost&#39;</span><span class="w"> </span><span class="n">IDENTIFIED</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="s1">&#39;passwort&#39;</span><span class="p">;</span>
+<span class="k">GRANT</span><span class="w"> </span><span class="k">ALL</span><span class="w"> </span><span class="k">PRIVILEGES</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">moodle</span><span class="p">.</span><span class="o">*</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="s1">&#39;moodleuser&#39;</span><span class="o">@</span><span class="s1">&#39;localhost&#39;</span><span class="p">;</span>
+<span class="n">FLUSH</span><span class="w"> </span><span class="k">PRIVILEGES</span><span class="p">;</span>
+<span class="n">EXIT</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
+4. <strong>Apache konfigurieren</strong>:
+   <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>chown<span class="w"> </span>-R<span class="w"> </span>www-data:www-data<span class="w"> </span>/var/www/html/moodle
+sudo<span class="w"> </span>chmod<span class="w"> </span>-R<span class="w"> </span><span class="m">755</span><span class="w"> </span>/var/www/html/moodle
+</code></pre></div></td></tr></table></div>
+5. <strong>Moodle im Browser öffnen</strong>:
+   - Öffnen Sie <code>http://&lt;Ihre-IP&gt;/moodle</code> und folgen Sie den Installationsanweisungen.</p>
+<h2 id="-_7">---<a class="headerlink" href="#-_7" title="Permanent link">&para;</a></h2>
+<h4 id="9-haufige-fehler-und-losungen"><strong>9. Häufige Fehler und Lösungen</strong><a class="headerlink" href="#9-haufige-fehler-und-losungen" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th><strong>Problem</strong></th>
+<th><strong>Ursache</strong></th>
+<th><strong>Lösung</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><code>E: Package not found</code> (Debian/Ubuntu)</strong></td>
+<td>Paket ist nicht in den Repositories verfügbar.</td>
+<td>Repository hinzufügen oder Paket manuell installieren.</td>
+</tr>
+<tr>
+<td><strong><code>Error: Unable to find a match</code> (RHEL/CentOS)</strong></td>
+<td>Paket ist nicht in den Repositories verfügbar.</td>
+<td>EPEL-Repository hinzufügen: <code>sudo yum install epel-release</code>.</td>
+</tr>
+<tr>
+<td><strong>Nextcloud: "Database connection failed"</strong></td>
+<td>Falsche Datenbankkonfiguration.</td>
+<td>Überprüfen Sie die Datenbankverbindung in <code>/var/www/html/nextcloud/config/config.php</code>.</td>
+</tr>
+<tr>
+<td><strong>GitLab: "502 Whoops, GitLab is taking too much time to respond"</strong></td>
+<td>Falsche Konfiguration oder Ressourcenmangel.</td>
+<td>Überprüfen Sie die GitLab-Logs: <code>sudo gitlab-ctl tail</code>.</td>
+</tr>
+<tr>
+<td><strong>Moodle: "PHP extension missing"</strong></td>
+<td>Fehlende PHP-Erweiterungen.</td>
+<td>Installieren Sie die fehlenden Erweiterungen: <code>sudo apt install php-&lt;erweiterung&gt;</code>.</td>
+</tr>
+<tr>
+<td><strong>Docker: "Permission denied"</strong></td>
+<td>Keine Berechtigung für Docker.</td>
+<td>Fügen Sie Ihren Benutzer zur Docker-Gruppe hinzu: <code>sudo usermod -aG docker $USER</code>.</td>
+</tr>
+<tr>
+<td><strong>Open-Source-Software läuft nicht stabil</strong></td>
+<td>Fehlende Abhängigkeiten oder veraltete Version.</td>
+<td>Überprüfen Sie die <strong>Systemanforderungen</strong> und installieren Sie fehlende Abhängigkeiten.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="-_8">---<a class="headerlink" href="#-_8" title="Permanent link">&para;</a></h2>
+<h4 id="10-vertiefung-open-source-in-der-cloud"><strong>10. Vertiefung: Open-Source in der Cloud</strong><a class="headerlink" href="#10-vertiefung-open-source-in-der-cloud" title="Permanent link">&para;</a></h4>
+<hr />
+<h5 id="101-open-source-cloud-plattformen"><strong>10.1 Open-Source-Cloud-Plattformen</strong><a class="headerlink" href="#101-open-source-cloud-plattformen" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th><strong>Plattform</strong></th>
+<th><strong>Beschreibung</strong></th>
+<th><strong>Website</strong></th>
+<th><strong>Lizenz</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>OpenStack</strong></td>
+<td>Cloud-Computing-Plattform für IaaS (Infrastructure as a Service).</td>
+<td><a href="https://www.openstack.org/">openstack.org</a></td>
+<td>Apache 2.0</td>
+</tr>
+<tr>
+<td><strong>CloudStack</strong></td>
+<td>Cloud-Computing-Plattform für IaaS.</td>
+<td><a href="https://cloudstack.apache.org/">cloudstack.apache.org</a></td>
+<td>Apache 2.0</td>
+</tr>
+<tr>
+<td><strong>Proxmox VE</strong></td>
+<td>Virtualisierungsplattform mit integriertem Cloud-Management.</td>
+<td><a href="https://www.proxmox.com/">proxmox.com</a></td>
+<td>AGPL</td>
+</tr>
+<tr>
+<td><strong>OpenNebula</strong></td>
+<td>Cloud-Computing-Plattform für IaaS.</td>
+<td><a href="https://opennebula.io/">opennebula.io</a></td>
+<td>Apache 2.0</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h5 id="102-open-source-cloud-dienste"><strong>10.2 Open-Source-Cloud-Dienste</strong><a class="headerlink" href="#102-open-source-cloud-dienste" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th><strong>Dienst</strong></th>
+<th><strong>Beschreibung</strong></th>
+<th><strong>Website</strong></th>
+<th><strong>Lizenz</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Nextcloud</strong></td>
+<td>Selbstgehostete Cloud-Speicherplattform.</td>
+<td><a href="https://nextcloud.com/">nextcloud.com</a></td>
+<td>AGPL</td>
+</tr>
+<tr>
+<td><strong>ownCloud</strong></td>
+<td>Selbstgehostete Cloud-Speicherplattform.</td>
+<td><a href="https://owncloud.com/">owncloud.com</a></td>
+<td>AGPL</td>
+</tr>
+<tr>
+<td><strong>Seafile</strong></td>
+<td>Selbstgehostete Cloud-Speicherplattform.</td>
+<td><a href="https://www.seafile.com/">seafile.com</a></td>
+<td>AGPL</td>
+</tr>
+<tr>
+<td><strong>MinIO</strong></td>
+<td>Selbstgehosteter S3-kompatibler Objektspeicher.</td>
+<td><a href="https://min.io/">min.io</a></td>
+<td>Apache 2.0</td>
+</tr>
+<tr>
+<td><strong>Ceph</strong></td>
+<td>Verteilte Speicherplattform.</td>
+<td><a href="https://ceph.io/">ceph.io</a></td>
+<td>LGPL</td>
+</tr>
+</tbody>
+</table>
+<h2 id="-_9">---<a class="headerlink" href="#-_9" title="Permanent link">&para;</a></h2>
+<h4 id="11-zusammenfassung-der-wichtigsten-open-source-anwendungen"><strong>11. Zusammenfassung der wichtigsten Open-Source-Anwendungen</strong><a class="headerlink" href="#11-zusammenfassung-der-wichtigsten-open-source-anwendungen" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th><strong>Kategorie</strong></th>
+<th><strong>Anwendungen</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Betriebssysteme</strong></td>
+<td>Linux, FreeBSD, OpenBSD</td>
+</tr>
+<tr>
+<td><strong>Büroanwendungen</strong></td>
+<td>LibreOffice, OnlyOffice, Joplin</td>
+</tr>
+<tr>
+<td><strong>Grafik und Design</strong></td>
+<td>GIMP, Inkscape, Krita, Blender</td>
+</tr>
+<tr>
+<td><strong>Multimedia</strong></td>
+<td>VLC, Kdenlive, Audacity, OBS Studio</td>
+</tr>
+<tr>
+<td><strong>Entwicklungstools</strong></td>
+<td>VS Code, Git, GitLab, Docker, Kubernetes</td>
+</tr>
+<tr>
+<td><strong>Datenbanken</strong></td>
+<td>MySQL, MariaDB, PostgreSQL, MongoDB, Redis</td>
+</tr>
+<tr>
+<td><strong>Webserver</strong></td>
+<td>Apache, Nginx, WordPress, Nextcloud</td>
+</tr>
+<tr>
+<td><strong>Netzwerk und Sicherheit</strong></td>
+<td>Wireshark, OpenVPN, WireGuard, Fail2Ban</td>
+</tr>
+<tr>
+<td><strong>Virtualisierung</strong></td>
+<td>QEMU, KVM, VirtualBox, Proxmox VE, LXC, Podman</td>
+</tr>
+<tr>
+<td><strong>Wissenschaft und Bildung</strong></td>
+<td>Moodle, Open edX, Kiwix, Stellarium</td>
+</tr>
+<tr>
+<td><strong>Spiele</strong></td>
+<td>0 A.D., SuperTux, FreeCiv, Godot Engine</td>
+</tr>
+<tr>
+<td><strong>Kommunikation</strong></td>
+<td>Thunderbird, Signal, Jitsi Meet, Mattermost</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Qualidy GmbH
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.kununu.com/de/qualidy" target="_blank" rel="noopener" title="www.kununu.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M311 86.3c12.3-12.7 12-32.9-.7-45.2s-32.9-12-45.2.7C143.4 167.2 76.4 236.3 64 249V64c0-17.7-14.3-32-32-32S0 46.3 0 64v384c0 17.7 14.3 32 32 32s32-14.3 32-32V341l64.7-66.7 133 192c10.1 14.5 30 18.1 44.5 8.1s18.1-30 8.1-44.5L174.1 227.4z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://de.linkedin.com/company/qualidy" target="_blank" rel="noopener" title="de.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.google.com/search?sca_esv=7e6ba2047fcb60f3&uds=AMwkrPtyB8MsmozA4Lwzqy2G2HCu-abqzc6moOG48q3gP5dtjTRzC2Ws0eSwcyLXDfZNuYCrZ7ByIreHLG9th3vKLekPoVeey0tumAbet4cVLQRLzdRFhUbOGbnyp3xo1V0hzzaNmkCN&si=AKbGX_rcuucMgom2rba1cdwsvM2SVoIkP2btyqGMV4t0GuHIs4sGV_1tpuqR0YHG4Rzd9SdJcL-lW6E-2aJA5azZLTKkIOrZ2j2aWwoBkVbdEJ0o0GPcQhs%3D&q=Qualidy+GmbH+Rezensionen&sa=X&ved=2ahUKEwibsbnSgcmFAxXNQvEDHaVYCiAQ3PALegQIRxAF" target="_blank" rel="noopener" title="www.google.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.35 11.1h-9.17v2.73h6.51c-.33 3.81-3.5 5.44-6.5 5.44C8.36 19.27 5 16.25 5 12c0-4.1 3.2-7.27 7.2-7.27 3.09 0 4.9 1.97 4.9 1.97L19 4.72S16.56 2 12.1 2C6.42 2 2.03 6.8 2.03 12c0 5.05 4.13 10 10.22 10 5.35 0 9.25-3.67 9.25-9.09 0-1.15-.15-1.81-.15-1.81"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://qualidy.de" target="_blank" rel="noopener" title="qualidy.de" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M351.9 280H161c2.9 64.5 17.2 123.9 37.5 167.4 11.4 24.5 23.7 41.8 35.1 52.4 11.2 10.5 18.9 12.2 22.9 12.2s11.7-1.7 22.9-12.2c11.4-10.6 23.7-28 35.1-52.4 20.3-43.5 34.6-102.9 37.5-167.4zm-191-48h190.9c-2.8-64.5-17.1-123.9-37.4-167.4-11.4-24.4-23.7-41.8-35.1-52.4C268.1 1.7 260.4 0 256.4 0s-11.7 1.7-22.9 12.2c-11.4 10.6-23.7 28-35.1 52.4-20.3 43.5-34.6 102.9-37.5 167.4m-48 0c3.5-85.6 25.6-165.1 57.9-217.3C78.7 47.3 10.9 131.2 1.5 232zM1.5 280c9.4 100.8 77.2 184.7 169.3 217.3-32.3-52.2-54.4-131.7-57.9-217.3zm398.4 0c-3.5 85.6-25.6 165.1-57.9 217.3 92.1-32.7 159.9-116.5 169.3-217.3zm111.4-48C501.9 131.2 434.1 47.3 342 14.7c32.3 52.2 54.4 131.7 57.9 217.3z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tracking", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

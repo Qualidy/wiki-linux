@@ -1,0 +1,2361 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../linux_evolution/">
+      
+      
+      
+      <link rel="icon" href="../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>Das Linux-Betriebssystem - Basis Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/logo.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/grid.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/video_admonition.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/python_tutor_admonition.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/mermaid.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="amber" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#linux-betriebssystem" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Basis Wiki" class="md-header__button md-logo" aria-label="Basis Wiki" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Basis Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Das Linux-Betriebssystem
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Basis Wiki" class="md-nav__button md-logo" aria-label="Basis Wiki" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    Basis Wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übersicht
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module I Das Konzept und die Theorie
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Module I Das Konzept und die Theorie
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../OpenSource%26Linux-Community/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Open Source & Proprietäre Software
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../opensource_lizenzen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Open-Source-Software und Lizenzierung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux_evolution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Linux Evolution und beliebte Betriebssysteme
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Das Linux-Betriebssystem
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Das Linux-Betriebssystem
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-einstieg-was-ist-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Einstieg: Was ist Linux?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Einstieg: Was ist Linux?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bestandteile-einer-linux-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bestandteile einer Linux-Distribution
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-was-ist-ein-betriebssystem" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Was ist ein Betriebssystem?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-der-linux-kernel" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Der Linux-Kernel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-linux-kernel-und-linux-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Linux-Kernel und Linux-Distribution
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Linux-Kernel und Linux-Distribution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definitionen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definitionen
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-einfuhrung-in-linux-distributionen" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Einführung in Linux-Distributionen
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Einführung in Linux-Distributionen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hauptbestandteile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hauptbestandteile
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-bekannte-linux-distributionen" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Bekannte Linux-Distributionen
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Bekannte Linux-Distributionen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ubersicht" class="md-nav__link">
+    <span class="md-ellipsis">
+      Übersicht
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-grunde-fur-vielfalt" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Gründe für Vielfalt
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Gründe für Vielfalt">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linux-ist-open-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linux ist Open Source
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unterschiede-zwischen-distributionen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unterschiede zwischen Distributionen
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-erfassung-nach-nutzergruppen" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Erfassung nach Nutzergruppen
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Erfassung nach Nutzergruppen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#einsteiger" class="md-nav__link">
+    <span class="md-ellipsis">
+      Einsteiger
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#server" class="md-nav__link">
+    <span class="md-ellipsis">
+      Server
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fortgeschrittene" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fortgeschrittene
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#it-sicherheit" class="md-nav__link">
+    <span class="md-ellipsis">
+      IT-Sicherheit
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-typische-einsatzbereiche-von-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Typische Einsatzbereiche von Linux
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Typische Einsatzbereiche von Linux">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ubersicht_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Übersicht
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-vorteile-und-nachteile-von-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Vorteile und Nachteile von Linux
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Vorteile und Nachteile von Linux">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vorteile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vorteile
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nachteile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nachteile
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-die-grafische-oberflache" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Die grafische Oberfläche
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Die grafische Oberfläche">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bekannte-desktop-umgebungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bekannte Desktop-Umgebungen
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-terminal-und-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. Terminal und Shell
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Terminal und Shell">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#einfuhrung-in-terminal-und-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      Einführung in Terminal und Shell
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bekannte-shells" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bekannte Shells
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-erste-wichtige-linux-befehle" class="md-nav__link">
+    <span class="md-ellipsis">
+      11. Erste wichtige Linux-Befehle
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. Erste wichtige Linux-Befehle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ubersicht_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Übersicht
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-erste-befehle-ausprobieren" class="md-nav__link">
+    <span class="md-ellipsis">
+      12. Erste Befehle ausprobieren
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12. Erste Befehle ausprobieren">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#praxisaufgabe" class="md-nav__link">
+    <span class="md-ellipsis">
+      Praxisaufgabe
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-das-linux-dateisystem" class="md-nav__link">
+    <span class="md-ellipsis">
+      13. Das Linux-Dateisystem
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ubersicht-der-wichtigsten-verzeichnisse" class="md-nav__link">
+    <span class="md-ellipsis">
+      Übersicht der wichtigsten Verzeichnisse
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kontrollfragen" class="md-nav__link">
+    <span class="md-ellipsis">
+      “Kontrollfragen”
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-benutzer-und-rechte" class="md-nav__link">
+    <span class="md-ellipsis">
+      16. Benutzer und Rechte
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="16. Benutzer und Rechte">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kernkonzepte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kernkonzepte
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wichtige-begriffe" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wichtige Begriffe
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-linux-rechte" class="md-nav__link">
+    <span class="md-ellipsis">
+      17. Linux-Rechte
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="17. Linux-Rechte">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#die-drei-grundrechte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Die drei Grundrechte
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../7.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dateisystem-Hierarchie
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../8.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Netzwerk
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module II Die Grundlagen der Command-Line
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Module II Die Grundlagen der Command-Line
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Grundlagen der Kommandozeile
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Die Kommandozeile zur Hilfe nutzen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Verzeichnissen und Anzeigen von Dateien
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Erstellen, Verschieben und Löschen von Dateien
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module III Automatisierung und Skripting
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Module III Automatisierung und Skripting
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Verknüpfung von Befehlen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Archivierung von Dateien in der Kommandozeile
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Suchen und Extrahieren von Daten aus Dateien
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Befehle in ein Skript umwandeln
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Automatisierung von Aufgaben mit Cron
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fortgeschrittenes Skripting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module IV Systemadministration und Sicherheit
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Module IV Systemadministration und Sicherheit
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Benutzer- und Gruppenverwaltung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Verwalten von Dateiberechtigungen und Eigentum
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Systemüberwachung und Protokollierung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Softwareinstallation und -verwaltung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Netzwerksicherheit und Firewall-Konfiguration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Backup-Strategien und Wiederherstellung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module V Zusammenführung und Zielsetzung
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Module V Zusammenführung und Zielsetzung
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Wichtige Open-Source-Anwendungen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ICT-Fähigkeiten und Arbeiten in Linux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="linux-betriebssystem">Linux-Betriebssystem<a class="headerlink" href="#linux-betriebssystem" title="Permanent link">&para;</a></h1>
+<hr />
+<h2 id="1-einstieg-was-ist-linux">1. Einstieg: Was ist Linux?<a class="headerlink" href="#1-einstieg-was-ist-linux" title="Permanent link">&para;</a></h2>
+<p>Linux ist ein <strong>freies und quelloffenes Betriebssystem</strong>.</p>
+<p>Genauer gesagt ist Linux der <strong>Kernel eines Betriebssystems</strong>.</p>
+<p>Im Alltag meint man mit „Linux“ meistens ein vollständiges Betriebssystem, also eine <strong>Linux-Distribution</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Merksatz</p>
+<p>Linux ist genau genommen der Kernel.
+Eine vollständige nutzbare Linux-Version nennt man Distribution.</p>
+</div>
+<h3 id="bestandteile-einer-linux-distribution">Bestandteile einer Linux-Distribution<a class="headerlink" href="#bestandteile-einer-linux-distribution" title="Permanent link">&para;</a></h3>
+<p>Eine Linux-Distribution besteht zum Beispiel aus:
+- Linux-Kernel
+- Systemprogrammen
+- Paketmanager
+- Benutzerverwaltung
+- Dateisystem
+- Terminal
+- grafischer Oberfläche
+- Standardprogrammen</p>
+<hr />
+<h2 id="2-was-ist-ein-betriebssystem">2. Was ist ein Betriebssystem?<a class="headerlink" href="#2-was-ist-ein-betriebssystem" title="Permanent link">&para;</a></h2>
+<p>Ein Betriebssystem ist die <strong>Grundsoftware eines Computers</strong>.</p>
+<p>Es sorgt dafür, dass Programme mit der Hardware arbeiten können.</p>
+<p>Das Betriebssystem verwaltet zum Beispiel:
+- Prozessor
+- Arbeitsspeicher
+- Festplatten
+- Dateien
+- Programme
+- Benutzerkonten
+- Netzwerkverbindungen
+- Rechte und Sicherheit</p>
+<div class="admonition example">
+<p class="admonition-title">Einfach erklärt</p>
+<p>Das Betriebssystem ist die Vermittlung zwischen Mensch, Programmen und Hardware.</p>
+<pre class="mermaid"><code>---
+config:
+look: handDrawn
+---
+flowchart LR
+A(Benutzer) --&gt; B(Programme)
+B --&gt; C(Betriebssystem)
+C --&gt; D(Hardware)</code></pre>
+</div>
+<hr />
+<h2 id="3-der-linux-kernel">3. Der Linux-Kernel<a class="headerlink" href="#3-der-linux-kernel" title="Permanent link">&para;</a></h2>
+<p>Der Kernel ist der <strong>zentrale Kern eines Betriebssystems</strong>.</p>
+<p>Er vermittelt zwischen Software und Hardware.</p>
+<p>Der Kernel kümmert sich unter anderem um:
+- Prozesse
+- Speicherverwaltung
+- Gerätetreiber
+- Dateisysteme
+- Netzwerkfunktionen
+- Rechteverwaltung
+- Kommunikation mit Hardware</p>
+<div class="admonition example">
+<p class="admonition-title">Beispiel</p>
+<p>Wenn ein Programm eine Datei speichern möchte, spricht es nicht direkt mit der Festplatte.
+Der Vorgang läuft über Betriebssystem und Kernel.</p>
+<pre class="mermaid"><code>---
+config:
+look: handDrawn
+---
+flowchart LR
+A(Programm) --&gt; B(Betriebssystem)
+B --&gt; C(Kernel)
+C --&gt; D(Hardware)</code></pre>
+</div>
+<h2 id="4-linux-kernel-und-linux-distribution">4. Linux-Kernel und Linux-Distribution<a class="headerlink" href="#4-linux-kernel-und-linux-distribution" title="Permanent link">&para;</a></h2>
+<h3 id="definitionen">Definitionen<a class="headerlink" href="#definitionen" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Begriff</th>
+<th>Bedeutung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Linux-Kernel</td>
+<td>Technischer Kern des Betriebssystems</td>
+</tr>
+<tr>
+<td>Linux-Distribution</td>
+<td>Vollständiges Betriebssystem auf Basis des Linux-Kernels</td>
+</tr>
+<tr>
+<td>Paketmanager</td>
+<td>Werkzeug zum Installieren, Aktualisieren und Entfernen von Software</td>
+</tr>
+<tr>
+<td>Desktop-Umgebung</td>
+<td>Grafische Oberfläche eines Linux-Systems</td>
+</tr>
+<tr>
+<td>Shell</td>
+<td>Programm, das Terminalbefehle verarbeitet</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Wichtig</p>
+<p>Viele sagen einfach „Linux“, meinen aber eigentlich eine Linux-Distribution wie Ubuntu, Debian oder Linux Mint.</p>
+</div>
+<h2 id="5-einfuhrung-in-linux-distributionen">5. Einführung in Linux-Distributionen<a class="headerlink" href="#5-einfuhrung-in-linux-distributionen" title="Permanent link">&para;</a></h2>
+<p>Eine <strong>Linux-Distribution</strong> ist eine Sammlung von Softwareprogrammen, die auf dem Linux-Kernel basiert.</p>
+<h3 id="hauptbestandteile">Hauptbestandteile<a class="headerlink" href="#hauptbestandteile" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Linux-Kernel</li>
+<li>Systemdienste</li>
+<li>Paketmanager</li>
+<li>Terminal und Shell</li>
+<li>Grafische Oberfläche</li>
+<li>Standardprogramme</li>
+<li>Update-System</li>
+<li>Sicherheitskonfigurationen</li>
+</ul>
+<hr />
+<h2 id="6-bekannte-linux-distributionen">6. Bekannte Linux-Distributionen<a class="headerlink" href="#6-bekannte-linux-distributionen" title="Permanent link">&para;</a></h2>
+<h3 id="ubersicht">Übersicht<a class="headerlink" href="#ubersicht" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Distribution</th>
+<th>Typischer Einsatz</th>
+<th>Besonderheiten</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Ubuntu</strong></td>
+<td>Einsteiger, Desktop, Server, Entwicklung</td>
+<td>Größte Nutzerbasis, gute Dokumentation, Ubuntu Server für professionelle Anwendungen</td>
+</tr>
+<tr>
+<td><strong>Debian</strong></td>
+<td>Server, stabile Systeme, Grundlage anderer Distros</td>
+<td>Stabil, langsame Releases, Community-orientiert</td>
+</tr>
+<tr>
+<td><strong>Linux Mint</strong></td>
+<td>Desktop, Windows-Umsteiger</td>
+<td>Ähnlich Windows, Ubuntu-basiert, sehr benutzerfreundlich</td>
+</tr>
+<tr>
+<td><strong>Fedora</strong></td>
+<td>Moderne Technologien, Entwickler</td>
+<td>Vorabversionen von RHEL, cutting-edge Technologie</td>
+</tr>
+<tr>
+<td><strong>Arch Linux</strong></td>
+<td>Fortgeschrittene Nutzer</td>
+<td>Minimaler Basiskernel, Rolling Release,高度 anpassbar</td>
+</tr>
+<tr>
+<td><strong>openSUSE</strong></td>
+<td>Desktop, Server, Unternehmen</td>
+<td>Starker Desktop, KDE Voreinstellung, gute Containerunterstützung</td>
+</tr>
+<tr>
+<td><strong>Kali Linux</strong></td>
+<td>IT-Sicherheit und Penetration Testing</td>
+<td>Specialized für Cybersecurity, viele Pen-Testing Tools</td>
+</tr>
+<tr>
+<td><strong>Raspberry Pi OS</strong></td>
+<td>Raspberry Pi, Bildung, Bastelprojekte</td>
+<td>Optimiert für ARM, leichtgewichtig, excellent für Education</td>
+</tr>
+<tr>
+<td><strong>Red Hat Enterprise Linux</strong></td>
+<td>Unternehmen und professionelle Server</td>
+<td>Enterprise-Grade, Support, SLA, teuer für Unternehmen</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="7-grunde-fur-vielfalt">7. Gründe für Vielfalt<a class="headerlink" href="#7-grunde-fur-vielfalt" title="Permanent link">&para;</a></h2>
+<h3 id="linux-ist-open-source">Linux ist Open Source<a class="headerlink" href="#linux-ist-open-source" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>„Der Quellcode ist offen und kann von anderen genutzt, verändert und weiterentwickelt werden“</p>
+</blockquote>
+<h3 id="unterschiede-zwischen-distributionen">Unterschiede zwischen Distributionen<a class="headerlink" href="#unterschiede-zwischen-distributionen" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Aspekt</th>
+<th>Einfluss auf Wahl</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Zielgruppe</strong></td>
+<td>Desktop vs. Server vs. Embedded</td>
+</tr>
+<tr>
+<td><strong>Paketmanager</strong></td>
+<td>apt vs. yum vs. pacman vs. dnf</td>
+</tr>
+<tr>
+<td><strong>Update-Modell</strong></td>
+<td>Rolling Release vs. Major Releases</td>
+</tr>
+<tr>
+<td><strong>Stabilität</strong></td>
+<td>Bleeding Edge vs. Stabil vs. LTS</td>
+</tr>
+<tr>
+<td><strong>grafische Oberfläche</strong></td>
+<td>GNOME vs. KDE Plasma vs. XFCE vs. LXQt</td>
+</tr>
+<tr>
+<td><strong>vorinstallierte Software</strong></td>
+<td>Desktop-Umgebung mit Software vs. Minimal Install</td>
+</tr>
+<tr>
+<td><strong>Support</strong></td>
+<td>Community vs. Enterprise vs. Commercial</td>
+</tr>
+<tr>
+<td><strong>Sicherheitskonzept</strong></td>
+<td>hardened Defaults vs. Standard Approach</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="8-erfassung-nach-nutzergruppen">8. Erfassung nach Nutzergruppen<a class="headerlink" href="#8-erfassung-nach-nutzergruppen" title="Permanent link">&para;</a></h2>
+<h3 id="einsteiger">Einsteiger<a class="headerlink" href="#einsteiger" title="Permanent link">&para;</a></h3>
+<p><strong>Erfasste Distributionen:</strong>
+- Ubuntu
+- Linux Mint
+- Zorin OS
+- Pop!_OS
+- elementary OS</p>
+<p><strong>Merkmale:</strong>
+- Einfache Installation
+- Graphische Benutzeroberfläche als Hauptzugang
+- Große Apps-Vorratsmenge
+- Gute Community-Unterstützung
+- Hohe Benutzerfreundlichkeit</p>
+<h3 id="server">Server<a class="headerlink" href="#server" title="Permanent link">&para;</a></h3>
+<p><strong>Erfasste Distributionen:</strong>
+- Debian
+- Ubuntu Server
+- AlmaLinux
+- Rocky Linux
+- Red Hat Enterprise Linux
+- CentOS Stream</p>
+<p><strong>Servermerkmale:</strong>
+- Optimiertes Kernel-Modell
+- Robustes Paketmanagement
+- Entwicklungsorientierte Tools
+- Langfristige Unterstützung (LTS)
+- Optimierter Sicherheitsfokus
+- Kompatibilität mit Enterprise-Anwendungen</p>
+<h3 id="fortgeschrittene">Fortgeschrittene<a class="headerlink" href="#fortgeschrittene" title="Permanent link">&para;</a></h3>
+<p><strong>Erfasste Distributionen:</strong>
+- Arch Linux
+- Gentoo
+- openSUSE Tumbleweed
+- Void Linux
+- Slackware</p>
+<p><strong>Fortgeschritteneneigenschaften:</strong>
+- Minimaler Basiskernel
+- Vollständige Systemkontrolle
+- Customizability und Flexibilität
+- Advanced Paketmanagement
+- Low-Level-Access
+- Command-Line-Zentriert</p>
+<h3 id="it-sicherheit">IT-Sicherheit<a class="headerlink" href="#it-sicherheit" title="Permanent link">&para;</a></h3>
+<p><strong>Erfasste Distributionen:</strong>
+- Kali Linux
+- Parrot OS
+- BlackArch
+- Samurai Web Framework
+- Security Onion</p>
+<p><strong>Sicherheitsmerkmale:</strong>
+- Spezialisierte Tools für Penetration Testing
+- hardened Systemkonfigurationen
+- Vorabkonfigurierte Forensik-Umgebungen
+- Spezielle Netzwerk-Tools
+- MFA-Unterstützung
+- Security-Focused Pkgs</p>
+<h2 id="7-typische-einsatzbereiche-von-linux">7. Typische Einsatzbereiche von Linux<a class="headerlink" href="#7-typische-einsatzbereiche-von-linux" title="Permanent link">&para;</a></h2>
+<p>Linux wird in sehr vielen Bereichen eingesetzt.</p>
+<h3 id="ubersicht_1">Übersicht<a class="headerlink" href="#ubersicht_1" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Bereich</th>
+<th>Beispiel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Server</td>
+<td>Webserver, Datenbankserver, Mailserver</td>
+</tr>
+<tr>
+<td>Cloud</td>
+<td>AWS, Azure, Google Cloud</td>
+</tr>
+<tr>
+<td>Entwicklung</td>
+<td>Webentwicklung, Backend, DevOps</td>
+</tr>
+<tr>
+<td>Container</td>
+<td>Docker, Kubernetes</td>
+</tr>
+<tr>
+<td>Mobilgeräte</td>
+<td>Android nutzt den Linux-Kernel</td>
+</tr>
+<tr>
+<td>Netzwerkgeräte</td>
+<td>Router, Firewalls</td>
+</tr>
+<tr>
+<td>Embedded Systems</td>
+<td>Smart-TVs, IoT-Geräte, Industrieanlagen</td>
+</tr>
+<tr>
+<td>Bildung</td>
+<td>Raspberry Pi</td>
+</tr>
+<tr>
+<td>Supercomputer</td>
+<td>Hochleistungsrechner</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition success">
+<p class="admonition-title">Praxisbezug</p>
+<p>Viele Webseiten, Apps und Cloud-Dienste laufen im Hintergrund auf Linux-Systemen.</p>
+</div>
+<hr />
+<h2 id="8-vorteile-und-nachteile-von-linux">8. Vorteile und Nachteile von Linux<a class="headerlink" href="#8-vorteile-und-nachteile-von-linux" title="Permanent link">&para;</a></h2>
+<h3 id="vorteile">Vorteile<a class="headerlink" href="#vorteile" title="Permanent link">&para;</a></h3>
+<p>Linux bietet viele Vorteile:</p>
+<ul>
+<li>kostenlos nutzbar</li>
+<li>Open Source</li>
+<li>stabil</li>
+<li>flexibel anpassbar</li>
+<li>gut für Server geeignet</li>
+<li>starke Rechteverwaltung</li>
+<li>viele Entwicklerwerkzeuge</li>
+<li>große Community</li>
+<li>große Auswahl an Distributionen</li>
+<li>läuft auch auf älterer Hardware</li>
+<li>gut automatisierbar</li>
+</ul>
+<h3 id="nachteile">Nachteile<a class="headerlink" href="#nachteile" title="Permanent link">&para;</a></h3>
+<p>Linux hat auch Nachteile:</p>
+<ul>
+<li>manche Programme gibt es nicht nativ für Linux</li>
+<li>einige Spiele funktionieren schlechter als unter Windows</li>
+<li>bestimmte Hardware benötigt zusätzliche Treiber</li>
+<li>die Kommandozeile wirkt am Anfang ungewohnt</li>
+<li>nicht jede Distribution ist einsteigerfreundlich</li>
+<li>bei Problemen muss man häufiger selbst recherchieren</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Realistisch bleiben</p>
+<p>Linux ist sehr mächtig, aber nicht automatisch für jeden Zweck die beste Wahl.</p>
+</div>
+<hr />
+<h2 id="9-die-grafische-oberflache">9. Die grafische Oberfläche<a class="headerlink" href="#9-die-grafische-oberflache" title="Permanent link">&para;</a></h2>
+<p>Linux kann mit grafischer Oberfläche oder nur über die Kommandozeile verwendet werden.</p>
+<h3 id="bekannte-desktop-umgebungen">Bekannte Desktop-Umgebungen<a class="headerlink" href="#bekannte-desktop-umgebungen" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Desktop-Umgebung</th>
+<th>Eigenschaft</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GNOME</td>
+<td>modern, schlicht, reduziert</td>
+</tr>
+<tr>
+<td>KDE Plasma</td>
+<td>sehr anpassbar</td>
+</tr>
+<tr>
+<td>XFCE</td>
+<td>leichtgewichtig, gut für ältere Rechner</td>
+</tr>
+<tr>
+<td>Cinnamon</td>
+<td>klassisch, Windows-ähnlich</td>
+</tr>
+<tr>
+<td>MATE</td>
+<td>schlicht und ressourcenschonend</td>
+</tr>
+<tr>
+<td>LXQt</td>
+<td>sehr leichtgewichtig</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Hinweis</p>
+<p>Die grafische Oberfläche ist nicht „Linux selbst“, sondern nur ein Teil der Distribution.</p>
+</div>
+<p>⸻</p>
+<h2 id="10-terminal-und-shell">10. Terminal und Shell<a class="headerlink" href="#10-terminal-und-shell" title="Permanent link">&para;</a></h2>
+<h3 id="einfuhrung-in-terminal-und-shell">Einführung in Terminal und Shell<a class="headerlink" href="#einfuhrung-in-terminal-und-shell" title="Permanent link">&para;</a></h3>
+<p>Das <strong>Terminal</strong> ist ein Programm, mit dem man Befehle eingeben kann.</p>
+<p>Die <strong>Shell</strong> nimmt diese Befehle entgegen und führt sie aus.</p>
+<div class="admonition note">
+<p class="admonition-title">Merksatz</p>
+<p>Das Terminal ist das Fenster.
+Die Shell ist das Programm, das die Befehle verarbeitet.</p>
+</div>
+<h3 id="bekannte-shells">Bekannte Shells<a class="headerlink" href="#bekannte-shells" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Shell</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bash</td>
+<td>sehr verbreitet</td>
+</tr>
+<tr>
+<td>Zsh</td>
+<td>moderne Shell mit vielen Komfortfunktionen</td>
+</tr>
+<tr>
+<td>Fish</td>
+<td>benutzerfreundliche Shell</td>
+</tr>
+</tbody>
+</table>
+<p>Die bekannteste Shell unter Linux ist <strong>Bash</strong>.</p>
+<hr />
+<h2 id="11-erste-wichtige-linux-befehle">11. Erste wichtige Linux-Befehle<a class="headerlink" href="#11-erste-wichtige-linux-befehle" title="Permanent link">&para;</a></h2>
+<h3 id="ubersicht_2">Übersicht<a class="headerlink" href="#ubersicht_2" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Befehl</th>
+<th>Bedeutung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>pwd</code></td>
+<td>zeigt den aktuellen Ordner an</td>
+</tr>
+<tr>
+<td><code>ls</code></td>
+<td>zeigt Dateien und Ordner an</td>
+</tr>
+<tr>
+<td><code>cd</code></td>
+<td>wechselt den Ordner</td>
+</tr>
+<tr>
+<td><code>mkdir</code></td>
+<td>erstellt einen Ordner</td>
+</tr>
+<tr>
+<td><code>touch</code></td>
+<td>erstellt eine leere Datei</td>
+</tr>
+<tr>
+<td><code>cat</code></td>
+<td>zeigt den Inhalt einer Datei an</td>
+</tr>
+<tr>
+<td><code>cp</code></td>
+<td>kopiert Dateien oder Ordner</td>
+</tr>
+<tr>
+<td><code>mv</code></td>
+<td>verschiebt oder benennt um</td>
+</tr>
+<tr>
+<td><code>rm</code></td>
+<td>löscht Dateien</td>
+</tr>
+<tr>
+<td><code>clear</code></td>
+<td>leert die Terminalansicht</td>
+</tr>
+<tr>
+<td><code>whoami</code></td>
+<td>zeigt den aktuellen Benutzer an</td>
+</tr>
+<tr>
+<td><code>sudo</code></td>
+<td>führt einen Befehl mit Administratorrechten aus</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="12-erste-befehle-ausprobieren">12. Erste Befehle ausprobieren<a class="headerlink" href="#12-erste-befehle-ausprobieren" title="Permanent link">&para;</a></h2>
+<h3 id="praxisaufgabe">Praxisaufgabe<a class="headerlink" href="#praxisaufgabe" title="Permanent link">&para;</a></h3>
+<p>Öffne ein Terminal und führe die folgenden Befehle Schritt für Schritt aus:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">pwd</span>
+ls
+mkdir<span class="w"> </span>linux-uebung
+<span class="nb">cd</span><span class="w"> </span>linux-uebung
+touch<span class="w"> </span>info.txt
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Mein erstes Linux-Dokument&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>info.txt
+cat<span class="w"> </span>info.txt
+ls<span class="w"> </span>-l
+</code></pre></div></td></tr></table></div>
+<p>⸻</p>
+<h2 id="13-das-linux-dateisystem">13. Das Linux-Dateisystem<a class="headerlink" href="#13-das-linux-dateisystem" title="Permanent link">&para;</a></h2>
+<p>Linux organisiert Dateien in einer Baumstruktur.</p>
+<p>Der oberste Punkt heißt Root-Verzeichnis und wird mit / dargestellt.</p>
+<pre class="mermaid"><code>graph TD
+    A("root[/]") --&gt; B(bin)
+    A --&gt; C(boot)
+    A --&gt; D(dev)
+    A --&gt; E(etc)
+    A --&gt; F(home)
+    A --&gt; G(opt)
+    A --&gt; H(tmp)
+    A --&gt; I(usr)
+    A --&gt; K(var)</code></pre>
+<div class="admonition note">
+<p class="admonition-title">Merksatz</p>
+<p>Unter Linux beginnt das Dateisystem bei "/" .</p>
+</div>
+<h2 id="ubersicht-der-wichtigsten-verzeichnisse">Übersicht der wichtigsten Verzeichnisse<a class="headerlink" href="#ubersicht-der-wichtigsten-verzeichnisse" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Verzeichnis</th>
+<th>Bedeutung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/</code></td>
+<td>Wurzel des Dateisystems</td>
+</tr>
+<tr>
+<td><code>/home</code></td>
+<td>persönliche Benutzerordner</td>
+</tr>
+<tr>
+<td><code>/root</code></td>
+<td>Home-Verzeichnis des Administrators</td>
+</tr>
+<tr>
+<td><code>/etc</code></td>
+<td>Konfigurationsdateien</td>
+</tr>
+<tr>
+<td><code>/var</code></td>
+<td>veränderliche Daten, Logs, Caches</td>
+</tr>
+<tr>
+<td><code>/tmp</code></td>
+<td>temporäre Dateien</td>
+</tr>
+<tr>
+<td><code>/usr</code></td>
+<td>Programme und Bibliotheken</td>
+</tr>
+<tr>
+<td><code>/bin</code></td>
+<td>wichtige ausführbare Programme</td>
+</tr>
+<tr>
+<td><code>/sbin</code></td>
+<td>Systemprogramme</td>
+</tr>
+<tr>
+<td><code>/boot</code></td>
+<td>Dateien für den Systemstart</td>
+</tr>
+<tr>
+<td><code>/dev</code></td>
+<td>Gerätedateien</td>
+</tr>
+<tr>
+<td><code>/opt</code></td>
+<td>optionale Zusatzsoftware</td>
+</tr>
+</tbody>
+</table>
+<p>⸻</p>
+<ol>
+<li>Verzeichnisse untersuchen</li>
+</ol>
+<p>!!! task “Praxisaufgabe”
+Sieh dir wichtige Linux-Verzeichnisse an.
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>ls /
+ls /home
+ls /etc
+ls /var
+</code></pre></div></td></tr></table></div></p>
+<h2 id="kontrollfragen">“Kontrollfragen”<a class="headerlink" href="#kontrollfragen" title="Permanent link">&para;</a></h2>
+<p>Was befindet sich im Root-Verzeichnis /?</p>
+<details class="success">
+<summary>Antwort</summary>
+<p>Systemdateien und wichtige Verzeichnisse wie /bin, /etc, /home, etc.</p>
+</details>
+<p>Wo liegen Benutzerordner?</p>
+<details class="success">
+<summary>Antwort</summary>
+<p>Im Verzeichnis <code>/home</code></p>
+</details>
+<p>Wo liegen viele Konfigurationsdateien?</p>
+<details class="success">
+<summary>Antwort</summary>
+<p>Im Verzeichnis <code>/etc</code></p>
+</details>
+<p>Wo liegen Logs und veränderliche Daten?</p>
+<details class="success">
+<summary>Antwort</summary>
+<p>Im Verzeichnis <code>/var</code></p>
+</details>
+<p>⸻</p>
+<h2 id="16-benutzer-und-rechte">16. Benutzer und Rechte<a class="headerlink" href="#16-benutzer-und-rechte" title="Permanent link">&para;</a></h2>
+<p>Linux ist ein <strong>Mehrben Benutzersystem</strong>. Das bedeutet, dass die Sicherheit und die Trennung von Daten im Vordergrund stehen.</p>
+<h3 id="kernkonzepte">Kernkonzepte<a class="headerlink" href="#kernkonzepte" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Multi-User-Unterstützung</strong>: Mehrere Benutzer können gleichzeitig auf einem System existieren.</li>
+<li><strong>Datentrennung</strong>: Jeder Benutzer hat seine eigenen, privaten Dateien.</li>
+<li><strong>Zugriffskontrolle</strong>: Rechte steuern präzise, wer Dateien lesen, schreiben oder Programme ausführen darf.</li>
+<li><strong>Schutz der Administration</strong>: Administratorrechte sind besonders geschützt, um das System vor unbefugten Änderungen zu bewahren.</li>
+</ul>
+<h3 id="wichtige-begriffe">Wichtige Begriffe<a class="headerlink" href="#wichtige-begriffe" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Begriff</th>
+<th style="text-align: left;">Bedeutung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Benutzer</strong></td>
+<td style="text-align: left;">Ein normales Nutzerkonto für den täglichen Gebrauch.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Gruppe</strong></td>
+<td style="text-align: left;">Eine Zusammenfassung mehrerer Benutzer (um Rechte gemeinsam zu verwalten).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>root</strong></td>
+<td style="text-align: left;">Der Administrator mit vollständigen, uneingeschränten Rechten.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>sudo</strong></td>
+<td style="text-align: left;">Ein Befehl, um einzelne Aufgaben mit erhöhten Rechten auszuführen.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Rechte</strong></td>
+<td style="text-align: left;">Die Berechtigungen: Lesen, Schreiben oder Ausführen.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="17-linux-rechte">17. Linux-Rechte<a class="headerlink" href="#17-linux-rechte" title="Permanent link">&para;</a></h2>
+<p>In Linux haben <strong>alle</strong> Dateien und Ordner spezifische Berechtigungen. Diese bestimmen, welche Aktionen ein Benutzer durchführen darf.</p>
+<h3 id="die-drei-grundrechte">Die drei Grundrechte<a class="headerlink" href="#die-drei-grundrechte" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Recht</th>
+<th style="text-align: center;">Kürzel</th>
+<th style="text-align: left;">Bedeutung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>read</strong></td>
+<td style="text-align: center;"><code>r</code></td>
+<td style="text-align: left;">Dateien lesen oder Inhalt von Ordnern anzeigen.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>write</strong></td>
+<td style="text-align: center;"><code>w</code></td>
+<td style="text-align: left;">Dateien verändern oder neue Dateien in Ordnern erstellen.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>execute</strong></td>
+<td style="text-align: center;"><code>x</code></td>
+<td style="text-align: left;">Programme oder Skripte ausführen bzw. Ordner betreten.</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../linux_evolution/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Linux Evolution und beliebte Betriebssysteme">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Linux Evolution und beliebte Betriebssysteme
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Qualidy GmbH
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.kununu.com/de/qualidy" target="_blank" rel="noopener" title="www.kununu.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M311 86.3c12.3-12.7 12-32.9-.7-45.2s-32.9-12-45.2.7C143.4 167.2 76.4 236.3 64 249V64c0-17.7-14.3-32-32-32S0 46.3 0 64v384c0 17.7 14.3 32 32 32s32-14.3 32-32V341l64.7-66.7 133 192c10.1 14.5 30 18.1 44.5 8.1s18.1-30 8.1-44.5L174.1 227.4z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://de.linkedin.com/company/qualidy" target="_blank" rel="noopener" title="de.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.google.com/search?sca_esv=7e6ba2047fcb60f3&uds=AMwkrPtyB8MsmozA4Lwzqy2G2HCu-abqzc6moOG48q3gP5dtjTRzC2Ws0eSwcyLXDfZNuYCrZ7ByIreHLG9th3vKLekPoVeey0tumAbet4cVLQRLzdRFhUbOGbnyp3xo1V0hzzaNmkCN&si=AKbGX_rcuucMgom2rba1cdwsvM2SVoIkP2btyqGMV4t0GuHIs4sGV_1tpuqR0YHG4Rzd9SdJcL-lW6E-2aJA5azZLTKkIOrZ2j2aWwoBkVbdEJ0o0GPcQhs%3D&q=Qualidy+GmbH+Rezensionen&sa=X&ved=2ahUKEwibsbnSgcmFAxXNQvEDHaVYCiAQ3PALegQIRxAF" target="_blank" rel="noopener" title="www.google.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.35 11.1h-9.17v2.73h6.51c-.33 3.81-3.5 5.44-6.5 5.44C8.36 19.27 5 16.25 5 12c0-4.1 3.2-7.27 7.2-7.27 3.09 0 4.9 1.97 4.9 1.97L19 4.72S16.56 2 12.1 2C6.42 2 2.03 6.8 2.03 12c0 5.05 4.13 10 10.22 10 5.35 0 9.25-3.67 9.25-9.09 0-1.15-.15-1.81-.15-1.81"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://qualidy.de" target="_blank" rel="noopener" title="qualidy.de" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M351.9 280H161c2.9 64.5 17.2 123.9 37.5 167.4 11.4 24.5 23.7 41.8 35.1 52.4 11.2 10.5 18.9 12.2 22.9 12.2s11.7-1.7 22.9-12.2c11.4-10.6 23.7-28 35.1-52.4 20.3-43.5 34.6-102.9 37.5-167.4zm-191-48h190.9c-2.8-64.5-17.1-123.9-37.4-167.4-11.4-24.4-23.7-41.8-35.1-52.4C268.1 1.7 260.4 0 256.4 0s-11.7 1.7-22.9 12.2c-11.4 10.6-23.7 28-35.1 52.4-20.3 43.5-34.6 102.9-37.5 167.4m-48 0c3.5-85.6 25.6-165.1 57.9-217.3C78.7 47.3 10.9 131.2 1.5 232zM1.5 280c9.4 100.8 77.2 184.7 169.3 217.3-32.3-52.2-54.4-131.7-57.9-217.3zm398.4 0c-3.5 85.6-25.6 165.1-57.9 217.3 92.1-32.7 159.9-116.5 169.3-217.3zm111.4-48C501.9 131.2 434.1 47.3 342 14.7c32.3 52.2 54.4 131.7 57.9 217.3z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tracking", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

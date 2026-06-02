@@ -1,0 +1,2003 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>Modul III.3: Suchen und Extrahieren von Daten aus Dateien - Basis Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/logo.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/grid.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/video_admonition.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/python_tutor_admonition.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/mermaid.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="amber" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#modul-iii3-suchen-und-extrahieren-von-daten-aus-dateien" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Basis Wiki" class="md-header__button md-logo" aria-label="Basis Wiki" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Basis Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Modul III.3: Suchen und Extrahieren von Daten aus Dateien
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Basis Wiki" class="md-nav__button md-logo" aria-label="Basis Wiki" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    Basis Wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übersicht
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module I Das Konzept und die Theorie
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Module I Das Konzept und die Theorie
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module1/OpenSource%26Linux-Community/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Open Source & Proprietäre Software
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module1/opensource_lizenzen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Open-Source-Software und Lizenzierung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module1/linux_evolution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Linux Evolution und beliebte Betriebssysteme
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module1/das_linux_betriebssystem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Das Linux-Betriebssystem
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../7.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dateisystem-Hierarchie
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../8.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Netzwerk
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module II Die Grundlagen der Command-Line
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Module II Die Grundlagen der Command-Line
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Grundlagen der Kommandozeile
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Die Kommandozeile zur Hilfe nutzen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Verzeichnissen und Anzeigen von Dateien
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Erstellen, Verschieben und Löschen von Dateien
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module III Automatisierung und Skripting
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Module III Automatisierung und Skripting
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Verknüpfung von Befehlen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Archivierung von Dateien in der Kommandozeile
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Suchen und Extrahieren von Daten aus Dateien
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Befehle in ein Skript umwandeln
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Automatisierung von Aufgaben mit Cron
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fortgeschrittenes Skripting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module IV Systemadministration und Sicherheit
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Module IV Systemadministration und Sicherheit
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Benutzer- und Gruppenverwaltung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Verwalten von Dateiberechtigungen und Eigentum
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Systemüberwachung und Protokollierung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Softwareinstallation und -verwaltung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Netzwerksicherheit und Firewall-Konfiguration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Backup-Strategien und Wiederherstellung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module V Zusammenführung und Zielsetzung
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Module V Zusammenführung und Zielsetzung
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Wichtige Open-Source-Anwendungen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ICT-Fähigkeiten und Arbeiten in Linux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="modul-iii3-suchen-und-extrahieren-von-daten-aus-dateien">Modul III.3: Suchen und Extrahieren von Daten aus Dateien<a class="headerlink" href="#modul-iii3-suchen-und-extrahieren-von-daten-aus-dateien" title="Permanent link">&para;</a></h1>
+<h2 id="einleitung">Einleitung<a class="headerlink" href="#einleitung" title="Permanent link">&para;</a></h2>
+<p>Das <strong>Suchen und Extrahieren von Daten</strong> aus Dateien ist eine der <strong>häufigsten Aufgaben</strong> in der Linux-Kommandozeile. Ob du Log-Dateien analysierst, Konfigurationsdateien durchsuchst oder Daten aus CSV-Dateien extrahierst – Linux bietet mächtige Tools, um diese Aufgaben effizient zu erledigen.</p>
+<p>In diesem Modul lernst du:</p>
+<ul>
+<li>Wie du <strong>Textmuster</strong> mit <code>grep</code>, <code>egrep</code> und <code>fgrep</code> suchst.</li>
+<li>Wie du <strong>Zeilen, Wörter und Zeichen</strong> mit <code>cut</code> und <code>sed</code> extrahierst.</li>
+<li>Wie du <strong>Daten sortierst, einzigartige Einträge findest</strong> und <strong>Statistiken erstellst</strong>.</li>
+<li>Wie du <strong>reguläre Ausdrücke (Regex)</strong> für komplexe Suchmuster verwendest.</li>
+<li><strong>Praktische Anwendungsfälle</strong> für die Datenverarbeitung.</li>
+</ul>
+<h2 id="1-grundlagen-textsuche-mit-grep">1. Grundlagen: Textsuche mit <code>grep</code><a class="headerlink" href="#1-grundlagen-textsuche-mit-grep" title="Permanent link">&para;</a></h2>
+<h3 id="11-was-ist-grep">1.1 Was ist <code>grep</code>?<a class="headerlink" href="#11-was-ist-grep" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>grep</code> (Global Regular Expression Print) ist ein <strong>Standard-Tool</strong> zum Durchsuchen von Textdateien nach <strong>Mustern</strong>.</li>
+<li>Es gibt <strong>drei Varianten</strong> von <code>grep</code>:</li>
+<li><code>grep</code>: Standardversion (unterstützt <strong>Grundlegende Regex</strong>).</li>
+<li><code>egrep</code>: Erweitert <code>grep</code> (unterstützt <strong>erweiterte Regex</strong>, äquivalent zu <code>grep -E</code>).</li>
+<li><code>fgrep</code>: Fixes <code>grep</code> (sucht nach <strong>exakten Zeichenketten</strong>, äquivalent zu <code>grep -F</code>).</li>
+</ul>
+<hr />
+<h3 id="12-grundlegende-syntax-von-grep">1.2 Grundlegende Syntax von <code>grep</code><a class="headerlink" href="#12-grundlegende-syntax-von-grep" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>grep<span class="w"> </span><span class="o">[</span>Optionen<span class="o">]</span><span class="w"> </span><span class="s2">&quot;Muster&quot;</span><span class="w"> </span><span class="o">[</span>Datei<span class="o">(</span>en<span class="o">)]</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="13-wichtige-optionen-von-grep">1.3 Wichtige Optionen von <code>grep</code><a class="headerlink" href="#13-wichtige-optionen-von-grep" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Beschreibung</th>
+<th>Beispiel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-i</code></td>
+<td><strong>Ignoriert Groß-/Kleinschreibung</strong>.</td>
+<td><code>grep -i "linux" datei.txt</code></td>
+</tr>
+<tr>
+<td><code>-v</code></td>
+<td><strong>Invertiert das Muster</strong> (zeigt Zeilen an, die <strong>nicht</strong> dem Muster entsprechen).</td>
+<td><code>grep -v "error" log.txt</code></td>
+</tr>
+<tr>
+<td><code>-n</code></td>
+<td><strong>Zeigt Zeilennummern</strong> an.</td>
+<td><code>grep -n "fehler" log.txt</code></td>
+</tr>
+<tr>
+<td><code>-c</code></td>
+<td><strong>Zählt die Anzahl der Treffer</strong>.</td>
+<td><code>grep -c "linux" datei.txt</code></td>
+</tr>
+<tr>
+<td><code>-l</code></td>
+<td><strong>Listet nur Dateinamen</strong> auf, die das Muster enthalten.</td>
+<td><code>grep -l "muster" *.txt</code></td>
+</tr>
+<tr>
+<td><code>-r</code></td>
+<td><strong>Durchsucht Verzeichnisse rekursiv</strong>.</td>
+<td><code>grep -r "muster" /pfad/</code></td>
+</tr>
+<tr>
+<td><code>-w</code></td>
+<td><strong>Such nach ganzen Wörtern</strong> (vermeidet Teiltreffer).</td>
+<td><code>grep -w "linux" datei.txt</code></td>
+</tr>
+<tr>
+<td><code>-A n</code></td>
+<td><strong>Zeigt <code>n</code> Zeilen nach dem Treffer</strong> an.</td>
+<td><code>grep -A 2 "error" log.txt</code></td>
+</tr>
+<tr>
+<td><code>-B n</code></td>
+<td><strong>Zeigt <code>n</code> Zeilen vor dem Treffer</strong> an.</td>
+<td><code>grep -B 2 "error" log.txt</code></td>
+</tr>
+<tr>
+<td><code>-C n</code></td>
+<td><strong>Zeigt <code>n</code> Zeilen vor und nach dem Treffer</strong> an.</td>
+<td><code>grep -C 2 "error" log.txt</code></td>
+</tr>
+<tr>
+<td><code>-E</code></td>
+<td><strong>Aktiviert erweiterte Regex</strong> (wie <code>egrep</code>).</td>
+<td>`grep -E "muster1</td>
+</tr>
+<tr>
+<td><code>-F</code></td>
+<td><strong>Such nach exakten Zeichenketten</strong> (wie <code>fgrep</code>).</td>
+<td><code>grep -F "muster mit [Sonderzeichen]" datei.txt</code></td>
+</tr>
+<tr>
+<td><code>--color</code></td>
+<td><strong>Markiert Treffer farbig</strong>.</td>
+<td><code>grep --color "linux" datei.txt</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="14-praxisbeispiele-mit-grep">1.4 Praxisbeispiele mit <code>grep</code><a class="headerlink" href="#14-praxisbeispiele-mit-grep" title="Permanent link">&para;</a></h3>
+<h4 id="beispiel-1-einfache-suche">Beispiel 1: Einfache Suche<a class="headerlink" href="#beispiel-1-einfache-suche" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Suche nach dem Wort &quot;Linux&quot; in einer Datei</span>
+grep<span class="w"> </span><span class="s2">&quot;Linux&quot;</span><span class="w"> </span>datei.txt
+
+<span class="c1"># Suche nach &quot;Linux&quot; (Groß-/Kleinschreibung ignorieren)</span>
+grep<span class="w"> </span>-i<span class="w"> </span><span class="s2">&quot;linux&quot;</span><span class="w"> </span>datei.txt
+</code></pre></div></td></tr></table></div>
+<h4 id="beispiel-2-invertierte-suche">Beispiel 2: Invertierte Suche<a class="headerlink" href="#beispiel-2-invertierte-suche" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Zeige alle Zeilen an, die **nicht** &quot;error&quot; enthalten</span>
+grep<span class="w"> </span>-v<span class="w"> </span><span class="s2">&quot;error&quot;</span><span class="w"> </span>log.txt
+</code></pre></div></td></tr></table></div>
+<h4 id="beispiel-3-rekursive-suche-in-verzeichnissen">Beispiel 3: Rekursive Suche in Verzeichnissen<a class="headerlink" href="#beispiel-3-rekursive-suche-in-verzeichnissen" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Suche nach &quot;muster&quot; in allen Dateien im Verzeichnis /var/log</span>
+grep<span class="w"> </span>-r<span class="w"> </span><span class="s2">&quot;muster&quot;</span><span class="w"> </span>/var/log
+</code></pre></div></td></tr></table></div>
+<h4 id="beispiel-4-zeilennummern-anzeigen">Beispiel 4: Zeilennummern anzeigen<a class="headerlink" href="#beispiel-4-zeilennummern-anzeigen" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Zeige Zeilennummern für Treffer von &quot;fehler&quot; an</span>
+grep<span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;fehler&quot;</span><span class="w"> </span>log.txt
+</code></pre></div></td></tr></table></div>
+<h4 id="beispiel-5-anzahl-der-treffer-zahlen">Beispiel 5: Anzahl der Treffer zählen<a class="headerlink" href="#beispiel-5-anzahl-der-treffer-zahlen" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Zähle, wie oft &quot;Linux&quot; in einer Datei vorkommt</span>
+grep<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;Linux&quot;</span><span class="w"> </span>datei.txt
+</code></pre></div></td></tr></table></div>
+<h4 id="beispiel-6-kontext-um-treffer-anzeigen">Beispiel 6: Kontext um Treffer anzeigen<a class="headerlink" href="#beispiel-6-kontext-um-treffer-anzeigen" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Zeige 2 Zeilen vor und nach jedem Treffer von &quot;error&quot;</span>
+grep<span class="w"> </span>-C<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="s2">&quot;error&quot;</span><span class="w"> </span>log.txt
+</code></pre></div></td></tr></table></div>
+<h4 id="beispiel-7-suche-nach-ganzen-wortern">Beispiel 7: Suche nach ganzen Wörtern<a class="headerlink" href="#beispiel-7-suche-nach-ganzen-wortern" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Suche nach dem **ganzen Wort** &quot;linux&quot; (nicht z. B. &quot;Linux-Distribution&quot;)</span>
+grep<span class="w"> </span>-w<span class="w"> </span><span class="s2">&quot;linux&quot;</span><span class="w"> </span>datei.txt
+</code></pre></div></td></tr></table></div>
+<h4 id="beispiel-8-suche-nach-mehreren-mustern">Beispiel 8: Suche nach mehreren Mustern<a class="headerlink" href="#beispiel-8-suche-nach-mehreren-mustern" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Suche nach &quot;error&quot; **oder** &quot;warning&quot; (mit erweiterter Regex)</span>
+grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">&quot;error|warning&quot;</span><span class="w"> </span>log.txt
+</code></pre></div></td></tr></table></div>
+<h2 id="2-regulare-ausdrucke-regex-mit-grep">2. Reguläre Ausdrücke (Regex) mit <code>grep</code><a class="headerlink" href="#2-regulare-ausdrucke-regex-mit-grep" title="Permanent link">&para;</a></h2>
+<h3 id="21-was-sind-regulare-ausdrucke">2.1 Was sind reguläre Ausdrücke?<a class="headerlink" href="#21-was-sind-regulare-ausdrucke" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Reguläre Ausdrücke (Regex)</strong> sind <strong>Muster</strong>, die verwendet werden, um <strong>Text zu suchen und zu manipulieren</strong>.</li>
+<li>Sie ermöglichen <strong>komplexe Suchanfragen</strong>, z. B.:</li>
+<li>Suche nach <strong>E-Mail-Adressen</strong>.</li>
+<li>Suche nach <strong>IP-Adressen</strong>.</li>
+<li>Suche nach <strong>Datum- oder Zeitformaten</strong>.</li>
+</ul>
+<h3 id="22-grundlegende-regex-syntax">2.2 Grundlegende Regex-Syntax<a class="headerlink" href="#22-grundlegende-regex-syntax" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Beschreibung</th>
+<th>Beispiel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.</code></td>
+<td><strong>Beliebiges einzelnes Zeichen</strong> (außer Zeilenumbruch).</td>
+<td><code>a.c</code> → "abc", "a1c", "a-c"</td>
+</tr>
+<tr>
+<td><code>*</code></td>
+<td><strong>0 oder mehr Vorkommen</strong> des vorherigen Zeichens.</td>
+<td><code>ab*c</code> → "ac", "abc", "abbc"</td>
+</tr>
+<tr>
+<td><code>+</code></td>
+<td><strong>1 oder mehr Vorkommen</strong> des vorherigen Zeichens.</td>
+<td><code>ab+c</code> → "abc", "abbc" (nicht "ac")</td>
+</tr>
+<tr>
+<td><code>?</code></td>
+<td><strong>0 oder 1 Vorkommen</strong> des vorherigen Zeichens.</td>
+<td><code>ab?c</code> → "ac", "abc"</td>
+</tr>
+<tr>
+<td><code>[abc]</code></td>
+<td><strong>Ein Zeichen aus der Menge</strong> <code>a</code>, <code>b</code> oder <code>c</code>.</td>
+<td><code>[aeiou]</code> → Jeder Vokal</td>
+</tr>
+<tr>
+<td><code>[^abc]</code></td>
+<td><strong>Ein Zeichen, das nicht</strong> in der Menge <code>a</code>, <code>b</code> oder <code>c</code> ist.</td>
+<td><code>[^0-9]</code> → Keine Ziffer</td>
+</tr>
+<tr>
+<td><code>[a-z]</code></td>
+<td><strong>Bereich</strong>: Ein Zeichen von <code>a</code> bis <code>z</code>.</td>
+<td><code>[A-Za-z]</code> → Groß- oder Kleinbuchstabe</td>
+</tr>
+<tr>
+<td><code>[0-9]</code></td>
+<td><strong>Ziffer</strong> (0 bis 9).</td>
+<td><code>[0-9][0-9]</code> → Zwei Ziffern</td>
+</tr>
+<tr>
+<td><code>\</code></td>
+<td><strong>Maskiert Sonderzeichen</strong> (z. B. <code>.</code>, <code>*</code>, <code>?</code>).</td>
+<td><code>\.</code> → Sucht nach einem Punkt</td>
+</tr>
+<tr>
+<td><code>^</code></td>
+<td><strong>Anfang der Zeile</strong>.</td>
+<td><code>^Linux</code> → Zeilen, die mit "Linux" beginnen</td>
+</tr>
+<tr>
+<td><code>$</code></td>
+<td><strong>Ende der Zeile</strong>.</td>
+<td><code>Linux$</code> → Zeilen, die mit "Linux" enden</td>
+</tr>
+<tr>
+<td><code>()</code></td>
+<td><strong>Gruppierung</strong>.</td>
+<td><code>(ab)+</code> → "ab", "abab", "ababab"</td>
+</tr>
+<tr>
+<td><code>{n}</code></td>
+<td><strong>Genau <code>n</code> Vorkommen</strong>.</td>
+<td><code>a{3}</code> → "aaa"</td>
+</tr>
+<tr>
+<td><code>{n,}</code></td>
+<td><strong>Mindestens <code>n</code> Vorkommen</strong>.</td>
+<td><code>a{2,}</code> → "aa", "aaa", "aaaa"</td>
+</tr>
+<tr>
+<td><code>{n,m}</code></td>
+<td><strong>Zwischen <code>n</code> und <code>m</code> Vorkommen</strong>.</td>
+<td><code>a{2,4}</code> → "aa", "aaa", "aaaa"</td>
+</tr>
+</tbody>
+</table>
+<h3 id="23-praxisbeispiele-mit-regex">2.3 Praxisbeispiele mit Regex<a class="headerlink" href="#23-praxisbeispiele-mit-regex" title="Permanent link">&para;</a></h3>
+<h4 id="beispiel-1-suche-nach-e-mail-adressen">Beispiel 1: Suche nach E-Mail-Adressen<a class="headerlink" href="#beispiel-1-suche-nach-e-mail-adressen" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">&quot;[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}&quot;</span><span class="w"> </span>datei.txt
+</code></pre></div></td></tr></table></div>
+<ul>
+<li><code>[a-zA-Z0-9._%+-]+</code>: Benutzername (mindestens ein Zeichen).</li>
+<li><code>@</code>: @-Symbol.</li>
+<li><code>[a-zA-Z0-9.-]+</code>: Domainname.</li>
+<li><code>\.</code>: Punkt (maskiert).</li>
+<li><code>[a-zA-Z]{2,}</code>: Top-Level-Domain (mindestens 2 Zeichen).</li>
+</ul>
+<h4 id="beispiel-2-suche-nach-ip-adressen">Beispiel 2: Suche nach IP-Adressen<a class="headerlink" href="#beispiel-2-suche-nach-ip-adressen" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">&quot;[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}&quot;</span><span class="w"> </span>log.txt
+</code></pre></div></td></tr></table></div>
+<ul>
+<li><code>[0-9]{1,3}</code>: 1 bis 3 Ziffern (für jede Oktett).</li>
+<li><code>\.</code>: Punkt (maskiert).</li>
+</ul>
+<h4 id="beispiel-3-suche-nach-datumsangaben-yyyy-mm-dd">Beispiel 3: Suche nach Datumsangaben (YYYY-MM-DD)<a class="headerlink" href="#beispiel-3-suche-nach-datumsangaben-yyyy-mm-dd" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">&quot;[0-9]{4}-[0-9]{2}-[0-9]{2}&quot;</span><span class="w"> </span>datei.txt
+</code></pre></div></td></tr></table></div>
+<ul>
+<li><code>[0-9]{4}</code>: Jahr (4 Ziffern).</li>
+<li><code>-</code>: Bindestrich.</li>
+<li><code>[0-9]{2}</code>: Monat und Tag (jeweils 2 Ziffern).</li>
+</ul>
+<h4 id="beispiel-4-suche-nach-zeilen-die-mit-error-beginnen">Beispiel 4: Suche nach Zeilen, die mit "Error" beginnen<a class="headerlink" href="#beispiel-4-suche-nach-zeilen-die-mit-error-beginnen" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">&quot;^Error&quot;</span><span class="w"> </span>log.txt
+</code></pre></div></td></tr></table></div>
+<h4 id="beispiel-5-suche-nach-zeilen-die-mit-einer-ziffer-enden">Beispiel 5: Suche nach Zeilen, die mit einer Ziffer enden<a class="headerlink" href="#beispiel-5-suche-nach-zeilen-die-mit-einer-ziffer-enden" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">&quot;[0-9]</span>$<span class="s2">&quot;</span><span class="w"> </span>datei.txt
+</code></pre></div></td></tr></table></div>
+<h4 id="beispiel-6-suche-nach-doppelten-wortern">Beispiel 6: Suche nach doppelten Wörtern<a class="headerlink" href="#beispiel-6-suche-nach-doppelten-wortern" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">&quot;\b([a-zA-Z]+) \1\b&quot;</span><span class="w"> </span>datei.txt
+</code></pre></div></td></tr></table></div>
+<ul>
+<li><code>\b</code>: Wortgrenze.</li>
+<li><code>([a-zA-Z]+)</code>: Ein oder mehrere Buchstaben (Gruppe 1).</li>
+<li><code>\1</code>: Ein Leerzeichen gefolgt vom Inhalt von Gruppe 1 (doppeltes Wort).</li>
+</ul>
+<h2 id="3-daten-extrahieren-mit-cut">3. Daten extrahieren mit <code>cut</code><a class="headerlink" href="#3-daten-extrahieren-mit-cut" title="Permanent link">&para;</a></h2>
+<h3 id="31-was-ist-cut">3.1 Was ist <code>cut</code>?<a class="headerlink" href="#31-was-ist-cut" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>cut</code> extrahiert <strong>Teile von Zeilen</strong> aus einer Datei, z. B.:</li>
+<li><strong>Spalten</strong> aus CSV-Dateien.</li>
+<li><strong>Bestimmte Zeichenbereiche</strong> aus Textdateien.</li>
+</ul>
+<h3 id="32-grundlegende-syntax-von-cut">3.2 Grundlegende Syntax von <code>cut</code><a class="headerlink" href="#32-grundlegende-syntax-von-cut" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>cut<span class="w"> </span><span class="o">[</span>Optionen<span class="o">]</span><span class="w"> </span><span class="o">[</span>Datei<span class="o">]</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="33-wichtige-optionen-von-cut">3.3 Wichtige Optionen von <code>cut</code><a class="headerlink" href="#33-wichtige-optionen-von-cut" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Beschreibung</th>
+<th>Beispiel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-d</code></td>
+<td><strong>Trennzeichen</strong> für Felder (Standard: Tabulator).</td>
+<td><code>cut -d"," -f1 datei.csv</code></td>
+</tr>
+<tr>
+<td><code>-f</code></td>
+<td><strong>Wählt Felder</strong> aus (1-basiert).</td>
+<td><code>cut -f1,3 datei.txt</code></td>
+</tr>
+<tr>
+<td><code>-c</code></td>
+<td><strong>Wählt Zeichenbereiche</strong> aus.</td>
+<td><code>cut -c1-10 datei.txt</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="34-praxisbeispiele-mit-cut">3.4 Praxisbeispiele mit <code>cut</code><a class="headerlink" href="#34-praxisbeispiele-mit-cut" title="Permanent link">&para;</a></h3>
+<h4 id="beispiel-1-erste-spalte-einer-csv-datei-extrahieren">Beispiel 1: Erste Spalte einer CSV-Datei extrahieren<a class="headerlink" href="#beispiel-1-erste-spalte-einer-csv-datei-extrahieren" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>cut<span class="w"> </span>-d<span class="s2">&quot;,&quot;</span><span class="w"> </span>-f1<span class="w"> </span>daten.csv
+</code></pre></div></td></tr></table></div>
+<ul>
+<li><code>-d","</code>: Trennzeichen ist ein Komma (für CSV-Dateien).</li>
+<li><code>-f1</code>: Erstes Feld (Spalte) extrahieren.</li>
+</ul>
+<h4 id="beispiel-2-benutzernamen-aus-etcpasswd-extrahieren">Beispiel 2: Benutzernamen aus <code>/etc/passwd</code> extrahieren<a class="headerlink" href="#beispiel-2-benutzernamen-aus-etcpasswd-extrahieren" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>cut<span class="w"> </span>-d<span class="s2">&quot;:&quot;</span><span class="w"> </span>-f1<span class="w"> </span>/etc/passwd
+</code></pre></div></td></tr></table></div>
+<ul>
+<li><code>-d":"</code>: Trennzeichen ist <code>:</code> (in <code>/etc/passwd</code>).</li>
+<li><code>-f1</code>: Erstes Feld (Benutzername) extrahieren.</li>
+</ul>
+<h4 id="beispiel-3-uid-und-benutzername-aus-etcpasswd-extrahieren">Beispiel 3: UID und Benutzername aus <code>/etc/passwd</code> extrahieren<a class="headerlink" href="#beispiel-3-uid-und-benutzername-aus-etcpasswd-extrahieren" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>cut<span class="w"> </span>-d<span class="s2">&quot;:&quot;</span><span class="w"> </span>-f1,3<span class="w"> </span>/etc/passwd
+</code></pre></div></td></tr></table></div>
+<ul>
+<li><code>-f1,3</code>: Erstes und drittes Feld (Benutzername und UID).</li>
+</ul>
+<h4 id="beispiel-4-erste-10-zeichen-jeder-zeile-extrahieren">Beispiel 4: Erste 10 Zeichen jeder Zeile extrahieren<a class="headerlink" href="#beispiel-4-erste-10-zeichen-jeder-zeile-extrahieren" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>cut<span class="w"> </span>-c1-10<span class="w"> </span>datei.txt
+</code></pre></div></td></tr></table></div>
+<ul>
+<li><code>-c1-10</code>: Zeichen 1 bis 10 jeder Zeile.</li>
+</ul>
+<h4 id="beispiel-5-bestimmte-zeichenbereiche-extrahieren">Beispiel 5: Bestimmte Zeichenbereiche extrahieren<a class="headerlink" href="#beispiel-5-bestimmte-zeichenbereiche-extrahieren" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Extrahiere die Zeichen 5 bis 10 jeder Zeile</span>
+cut<span class="w"> </span>-c5-10<span class="w"> </span>datei.txt
+</code></pre></div></td></tr></table></div>
+<h2 id="4-text-ersetzen-und-bearbeiten-mit-sed">4. Text ersetzen und bearbeiten mit <code>sed</code><a class="headerlink" href="#4-text-ersetzen-und-bearbeiten-mit-sed" title="Permanent link">&para;</a></h2>
+<h3 id="41-was-ist-sed">4.1 Was ist <code>sed</code>?<a class="headerlink" href="#41-was-ist-sed" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>**sed**</code> (Stream Editor) ist ein <strong>Tool zur Textbearbeitung</strong>, das:</li>
+<li><strong>Text ersetzt</strong> (z. B. Suchen und Ersetzen).</li>
+<li><strong>Zeilen löscht</strong>.</li>
+<li><strong>Text einfügt oder anhängt</strong>.</li>
+<li><strong>Skripte</strong> für komplexe Textmanipulationen ermöglicht.</li>
+</ul>
+<hr />
+<h3 id="42-grundlegende-syntax-von-sed">4.2 Grundlegende Syntax von <code>sed</code><a class="headerlink" href="#42-grundlegende-syntax-von-sed" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sed<span class="w"> </span><span class="o">[</span>Optionen<span class="o">]</span><span class="w"> </span><span class="s1">&#39;Befehl&#39;</span><span class="w"> </span><span class="o">[</span>Datei<span class="o">]</span>
+</code></pre></div></td></tr></table></div>
+<hr />
+<h3 id="43-wichtige-befehle-in-sed">4.3 Wichtige Befehle in <code>sed</code><a class="headerlink" href="#43-wichtige-befehle-in-sed" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Befehl</th>
+<th>Beschreibung</th>
+<th>Beispiel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>s/Muster/Ersatz/</code></td>
+<td><strong>Ersetzt</strong> das erste Vorkommen von <code>Muster</code> durch <code>Ersatz</code>.</td>
+<td><code>sed 's/Linux/GNU\/Linux/' datei.txt</code></td>
+</tr>
+<tr>
+<td><code>s/Muster/Ersatz/g</code></td>
+<td><strong>Ersetzt alle Vorkommen</strong> von <code>Muster</code> durch <code>Ersatz</code>.</td>
+<td><code>sed 's/Linux/GNU\/Linux/g' datei.txt</code></td>
+</tr>
+<tr>
+<td><code>s/Muster/Ersatz/gi</code></td>
+<td><strong>Ersetzt alle Vorkommen</strong> (Groß-/Kleinschreibung ignorieren).</td>
+<td><code>sed 's/linux/GNU\/Linux/gi' datei.txt</code></td>
+</tr>
+<tr>
+<td><code>d</code></td>
+<td><strong>Löscht</strong> Zeilen, die dem Muster entsprechen.</td>
+<td><code>sed '/error/d' log.txt</code></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><strong>Druckt</strong> Zeilen, die dem Muster entsprechen.</td>
+<td><code>sed '/Linux/p' datei.txt</code></td>
+</tr>
+<tr>
+<td><code>a\Text</code></td>
+<td><strong>Fügt Text nach</strong> der Zeile ein.</td>
+<td><code>sed '/Linux/a\Das ist Linux' datei.txt</code></td>
+</tr>
+<tr>
+<td><code>i\Text</code></td>
+<td><strong>Fügt Text vor</strong> der Zeile ein.</td>
+<td><code>sed '/Linux/i\Linux ist toll' datei.txt</code></td>
+</tr>
+<tr>
+<td><code>c\Text</code></td>
+<td><strong>Ersetzt die Zeile</strong> durch <code>Text</code>.</td>
+<td><code>sed '/Linux/c\Linux ist ein Betriebssystem' datei.txt</code></td>
+</tr>
+<tr>
+<td><code>y/Zeichen1/Zeichen2/</code></td>
+<td><strong>Ersetzt einzelne Zeichen</strong> (z. B. für Übersetzungen).</td>
+<td><code>sed 'y/aeiou/AEIOU/' datei.txt</code></td>
+</tr>
+<tr>
+<td><code>=</code></td>
+<td><strong>Zeigt die Zeilennummer</strong> an.</td>
+<td><code>sed '=' datei.txt</code></td>
+</tr>
+<tr>
+<td><code>q</code></td>
+<td><strong>Beendet die Verarbeitung</strong> nach der ersten Übereinstimmung.</td>
+<td><code>sed '/error/q' log.txt</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="44-adressierung-in-sed">4.4 Adressierung in <code>sed</code><a class="headerlink" href="#44-adressierung-in-sed" title="Permanent link">&para;</a></h3>
+<p>Du kannst <strong>Befehle auf bestimmte Zeilen oder Muster anwenden</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Adresse</th>
+<th>Beschreibung</th>
+<th>Beispiel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>n</code></td>
+<td>**Zeile <code>n**</code>.</td>
+<td><code>sed '3s/Linux/GNU\/Linux/' datei.txt</code> (nur Zeile 3)</td>
+</tr>
+<tr>
+<td><code>n,m</code></td>
+<td>**Zeilen <code>n</code> bis <code>m**</code>.</td>
+<td><code>sed '2,5d' datei.txt</code> (löscht Zeilen 2 bis 5)</td>
+</tr>
+<tr>
+<td><code>/Muster/</code></td>
+<td><strong>Zeilen, die dem Muster entsprechen</strong>.</td>
+<td><code>sed '/error/s/Linux/GNU\/Linux/' log.txt</code></td>
+</tr>
+<tr>
+<td><code>!</code></td>
+<td><strong>Invertiert die Adresse</strong>.</td>
+<td><code>sed '/error/!d' log.txt</code> (löscht alle Zeilen, die <strong>nicht</strong> "error" enthalten)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="45-praxisbeispiele-mit-sed">4.5 Praxisbeispiele mit <code>sed</code><a class="headerlink" href="#45-praxisbeispiele-mit-sed" title="Permanent link">&para;</a></h3>
+<h4 id="beispiel-1-einfaches-ersetzen">Beispiel 1: Einfaches Ersetzen<a class="headerlink" href="#beispiel-1-einfaches-ersetzen" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Ersetze das erste Vorkommen von &quot;Linux&quot; durch &quot;GNU/Linux&quot; in jeder Zeile</span>
+sed<span class="w"> </span><span class="s1">&#39;s/Linux/GNU\/Linux/&#39;</span><span class="w"> </span>datei.txt
+</code></pre></div></td></tr></table></div>
+<ul>
+<li><code>\/</code> maskiert den Schrägstrich in "GNU/Linux".</li>
+</ul>
+<h4 id="beispiel-2-alle-vorkommen-ersetzen">Beispiel 2: Alle Vorkommen ersetzen<a class="headerlink" href="#beispiel-2-alle-vorkommen-ersetzen" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Ersetze **alle** Vorkommen von &quot;Linux&quot; durch &quot;GNU/Linux&quot;</span>
+sed<span class="w"> </span><span class="s1">&#39;s/Linux/GNU\/Linux/g&#39;</span><span class="w"> </span>datei.txt
+</code></pre></div></td></tr></table></div>
+<h4 id="beispiel-3-gro-kleinschreibung-ignorieren">Beispiel 3: Groß-/Kleinschreibung ignorieren<a class="headerlink" href="#beispiel-3-gro-kleinschreibung-ignorieren" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Ersetze &quot;linux&quot; (unabhängig von Groß-/Kleinschreibung) durch &quot;Linux&quot;</span>
+sed<span class="w"> </span><span class="s1">&#39;s/linux/Linux/gi&#39;</span><span class="w"> </span>datei.txt
+</code></pre></div></td></tr></table></div>
+<h4 id="beispiel-4-zeilen-loschen">Beispiel 4: Zeilen löschen<a class="headerlink" href="#beispiel-4-zeilen-loschen" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Lösche alle Zeilen, die &quot;error&quot; enthalten</span>
+sed<span class="w"> </span><span class="s1">&#39;/error/d&#39;</span><span class="w"> </span>log.txt
+</code></pre></div></td></tr></table></div>
+<h4 id="beispiel-5-zeilen-drucken">Beispiel 5: Zeilen drucken<a class="headerlink" href="#beispiel-5-zeilen-drucken" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Drucke alle Zeilen, die &quot;Linux&quot; enthalten</span>
+sed<span class="w"> </span><span class="s1">&#39;/Linux/p&#39;</span><span class="w"> </span>datei.txt
+</code></pre></div></td></tr></table></div>
+<h4 id="beispiel-6-text-einfugen">Beispiel 6: Text einfügen<a class="headerlink" href="#beispiel-6-text-einfugen" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Füge nach jeder Zeile, die &quot;Linux&quot; enthält, den Text &quot;Das ist Linux&quot; ein</span>
+sed<span class="w"> </span><span class="s1">&#39;/Linux/a\Das ist Linux&#39;</span><span class="w"> </span>datei.txt
+</code></pre></div></td></tr></table></div>
+<h4 id="beispiel-7-text-vor-einer-zeile-einfugen">Beispiel 7: Text vor einer Zeile einfügen<a class="headerlink" href="#beispiel-7-text-vor-einer-zeile-einfugen" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Füge vor jeder Zeile, die &quot;Linux&quot; enthält, den Text &quot;Linux ist toll&quot; ein</span>
+sed<span class="w"> </span><span class="s1">&#39;/Linux/i\Linux ist toll&#39;</span><span class="w"> </span>datei.txt
+</code></pre></div></td></tr></table></div>
+<h4 id="beispiel-8-zeilen-ersetzen">Beispiel 8: Zeilen ersetzen<a class="headerlink" href="#beispiel-8-zeilen-ersetzen" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Ersetze jede Zeile, die &quot;Linux&quot; enthält, durch &quot;Linux ist ein Betriebssystem&quot;</span>
+sed<span class="w"> </span><span class="s1">&#39;/Linux/c\Linux ist ein Betriebssystem&#39;</span><span class="w"> </span>datei.txt
+</code></pre></div></td></tr></table></div>
+<h4 id="beispiel-9-zeilennummern-anzeigen">Beispiel 9: Zeilennummern anzeigen<a class="headerlink" href="#beispiel-9-zeilennummern-anzeigen" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Zeige die Zeilennummern aller Zeilen an</span>
+sed<span class="w"> </span><span class="s1">&#39;=&#39;</span><span class="w"> </span>datei.txt
+</code></pre></div></td></tr></table></div>
+<h4 id="beispiel-10-datei-direkt-bearbeiten">Beispiel 10: Datei direkt bearbeiten<a class="headerlink" href="#beispiel-10-datei-direkt-bearbeiten" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Ersetze &quot;Linux&quot; durch &quot;GNU/Linux&quot; **direkt in der Datei** (Vorsicht!)</span>
+sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/Linux/GNU\/Linux/g&#39;</span><span class="w"> </span>datei.txt
+</code></pre></div></td></tr></table></div>
+<ul>
+<li><code>-i</code>: Bearbeitet die Datei <strong>direkt</strong> (ohne <code>-i</code> wird nur die Ausgabe angezeigt).</li>
+</ul>
+<h2 id="5-daten-sortieren-und-einzigartige-eintrage-finden">5. Daten sortieren und einzigartige Einträge finden<a class="headerlink" href="#5-daten-sortieren-und-einzigartige-eintrage-finden" title="Permanent link">&para;</a></h2>
+<h3 id="51-sort-daten-sortieren">5.1 <code>sort</code>: Daten sortieren<a class="headerlink" href="#51-sort-daten-sortieren" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>sort</code> sortiert Zeilen einer Datei <strong>alphabetisch oder numerisch</strong>.</li>
+</ul>
+<h4 id="wichtige-optionen-von-sort">Wichtige Optionen von <code>sort</code><a class="headerlink" href="#wichtige-optionen-von-sort" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Beschreibung</th>
+<th>Beispiel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-r</code></td>
+<td><strong>Absteigende Sortierung</strong>.</td>
+<td><code>sort -r datei.txt</code></td>
+</tr>
+<tr>
+<td><code>-n</code></td>
+<td><strong>Numerische Sortierung</strong>.</td>
+<td><code>sort -n zahlen.txt</code></td>
+</tr>
+<tr>
+<td><code>-k</code></td>
+<td><strong>Sortiert nach einer bestimmten Spalte</strong>.</td>
+<td><code>sort -k2 datei.txt</code> (sortiert nach der 2. Spalte)</td>
+</tr>
+<tr>
+<td><code>-t</code></td>
+<td><strong>Trennzeichen für Spalten</strong>.</td>
+<td><code>sort -t"," -k2 daten.csv</code> (sortiert nach der 2. Spalte in einer CSV-Datei)</td>
+</tr>
+<tr>
+<td><code>-u</code></td>
+<td><strong>Entfernt Duplikate</strong> (wie <code>uniq</code>).</td>
+<td><code>sort -u datei.txt</code></td>
+</tr>
+<tr>
+<td><code>-f</code></td>
+<td><strong>Ignoriert Groß-/Kleinschreibung</strong>.</td>
+<td><code>sort -f datei.txt</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="praxisbeispiele-mit-sort">Praxisbeispiele mit <code>sort</code><a class="headerlink" href="#praxisbeispiele-mit-sort" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Sortiere eine Datei alphabetisch</span>
+sort<span class="w"> </span>datei.txt
+
+<span class="c1"># Sortiere eine Datei absteigend</span>
+sort<span class="w"> </span>-r<span class="w"> </span>datei.txt
+
+<span class="c1"># Sortiere eine Datei numerisch</span>
+sort<span class="w"> </span>-n<span class="w"> </span>zahlen.txt
+
+<span class="c1"># Sortiere nach der 2. Spalte (Trennzeichen: Komma)</span>
+sort<span class="w"> </span>-t<span class="s2">&quot;,&quot;</span><span class="w"> </span>-k2<span class="w"> </span>daten.csv
+
+<span class="c1"># Sortiere und entferne Duplikate</span>
+sort<span class="w"> </span>-u<span class="w"> </span>datei.txt
+</code></pre></div></td></tr></table></div>
+<hr />
+<h3 id="52-uniq-einzigartige-eintrage-finden">5.2 <code>uniq</code>: Einzigartige Einträge finden<a class="headerlink" href="#52-uniq-einzigartige-eintrage-finden" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>uniq</code> entfernt <strong>aufeinanderfolgende Duplikate</strong> aus einer sortierten Datei.</li>
+</ul>
+<h4 id="wichtige-optionen-von-uniq">Wichtige Optionen von <code>uniq</code><a class="headerlink" href="#wichtige-optionen-von-uniq" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Beschreibung</th>
+<th>Beispiel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-c</code></td>
+<td><strong>Zählt die Vorkommen</strong> jedes einzigartigen Eintrags.</td>
+<td><code>uniq -c datei.txt</code></td>
+</tr>
+<tr>
+<td><code>-d</code></td>
+<td><strong>Zeigt nur Duplikate</strong> an.</td>
+<td><code>uniq -d datei.txt</code></td>
+</tr>
+<tr>
+<td><code>-u</code></td>
+<td><strong>Zeigt nur einzigartige Einträge</strong> an.</td>
+<td><code>uniq -u datei.txt</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="praxisbeispiele-mit-uniq">Praxisbeispiele mit <code>uniq</code><a class="headerlink" href="#praxisbeispiele-mit-uniq" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Zeige nur einzigartige Zeilen an (Datei muss sortiert sein!)</span>
+sort<span class="w"> </span>datei.txt<span class="w"> </span><span class="p">|</span><span class="w"> </span>uniq
+
+<span class="c1"># Zähle die Vorkommen jeder Zeile</span>
+sort<span class="w"> </span>datei.txt<span class="w"> </span><span class="p">|</span><span class="w"> </span>uniq<span class="w"> </span>-c
+
+<span class="c1"># Zeige nur Duplikate an</span>
+sort<span class="w"> </span>datei.txt<span class="w"> </span><span class="p">|</span><span class="w"> </span>uniq<span class="w"> </span>-d
+
+<span class="c1"># Zeige nur einzigartige Einträge an</span>
+sort<span class="w"> </span>datei.txt<span class="w"> </span><span class="p">|</span><span class="w"> </span>uniq<span class="w"> </span>-u
+</code></pre></div></td></tr></table></div>
+<h3 id="53-kombinierte-beispiele-sort-und-uniq">5.3 Kombinierte Beispiele: <code>sort</code> und <code>uniq</code><a class="headerlink" href="#53-kombinierte-beispiele-sort-und-uniq" title="Permanent link">&para;</a></h3>
+<h4 id="beispiel-1-haufigste-worter-in-einer-datei-finden">Beispiel 1: Häufigste Wörter in einer Datei finden<a class="headerlink" href="#beispiel-1-haufigste-worter-in-einer-datei-finden" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Zähle die Häufigkeit jedes Wortes in einer Datei</span>
+cat<span class="w"> </span>datei.txt<span class="w"> </span><span class="p">|</span><span class="w"> </span>tr<span class="w"> </span><span class="s1">&#39; &#39;</span><span class="w"> </span><span class="s1">&#39;\n&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span><span class="p">|</span><span class="w"> </span>uniq<span class="w"> </span>-c<span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span>-nr
+</code></pre></div></td></tr></table></div>
+<ul>
+<li><code>tr ' ' '\n'</code>: Ersetzt Leerzeichen durch Zeilenumbrüche (ein Wort pro Zeile).</li>
+<li><code>sort</code>: Sortiert die Wörter alphabetisch.</li>
+<li><code>uniq -c</code>: Zählt die Vorkommen jedes Wortes.</li>
+<li><code>sort -nr</code>: Sortiert nach der Häufigkeit (absteigend).</li>
+</ul>
+<h4 id="beispiel-2-einzigartige-ip-adressen-aus-einer-log-datei-extrahieren">Beispiel 2: Einzigartige IP-Adressen aus einer Log-Datei extrahieren<a class="headerlink" href="#beispiel-2-einzigartige-ip-adressen-aus-einer-log-datei-extrahieren" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">&quot;[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}&quot;</span><span class="w"> </span>access.log<span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span><span class="p">|</span><span class="w"> </span>uniq
+</code></pre></div></td></tr></table></div>
+<ul>
+<li><code>grep -E</code>: Filtert IP-Adressen aus der Log-Datei.</li>
+<li><code>sort | uniq</code>: Sortiert und entfernt Duplikate.</li>
+</ul>
+<h2 id="6-kombinierte-beispiele-datenverarbeitung-in-der-praxis">6. Kombinierte Beispiele: Datenverarbeitung in der Praxis<a class="headerlink" href="#6-kombinierte-beispiele-datenverarbeitung-in-der-praxis" title="Permanent link">&para;</a></h2>
+<h3 id="61-log-dateien-analysieren">6.1 Log-Dateien analysieren<a class="headerlink" href="#61-log-dateien-analysieren" title="Permanent link">&para;</a></h3>
+<h4 id="beispiel-1-anzahl-der-fehler-in-einer-log-datei-zahlen">Beispiel 1: Anzahl der Fehler in einer Log-Datei zählen<a class="headerlink" href="#beispiel-1-anzahl-der-fehler-in-einer-log-datei-zahlen" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>grep<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;error&quot;</span><span class="w"> </span>/var/log/syslog
+</code></pre></div></td></tr></table></div>
+<h3 id="62-csv-dateien-verarbeiten">6.2 CSV-Dateien verarbeiten<a class="headerlink" href="#62-csv-dateien-verarbeiten" title="Permanent link">&para;</a></h3>
+<h4 id="beispiel-1-erste-spalte-einer-csv-datei-extrahieren_1">Beispiel 1: Erste Spalte einer CSV-Datei extrahieren<a class="headerlink" href="#beispiel-1-erste-spalte-einer-csv-datei-extrahieren_1" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>cut<span class="w"> </span>-d<span class="s2">&quot;,&quot;</span><span class="w"> </span>-f1<span class="w"> </span>daten.csv
+</code></pre></div></td></tr></table></div>
+<h3 id="63-textdateien-durchsuchen-und-bearbeiten">6.3 Textdateien durchsuchen und bearbeiten<a class="headerlink" href="#63-textdateien-durchsuchen-und-bearbeiten" title="Permanent link">&para;</a></h3>
+<h4 id="beispiel-1-alle-e-mail-adressen-aus-einer-datei-extrahieren">Beispiel 1: Alle E-Mail-Adressen aus einer Datei extrahieren<a class="headerlink" href="#beispiel-1-alle-e-mail-adressen-aus-einer-datei-extrahieren" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>grep<span class="w"> </span>-Eo<span class="w"> </span><span class="s2">&quot;[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}&quot;</span><span class="w"> </span>datei.txt
+</code></pre></div></td></tr></table></div>
+<h4 id="beispiel-2-alle-zeilen-die-mit-error-beginnen-in-eine-neue-datei-schreiben">Beispiel 2: Alle Zeilen, die mit "Error" beginnen, in eine neue Datei schreiben<a class="headerlink" href="#beispiel-2-alle-zeilen-die-mit-error-beginnen-in-eine-neue-datei-schreiben" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>grep<span class="w"> </span><span class="s2">&quot;^Error&quot;</span><span class="w"> </span>log.txt<span class="w"> </span>&gt;<span class="w"> </span>fehler.txt
+</code></pre></div></td></tr></table></div>
+<h2 id="7-ubungsaufgaben">7. Übungsaufgaben<a class="headerlink" href="#7-ubungsaufgaben" title="Permanent link">&para;</a></h2>
+<h3 id="ubung-1-einfache-suche-mit-grep">Übung 1: Einfache Suche mit <code>grep</code><a class="headerlink" href="#ubung-1-einfache-suche-mit-grep" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Suche nach dem Wort <strong>"Linux"</strong> in der Datei <code>/etc/os-release</code>.</li>
+<li>Zeige die <strong>Zeilennummern</strong> der Treffer an.</li>
+</ol>
+<details class="success">
+<summary>Lösung</summary>
+<p><code>grep -n "Linux" /etc/os-release</code>     </p>
+</details>
+<h3 id="ubung-2-invertierte-suche">Übung 2: Invertierte Suche<a class="headerlink" href="#ubung-2-invertierte-suche" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Zeige alle Zeilen in <code>/etc/passwd</code> an, die <strong>nicht</strong> mit <code>#</code> beginnen (d. h. keine Kommentare).</li>
+</ol>
+<details class="success">
+<summary>Lösung</summary>
+<p><code>grep -v "^#" /etc/passwd</code>     </p>
+</details>
+<h3 id="ubung-3-rekursive-suche">Übung 3: Rekursive Suche<a class="headerlink" href="#ubung-3-rekursive-suche" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Suche <strong>rekursiv</strong> nach dem Wort <strong>"error"</strong> in allen Dateien im Verzeichnis <code>/var/log</code>.</li>
+<li>Zeige nur die <strong>Dateinamen</strong> an, die Treffer enthalten.</li>
+</ol>
+<details class="success">
+<summary>Lösung</summary>
+<p><code>grep -rl "error" /var/log</code>     </p>
+</details>
+<h3 id="ubung-4-regex-fur-e-mail-adressen">Übung 4: Regex für E-Mail-Adressen<a class="headerlink" href="#ubung-4-regex-fur-e-mail-adressen" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Suche nach <strong>E-Mail-Adressen</strong> in der Datei <code>kontakte.txt</code>.</li>
+</ol>
+<details class="success">
+<summary>Lösung</summary>
+<p><code>grep -E "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" kontakte.txt</code>     </p>
+</details>
+<h3 id="ubung-5-spalten-extrahieren-mit-cut">Übung 5: Spalten extrahieren mit <code>cut</code><a class="headerlink" href="#ubung-5-spalten-extrahieren-mit-cut" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Extrahiere die <strong>Benutzernamen</strong> (1. Spalte) und <strong>UIDs</strong> (3. Spalte) aus <code>/etc/passwd</code>.</li>
+</ol>
+<details class="success">
+<summary>Lösung</summary>
+<p><code>cut -d":" -f1,3 /etc/passwd</code>     </p>
+</details>
+<h3 id="ubung-6-text-ersetzen-mit-sed">Übung 6: Text ersetzen mit <code>sed</code><a class="headerlink" href="#ubung-6-text-ersetzen-mit-sed" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Ersetze <strong>alle Vorkommen</strong> von <strong>"Linux"</strong> durch <strong>"GNU/Linux"</strong> in der Datei <code>text.txt</code>.</li>
+<li>Speichere die Änderungen <strong>direkt in der Datei</strong>.</li>
+</ol>
+<details class="success">
+<summary>Lösung</summary>
+<p><code>sed -i 's/Linux/GNU\/Linux/g' text.txt</code>     </p>
+</details>
+<h3 id="ubung-7-zeilen-loschen-mit-sed">Übung 7: Zeilen löschen mit <code>sed</code><a class="headerlink" href="#ubung-7-zeilen-loschen-mit-sed" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Lösche <strong>alle Zeilen</strong>, die das Wort <strong>"error"</strong> enthalten, aus der Datei <code>log.txt</code>.</li>
+<li>Speichere die Änderungen <strong>direkt in der Datei</strong>.</li>
+</ol>
+<details class="success">
+<summary>Lösung</summary>
+<p><code>sed -i '/error/d' log.txt</code>     </p>
+</details>
+<h3 id="ubung-8-daten-sortieren-und-duplikate-entfernen">Übung 8: Daten sortieren und Duplikate entfernen<a class="headerlink" href="#ubung-8-daten-sortieren-und-duplikate-entfernen" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Sortiere die Datei <code>namen.txt</code> alphabetisch.</li>
+<li>Entferne <strong>aufeinanderfolgende Duplikate</strong>.</li>
+</ol>
+<details class="success">
+<summary>Lösung</summary>
+<p><code>sort namen.txt | uniq</code>     </p>
+</details>
+<h3 id="ubung-9-textbearbeitung-mit-sed">Übung 9: Textbearbeitung mit <code>sed</code><a class="headerlink" href="#ubung-9-textbearbeitung-mit-sed" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Füge vor <strong>jeder Zeile</strong>, die mit <strong>"Error"</strong> beginnt, den Text <strong>"FEHLER: "</strong> ein.</li>
+<li>Speichere die Änderungen in einer neuen Datei namens <code>fehler_log.txt</code>.</li>
+</ol>
+<details class="success">
+<summary>Lösung</summary>
+<p><code>sed '/^Error/s/^/FEHLER: /' log.txt &gt; fehler_log.txt</code>     </p>
+</details>
+<h2 id="8-zusammenfassung-und-tipps">8. Zusammenfassung und Tipps<a class="headerlink" href="#8-zusammenfassung-und-tipps" title="Permanent link">&para;</a></h2>
+<h3 id="wichtige-befehle-im-uberblick">Wichtige Befehle im Überblick<a class="headerlink" href="#wichtige-befehle-im-uberblick" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Befehl</th>
+<th>Beschreibung</th>
+<th>Beispiel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>grep</code></td>
+<td>Sucht nach <strong>Textmustern</strong> in Dateien.</td>
+<td><code>grep "Linux" datei.txt</code></td>
+</tr>
+<tr>
+<td><code>egrep</code></td>
+<td>Sucht mit <strong>erweiterten Regex</strong>.</td>
+<td><code>egrep "error|warning" log.txt</code></td>
+</tr>
+<tr>
+<td><code>fgrep</code></td>
+<td>Sucht nach <strong>exakten Zeichenketten</strong>.</td>
+<td><code>fgrep "muster mit [Sonderzeichen]" datei.txt</code></td>
+</tr>
+<tr>
+<td><code>cut</code></td>
+<td>Extrahiere <strong>Spalten oder Zeichenbereiche</strong>.</td>
+<td><code>cut -d"," -f1 datei.csv</code></td>
+</tr>
+</tbody>
+</table>
+<p>| <code>sed</code>   | <strong>Ersetzt, löscht oder fügt Text</strong> ein.                               | <code>sed 's/Linux/GNU\/Linux/g' datei.txt</code>         |
+| <code>sort</code>  | <strong>Sortiert</strong> Zeilen alphabetisch oder numerisch.                      | <code>sort -n zahlen.txt</code>                           |
+| <code>uniq</code>  | <strong>Entfernt Duplikate</strong> aus sortierten Dateien.                        | <code>sort datei.txt                                |
+|</code>tr<code>| **Ersetzt oder löscht Zeichen**.                                      |</code>tr 'a-z' 'A-Z' &lt; datei.txt`                   |</p>
+<h3 id="tipps-fur-die-praxis">Tipps für die Praxis<a class="headerlink" href="#tipps-fur-die-praxis" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Kombiniere Befehle mit Pipes (<code>|</code>)</strong>:</li>
+<li>Pipes ermöglichen es, die <strong>Ausgabe eines Befehls</strong> als <strong>Eingabe für einen anderen Befehl</strong> zu verwenden.</li>
+<li>Beispiel: <code>grep "error" log.txt | sort | uniq -c | sort -nr</code></li>
+<li><strong>Nutze <code>grep</code> für einfache Suchen</strong>:</li>
+<li><code>grep</code> ist ideal für <strong>schnelle Textsuche</strong> in Dateien.</li>
+<li>Nutze <code>-i</code> für <strong>Groß-/Kleinschreibung ignorieren</strong>.</li>
+<li>Nutze <code>-v</code> für <strong>invertierte Suche</strong>.</li>
+<li><strong>Nutze <code>sed</code> für Textersetzungen</strong>:</li>
+<li><code>sed</code> ist ideal für <strong>Suchen und Ersetzen</strong> in Dateien.</li>
+<li>Nutze <code>-i</code> für <strong>direkte Bearbeitung von Dateien</strong> (Vorsicht!).</li>
+<li><strong>Sortiere und entferne Duplikate</strong>:</li>
+<li><code>sort</code> + <code>uniq</code> ist eine <strong>mächtige Kombination</strong>, um <strong>einzigartige Einträge</strong> zu finden oder <strong>Häufigkeiten zu zählen</strong>.</li>
+<li><strong>Nutze <code>tr</code> für Zeichenersetzungen</strong>:</li>
+<li><code>tr</code> ist nützlich, um <strong>Zeichen zu ersetzen oder zu löschen</strong> (z. B. <code>tr 'a-z' 'A-Z'</code> für Großbuchstaben).</li>
+<li><strong>Reguläre Ausdrücke (Regex) meistern</strong>:</li>
+<li>Regex ermöglicht <strong>komplexe Suchmuster</strong> (z. B. E-Mail-Adressen, IP-Adressen).</li>
+<li>Nutze <strong>Online-Tools</strong> wie <a href="https://regex101.com/">Regex101</a> zum Testen von Regex.</li>
+<li><strong>Dokumentation nutzen</strong>:</li>
+<li>Nutze <code>man grep</code>, <code>man sed</code>, um die <strong>Dokumentation</strong> der Befehle zu lesen.</li>
+<li>Nutze <code>--help</code> für eine <strong>kurze Übersicht</strong> der Optionen.</li>
+</ol>
+<h3 id="haufige-fallstricke">Häufige Fallstricke<a class="headerlink" href="#haufige-fallstricke" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Problem</th>
+<th>Lösung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>**grep</code> findet keine Treffer**</td>
+<td>Überprüfe die <strong>Groß-/Kleinschreibung</strong> (<code>-i</code>) oder <strong>Sonderzeichen</strong> (maskieren mit <code>\</code>).</td>
+</tr>
+<tr>
+<td><code>**cut</code> extrahiert falsche Spalten**</td>
+<td>Überprüfe das <strong>Trennzeichen</strong> (<code>-d</code>) und die <strong>Spaltennummern</strong> (<code>-f</code>).</td>
+</tr>
+<tr>
+<td><code>**sed</code> ändert die Datei nicht**</td>
+<td>Nutze <code>-i</code> für <strong>direkte Bearbeitung</strong> oder leite die Ausgabe in eine neue Datei um (<code>&gt; datei.txt</code>).</td>
+</tr>
+<tr>
+<td><code>**sort</code> sortiert falsch**</td>
+<td>Nutze <code>-n</code> für <strong>numerische Sortierung</strong> oder <code>-r</code> für <strong>absteigende Sortierung</strong>.</td>
+</tr>
+<tr>
+<td><code>**uniq</code> entfernt keine Duplikate**</td>
+<td>Die Datei muss <strong>zuvor sortiert</strong> werden (`sort datei.txt</td>
+</tr>
+<tr>
+<td><strong>Regex funktioniert nicht</strong></td>
+<td>Überprüfe die <strong>Syntax</strong> (z. B. <code>\</code> für Sonderzeichen maskieren).</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Qualidy GmbH
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.kununu.com/de/qualidy" target="_blank" rel="noopener" title="www.kununu.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M311 86.3c12.3-12.7 12-32.9-.7-45.2s-32.9-12-45.2.7C143.4 167.2 76.4 236.3 64 249V64c0-17.7-14.3-32-32-32S0 46.3 0 64v384c0 17.7 14.3 32 32 32s32-14.3 32-32V341l64.7-66.7 133 192c10.1 14.5 30 18.1 44.5 8.1s18.1-30 8.1-44.5L174.1 227.4z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://de.linkedin.com/company/qualidy" target="_blank" rel="noopener" title="de.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.google.com/search?sca_esv=7e6ba2047fcb60f3&uds=AMwkrPtyB8MsmozA4Lwzqy2G2HCu-abqzc6moOG48q3gP5dtjTRzC2Ws0eSwcyLXDfZNuYCrZ7ByIreHLG9th3vKLekPoVeey0tumAbet4cVLQRLzdRFhUbOGbnyp3xo1V0hzzaNmkCN&si=AKbGX_rcuucMgom2rba1cdwsvM2SVoIkP2btyqGMV4t0GuHIs4sGV_1tpuqR0YHG4Rzd9SdJcL-lW6E-2aJA5azZLTKkIOrZ2j2aWwoBkVbdEJ0o0GPcQhs%3D&q=Qualidy+GmbH+Rezensionen&sa=X&ved=2ahUKEwibsbnSgcmFAxXNQvEDHaVYCiAQ3PALegQIRxAF" target="_blank" rel="noopener" title="www.google.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.35 11.1h-9.17v2.73h6.51c-.33 3.81-3.5 5.44-6.5 5.44C8.36 19.27 5 16.25 5 12c0-4.1 3.2-7.27 7.2-7.27 3.09 0 4.9 1.97 4.9 1.97L19 4.72S16.56 2 12.1 2C6.42 2 2.03 6.8 2.03 12c0 5.05 4.13 10 10.22 10 5.35 0 9.25-3.67 9.25-9.09 0-1.15-.15-1.81-.15-1.81"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://qualidy.de" target="_blank" rel="noopener" title="qualidy.de" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M351.9 280H161c2.9 64.5 17.2 123.9 37.5 167.4 11.4 24.5 23.7 41.8 35.1 52.4 11.2 10.5 18.9 12.2 22.9 12.2s11.7-1.7 22.9-12.2c11.4-10.6 23.7-28 35.1-52.4 20.3-43.5 34.6-102.9 37.5-167.4zm-191-48h190.9c-2.8-64.5-17.1-123.9-37.4-167.4-11.4-24.4-23.7-41.8-35.1-52.4C268.1 1.7 260.4 0 256.4 0s-11.7 1.7-22.9 12.2c-11.4 10.6-23.7 28-35.1 52.4-20.3 43.5-34.6 102.9-37.5 167.4m-48 0c3.5-85.6 25.6-165.1 57.9-217.3C78.7 47.3 10.9 131.2 1.5 232zM1.5 280c9.4 100.8 77.2 184.7 169.3 217.3-32.3-52.2-54.4-131.7-57.9-217.3zm398.4 0c-3.5 85.6-25.6 165.1-57.9 217.3 92.1-32.7 159.9-116.5 169.3-217.3zm111.4-48C501.9 131.2 434.1 47.3 342 14.7c32.3 52.2 54.4 131.7 57.9 217.3z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tracking", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

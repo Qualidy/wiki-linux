@@ -1,0 +1,1778 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>Modul III.1: Verknüpfung von Befehlen - Basis Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/logo.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/grid.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/video_admonition.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/python_tutor_admonition.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/mermaid.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="amber" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#modul-iii1-verknupfung-von-befehlen" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Basis Wiki" class="md-header__button md-logo" aria-label="Basis Wiki" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Basis Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Modul III.1: Verknüpfung von Befehlen
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Basis Wiki" class="md-nav__button md-logo" aria-label="Basis Wiki" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    Basis Wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übersicht
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module I Das Konzept und die Theorie
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Module I Das Konzept und die Theorie
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module1/OpenSource%26Linux-Community/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Open Source & Proprietäre Software
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module1/opensource_lizenzen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Open-Source-Software und Lizenzierung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module1/linux_evolution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Linux Evolution und beliebte Betriebssysteme
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module1/das_linux_betriebssystem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Das Linux-Betriebssystem
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../7.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dateisystem-Hierarchie
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../8.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Netzwerk
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module II Die Grundlagen der Command-Line
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Module II Die Grundlagen der Command-Line
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Grundlagen der Kommandozeile
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Die Kommandozeile zur Hilfe nutzen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Verzeichnissen und Anzeigen von Dateien
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Erstellen, Verschieben und Löschen von Dateien
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module III Automatisierung und Skripting
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Module III Automatisierung und Skripting
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Verknüpfung von Befehlen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Archivierung von Dateien in der Kommandozeile
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Suchen und Extrahieren von Daten aus Dateien
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Befehle in ein Skript umwandeln
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Automatisierung von Aufgaben mit Cron
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fortgeschrittenes Skripting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module IV Systemadministration und Sicherheit
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Module IV Systemadministration und Sicherheit
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Benutzer- und Gruppenverwaltung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Verwalten von Dateiberechtigungen und Eigentum
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Systemüberwachung und Protokollierung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Softwareinstallation und -verwaltung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Netzwerksicherheit und Firewall-Konfiguration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Backup-Strategien und Wiederherstellung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module V Zusammenführung und Zielsetzung
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Module V Zusammenführung und Zielsetzung
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Wichtige Open-Source-Anwendungen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ICT-Fähigkeiten und Arbeiten in Linux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="modul-iii1-verknupfung-von-befehlen">Modul III.1: Verknüpfung von Befehlen<a class="headerlink" href="#modul-iii1-verknupfung-von-befehlen" title="Permanent link">&para;</a></h1>
+<h2 id="einleitung">Einleitung<a class="headerlink" href="#einleitung" title="Permanent link">&para;</a></h2>
+<p>In Linux kannst du <strong>mehrere Befehle kombinieren</strong>, um komplexe Aufgaben in einem einzigen Schritt zu erledigen. Dies spart Zeit und macht deine Arbeit effizienter. In diesem Modul lernst du:</p>
+<ul>
+<li>Wie du <strong>Pipes (<code>|</code>)</strong> nutzt, um die Ausgabe eines Befehls an einen anderen weiterzuleiten.</li>
+<li>Wie du <strong>Umleitungen (<code>&gt;</code>, <code>&gt;&gt;</code>, <code>2&gt;</code>, <code>&lt;</code>)</strong> verwendest, um Ausgaben in Dateien zu speichern oder Eingaben aus Dateien zu lesen.</li>
+<li>Wie du <strong>Befehlsverknüpfungen (<code>;</code>, <code>&amp;&amp;</code>, <code>||</code>)</strong> einsetzt, um mehrere Befehle hintereinander oder bedingt auszuführen.</li>
+<li>Wie du <strong>Subshells (<code>$(...)</code> oder <code>...</code>)</strong> nutzt, um Befehle in andere Befehle einzubetten.</li>
+</ul>
+<h2 id="1-pipes-ausgabe-weiterleiten">1. Pipes (<code>|</code>): Ausgabe weiterleiten<a class="headerlink" href="#1-pipes-ausgabe-weiterleiten" title="Permanent link">&para;</a></h2>
+<h3 id="11-was-sind-pipes">1.1 Was sind Pipes?<a class="headerlink" href="#11-was-sind-pipes" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Pipes (<code>|</code>)</strong> leiten die <strong>Standardausgabe (stdout)</strong> eines Befehls als <strong>Standardeingabe (stdin)</strong> an einen anderen Befehl weiter.</li>
+<li><strong>Beispiel:</strong>
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>ls<span class="w"> </span>-l<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s2">&quot;txt&quot;</span>
+</code></pre></div></td></tr></table></div></li>
+<li><code>ls -l</code> listet alle Dateien im aktuellen Verzeichnis auf.</li>
+<li><code>grep "txt"</code> filtert die Ausgabe und zeigt nur Zeilen an, die "txt" enthalten.</li>
+</ul>
+<h3 id="12-typische-anwendungsfalle-fur-pipes">1.2 Typische Anwendungsfälle für Pipes<a class="headerlink" href="#12-typische-anwendungsfalle-fur-pipes" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Anwendung</th>
+<th>Beispiel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Filtern von Ausgaben</strong></td>
+<td><code>ps aux            | grep firefox</code></td>
+</tr>
+<tr>
+<td><strong>Sortieren von Ausgaben</strong></td>
+<td><code>ls -l             | sort -k5</code></td>
+</tr>
+<tr>
+<td><strong>Zählen von Ergebnissen</strong></td>
+<td><code>ls                | wc -l</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="13-wichtige-befehle-fur-pipes">1.3 Wichtige Befehle für Pipes<a class="headerlink" href="#13-wichtige-befehle-fur-pipes" title="Permanent link">&para;</a></h3>
+<p>Hier sind einige Befehle, die häufig mit Pipes kombiniert werden:</p>
+<table>
+<thead>
+<tr>
+<th>Befehl</th>
+<th>Beschreibung</th>
+<th>Beispiel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>grep</code></td>
+<td>Filtert Zeilen nach einem Muster.</td>
+<td><code>grep "Linux" datei.txt</code></td>
+</tr>
+<tr>
+<td><code>sort</code></td>
+<td>Sortiert Zeilen alphabetisch oder numerisch.</td>
+<td><code>sort datei.txt</code></td>
+</tr>
+<tr>
+<td><code>wc</code></td>
+<td>Zählt Zeilen, Wörter oder Zeichen.</td>
+<td><code>wc -l datei.txt</code></td>
+</tr>
+<tr>
+<td><code>cut</code></td>
+<td>Schneidet Teile aus Zeilen heraus.</td>
+<td><code>cut -d: -f1 /etc/passwd</code></td>
+</tr>
+<tr>
+<td><code>awk</code></td>
+<td>Verarbeitet Text zeilenweise (z. B. Spalten extrahieren).</td>
+<td><code>awk '{print $1}' datei.txt</code></td>
+</tr>
+<tr>
+<td><code>sed</code></td>
+<td>Ersetzt oder löscht Text in Zeilen.</td>
+<td><code>sed 's/alt/neu/' datei.txt</code></td>
+</tr>
+<tr>
+<td><code>head</code></td>
+<td>Zeigt die ersten Zeilen einer Datei.</td>
+<td><code>head -n 5 datei.txt</code></td>
+</tr>
+<tr>
+<td><code>tail</code></td>
+<td>Zeigt die letzten Zeilen einer Datei.</td>
+<td><code>tail -n 5 datei.txt</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="14-praxisbeispiele-fur-pipes">1.4 Praxisbeispiele für Pipes<a class="headerlink" href="#14-praxisbeispiele-fur-pipes" title="Permanent link">&para;</a></h3>
+<h4 id="beispiel-1-dateien-nach-groe-sortieren">Beispiel 1: Dateien nach Größe sortieren<a class="headerlink" href="#beispiel-1-dateien-nach-groe-sortieren" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>ls<span class="w"> </span>-l<span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span>-k5<span class="w"> </span>-n
+</code></pre></div></td></tr></table></div>
+<ul>
+<li><code>ls -l</code>: Listet Dateien mit Details auf (Größe ist die 5. Spalte).</li>
+<li><code>sort -k5 -n</code>: Sortiert nach der 5. Spalte (Größe) numerisch (<code>-n</code>).</li>
+</ul>
+<h4 id="beispiel-2-anzahl-der-dateien-im-verzeichnis-zahlen">Beispiel 2: Anzahl der Dateien im Verzeichnis zählen<a class="headerlink" href="#beispiel-2-anzahl-der-dateien-im-verzeichnis-zahlen" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>ls<span class="w"> </span><span class="p">|</span><span class="w"> </span>wc<span class="w"> </span>-l
+</code></pre></div></td></tr></table></div>
+<ul>
+<li><code>ls</code>: Listet alle Dateien/Verzeichnisse auf.</li>
+<li><code>wc -l</code>: Zählt die Anzahl der Zeilen (entspricht der Anzahl der Dateien/Verzeichnisse).</li>
+</ul>
+<h4 id="beispiel-3-die-10-groten-dateien-im-aktuellen-verzeichnis-finden">Beispiel 3: Die 10 größten Dateien im aktuellen Verzeichnis finden<a class="headerlink" href="#beispiel-3-die-10-groten-dateien-im-aktuellen-verzeichnis-finden" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>ls<span class="w"> </span>-l<span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span>-k5<span class="w"> </span>-nr<span class="w"> </span><span class="p">|</span><span class="w"> </span>head<span class="w"> </span>-n<span class="w"> </span><span class="m">10</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+<li><code>ls -l</code>: Listet Dateien mit Details auf.</li>
+<li><code>sort -k5 -nr</code>: Sortiert nach der 5. Spalte (Größe) <strong>numerisch (<code>-n</code>)</strong> und <strong>absteigend (<code>-r</code>)</strong>.</li>
+<li><code>head -n 10</code>: Zeigt die ersten 10 Zeilen an.</li>
+</ul>
+<h4 id="beispiel-4-alle-prozesse-eines-benutzers-anzeigen">Beispiel 4: Alle Prozesse eines Benutzers anzeigen<a class="headerlink" href="#beispiel-4-alle-prozesse-eines-benutzers-anzeigen" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>ps<span class="w"> </span>aux<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-i<span class="w"> </span><span class="nv">$USER</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+<li><code>ps aux</code>: Zeigt alle laufenden Prozesse an.</li>
+<li><code>grep -i $USER</code>: Filtert Prozesse, die zum aktuellen Benutzer (<code>$USER</code>) gehören (Groß-/Kleinschreibung ignorieren mit <code>-i</code>).</li>
+</ul>
+<h2 id="2-umleitungen-ausgabe-in-dateien-speichern">2. Umleitungen: Ausgabe in Dateien speichern<a class="headerlink" href="#2-umleitungen-ausgabe-in-dateien-speichern" title="Permanent link">&para;</a></h2>
+<h3 id="21-standardausgabe-stdout-umleiten">2.1 Standardausgabe (<code>stdout</code>) umleiten<a class="headerlink" href="#21-standardausgabe-stdout-umleiten" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Beschreibung</th>
+<th>Beispiel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&gt;</code></td>
+<td><strong>Überschreibt</strong> eine Datei mit der Ausgabe.</td>
+<td><code>echo "Hallo" &gt; ausgabe.txt</code></td>
+</tr>
+<tr>
+<td><code>&gt;&gt;</code></td>
+<td><strong>Fügt</strong> die Ausgabe an eine bestehende Datei an.</td>
+<td><code>echo "Welt" &gt;&gt; ausgabe.txt</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Beispiel:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Überschreibt die Datei</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Erste Zeile&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>datei.txt
+
+<span class="c1"># Fügt eine zweite Zeile hinzu</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Zweite Zeile&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>datei.txt
+</code></pre></div></td></tr></table></div>
+<h3 id="22-fehlerausgabe-stderr-umleiten">2.2 Fehlerausgabe (<code>stderr</code>) umleiten<a class="headerlink" href="#22-fehlerausgabe-stderr-umleiten" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Standardmäßig wird die <strong>Fehlerausgabe (stderr)</strong> auf dem Bildschirm angezeigt.</li>
+<li>Mit <code>2&gt;</code> kannst du die Fehlerausgabe in eine Datei umleiten.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Beschreibung</th>
+<th>Beispiel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>2&gt;</code></td>
+<td>Leitet <strong>Fehlermeldungen</strong> in eine Datei um.</td>
+<td><code>ls /nonexistent 2&gt; fehler.log</code></td>
+</tr>
+<tr>
+<td><code>2&gt;&gt;</code></td>
+<td>Fügt Fehlermeldungen an eine Datei an.</td>
+<td><code>ls /nonexistent 2&gt;&gt; fehler.log</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Beispiel:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Leitet Fehlermeldungen in eine Datei um</span>
+ls<span class="w"> </span>/nonexistent<span class="w"> </span><span class="m">2</span>&gt;<span class="w"> </span>fehler.log
+
+<span class="c1"># Leitet sowohl stdout als auch stderr in eine Datei um</span>
+ls<span class="w"> </span>/nonexistent<span class="w"> </span>&gt;<span class="w"> </span>ausgabe.log<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+<li><code>2&gt;&amp;1</code>: Leitet <code>stderr</code> (2) in <code>stdout</code> (1) um, das dann in <code>ausgabe.log</code> geschrieben wird.</li>
+</ul>
+<h3 id="23-eingabeumleitung">2.3 Eingabeumleitung (<code>&lt;</code>)<a class="headerlink" href="#23-eingabeumleitung" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Leitet den Inhalt einer Datei als <strong>Eingabe (stdin)</strong> an einen Befehl weiter.</li>
+</ul>
+<p><strong>Beispiel:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Zählt die Wörter in einer Datei</span>
+wc<span class="w"> </span>-w<span class="w"> </span>&lt;<span class="w"> </span>datei.txt
+</code></pre></div></td></tr></table></div>
+<h3 id="24-devnull-ausgabe-verwerfen">2.4 <code>/dev/null</code> – Ausgabe verwerfen<a class="headerlink" href="#24-devnull-ausgabe-verwerfen" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>/dev/null</code> ist ein <strong>speziäles funktion</strong>, das alle Daten verwirft.</li>
+<li>Nützlich, um Ausgaben zu unterdrücken.</li>
+</ul>
+<p><strong>Beispiel:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Unterdrückt die Standardausgabe</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Hallo&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>/dev/null
+
+<span class="c1"># Unterdrückt Fehlermeldungen</span>
+ls<span class="w"> </span>/nonexistent<span class="w"> </span><span class="m">2</span>&gt;<span class="w"> </span>/dev/null
+</code></pre></div></td></tr></table></div>
+<h3 id="25-praxisbeispiele-fur-umleitungen">2.5 Praxisbeispiele für Umleitungen<a class="headerlink" href="#25-praxisbeispiele-fur-umleitungen" title="Permanent link">&para;</a></h3>
+<h4 id="beispiel-1-log-datei-erstellen">Beispiel 1: Log-Datei erstellen<a class="headerlink" href="#beispiel-1-log-datei-erstellen" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Speichert die Ausgabe von `date` in einer Log-Datei</span>
+date<span class="w"> </span>&gt;<span class="w"> </span>log.txt
+
+<span class="c1"># Fügt die Ausgabe von `whoami` an die Log-Datei an</span>
+whoami<span class="w"> </span>&gt;&gt;<span class="w"> </span>log.txt
+</code></pre></div></td></tr></table></div>
+<h4 id="beispiel-2-fehlerprotokollierung">Beispiel 2: Fehlerprotokollierung<a class="headerlink" href="#beispiel-2-fehlerprotokollierung" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Führt ein Skript aus und speichert Fehler in einer Datei</span>
+./skript.sh<span class="w"> </span><span class="m">2</span>&gt;<span class="w"> </span>fehler.log
+</code></pre></div></td></tr></table></div>
+<h4 id="beispiel-3-kombinierte-umleitung">Beispiel 3: Kombinierte Umleitung<a class="headerlink" href="#beispiel-3-kombinierte-umleitung" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Speichert sowohl stdout als auch stderr in einer Datei</span>
+ls<span class="w"> </span>/existiert<span class="w"> </span>/nonexistent<span class="w"> </span>&gt;<span class="w"> </span>ausgabe.log<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="beispiel-4-eingabe-aus-einer-datei-lesen">Beispiel 4: Eingabe aus einer Datei lesen<a class="headerlink" href="#beispiel-4-eingabe-aus-einer-datei-lesen" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Sortiert den Inhalt einer Datei</span>
+sort<span class="w"> </span>&lt;<span class="w"> </span>unsortierte_liste.txt<span class="w"> </span>&gt;<span class="w"> </span>sortierte_liste.txt
+</code></pre></div></td></tr></table></div>
+<h2 id="3-befehlsverknupfungen-mehrere-befehle-kombinieren">3. Befehlsverknüpfungen: Mehrere Befehle kombinieren<a class="headerlink" href="#3-befehlsverknupfungen-mehrere-befehle-kombinieren" title="Permanent link">&para;</a></h2>
+<h3 id="31-semikolon-befehle-nacheinander-ausfuhren">3.1 Semikolon (<code>;</code>): Befehle nacheinander ausführen<a class="headerlink" href="#31-semikolon-befehle-nacheinander-ausfuhren" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Führt <strong>mehrere Befehle hintereinander</strong> aus, unabhängig vom Erfolg des vorherigen Befehls.</li>
+</ul>
+<p><strong>Beispiel:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>~/dokumente<span class="p">;</span><span class="w"> </span>ls<span class="w"> </span>-l<span class="p">;</span><span class="w"> </span><span class="nb">pwd</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>Wechselt in das Verzeichnis <code>dokumente</code>, listet die Dateien auf und zeigt das aktuelle Verzeichnis an.</li>
+</ul>
+<h3 id="32-logisches-und-befehle-bedingt-ausfuhren">3.2 Logisches UND (<code>&amp;&amp;</code>): Befehle bedingt ausführen<a class="headerlink" href="#32-logisches-und-befehle-bedingt-ausfuhren" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Führt den <strong>nächsten Befehl nur aus, wenn der vorherige erfolgreich war</strong> (Rückgabewert <code>0</code>).</li>
+</ul>
+<p><strong>Beispiel:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Wechselt in das Verzeichnis und listet Dateien auf (nur wenn cd erfolgreich war)</span>
+<span class="nb">cd</span><span class="w"> </span>~/dokumente<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>ls<span class="w"> </span>-l
+</code></pre></div></td></tr></table></div>
+<p><strong>Anwendungsfall:</strong></p>
+<ul>
+<li>Nützlich für <strong>Skripte</strong>, um sicherzustellen, dass ein Befehl nur ausgeführt wird, wenn der vorherige erfolgreich war.</li>
+</ul>
+<h3 id="33-logisches-oder-alternativen-ausfuhren">3.3 Logisches ODER (<code>||</code>): Alternativen ausführen<a class="headerlink" href="#33-logisches-oder-alternativen-ausfuhren" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Führt den <strong>nächsten Befehl nur aus, wenn der vorherige fehlgeschlagen ist</strong> (Rückgabewert <code>≠ 0</code>).</li>
+</ul>
+<p><strong>Beispiel:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Versucht, in das Verzeichnis zu wechseln. Falls es nicht existiert, erstellt es.</span>
+<span class="nb">cd</span><span class="w"> </span>~/neues_verzeichnis<span class="w"> </span><span class="o">||</span><span class="w"> </span>mkdir<span class="w"> </span>~/neues_verzeichnis
+</code></pre></div></td></tr></table></div>
+<p><strong>Anwendungsfall:</strong></p>
+<ul>
+<li>Nützlich für <strong>Fehlerbehandlung</strong> in Skripten.</li>
+</ul>
+<h3 id="34-kombinierte-verknupfungen">3.4 Kombinierte Verknüpfungen<a class="headerlink" href="#34-kombinierte-verknupfungen" title="Permanent link">&para;</a></h3>
+<p>Du kannst <code>;</code>, <code>&amp;&amp;</code> und <code>||</code> kombinieren, um komplexe Logik zu erstellen.</p>
+<p><strong>Beispiel:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Versucht, eine Datei zu löschen. Falls sie nicht existiert, erstelle sie.</span>
+rm<span class="w"> </span>datei.txt<span class="w"> </span><span class="o">||</span><span class="w"> </span>touch<span class="w"> </span>datei.txt<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Datei wurde erstellt oder existierte bereits.&quot;</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="35-praxisbeispiele-fur-befehlsverknupfungen">3.5 Praxisbeispiele für Befehlsverknüpfungen<a class="headerlink" href="#35-praxisbeispiele-fur-befehlsverknupfungen" title="Permanent link">&para;</a></h3>
+<h4 id="beispiel-1-backup-skript">Beispiel 1: Backup-Skript<a class="headerlink" href="#beispiel-1-backup-skript" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Erstellt ein Backup eines Verzeichnisses, falls es existiert</span>
+<span class="o">[</span><span class="w"> </span>-d<span class="w"> </span>~/dokumente<span class="w"> </span><span class="o">]</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>tar<span class="w"> </span>-czvf<span class="w"> </span>backup.tar.gz<span class="w"> </span>~/dokumente<span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Verzeichnis existiert nicht.&quot;</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+<li><code>[ -d ~/dokumente ]</code>: Überprüft, ob das Verzeichnis existiert.</li>
+<li><code>&amp;&amp;</code>: Führt <code>tar</code> nur aus, wenn das Verzeichnis existiert.</li>
+<li><code>||</code>: Zeigt eine Fehlermeldung an, falls das Verzeichnis nicht existiert.</li>
+</ul>
+<h4 id="beispiel-2-datei-herunterladen-und-entpacken">Beispiel 2: Datei herunterladen und entpacken<a class="headerlink" href="#beispiel-2-datei-herunterladen-und-entpacken" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>wget<span class="w"> </span>https://example.com/datei.tar.gz<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>tar<span class="w"> </span>-xzvf<span class="w"> </span>datei.tar.gz
+</code></pre></div></td></tr></table></div>
+<ul>
+<li><code>wget</code>: Lädt die Datei herunter.</li>
+<li><code>&amp;&amp;</code>: Entpackt die Datei nur, wenn der Download erfolgreich war.</li>
+</ul>
+<h4 id="beispiel-3-benutzer-erstellen-und-berechtigungen-setzen">Beispiel 3: Benutzer erstellen und Berechtigungen setzen<a class="headerlink" href="#beispiel-3-benutzer-erstellen-und-berechtigungen-setzen" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>useradd<span class="w"> </span>-m<span class="w"> </span>testuser<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>usermod<span class="w"> </span>-aG<span class="w"> </span>sudo<span class="w"> </span>testuser<span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Fehler beim Erstellen des Benutzers.&quot;</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+<li><code>useradd</code>: Erstellt den Benutzer.</li>
+<li><code>&amp;&amp;</code>: Fügt den Benutzer zur <code>sudo</code>-Gruppe hinzu (nur wenn <code>useradd</code> erfolgreich war).</li>
+<li><code>||</code>: Zeigt eine Fehlermeldung an, falls etwas schiefgeht.</li>
+</ul>
+<h2 id="4-subshells-befehle-in-andere-befehle-einbetten">4. Subshells: Befehle in andere Befehle einbetten<a class="headerlink" href="#4-subshells-befehle-in-andere-befehle-einbetten" title="Permanent link">&para;</a></h2>
+<h3 id="41-was-sind-subshells">4.1 Was sind Subshells?<a class="headerlink" href="#41-was-sind-subshells" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Subshells</strong> ermöglichen es, die <strong>Ausgabe eines Befehls als Argument für einen anderen Befehl</strong> zu verwenden.</li>
+<li><code>$(...)</code> </li>
+<li><code>HEUTE=$(date +%Y-%m-%d)</code></li>
+</ul>
+<h3 id="42-syntax-und-beispiele">4.2 Syntax und Beispiele<a class="headerlink" href="#42-syntax-und-beispiele" title="Permanent link">&para;</a></h3>
+<h4 id="beispiel-1-aktuelles-datum-in-einer-variable-speichern">Beispiel 1: Aktuelles Datum in einer Variable speichern<a class="headerlink" href="#beispiel-1-aktuelles-datum-in-einer-variable-speichern" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nv">HEUTE</span><span class="o">=</span><span class="k">$(</span>date<span class="w"> </span>+%Y-%m-%d<span class="k">)</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Heute ist </span><span class="nv">$HEUTE</span><span class="s2">.&quot;</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+<li><code>date +%Y-%m-%d</code>: Gibt das Datum im Format <code>JJJJ-MM-TT</code> aus.</li>
+<li><code>$(...)</code>: Fängt die Ausgabe ein und weist sie der Variable <code>HEUTE</code> zu.</li>
+</ul>
+<h4 id="beispiel-2-anzahl-der-dateien-in-einem-verzeichnis-zahlen">Beispiel 2: Anzahl der Dateien in einem Verzeichnis zählen<a class="headerlink" href="#beispiel-2-anzahl-der-dateien-in-einem-verzeichnis-zahlen" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nv">ANZAHL</span><span class="o">=</span><span class="k">$(</span>ls<span class="w"> </span><span class="p">|</span><span class="w"> </span>wc<span class="w"> </span>-l<span class="k">)</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Es gibt </span><span class="nv">$ANZAHL</span><span class="s2"> Dateien im aktuellen Verzeichnis.&quot;</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="beispiel-3-letzte-zeile-einer-datei-extrahieren">Beispiel 3: Letzte Zeile einer Datei extrahieren<a class="headerlink" href="#beispiel-3-letzte-zeile-einer-datei-extrahieren" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nv">LETZTE_ZEILE</span><span class="o">=</span><span class="k">$(</span>tail<span class="w"> </span>-n<span class="w"> </span><span class="m">1</span><span class="w"> </span>datei.txt<span class="k">)</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Die letzte Zeile lautet: </span><span class="nv">$LETZTE_ZEILE</span><span class="s2">&quot;</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="beispiel-4-verzeichnisgroe-berechnen">Beispiel 4: Verzeichnisgröße berechnen<a class="headerlink" href="#beispiel-4-verzeichnisgroe-berechnen" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nv">GROESSE</span><span class="o">=</span><span class="k">$(</span>du<span class="w"> </span>-sh<span class="w"> </span>~/dokumente<span class="w"> </span><span class="p">|</span><span class="w"> </span>cut<span class="w"> </span>-f1<span class="k">)</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Das Verzeichnis ~/dokumente ist </span><span class="nv">$GROESSE</span><span class="s2"> groß.&quot;</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+<li><code>du -sh ~/dokumente</code>: Berechnet die Größe des Verzeichnisses in lesbarer Form (z. B. <code>1.2G</code>).</li>
+<li><code>cut -f1</code>: Schneidet das erste Feld (die Größe) heraus.</li>
+</ul>
+<h3 id="43-verschachtelte-subshells">4.3 🌶️🌶️🌶️ Verschachtelte Subshells<a class="headerlink" href="#43-verschachtelte-subshells" title="Permanent link">&para;</a></h3>
+<p>Du kannst Subshells <strong>verschachteln</strong>, um komplexe Ausdrücke zu erstellen.</p>
+<p><strong>Beispiel:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Zählt die Anzahl der Zeilen in allen .txt-Dateien im aktuellen Verzeichnis</span>
+<span class="nv">ANZAHL_ZEILEN</span><span class="o">=</span><span class="k">$(</span>find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.txt&quot;</span><span class="w"> </span>-exec<span class="w"> </span>cat<span class="w"> </span><span class="o">{}</span><span class="w"> </span><span class="se">\;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>wc<span class="w"> </span>-l<span class="k">)</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Insgesamt gibt es </span><span class="nv">$ANZAHL_ZEILEN</span><span class="s2"> Zeilen in allen .txt-Dateien.&quot;</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+<li><code>find . -name "*.txt"</code>: Findet alle <code>.txt</code>-Dateien im aktuellen Verzeichnis.</li>
+<li><code>-exec cat {} \;</code>: Führt <code>cat</code> für jede gefundene Datei aus.</li>
+<li><code>wc -l</code>: Zählt die Zeilen.</li>
+</ul>
+<h3 id="44-subshells-vs-variablen">4.4 Subshells vs. Variablen<a class="headerlink" href="#44-subshells-vs-variablen" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Subshell (<code>$(...)</code>)</th>
+<th>Variable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Ausführung</strong></td>
+<td>Wird sofort ausgeführt.</td>
+<td>Speichert einen Wert für spätere Verwendung.</td>
+</tr>
+<tr>
+<td><strong>Verwendung</strong></td>
+<td>Für <strong>einmalige</strong> Berechnungen.</td>
+<td>Für <strong>wiederholte</strong> Verwendung.</td>
+</tr>
+<tr>
+<td><strong>Lesbarkeit</strong></td>
+<td>Gut für komplexe Ausdrücke.</td>
+<td>Gut für einfache Werte.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Beispiel für Variablen:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nv">NAME</span><span class="o">=</span><span class="s2">&quot;Linux&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Ich liebe </span><span class="nv">$NAME</span><span class="s2">.&quot;</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>Beispiel für Subshells:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Heute ist </span><span class="k">$(</span>date<span class="w"> </span>+%A<span class="k">)</span><span class="s2">.&quot;</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="5-ubungsaufgaben">5. Übungsaufgaben<a class="headerlink" href="#5-ubungsaufgaben" title="Permanent link">&para;</a></h2>
+<h3 id="ubung-1-pipes-fur-filterung">Übung 1: Pipes für Filterung<a class="headerlink" href="#ubung-1-pipes-fur-filterung" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Liste alle Dateien im Verzeichnis <code>/etc</code> auf.</li>
+<li>Filtere die Ausgabe so, dass nur Dateien angezeigt werden, die mit <code>passwd</code> beginnen.</li>
+</ol>
+<details class="success">
+<summary>Lösung</summary>
+<p><code>bash     ls /etc | grep "^passwd"</code>     <br />
+- <code>grep "^passwd"</code>: Filtert Zeilen, die mit "passwd" beginnen (<code>^</code> = Anfang der Zeile).</p>
+</details>
+<hr />
+<h3 id="ubung-2-pipes-fur-sortierung">Übung 2: Pipes für Sortierung<a class="headerlink" href="#ubung-2-pipes-fur-sortierung" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Liste alle Benutzer in <code>/etc/passwd</code> auf.</li>
+<li>Sortiere die Liste alphabetisch.</li>
+<li>Zeige nur die ersten 5 Benutzer an.</li>
+</ol>
+<details class="success">
+<summary>Lösung</summary>
+<p><code>bash     cut -d: -f1 /etc/passwd | sort | head -n 5</code>     <br />
+- <code>cut -d: -f1 /etc/passwd</code>: Extrahiere die Benutzernamen (1. Feld, getrennt durch <code>:</code>).<br />
+- <code>sort</code>: Sortiert die Benutzernamen alphabetisch.<br />
+- <code>head -n 5</code>: Zeigt die ersten 5 Zeilen an.</p>
+</details>
+<hr />
+<h3 id="ubung-3-umleitungen">Übung 3: Umleitungen<a class="headerlink" href="#ubung-3-umleitungen" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Erstelle eine Datei namens <code>benutzer.txt</code>, die alle Benutzer aus <code>/etc/passwd</code> enthält.</li>
+<li>Füge eine Zeile mit dem Text <code>"Ende der Liste"</code> am Ende der Datei hinzu.</li>
+</ol>
+<details class="success">
+<summary>Lösung</summary>
+<p><code>cut -d: -f1 /etc/passwd &gt; benutzer.txt</code>   <br />
+<code>echo "Ende der Liste" &gt;&gt; benutzer.txt</code>     </p>
+</details>
+<hr />
+<h3 id="ubung-4-fehlerumleitung">Übung 4: Fehlerumleitung<a class="headerlink" href="#ubung-4-fehlerumleitung" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Führe den Befehl <code>ls /nonexistent</code> aus und leite die Fehlermeldung in eine Datei namens <code>fehler.log</code> um.</li>
+<li>Überprüfe den Inhalt von <code>fehler.log</code>.</li>
+</ol>
+<details class="success">
+<summary>Lösung</summary>
+<p><code>ls /nonexistent 2&gt; fehler.log</code>
+<code>cat fehler.log</code></p>
+</details>
+<hr />
+<h3 id="ubung-5-befehlsverknupfungen">Übung 5: Befehlsverknüpfungen<a class="headerlink" href="#ubung-5-befehlsverknupfungen" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Wechsle in das Verzeichnis <code>/tmp</code> und erstelle dort eine Datei namens <code>test.txt</code>.</li>
+<li>Nutze <code>&amp;&amp;</code>, um sicherzustellen, dass die Datei nur erstellt wird, wenn das Wechseln des Verzeichnisses erfolgreich war.</li>
+</ol>
+<details class="success">
+<summary>Lösung</summary>
+<p><code>cd /tmp &amp;&amp; touch test.txt</code>     </p>
+</details>
+<hr />
+<h3 id="ubung-6-logisches-oder">Übung 6: Logisches ODER<a class="headerlink" href="#ubung-6-logisches-oder" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Versuche, in ein nicht existierendes Verzeichnis <code>/nonexistent</code> zu wechseln.</li>
+<li>Falls das fehlschlägt, erstelle das Verzeichnis und wechsle dann hinein.</li>
+</ol>
+<details class="success">
+<summary>Lösung</summary>
+<p><code>cd /nonexistent || mkdir /nonexistent &amp;&amp; cd /nonexistent</code>     </p>
+</details>
+<hr />
+<h3 id="ubung-7-subshells">Übung 7: Subshells<a class="headerlink" href="#ubung-7-subshells" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Speichere das aktuelle Datum im Format <code>JJJJ-MM-TT</code> in einer Variable namens <code>DATUM</code>.</li>
+<li>Erstelle eine Datei namens <code>datum.log</code> mit dem Inhalt <code>"Heute ist [DATUM]."</code>.</li>
+</ol>
+<details class="success">
+<summary>Lösung</summary>
+<p><code>DATUM=$(date +%Y-%m-%d)</code>   <br />
+<code>echo "Heute ist $DATUM." &gt; datum.log</code>     </p>
+</details>
+<h3 id="ubung-9-komplexe-verknupfung">Übung 9: Komplexe Verknüpfung<a class="headerlink" href="#ubung-9-komplexe-verknupfung" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Erstelle ein Skript, das:</li>
+<li>Ein Verzeichnis namens <code>backup</code> erstellt (falls es nicht existiert).</li>
+<li>Alle <code>.txt</code>-Dateien aus dem aktuellen Verzeichnis in <code>backup</code> kopiert.</li>
+<li>Eine Meldung ausgibt, wenn der Vorgang erfolgreich war.</li>
+</ol>
+<details class="success">
+<summary>Lösung</summary>
+<p><code>mkdir -p backup &amp;&amp; cp *.txt backup/ &amp;&amp; echo "Backup erfolgreich erstellt."</code>     <br />
+- <code>mkdir -p backup</code>: Erstellt das Verzeichnis <code>backup</code> (falls es nicht existiert, <code>-p</code> unterdrückt Fehlermeldungen).<br />
+- <code>cp *.txt backup/</code>: Kopiert alle <code>.txt</code>-Dateien in <code>backup/</code>.<br />
+- <code>&amp;&amp;</code>: Führt den nächsten Befehl nur aus, wenn der vorherige erfolgreich war.</p>
+</details>
+<h3 id="ubung-10-fehlerbehandlung-mit-subshells">Übung 10: Fehlerbehandlung mit Subshells<a class="headerlink" href="#ubung-10-fehlerbehandlung-mit-subshells" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Versuche, den Inhalt einer Datei namens <code>datei.txt</code> anzuzeigen.</li>
+<li>Falls die Datei nicht existiert, erstelle sie mit dem Inhalt <code>"Datei wurde erstellt."</code>.</li>
+<li>Gib in beiden Fällen den Inhalt der Datei aus.</li>
+</ol>
+<details class="success">
+<summary>Lösung</summary>
+<p><code>cat datei.txt 2&gt; /dev/null || echo "Datei wurde erstellt." &gt; datei.txt</code>   <br />
+<code>cat datei.txt</code>     <br />
+- <code>cat datei.txt 2&gt; /dev/null</code>: Unterdrückt die Fehlermeldung, falls die Datei nicht existiert.<br />
+- <code>||</code>: Führt den nächsten Befehl nur aus, wenn <code>cat</code> fehlschlägt (Datei existiert nicht).<br />
+- <code>echo "Datei wurde erstellt." &gt; datei.txt</code>: Erstellt die Datei mit dem angegebenen Inhalt.</p>
+</details>
+<h2 id="6-zusammenfassung-und-tipps">6. Zusammenfassung und Tipps<a class="headerlink" href="#6-zusammenfassung-und-tipps" title="Permanent link">&para;</a></h2>
+<h3 id="wichtige-konzepte-im-uberblick">Wichtige Konzepte im Überblick<a class="headerlink" href="#wichtige-konzepte-im-uberblick" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Konzept</th>
+<th>Symbol/Operator</th>
+<th>Beschreibung</th>
+<th>Beispiel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Pipe</strong></td>
+<td><code>|</code></td>
+<td>Leitet die Ausgabe eines Befehls an einen anderen weiter.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Standardausgabe umleiten</strong></td>
+<td><code>&gt;</code></td>
+<td>Überschreibt eine Datei mit der Ausgabe.</td>
+<td><code>echo "Hallo" &gt; datei.txt</code></td>
+</tr>
+<tr>
+<td><strong>Anhängen</strong></td>
+<td><code>&gt;&gt;</code></td>
+<td>Fügt die Ausgabe an eine Datei an.</td>
+<td><code>echo "Welt" &gt;&gt; datei.txt</code></td>
+</tr>
+<tr>
+<td><strong>Fehlerausgabe umleiten</strong></td>
+<td><code>2&gt;</code></td>
+<td>Leitet Fehlermeldungen in eine Datei um.</td>
+<td><code>ls /nonexistent 2&gt; fehler.log</code></td>
+</tr>
+<tr>
+<td><strong>Eingabeumleitung</strong></td>
+<td><code>&lt;</code></td>
+<td>Liest Eingaben aus einer Datei.</td>
+<td><code>wc -w &lt; datei.txt</code></td>
+</tr>
+<tr>
+<td><strong>Befehle nacheinander ausführen</strong></td>
+<td><code>;</code></td>
+<td>Führt Befehle hintereinander aus.</td>
+<td><code>cd /tmp; ls</code></td>
+</tr>
+<tr>
+<td><strong>Logisches UND</strong></td>
+<td><code>&amp;&amp;</code></td>
+<td>Führt den nächsten Befehl nur aus, wenn der vorherige erfolgreich war.</td>
+<td><code>cd /tmp &amp;&amp; ls</code></td>
+</tr>
+<tr>
+<td><strong>Logisches ODER</strong></td>
+<td><code>| &amp;nbsp;                                                                 |</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Subshell</strong></td>
+<td><code>$(...)</code></td>
+<td>Bettet die Ausgabe eines Befehls in einen anderen ein.</td>
+<td><code>echo "Heute ist $(date)."</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="tipps-fur-die-praxis">Tipps für die Praxis<a class="headerlink" href="#tipps-fur-die-praxis" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Pipes sind mächtig</strong>:<ul>
+<li>Kombiniere Befehle wie <code>grep</code>, <code>sort</code>, <code>awk</code> und <code>sed</code>, um komplexe Textverarbeitungen durchzuführen.</li>
+</ul>
+</li>
+<li><strong>Umleitungen sinnvoll nutzen</strong>:<ul>
+<li>Speichere Ausgaben in Dateien, um sie später zu analysieren (z. B. Logs).</li>
+<li>Nutze <code>/dev/null</code>, um unnötige Ausgaben zu unterdrücken.</li>
+</ul>
+</li>
+<li><strong>Befehlsverknüpfungen für Skripte</strong>:<ul>
+<li>Nutze <code>&amp;&amp;</code> und <code>||</code> in Skripten, um <strong>Fehler zu behandeln</strong> und <strong>Bedingungen zu prüfen</strong>.</li>
+</ul>
+</li>
+<li><strong>Subshells für dynamische Werte</strong>:<ul>
+<li>Verwende <code>$(...)</code> , um die Ausgabe eines Befehls in eine Variable oder einen anderen Befehl einzubetten.</li>
+</ul>
+</li>
+<li><strong>Lesbarkeit beachten</strong>:<ul>
+<li>Komplexe Befehle können schwer lesbar sein. Nutze <strong>Zeilenumbrüche</strong> und <strong>Kommentare</strong> in Skripten:</li>
+</ul>
+</li>
+<li><strong>Fehlerbehandlung nicht vergessen</strong>:<ul>
+<li>Überprüfe immer, ob Befehle erfolgreich waren, besonders in Skripten:</li>
+</ul>
+</li>
+</ol>
+<h3 id="haufige-fallstricke">Häufige Fallstricke<a class="headerlink" href="#haufige-fallstricke" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Problem</th>
+<th>Lösung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Pipes und Umleitungen verwechseln</strong></td>
+<td>Pipes (`</td>
+</tr>
+<tr>
+<td><strong>Fehlermeldungen ignorieren</strong></td>
+<td>Nutze <code>2&gt;</code> oder <code>2&gt;&amp;1</code>, um Fehlermeldungen umzuleiten oder zu unterdrücken.</td>
+</tr>
+<tr>
+<td><strong>Subshells falsch verschachteln</strong></td>
+<td>Achte auf die richtige Syntax: <code>$(...)</code> oder <code>...</code>.</td>
+</tr>
+<tr>
+<td>**Befehle ohne <code>&amp;&amp;</code> oder `</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td><strong>Leerzeichen in Pfaden</strong></td>
+<td>Nutze Anführungszeichen für Pfade mit Leerzeichen: <code>cd "/mein verzeichnis"</code>.</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Qualidy GmbH
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.kununu.com/de/qualidy" target="_blank" rel="noopener" title="www.kununu.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M311 86.3c12.3-12.7 12-32.9-.7-45.2s-32.9-12-45.2.7C143.4 167.2 76.4 236.3 64 249V64c0-17.7-14.3-32-32-32S0 46.3 0 64v384c0 17.7 14.3 32 32 32s32-14.3 32-32V341l64.7-66.7 133 192c10.1 14.5 30 18.1 44.5 8.1s18.1-30 8.1-44.5L174.1 227.4z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://de.linkedin.com/company/qualidy" target="_blank" rel="noopener" title="de.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.google.com/search?sca_esv=7e6ba2047fcb60f3&uds=AMwkrPtyB8MsmozA4Lwzqy2G2HCu-abqzc6moOG48q3gP5dtjTRzC2Ws0eSwcyLXDfZNuYCrZ7ByIreHLG9th3vKLekPoVeey0tumAbet4cVLQRLzdRFhUbOGbnyp3xo1V0hzzaNmkCN&si=AKbGX_rcuucMgom2rba1cdwsvM2SVoIkP2btyqGMV4t0GuHIs4sGV_1tpuqR0YHG4Rzd9SdJcL-lW6E-2aJA5azZLTKkIOrZ2j2aWwoBkVbdEJ0o0GPcQhs%3D&q=Qualidy+GmbH+Rezensionen&sa=X&ved=2ahUKEwibsbnSgcmFAxXNQvEDHaVYCiAQ3PALegQIRxAF" target="_blank" rel="noopener" title="www.google.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.35 11.1h-9.17v2.73h6.51c-.33 3.81-3.5 5.44-6.5 5.44C8.36 19.27 5 16.25 5 12c0-4.1 3.2-7.27 7.2-7.27 3.09 0 4.9 1.97 4.9 1.97L19 4.72S16.56 2 12.1 2C6.42 2 2.03 6.8 2.03 12c0 5.05 4.13 10 10.22 10 5.35 0 9.25-3.67 9.25-9.09 0-1.15-.15-1.81-.15-1.81"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://qualidy.de" target="_blank" rel="noopener" title="qualidy.de" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M351.9 280H161c2.9 64.5 17.2 123.9 37.5 167.4 11.4 24.5 23.7 41.8 35.1 52.4 11.2 10.5 18.9 12.2 22.9 12.2s11.7-1.7 22.9-12.2c11.4-10.6 23.7-28 35.1-52.4 20.3-43.5 34.6-102.9 37.5-167.4zm-191-48h190.9c-2.8-64.5-17.1-123.9-37.4-167.4-11.4-24.4-23.7-41.8-35.1-52.4C268.1 1.7 260.4 0 256.4 0s-11.7 1.7-22.9 12.2c-11.4 10.6-23.7 28-35.1 52.4-20.3 43.5-34.6 102.9-37.5 167.4m-48 0c3.5-85.6 25.6-165.1 57.9-217.3C78.7 47.3 10.9 131.2 1.5 232zM1.5 280c9.4 100.8 77.2 184.7 169.3 217.3-32.3-52.2-54.4-131.7-57.9-217.3zm398.4 0c-3.5 85.6-25.6 165.1-57.9 217.3 92.1-32.7 159.9-116.5 169.3-217.3zm111.4-48C501.9 131.2 434.1 47.3 342 14.7c32.3 52.2 54.4 131.7 57.9 217.3z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tracking", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

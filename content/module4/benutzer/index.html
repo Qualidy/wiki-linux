@@ -1,0 +1,2167 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>👥 Modul IV.1: Benutzer- und Gruppenverwaltung in Linux - Basis Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/logo.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/grid.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/video_admonition.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/python_tutor_admonition.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/mermaid.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="amber" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#modul-iv1-benutzer-und-gruppenverwaltung-in-linux" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Basis Wiki" class="md-header__button md-logo" aria-label="Basis Wiki" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Basis Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              👥 Modul IV.1: Benutzer- und Gruppenverwaltung in Linux
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Basis Wiki" class="md-nav__button md-logo" aria-label="Basis Wiki" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    Basis Wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übersicht
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module I Das Konzept und die Theorie
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Module I Das Konzept und die Theorie
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module1/OpenSource%26Linux-Community/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Open Source & Proprietäre Software
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module1/opensource_lizenzen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Open-Source-Software und Lizenzierung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module1/linux_evolution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Linux Evolution und beliebte Betriebssysteme
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module1/das_linux_betriebssystem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Das Linux-Betriebssystem
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../7.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dateisystem-Hierarchie
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../8.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Netzwerk
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module II Die Grundlagen der Command-Line
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Module II Die Grundlagen der Command-Line
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Grundlagen der Kommandozeile
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Die Kommandozeile zur Hilfe nutzen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Verzeichnissen und Anzeigen von Dateien
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Erstellen, Verschieben und Löschen von Dateien
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module III Automatisierung und Skripting
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Module III Automatisierung und Skripting
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Verknüpfung von Befehlen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Archivierung von Dateien in der Kommandozeile
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Suchen und Extrahieren von Daten aus Dateien
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Befehle in ein Skript umwandeln
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Automatisierung von Aufgaben mit Cron
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fortgeschrittenes Skripting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module IV Systemadministration und Sicherheit
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Module IV Systemadministration und Sicherheit
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Benutzer- und Gruppenverwaltung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Verwalten von Dateiberechtigungen und Eigentum
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Systemüberwachung und Protokollierung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Softwareinstallation und -verwaltung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Netzwerksicherheit und Firewall-Konfiguration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Backup-Strategien und Wiederherstellung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module V Zusammenführung und Zielsetzung
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Module V Zusammenführung und Zielsetzung
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Wichtige Open-Source-Anwendungen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ICT-Fähigkeiten und Arbeiten in Linux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="modul-iv1-benutzer-und-gruppenverwaltung-in-linux">👥 Modul IV.1: Benutzer- und Gruppenverwaltung in Linux<a class="headerlink" href="#modul-iv1-benutzer-und-gruppenverwaltung-in-linux" title="Permanent link">&para;</a></h1>
+<h2 id="einleitung">Einleitung<a class="headerlink" href="#einleitung" title="Permanent link">&para;</a></h2>
+<p>Die <strong>Benutzer- und Gruppenverwaltung</strong> ist ein <strong>zentraler Bestandteil der Linux-Systemadministration</strong>. Sie ermöglicht es dir:</p>
+<ul>
+<li><strong>Benutzerkonten</strong> zu erstellen, zu ändern und zu löschen.</li>
+<li><strong>Gruppen</strong> zu verwalten und Benutzer zu Gruppen hinzuzufügen.</li>
+<li><strong>Berechtigungen</strong> für Dateien und Verzeichnisse zu steuern.</li>
+<li><strong>Sicherheitsrichtlinien</strong> durchzusetzen (z. B. Passwortrichtlinien, Account-Sperrung).</li>
+</ul>
+<p>In diesem Modul lernst du:</p>
+<ul>
+<li>Wie du <strong>Benutzer und Gruppen</strong> erstellst und verwaltest.</li>
+<li>Wie du <strong>Benutzerinformationen</strong> abrufst und bearbeitest.</li>
+<li>Wie du <strong>Passwortrichtlinien</strong> durchsetzt.</li>
+<li><strong>Best Practices</strong> für die Benutzerverwaltung.</li>
+<li><strong>Sicherheitsaspekte</strong> bei der Verwaltung von Benutzern und Gruppen.</li>
+</ul>
+<h2 id="1-grundlagen-der-benutzerverwaltung">1. Grundlagen der Benutzerverwaltung<a class="headerlink" href="#1-grundlagen-der-benutzerverwaltung" title="Permanent link">&para;</a></h2>
+<h3 id="11-was-ist-ein-benutzer">1.1 Was ist ein Benutzer?<a class="headerlink" href="#11-was-ist-ein-benutzer" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Ein <strong>Benutzer</strong> ist ein <strong>Konto</strong>, das den Zugriff auf das System ermöglicht.</li>
+<li>Jeder Benutzer hat:</li>
+<li>Einen <strong>Benutzernamen</strong> (z. B. <code>sadik</code>).</li>
+<li>Eine <strong>Benutzer-ID (UID)</strong> (z. B. <code>1000</code>).</li>
+<li>Eine <strong>Gruppen-ID (GID)</strong> (z. B. <code>1000</code>).</li>
+<li>Ein <strong>Home-Verzeichnis</strong> (z. B. <code>/home/sadik</code>).</li>
+<li>Eine <strong>Shell</strong> (z. B. <code>/bin/bash</code>).</li>
+<li>Ein <strong>Passwort</strong> (optional).</li>
+</ul>
+<h3 id="12-benutzerkategorien-in-linux">1.2 Benutzerkategorien in Linux<a class="headerlink" href="#12-benutzerkategorien-in-linux" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Kategorie</th>
+<th>UID-Bereich</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Root-Benutzer</strong></td>
+<td>0</td>
+<td><strong>Superuser</strong> mit vollen Administratorrechten.</td>
+</tr>
+<tr>
+<td><strong>Systembenutzer</strong></td>
+<td>1-999</td>
+<td>Benutzer für <strong>Systemdienste</strong> (z. B. <code>www-data</code>, <code>mysql</code>).</td>
+</tr>
+<tr>
+<td><strong>Normale Benutzer</strong></td>
+<td>1000-65535</td>
+<td><strong>Reguläre Benutzerkonten</strong> für Menschen.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="13-wichtige-dateien-fur-die-benutzerverwaltung">1.3 Wichtige Dateien für die Benutzerverwaltung<a class="headerlink" href="#13-wichtige-dateien-fur-die-benutzerverwaltung" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Datei</th>
+<th>Beschreibung</th>
+<th>Beispielinhalt</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>**/etc/passwd**</code></td>
+<td>Enthält <strong>Benutzerkonteninformationen</strong> (Name, UID, GID, Home-Verzeichnis, Shell).</td>
+<td><code>sadik:x:1000:1000:Sadik Altuneriten:/home/sadik:/bin/bash</code></td>
+</tr>
+<tr>
+<td><code>**/etc/shadow**</code></td>
+<td>Enthält <strong>Passwort-Hashes</strong> und Passwortrichtlinien (nur für Root lesbar).</td>
+<td><code>sadik:$6$...:19122:0:99999:7:::</code></td>
+</tr>
+<tr>
+<td><code>**/etc/group**</code></td>
+<td>Enthält <strong>Gruppendefinitionen</strong> (Gruppenname, GID, Mitglieder).</td>
+<td><code>sadik:x:1000:</code></td>
+</tr>
+<tr>
+<td><code>**/etc/gshadow**</code></td>
+<td>Enthält <strong>Gruppen-Passwörter</strong> (nur für Root lesbar).</td>
+<td><code>sadik:!:::</code></td>
+</tr>
+<tr>
+<td><code>**/etc/shells**</code></td>
+<td>Enthält <strong>gültige Shells</strong> für Benutzer.</td>
+<td><code>/bin/bash</code>, <code>/bin/sh</code>, <code>/usr/bin/zsh</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="14-struktur-von-etcpasswd">1.4 Struktur von <code>/etc/passwd</code><a class="headerlink" href="#14-struktur-von-etcpasswd" title="Permanent link">&para;</a></h3>
+<p>Jede Zeile in <code>/etc/passwd</code> enthält <strong>7 Felder</strong>, getrennt durch <code>:</code>:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Benutzername:Passwort:UID:GID:Beschreibung:Home-Verzeichnis:Shell
+</code></pre></div></td></tr></table></div>
+<p><strong>Beispiel:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sadik:x:1000:1000:Sadik Altuneriten:/home/sadik:/bin/bash
+</code></pre></div></td></tr></table></div>
+<table>
+<thead>
+<tr>
+<th>Feld</th>
+<th>Beschreibung</th>
+<th>Wert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Benutzername</strong></td>
+<td><code>sadik</code></td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Passwort</strong> (x = Passwort in <code>/etc/shadow</code>)</td>
+<td><code>x</code></td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>UID (Benutzer-ID)</strong></td>
+<td><code>1000</code></td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>GID (Gruppen-ID)</strong></td>
+<td><code>1000</code></td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Beschreibung (GECOS)</strong></td>
+<td><code>Sadik Altuneriten</code></td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Home-Verzeichnis</strong></td>
+<td><code>/home/sadik</code></td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>Shell</strong></td>
+<td><code>/bin/bash</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="15-struktur-von-etcshadow">1.5 Struktur von <code>/etc/shadow</code><a class="headerlink" href="#15-struktur-von-etcshadow" title="Permanent link">&para;</a></h3>
+<p>Jede Zeile in <code>/etc/shadow</code> enthält <strong>9 Felder</strong>, getrennt durch <code>:</code>:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Benutzername:Passwort:Letzte_Änderung:Minimal:Maximal:Warnung:Inaktiv:Ablauf:Reserviert
+</code></pre></div></td></tr></table></div>
+<p><strong>Beispiel:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sadik:$6$...:19122:0:99999:7:::
+</code></pre></div></td></tr></table></div>
+<table>
+<thead>
+<tr>
+<th>Feld</th>
+<th>Beschreibung</th>
+<th>Wert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Benutzername</strong></td>
+<td><code>sadik</code></td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Passwort-Hash</strong></td>
+<td><code>$6$...</code> (SHA-512)</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Letzte Passwortänderung</strong> (Tage seit 1.1.1970)</td>
+<td><code>19122</code></td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Minimale Passwortalter</strong> (Tage)</td>
+<td><code>0</code> (keine Wartezeit)</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Maximales Passwortalter</strong> (Tage)</td>
+<td><code>99999</code> (nie ablaufen)</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Warnung vor Ablauf</strong> (Tage)</td>
+<td><code>7</code> (7 Tage vorher warnen)</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>Inaktivitätsdauer</strong> (Tage nach Ablauf)</td>
+<td>(leer = deaktiviert)</td>
+</tr>
+<tr>
+<td>8</td>
+<td><strong>Ablaufdatum</strong> (Tage seit 1.1.1970)</td>
+<td>(leer = nie)</td>
+</tr>
+<tr>
+<td>9</td>
+<td><strong>Reserviert</strong></td>
+<td>(leer)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="16-struktur-von-etcgroup">1.6 Struktur von <code>/etc/group</code><a class="headerlink" href="#16-struktur-von-etcgroup" title="Permanent link">&para;</a></h3>
+<p>Jede Zeile in <code>/etc/group</code> enthält <strong>4 Felder</strong>, getrennt durch <code>:</code>:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Gruppenname:Passwort:GID:Mitglieder
+</code></pre></div></td></tr></table></div>
+<p><strong>Beispiel:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>sadik:x:1000:
+sudo:x:27:sadik
+</code></pre></div></td></tr></table></div>
+<table>
+<thead>
+<tr>
+<th>Feld</th>
+<th>Beschreibung</th>
+<th>Wert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Gruppenname</strong></td>
+<td><code>sadik</code>, <code>sudo</code></td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Gruppen-Passwort</strong> (x = Passwort in <code>/etc/gshadow</code>)</td>
+<td><code>x</code></td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>GID (Gruppen-ID)</strong></td>
+<td><code>1000</code>, <code>27</code></td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Mitglieder</strong> (durch Komma getrennt)</td>
+<td><code>sadik</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="2-benutzer-verwalten">2. Benutzer verwalten<a class="headerlink" href="#2-benutzer-verwalten" title="Permanent link">&para;</a></h2>
+<h3 id="21-benutzer-erstellen-useradd">2.1 Benutzer erstellen (<code>useradd</code>)<a class="headerlink" href="#21-benutzer-erstellen-useradd" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>**useradd**</code> erstellt ein <strong>neues Benutzerkonto</strong>.</li>
+<li><strong>Standardmäßig</strong> wird ein <strong>Home-Verzeichnis</strong> erstellt (falls <code>-m</code> verwendet wird).</li>
+</ul>
+<h4 id="grundlegende-syntax">Grundlegende Syntax:<a class="headerlink" href="#grundlegende-syntax" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>useradd<span class="w"> </span><span class="o">[</span>Optionen<span class="o">]</span><span class="w"> </span>Benutzername
+</code></pre></div></td></tr></table></div>
+<h4 id="wichtige-optionen-von-useradd">Wichtige Optionen von <code>useradd</code>:<a class="headerlink" href="#wichtige-optionen-von-useradd" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Beschreibung</th>
+<th>Beispiel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-m</code></td>
+<td><strong>Erstellt das Home-Verzeichnis</strong>.</td>
+<td><code>sudo useradd -m benutzername</code></td>
+</tr>
+<tr>
+<td><code>-d</code></td>
+<td><strong>Legt das Home-Verzeichnis fest</strong>.</td>
+<td><code>sudo useradd -d /home/mein_benutzer benutzername</code></td>
+</tr>
+<tr>
+<td><code>-s</code></td>
+<td><strong>Legt die Shell fest</strong>.</td>
+<td><code>sudo useradd -s /bin/zsh benutzername</code></td>
+</tr>
+<tr>
+<td><code>-u</code></td>
+<td><strong>Legt die UID fest</strong>.</td>
+<td><code>sudo useradd -u 1005 benutzername</code></td>
+</tr>
+<tr>
+<td><code>-g</code></td>
+<td><strong>Legt die primäre Gruppe fest</strong>.</td>
+<td><code>sudo useradd -g gruppenname benutzername</code></td>
+</tr>
+<tr>
+<td><code>-G</code></td>
+<td><strong>Fügt den Benutzer zu zusätzlichen Gruppen hinzu</strong>.</td>
+<td><code>sudo useradd -G sudo,docker benutzername</code></td>
+</tr>
+<tr>
+<td><code>-c</code></td>
+<td><strong>Fügt eine Beschreibung (GECOS) hinzu</strong>.</td>
+<td><code>sudo useradd -c "Testbenutzer" benutzername</code></td>
+</tr>
+<tr>
+<td><code>-e</code></td>
+<td><strong>Legt das Ablaufdatum fest</strong> (Format: <code>YYYY-MM-DD</code>).</td>
+<td><code>sudo useradd -e 2026-12-31 benutzername</code></td>
+</tr>
+<tr>
+<td><code>-p</code></td>
+<td><strong>Legt ein Passwort fest</strong> (verschlüsselt).</td>
+<td><code>sudo useradd -p $(openssl passwd -6 "passwort") benutzername</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="beispiel-1-benutzer-mit-home-verzeichnis-erstellen">Beispiel 1: Benutzer mit Home-Verzeichnis erstellen<a class="headerlink" href="#beispiel-1-benutzer-mit-home-verzeichnis-erstellen" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>useradd<span class="w"> </span>-m<span class="w"> </span>testuser
+</code></pre></div></td></tr></table></div>
+<h4 id="beispiel-2-benutzer-mit-spezifischer-uid-und-shell-erstellen">Beispiel 2: Benutzer mit spezifischer UID und Shell erstellen<a class="headerlink" href="#beispiel-2-benutzer-mit-spezifischer-uid-und-shell-erstellen" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>useradd<span class="w"> </span>-u<span class="w"> </span><span class="m">1005</span><span class="w"> </span>-s<span class="w"> </span>/bin/zsh<span class="w"> </span>-m<span class="w"> </span>testuser
+</code></pre></div></td></tr></table></div>
+<h4 id="beispiel-3-benutzer-mit-beschreibung-und-gruppen-erstellen">Beispiel 3: Benutzer mit Beschreibung und Gruppen erstellen<a class="headerlink" href="#beispiel-3-benutzer-mit-beschreibung-und-gruppen-erstellen" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>useradd<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;Testbenutzer für Projekte&quot;</span><span class="w"> </span>-G<span class="w"> </span>sudo,docker<span class="w"> </span>-m<span class="w"> </span>testuser
+</code></pre></div></td></tr></table></div>
+<h3 id="22-passwort-setzen-passwd">2.2 Passwort setzen (<code>passwd</code>)<a class="headerlink" href="#22-passwort-setzen-passwd" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>**passwd**</code> setzt oder ändert das <strong>Passwort eines Benutzers</strong>.</li>
+</ul>
+<h4 id="grundlegende-syntax_1">Grundlegende Syntax:<a class="headerlink" href="#grundlegende-syntax_1" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>passwd<span class="w"> </span>Benutzername
+</code></pre></div></td></tr></table></div>
+<p><strong>Beispiel:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>passwd<span class="w"> </span>testuser
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>Du wirst aufgefordert, das <strong>neue Passwort zweimal einzugeben</strong>.</li>
+</ul>
+<h4 id="passwort-fur-einen-benutzer-ohne-prompt-setzen">Passwort für einen Benutzer ohne Prompt setzen:<a class="headerlink" href="#passwort-fur-einen-benutzer-ohne-prompt-setzen" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;testuser:neues_passwort&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>chpasswd
+</code></pre></div></td></tr></table></div>
+<ul>
+<li><strong>Achtung:</strong> Dies ist <strong>unsicher</strong>, da das Passwort im Klartext in der Befehlshistory gespeichert wird.</li>
+</ul>
+<h3 id="23-benutzer-andern-usermod">2.3 Benutzer ändern (<code>usermod</code>)<a class="headerlink" href="#23-benutzer-andern-usermod" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>**usermod**</code> ändert die <strong>Eigenschaften eines bestehenden Benutzers</strong>.</li>
+</ul>
+<h4 id="grundlegende-syntax_2">Grundlegende Syntax:<a class="headerlink" href="#grundlegende-syntax_2" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>usermod<span class="w"> </span><span class="o">[</span>Optionen<span class="o">]</span><span class="w"> </span>Benutzername
+</code></pre></div></td></tr></table></div>
+<h4 id="wichtige-optionen-von-usermod">Wichtige Optionen von <code>usermod</code>:<a class="headerlink" href="#wichtige-optionen-von-usermod" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Beschreibung</th>
+<th>Beispiel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-l</code></td>
+<td><strong>Benutzernamen ändern</strong>.</td>
+<td><code>sudo usermod -l neuer_name alter_name</code></td>
+</tr>
+<tr>
+<td><code>-d</code></td>
+<td><strong>Home-Verzeichnis ändern</strong>.</td>
+<td><code>sudo usermod -d /neues/home benutzername</code></td>
+</tr>
+<tr>
+<td><code>-m</code></td>
+<td><strong>Home-Verzeichnis verschieben</strong> (mit <code>-d</code>).</td>
+<td><code>sudo usermod -d /neues/home -m benutzername</code></td>
+</tr>
+<tr>
+<td><code>-s</code></td>
+<td><strong>Shell ändern</strong>.</td>
+<td><code>sudo usermod -s /bin/zsh benutzername</code></td>
+</tr>
+<tr>
+<td><code>-u</code></td>
+<td><strong>UID ändern</strong>.</td>
+<td><code>sudo usermod -u 1010 benutzername</code></td>
+</tr>
+<tr>
+<td><code>-g</code></td>
+<td><strong>Primäre Gruppe ändern</strong>.</td>
+<td><code>sudo usermod -g neue_gruppe benutzername</code></td>
+</tr>
+<tr>
+<td><code>-G</code></td>
+<td><strong>Zusätzliche Gruppen ändern</strong>.</td>
+<td><code>sudo usermod -G gruppe1,gruppe2 benutzername</code></td>
+</tr>
+<tr>
+<td><code>-aG</code></td>
+<td><strong>Fügt den Benutzer zu Gruppen hinzu</strong> (ohne bestehende Gruppen zu entfernen).</td>
+<td><code>sudo usermod -aG sudo benutzername</code></td>
+</tr>
+<tr>
+<td><code>-c</code></td>
+<td><strong>Beschreibung ändern</strong>.</td>
+<td><code>sudo usermod -c "Neue Beschreibung" benutzername</code></td>
+</tr>
+<tr>
+<td><code>-e</code></td>
+<td><strong>Ablaufdatum ändern</strong>.</td>
+<td><code>sudo usermod -e 2026-12-31 benutzername</code></td>
+</tr>
+<tr>
+<td><code>-L</code></td>
+<td><strong>Benutzer sperren</strong> (Passwort deaktivieren).</td>
+<td><code>sudo usermod -L benutzername</code></td>
+</tr>
+<tr>
+<td><code>-U</code></td>
+<td><strong>Benutzer entsperren</strong>.</td>
+<td><code>sudo usermod -U benutzername</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="beispiel-1-benutzernamen-andern">Beispiel 1: Benutzernamen ändern<a class="headerlink" href="#beispiel-1-benutzernamen-andern" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>usermod<span class="w"> </span>-l<span class="w"> </span>neuer_benutzername<span class="w"> </span>alter_benutzername
+</code></pre></div></td></tr></table></div>
+<h4 id="beispiel-2-benutzer-zu-einer-gruppe-hinzufugen">Beispiel 2: Benutzer zu einer Gruppe hinzufügen<a class="headerlink" href="#beispiel-2-benutzer-zu-einer-gruppe-hinzufugen" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>usermod<span class="w"> </span>-aG<span class="w"> </span>sudo<span class="w"> </span>testuser
+</code></pre></div></td></tr></table></div>
+<h4 id="beispiel-3-home-verzeichnis-verschieben">Beispiel 3: Home-Verzeichnis verschieben<a class="headerlink" href="#beispiel-3-home-verzeichnis-verschieben" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>usermod<span class="w"> </span>-d<span class="w"> </span>/neues/home/testuser<span class="w"> </span>-m<span class="w"> </span>testuser
+</code></pre></div></td></tr></table></div>
+<h4 id="beispiel-4-benutzer-sperren">Beispiel 4: Benutzer sperren<a class="headerlink" href="#beispiel-4-benutzer-sperren" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>usermod<span class="w"> </span>-L<span class="w"> </span>testuser
+</code></pre></div></td></tr></table></div>
+<h3 id="24-benutzer-loschen-userdel">2.4 Benutzer löschen (<code>userdel</code>)<a class="headerlink" href="#24-benutzer-loschen-userdel" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>**userdel**</code> löscht ein <strong>Benutzerkonto</strong>.</li>
+</ul>
+<h4 id="grundlegende-syntax_3">Grundlegende Syntax:<a class="headerlink" href="#grundlegende-syntax_3" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>userdel<span class="w"> </span><span class="o">[</span>Optionen<span class="o">]</span><span class="w"> </span>Benutzername
+</code></pre></div></td></tr></table></div>
+<h4 id="wichtige-optionen-von-userdel">Wichtige Optionen von <code>userdel</code>:<a class="headerlink" href="#wichtige-optionen-von-userdel" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Beschreibung</th>
+<th>Beispiel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-r</code></td>
+<td><strong>Löscht das Home-Verzeichnis und die Mail-Spool</strong>.</td>
+<td><code>sudo userdel -r testuser</code></td>
+</tr>
+<tr>
+<td><code>-f</code></td>
+<td><strong>Erzwingt das Löschen</strong>, auch wenn der Benutzer noch angemeldet ist.</td>
+<td><code>sudo userdel -f testuser</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="beispiel-1-benutzer-loschen-ohne-home-verzeichnis">Beispiel 1: Benutzer löschen (ohne Home-Verzeichnis)<a class="headerlink" href="#beispiel-1-benutzer-loschen-ohne-home-verzeichnis" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>userdel<span class="w"> </span>testuser
+</code></pre></div></td></tr></table></div>
+<h4 id="beispiel-2-benutzer-mit-home-verzeichnis-loschen">Beispiel 2: Benutzer mit Home-Verzeichnis löschen<a class="headerlink" href="#beispiel-2-benutzer-mit-home-verzeichnis-loschen" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>userdel<span class="w"> </span>-r<span class="w"> </span>testuser
+</code></pre></div></td></tr></table></div>
+<h3 id="25-benutzerinformationen-abrufen-id-finger-who">2.5 Benutzerinformationen abrufen (<code>id</code>, <code>finger</code>, <code>who</code>)<a class="headerlink" href="#25-benutzerinformationen-abrufen-id-finger-who" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Befehl</th>
+<th>Beschreibung</th>
+<th>Beispiel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>Zeigt <strong>UID, GID und Gruppen</strong> eines Benutzers an.</td>
+<td><code>id testuser</code></td>
+</tr>
+<tr>
+<td><code>finger</code></td>
+<td>Zeigt <strong>detaillierte Benutzerinformationen</strong> an (muss installiert sein).</td>
+<td><code>finger testuser</code></td>
+</tr>
+<tr>
+<td><code>who</code></td>
+<td>Zeigt <strong>angemeldete Benutzer</strong> an.</td>
+<td><code>who</code></td>
+</tr>
+<tr>
+<td><code>w</code></td>
+<td>Zeigt <strong>angemeldete Benutzer und ihre Prozesse</strong> an.</td>
+<td><code>w</code></td>
+</tr>
+<tr>
+<td><code>last</code></td>
+<td>Zeigt die <strong>Anmeldehistorie</strong> an.</td>
+<td><code>last testuser</code></td>
+</tr>
+<tr>
+<td><code>getent passwd</code></td>
+<td>Zeigt <strong>Benutzerinformationen</strong> aus <code>/etc/passwd</code> an.</td>
+<td><code>getent passwd testuser</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="beispiel">Beispiel:<a class="headerlink" href="#beispiel" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Zeige UID, GID und Gruppen von testuser</span>
+id<span class="w"> </span>testuser
+
+<span class="c1"># Zeige detaillierte Informationen zu testuser</span>
+finger<span class="w"> </span>testuser
+
+<span class="c1"># Zeige alle angemeldeten Benutzer</span>
+who
+</code></pre></div></td></tr></table></div>
+<h2 id="3-gruppen-verwalten">3. Gruppen verwalten<a class="headerlink" href="#3-gruppen-verwalten" title="Permanent link">&para;</a></h2>
+<h3 id="31-gruppen-erstellen-groupadd">3.1 Gruppen erstellen (<code>groupadd</code>)<a class="headerlink" href="#31-gruppen-erstellen-groupadd" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>**groupadd**</code> erstellt eine <strong>neue Gruppe</strong>.</li>
+</ul>
+<h4 id="grundlegende-syntax_4">Grundlegende Syntax:<a class="headerlink" href="#grundlegende-syntax_4" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>groupadd<span class="w"> </span><span class="o">[</span>Optionen<span class="o">]</span><span class="w"> </span>Gruppenname
+</code></pre></div></td></tr></table></div>
+<h4 id="wichtige-optionen-von-groupadd">Wichtige Optionen von <code>groupadd</code>:<a class="headerlink" href="#wichtige-optionen-von-groupadd" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Beschreibung</th>
+<th>Beispiel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-g</code></td>
+<td><strong>Legt die GID fest</strong>.</td>
+<td><code>sudo groupadd -g 2000 neue_gruppe</code></td>
+</tr>
+<tr>
+<td><code>-r</code></td>
+<td><strong>Erstellt eine Systemgruppe</strong> (GID &lt; 1000).</td>
+<td><code>sudo groupadd -r systemgruppe</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="beispiel-1-gruppe-erstellen">Beispiel 1: Gruppe erstellen<a class="headerlink" href="#beispiel-1-gruppe-erstellen" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>groupadd<span class="w"> </span>Entwickler
+</code></pre></div></td></tr></table></div>
+<h4 id="beispiel-2-gruppe-mit-spezifischer-gid-erstellen">Beispiel 2: Gruppe mit spezifischer GID erstellen<a class="headerlink" href="#beispiel-2-gruppe-mit-spezifischer-gid-erstellen" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>groupadd<span class="w"> </span>-g<span class="w"> </span><span class="m">2000</span><span class="w"> </span>Entwickler
+</code></pre></div></td></tr></table></div>
+<h3 id="32-gruppen-andern-groupmod">3.2 Gruppen ändern (<code>groupmod</code>)<a class="headerlink" href="#32-gruppen-andern-groupmod" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>**groupmod**</code> ändert die <strong>Eigenschaften einer bestehenden Gruppe</strong>.</li>
+</ul>
+<h4 id="grundlegende-syntax_5">Grundlegende Syntax:<a class="headerlink" href="#grundlegende-syntax_5" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>groupmod<span class="w"> </span><span class="o">[</span>Optionen<span class="o">]</span><span class="w"> </span>Gruppenname
+</code></pre></div></td></tr></table></div>
+<h4 id="wichtige-optionen-von-groupmod">Wichtige Optionen von <code>groupmod</code>:<a class="headerlink" href="#wichtige-optionen-von-groupmod" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Beschreibung</th>
+<th>Beispiel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-n</code></td>
+<td><strong>Gruppennamen ändern</strong>.</td>
+<td><code>sudo groupmod -n neuer_name alter_name</code></td>
+</tr>
+<tr>
+<td><code>-g</code></td>
+<td><strong>GID ändern</strong>.</td>
+<td><code>sudo groupmod -g 2001 Entwickler</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="beispiel-1-gruppennamen-andern">Beispiel 1: Gruppennamen ändern<a class="headerlink" href="#beispiel-1-gruppennamen-andern" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>groupmod<span class="w"> </span>-n<span class="w"> </span>DevOps<span class="w"> </span>Entwickler
+</code></pre></div></td></tr></table></div>
+<h4 id="beispiel-2-gid-andern">Beispiel 2: GID ändern<a class="headerlink" href="#beispiel-2-gid-andern" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>groupmod<span class="w"> </span>-g<span class="w"> </span><span class="m">2001</span><span class="w"> </span>DevOps
+</code></pre></div></td></tr></table></div>
+<h3 id="33-gruppen-loschen-groupdel">3.3 Gruppen löschen (<code>groupdel</code>)<a class="headerlink" href="#33-gruppen-loschen-groupdel" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>**groupdel**</code> löscht eine <strong>Gruppe</strong>.</li>
+</ul>
+<h4 id="grundlegende-syntax_6">Grundlegende Syntax:<a class="headerlink" href="#grundlegende-syntax_6" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>groupdel<span class="w"> </span>Gruppenname
+</code></pre></div></td></tr></table></div>
+<h4 id="beispiel_1">Beispiel:<a class="headerlink" href="#beispiel_1" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>groupdel<span class="w"> </span>DevOps
+</code></pre></div></td></tr></table></div>
+<ul>
+<li><strong>Achtung:</strong> Eine Gruppe kann <strong>nicht gelöscht werden</strong>, wenn sie noch <strong>Mitglieder</strong> hat.</li>
+</ul>
+<h3 id="34-benutzer-zu-gruppen-hinzufugen-usermod-gpasswd">3.4 Benutzer zu Gruppen hinzufügen (<code>usermod</code>, <code>gpasswd</code>)<a class="headerlink" href="#34-benutzer-zu-gruppen-hinzufugen-usermod-gpasswd" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Nutze <code>**usermod -aG**</code>, um einen Benutzer zu einer Gruppe hinzuzufügen.</li>
+<li>Alternativ kannst du <code>**gpasswd**</code> verwenden.</li>
+</ul>
+<h4 id="beispiel-1-benutzer-zu-einer-gruppe-hinzufugen">Beispiel 1: Benutzer zu einer Gruppe hinzufügen<a class="headerlink" href="#beispiel-1-benutzer-zu-einer-gruppe-hinzufugen" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>usermod<span class="w"> </span>-aG<span class="w"> </span>Entwickler<span class="w"> </span>testuser
+</code></pre></div></td></tr></table></div>
+<h4 id="beispiel-2-benutzer-mit-gpasswd-zu-einer-gruppe-hinzufugen">Beispiel 2: Benutzer mit <code>gpasswd</code> zu einer Gruppe hinzufügen<a class="headerlink" href="#beispiel-2-benutzer-mit-gpasswd-zu-einer-gruppe-hinzufugen" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>gpasswd<span class="w"> </span>-a<span class="w"> </span>testuser<span class="w"> </span>Entwickler
+</code></pre></div></td></tr></table></div>
+<h3 id="35-benutzer-aus-gruppen-entfernen-gpasswd">3.5 Benutzer aus Gruppen entfernen (<code>gpasswd</code>)<a class="headerlink" href="#35-benutzer-aus-gruppen-entfernen-gpasswd" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>**gpasswd -d**</code> entfernt einen Benutzer aus einer Gruppe.</li>
+</ul>
+<h4 id="beispiel_2">Beispiel:<a class="headerlink" href="#beispiel_2" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>gpasswd<span class="w"> </span>-d<span class="w"> </span>testuser<span class="w"> </span>Entwickler
+</code></pre></div></td></tr></table></div>
+<h3 id="36-gruppeninformationen-abrufen-getent-group">3.6 Gruppeninformationen abrufen (<code>getent group</code>)<a class="headerlink" href="#36-gruppeninformationen-abrufen-getent-group" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>**getent group**</code> zeigt die <strong>Mitglieder einer Gruppe</strong> an.</li>
+</ul>
+<h4 id="beispiel_3">Beispiel:<a class="headerlink" href="#beispiel_3" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>getent<span class="w"> </span>group<span class="w"> </span>Entwickler
+</code></pre></div></td></tr></table></div>
+<p><strong>Ausgabe:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Entwickler:x:2000:testuser,benutzer2
+</code></pre></div></td></tr></table></div>
+<h3 id="37-gruppen-passwort-setzen-gpasswd">3.7 Gruppen-Passwort setzen (<code>gpasswd</code>)<a class="headerlink" href="#37-gruppen-passwort-setzen-gpasswd" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>**gpasswd**</code> setzt ein <strong>Passwort für eine Gruppe</strong> (selten verwendet).</li>
+</ul>
+<h4 id="beispiel_4">Beispiel:<a class="headerlink" href="#beispiel_4" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>gpasswd<span class="w"> </span>Entwickler
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>Du wirst aufgefordert, ein <strong>Passwort für die Gruppe</strong> einzugeben.</li>
+</ul>
+<h2 id="4-passwortrichtlinien-und-sicherheit">4. Passwortrichtlinien und Sicherheit<a class="headerlink" href="#4-passwortrichtlinien-und-sicherheit" title="Permanent link">&para;</a></h2>
+<h3 id="41-passwortrichtlinien-mit-chage">4.1 Passwortrichtlinien mit <code>chage</code><a class="headerlink" href="#41-passwortrichtlinien-mit-chage" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>**chage**</code> (Change Age) ändert die <strong>Passwortrichtlinien</strong> für einen Benutzer.</li>
+</ul>
+<h4 id="grundlegende-syntax_7">Grundlegende Syntax:<a class="headerlink" href="#grundlegende-syntax_7" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>chage<span class="w"> </span><span class="o">[</span>Optionen<span class="o">]</span><span class="w"> </span>Benutzername
+</code></pre></div></td></tr></table></div>
+<h4 id="wichtige-optionen-von-chage">Wichtige Optionen von <code>chage</code>:<a class="headerlink" href="#wichtige-optionen-von-chage" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Beschreibung</th>
+<th>Beispiel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-l</code></td>
+<td><strong>Zeigt die aktuellen Passwortrichtlinien</strong> an.</td>
+<td><code>sudo chage -l testuser</code></td>
+</tr>
+<tr>
+<td><code>-m</code></td>
+<td><strong>Minimales Passwortalter</strong> (Tage).</td>
+<td><code>sudo chage -m 7 testuser</code></td>
+</tr>
+<tr>
+<td><code>-M</code></td>
+<td><strong>Maximales Passwortalter</strong> (Tage).</td>
+<td><code>sudo chage -M 90 testuser</code></td>
+</tr>
+<tr>
+<td><code>-W</code></td>
+<td><strong>Warnung vor Ablauf</strong> (Tage).</td>
+<td><code>sudo chage -W 14 testuser</code></td>
+</tr>
+<tr>
+<td><code>-I</code></td>
+<td><strong>Inaktivitätsdauer</strong> (Tage nach Ablauf).</td>
+<td><code>sudo chage -I 30 testuser</code></td>
+</tr>
+<tr>
+<td><code>-E</code></td>
+<td><strong>Ablaufdatum</strong> (Format: <code>YYYY-MM-DD</code>).</td>
+<td><code>sudo chage -E 2026-12-31 testuser</code></td>
+</tr>
+<tr>
+<td><code>-d</code></td>
+<td><strong>Letzte Passwortänderung</strong> (Tage seit 1.1.1970).</td>
+<td><code>sudo chage -d $(date +%s/86400) testuser</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="beispiel-1-passwortrichtlinien-anzeigen">Beispiel 1: Passwortrichtlinien anzeigen<a class="headerlink" href="#beispiel-1-passwortrichtlinien-anzeigen" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>chage<span class="w"> </span>-l<span class="w"> </span>testuser
+</code></pre></div></td></tr></table></div>
+<h4 id="beispiel-2-passwort-alle-90-tage-andern-lassen">Beispiel 2: Passwort alle 90 Tage ändern lassen<a class="headerlink" href="#beispiel-2-passwort-alle-90-tage-andern-lassen" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>chage<span class="w"> </span>-M<span class="w"> </span><span class="m">90</span><span class="w"> </span>testuser
+</code></pre></div></td></tr></table></div>
+<h4 id="beispiel-3-benutzer-nach-30-tagen-inaktivitat-sperren">Beispiel 3: Benutzer nach 30 Tagen Inaktivität sperren<a class="headerlink" href="#beispiel-3-benutzer-nach-30-tagen-inaktivitat-sperren" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>chage<span class="w"> </span>-I<span class="w"> </span><span class="m">30</span><span class="w"> </span>testuser
+</code></pre></div></td></tr></table></div>
+<h3 id="42-passwortalter-erzwingen-passwd-x">4.2 Passwortalter erzwingen (<code>passwd -x</code>)<a class="headerlink" href="#42-passwortalter-erzwingen-passwd-x" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>**passwd -x**</code> setzt das <strong>maximale Passwortalter</strong>.</li>
+</ul>
+<h4 id="beispiel_5">Beispiel:<a class="headerlink" href="#beispiel_5" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>passwd<span class="w"> </span>-x<span class="w"> </span><span class="m">90</span><span class="w"> </span>testuser
+</code></pre></div></td></tr></table></div>
+<h3 id="43-benutzer-sperren-und-entsperren">4.3 Benutzer sperren und entsperren<a class="headerlink" href="#43-benutzer-sperren-und-entsperren" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Benutzer sperren</strong> (Passwort deaktivieren):
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>usermod<span class="w"> </span>-L<span class="w"> </span>testuser
+</code></pre></div></td></tr></table></div></li>
+<li><strong>Benutzer entsperren</strong>:
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>usermod<span class="w"> </span>-U<span class="w"> </span>testuser
+</code></pre></div></td></tr></table></div></li>
+</ul>
+<h3 id="44-benutzerkonto-deaktivieren-nologin">4.4 Benutzerkonto deaktivieren (<code>nologin</code>)<a class="headerlink" href="#44-benutzerkonto-deaktivieren-nologin" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>**/usr/sbin/nologin**</code> als Shell setzen, um <strong>Anmeldungen zu verhindern</strong>.</li>
+</ul>
+<h4 id="beispiel_6">Beispiel:<a class="headerlink" href="#beispiel_6" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>usermod<span class="w"> </span>-s<span class="w"> </span>/usr/sbin/nologin<span class="w"> </span>testuser
+</code></pre></div></td></tr></table></div>
+<h3 id="45-benutzerkonto-ablaufen-lassen">4.5 Benutzerkonto ablaufen lassen<a class="headerlink" href="#45-benutzerkonto-ablaufen-lassen" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Ablaufdatum setzen</strong> (Benutzer kann sich nicht mehr anmelden):
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>chage<span class="w"> </span>-E<span class="w"> </span><span class="m">2026</span>-12-31<span class="w"> </span>testuser
+</code></pre></div></td></tr></table></div></li>
+</ul>
+<h2 id="5-praktische-beispiele">5. Praktische Beispiele<a class="headerlink" href="#5-praktische-beispiele" title="Permanent link">&para;</a></h2>
+<h3 id="51-beispiel-1-neuen-benutzer-mit-home-verzeichnis-erstellen">5.1 Beispiel 1: Neuen Benutzer mit Home-Verzeichnis erstellen<a class="headerlink" href="#51-beispiel-1-neuen-benutzer-mit-home-verzeichnis-erstellen" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>useradd<span class="w"> </span>-m<span class="w"> </span>-s<span class="w"> </span>/bin/bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;Testbenutzer&quot;</span><span class="w"> </span>testuser
+sudo<span class="w"> </span>passwd<span class="w"> </span>testuser
+</code></pre></div></td></tr></table></div>
+<h3 id="52-beispiel-2-benutzer-zu-mehreren-gruppen-hinzufugen">5.2 Beispiel 2: Benutzer zu mehreren Gruppen hinzufügen<a class="headerlink" href="#52-beispiel-2-benutzer-zu-mehreren-gruppen-hinzufugen" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>usermod<span class="w"> </span>-aG<span class="w"> </span>sudo,docker,Entwickler<span class="w"> </span>testuser
+</code></pre></div></td></tr></table></div>
+<h3 id="53-beispiel-3-gruppe-erstellen-und-benutzer-hinzufugen">5.3 Beispiel 3: Gruppe erstellen und Benutzer hinzufügen<a class="headerlink" href="#53-beispiel-3-gruppe-erstellen-und-benutzer-hinzufugen" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>groupadd<span class="w"> </span>Entwickler
+sudo<span class="w"> </span>usermod<span class="w"> </span>-aG<span class="w"> </span>Entwickler<span class="w"> </span>testuser
+</code></pre></div></td></tr></table></div>
+<h3 id="54-beispiel-4-benutzerinformationen-anzeigen">5.4 Beispiel 4: Benutzerinformationen anzeigen<a class="headerlink" href="#54-beispiel-4-benutzerinformationen-anzeigen" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>id<span class="w"> </span>testuser
+finger<span class="w"> </span>testuser
+getent<span class="w"> </span>passwd<span class="w"> </span>testuser
+</code></pre></div></td></tr></table></div>
+<h3 id="55-beispiel-5-passwortrichtlinien-fur-einen-benutzer-setzen">5.5 Beispiel 5: Passwortrichtlinien für einen Benutzer setzen<a class="headerlink" href="#55-beispiel-5-passwortrichtlinien-fur-einen-benutzer-setzen" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>chage<span class="w"> </span>-M<span class="w"> </span><span class="m">90</span><span class="w"> </span>-m<span class="w"> </span><span class="m">7</span><span class="w"> </span>-W<span class="w"> </span><span class="m">14</span><span class="w"> </span>-I<span class="w"> </span><span class="m">30</span><span class="w"> </span>testuser
+</code></pre></div></td></tr></table></div>
+<ul>
+<li><strong>Maximales Passwortalter:</strong> 90 Tage.</li>
+<li><strong>Minimales Passwortalter:</strong> 7 Tage.</li>
+<li><strong>Warnung vor Ablauf:</strong> 14 Tage.</li>
+<li><strong>Inaktivitätsdauer:</strong> 30 Tage.</li>
+</ul>
+<h3 id="56-beispiel-6-benutzer-sperren-und-entsperren">5.6 Beispiel 6: Benutzer sperren und entsperren<a class="headerlink" href="#56-beispiel-6-benutzer-sperren-und-entsperren" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Benutzer sperren</span>
+sudo<span class="w"> </span>usermod<span class="w"> </span>-L<span class="w"> </span>testuser
+
+<span class="c1"># Benutzer entsperren</span>
+sudo<span class="w"> </span>usermod<span class="w"> </span>-U<span class="w"> </span>testuser
+</code></pre></div></td></tr></table></div>
+<h3 id="57-beispiel-7-benutzerkonto-deaktivieren">5.7 Beispiel 7: Benutzerkonto deaktivieren<a class="headerlink" href="#57-beispiel-7-benutzerkonto-deaktivieren" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>usermod<span class="w"> </span>-s<span class="w"> </span>/usr/sbin/nologin<span class="w"> </span>testuser
+</code></pre></div></td></tr></table></div>
+<h3 id="58-beispiel-8-benutzer-mit-ablaufdatum-erstellen">5.8 Beispiel 8: Benutzer mit Ablaufdatum erstellen<a class="headerlink" href="#58-beispiel-8-benutzer-mit-ablaufdatum-erstellen" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>useradd<span class="w"> </span>-m<span class="w"> </span>-e<span class="w"> </span><span class="m">2026</span>-12-31<span class="w"> </span>testuser
+sudo<span class="w"> </span>passwd<span class="w"> </span>testuser
+</code></pre></div></td></tr></table></div>
+<h3 id="59-beispiel-9-alle-benutzer-auflisten">5.9 Beispiel 9: Alle Benutzer auflisten<a class="headerlink" href="#59-beispiel-9-alle-benutzer-auflisten" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>cut<span class="w"> </span>-d:<span class="w"> </span>-f1<span class="w"> </span>/etc/passwd
+</code></pre></div></td></tr></table></div>
+<p>oder</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>getent<span class="w"> </span>passwd<span class="w"> </span><span class="p">|</span><span class="w"> </span>cut<span class="w"> </span>-d:<span class="w"> </span>-f1
+</code></pre></div></td></tr></table></div>
+<h3 id="510-beispiel-10-alle-gruppen-auflisten">5.10 Beispiel 10: Alle Gruppen auflisten<a class="headerlink" href="#510-beispiel-10-alle-gruppen-auflisten" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>cut<span class="w"> </span>-d:<span class="w"> </span>-f1<span class="w"> </span>/etc/group
+</code></pre></div></td></tr></table></div>
+<p>oder</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>getent<span class="w"> </span>group<span class="w"> </span><span class="p">|</span><span class="w"> </span>cut<span class="w"> </span>-d:<span class="w"> </span>-f1
+</code></pre></div></td></tr></table></div>
+<h2 id="6-ubungsaufgaben">6. Übungsaufgaben<a class="headerlink" href="#6-ubungsaufgaben" title="Permanent link">&para;</a></h2>
+<h3 id="ubung-1-benutzer-erstellen">Übung 1: Benutzer erstellen<a class="headerlink" href="#ubung-1-benutzer-erstellen" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Erstelle einen Benutzer namens <code>**testuser1**</code> mit:</li>
+<li>Home-Verzeichnis <code>/home/testuser1</code>.</li>
+<li>Shell <code>/bin/bash</code>.</li>
+<li>Beschreibung <strong>"Testbenutzer 1"</strong>.</li>
+<li>Setze ein Passwort für den Benutzer.</li>
+</ol>
+<details class="success">
+<summary>Lösung</summary>
+<p><code>bash     sudo useradd -m -s /bin/bash -c "Testbenutzer 1" testuser1     sudo passwd testuser1</code>     </p>
+</details>
+<h3 id="ubung-2-benutzer-zu-gruppen-hinzufugen">Übung 2: Benutzer zu Gruppen hinzufügen<a class="headerlink" href="#ubung-2-benutzer-zu-gruppen-hinzufugen" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Erstelle eine Gruppe namens <code>**Entwickler**</code>.</li>
+<li>Füge den Benutzer <code>**testuser1**</code> zur Gruppe <code>**Entwickler**</code> hinzu.</li>
+</ol>
+<details class="success">
+<summary>Lösung</summary>
+<p><code>bash     sudo groupadd Entwickler     sudo usermod -aG Entwickler testuser1</code>     </p>
+</details>
+<h3 id="ubung-3-benutzerinformationen-abrufen">Übung 3: Benutzerinformationen abrufen<a class="headerlink" href="#ubung-3-benutzerinformationen-abrufen" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Zeige die <strong>UID, GID und Gruppen</strong> des Benutzers <code>**testuser1**</code> an.</li>
+<li>Zeige die <strong>detaillierten Informationen</strong> des Benutzers an.</li>
+</ol>
+<details class="success">
+<summary>Lösung</summary>
+<p><code>bash     id testuser1     finger testuser1</code>     </p>
+</details>
+<h3 id="ubung-4-passwortrichtlinien-setzen">Übung 4: Passwortrichtlinien setzen<a class="headerlink" href="#ubung-4-passwortrichtlinien-setzen" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Setze für den Benutzer <code>**testuser1**</code> folgende Passwortrichtlinien:</li>
+<li><strong>Maximales Passwortalter:</strong> 60 Tage.</li>
+<li><strong>Minimales Passwortalter:</strong> 3 Tage.</li>
+<li><strong>Warnung vor Ablauf:</strong> 7 Tage.</li>
+</ol>
+<details class="success">
+<summary>Lösung</summary>
+<p><code>bash     sudo chage -M 60 -m 3 -W 7 testuser1</code>     </p>
+</details>
+<h3 id="ubung-5-benutzer-sperren">Übung 5: Benutzer sperren<a class="headerlink" href="#ubung-5-benutzer-sperren" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Sperre den Benutzer <code>**testuser1**</code>.</li>
+<li>Überprüfe, ob der Benutzer gesperrt ist.</li>
+</ol>
+<details class="success">
+<summary>Lösung</summary>
+<p><code>bash     sudo usermod -L testuser1     sudo chage -l testuser1 | grep "Password locked"</code>     </p>
+</details>
+<h3 id="ubung-6-benutzer-entsperren">Übung 6: Benutzer entsperren<a class="headerlink" href="#ubung-6-benutzer-entsperren" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Entsperre den Benutzer <code>**testuser1**</code>.</li>
+<li>Überprüfe, ob der Benutzer entsperrt ist.</li>
+</ol>
+<details class="success">
+<summary>Lösung</summary>
+<p><code>bash     sudo usermod -U testuser1     sudo chage -l testuser1 | grep "Password locked"</code>     </p>
+</details>
+<h3 id="ubung-7-benutzer-loschen">Übung 7: Benutzer löschen<a class="headerlink" href="#ubung-7-benutzer-loschen" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Lösche den Benutzer <code>**testuser1**</code> <strong>inklusive Home-Verzeichnis</strong>.</li>
+</ol>
+<details class="success">
+<summary>Lösung</summary>
+<p><code>bash     sudo userdel -r testuser1</code>     </p>
+</details>
+<h3 id="ubung-8-gruppe-erstellen-und-benutzer-hinzufugen">Übung 8: Gruppe erstellen und Benutzer hinzufügen<a class="headerlink" href="#ubung-8-gruppe-erstellen-und-benutzer-hinzufugen" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Erstelle eine Gruppe namens <code>**ProjektA**</code> mit der GID <code>**3000**</code>.</li>
+<li>Erstelle einen Benutzer namens <code>**projektuser**</code> und füge ihn zur Gruppe <code>**ProjektA**</code> hinzu.</li>
+</ol>
+<details class="success">
+<summary>Lösung</summary>
+<p><code>bash     sudo groupadd -g 3000 ProjektA     sudo useradd -m -G ProjektA projektuser     sudo passwd projektuser</code>     </p>
+</details>
+<h3 id="ubung-9-benutzer-aus-gruppe-entfernen">Übung 9: Benutzer aus Gruppe entfernen<a class="headerlink" href="#ubung-9-benutzer-aus-gruppe-entfernen" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Entferne den Benutzer <code>**projektuser**</code> aus der Gruppe <code>**ProjektA**</code>.</li>
+</ol>
+<details class="success">
+<summary>Lösung</summary>
+<p><code>bash     sudo gpasswd -d projektuser ProjektA</code>     </p>
+</details>
+<h3 id="ubung-10-benutzerkonto-mit-ablaufdatum-erstellen">Übung 10: Benutzerkonto mit Ablaufdatum erstellen<a class="headerlink" href="#ubung-10-benutzerkonto-mit-ablaufdatum-erstellen" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Erstelle einen Benutzer namens <code>**tempuser**</code> mit:</li>
+<li>Ablaufdatum <strong>31.12.2026</strong>.</li>
+<li>Home-Verzeichnis <code>/home/tempuser</code>.</li>
+<li>Überprüfe das Ablaufdatum.</li>
+</ol>
+<details class="success">
+<summary>Lösung</summary>
+<p><code>bash     sudo useradd -m -e 2026-12-31 tempuser     sudo passwd tempuser     sudo chage -l tempuser | grep "Account expires"</code>     </p>
+</details>
+<h3 id="ubung-11-alle-benutzer-mit-uid-1000-auflisten">Übung 11: Alle Benutzer mit UID &gt; 1000 auflisten<a class="headerlink" href="#ubung-11-alle-benutzer-mit-uid-1000-auflisten" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Liste alle <strong>normalen Benutzer</strong> (UID ≥ 1000) auf.</li>
+</ol>
+<details class="success">
+<summary>Lösung</summary>
+<p><code>bash     getent passwd | awk -F: '$3 &gt;= 1000 {print $1}'</code>     </p>
+</details>
+<h3 id="ubung-12-benutzer-mit-spezifischer-shell-finden">Übung 12: Benutzer mit spezifischer Shell finden<a class="headerlink" href="#ubung-12-benutzer-mit-spezifischer-shell-finden" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Liste alle Benutzer auf, die die Shell <code>**/bin/bash**</code> verwenden.</li>
+</ol>
+<details class="success">
+<summary>Lösung</summary>
+<p><code>bash     getent passwd | awk -F: '$7 == "/bin/bash" {print $1}'</code>     </p>
+</details>
+<h3 id="ubung-13-gruppenmitglieder-auflisten">Übung 13: Gruppenmitglieder auflisten<a class="headerlink" href="#ubung-13-gruppenmitglieder-auflisten" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Liste alle Mitglieder der Gruppe <code>**sudo**</code> auf.</li>
+</ol>
+<details class="success">
+<summary>Lösung</summary>
+<p><code>bash     getent group sudo | cut -d: -f4 | tr ',' '\n'</code>     </p>
+</details>
+<h3 id="ubung-14-benutzer-mit-abgelaufenem-passwort-finden">Übung 14: Benutzer mit abgelaufenem Passwort finden<a class="headerlink" href="#ubung-14-benutzer-mit-abgelaufenem-passwort-finden" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Liste alle Benutzer auf, deren <strong>Passwort abgelaufen</strong> ist.</li>
+</ol>
+<details class="success">
+<summary>Lösung</summary>
+<p><code>bash     sudo chage -l $(getent passwd | cut -d: -f1) | grep -B1 "Password expired" | grep -v "Password expired" | awk '{print $1}'</code>     </p>
+</details>
+<h3 id="ubung-15-benutzer-mit-nologin-shell-finden">Übung 15: Benutzer mit <code>nologin</code>-Shell finden<a class="headerlink" href="#ubung-15-benutzer-mit-nologin-shell-finden" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Liste alle Benutzer auf, die die Shell <code>**/usr/sbin/nologin**</code> oder <code>**/bin/false**</code> verwenden.</li>
+</ol>
+<details class="success">
+<summary>Lösung</summary>
+<p><code>bash     getent passwd | awk -F: '$7 == "/usr/sbin/nologin" || $7 == "/bin/false" {print $1}'</code>     </p>
+</details>
+<h2 id="7-best-practices-fur-die-benutzer-und-gruppenverwaltung">7. Best Practices für die Benutzer- und Gruppenverwaltung<a class="headerlink" href="#7-best-practices-fur-die-benutzer-und-gruppenverwaltung" title="Permanent link">&para;</a></h2>
+<h3 id="71-sicherheitstipps">7.1 Sicherheitstipps<a class="headerlink" href="#71-sicherheitstipps" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Nutze starke Passwörter</strong>:</li>
+<li>Erzwinge <strong>Passwortrichtlinien</strong> (z. B. Mindestlänge, Sonderzeichen).</li>
+<li>Nutze Tools wie <code>**pwgen**</code> oder <code>**apg**</code>, um sichere Passwörter zu generieren.</li>
+<li><strong>Sperre ungenutzte Konten</strong>:</li>
+<li>Sperre Benutzerkonten, die <strong>nicht mehr benötigt</strong> werden (<code>usermod -L</code>).</li>
+<li>Lösche Benutzerkonten, die <strong>dauerhaft nicht mehr benötigt</strong> werden (<code>userdel -r</code>).</li>
+<li><strong>Vermeide Root-Zugriff für normale Benutzer</strong>:</li>
+<li>Füge Benutzer nur dann zur <code>**sudo</code>-Gruppe<strong> hinzu, wenn sie </strong>Administratorrechte** benötigen.</li>
+<li><strong>Nutze <code>sudo</code> statt Root-Login</strong>:</li>
+<li>Erlaube Benutzern, <strong>bestimmte Befehle mit <code>sudo**</code> auszuführen, statt ihnen </strong>Root-Zugriff** zu geben.</li>
+<li><strong>Überprüfe Benutzerkonten regelmäßig</strong>:</li>
+<li>Nutze <code>last</code> oder <code>who</code>, um <strong>unbekannte Anmeldungen</strong> zu erkennen.</li>
+<li>Überprüfe <code>/etc/passwd</code> und <code>/etc/shadow</code> auf <strong>unbekannte Benutzer</strong>.</li>
+<li><strong>Nutze Gruppen für Berechtigungen</strong>:</li>
+<li>Verwalte <strong>Berechtigungen über Gruppen</strong> (z. B. <code>sudo</code>, <code>docker</code>, <code>www-data</code>).</li>
+<li>Vermeide es, <strong>direkte Berechtigungen für einzelne Benutzer</strong> zu setzen.</li>
+<li><strong>Dokumentiere Benutzerkonten</strong>:</li>
+<li>Führe eine <strong>Liste aller Benutzerkonten</strong> und ihrer <strong>Zwecke</strong>.</li>
+<li>Dokumentiere <strong>Passwortrichtlinien</strong> und <strong>Ablaufdaten</strong>.</li>
+</ol>
+<h3 id="72-tipps-fur-die-praxis">7.2 Tipps für die Praxis<a class="headerlink" href="#72-tipps-fur-die-praxis" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Nutze <code>useradd</code> mit <code>-m</code> für neue Benutzer</strong>:</li>
+<li>Erstelle <strong>immer ein Home-Verzeichnis</strong> (<code>-m</code>), es sei denn, es ist ein <strong>Systembenutzer</strong>.</li>
+<li><strong>Nutze <code>usermod -aG</code> zum Hinzufügen zu Gruppen</strong>:</li>
+<li><code>-aG</code> fügt den Benutzer zu einer Gruppe hinzu, <strong>ohne ihn aus anderen Gruppen zu entfernen</strong>.</li>
+<li><strong>Nutze <code>getent</code> statt direkter Dateizugriffe</strong>:</li>
+<li><code>getent passwd</code> und <code>getent group</code> sind <strong>sicherer</strong> als direkter Zugriff auf <code>/etc/passwd</code> oder <code>/etc/group</code>.</li>
+<li><strong>Teste Änderungen an Benutzerkonten</strong>:</li>
+<li>Melde dich als der Benutzer an (<code>su - benutzername</code>), um zu überprüfen, ob alles funktioniert.</li>
+<li><strong>Nutze <code>chage</code> für Passwortrichtlinien</strong>:</li>
+<li>Erzwinge <strong>regelmäßige Passwortänderungen</strong> und <strong>Sperren nach Inaktivität</strong>.</li>
+<li><strong>Automatisiere die Benutzerverwaltung</strong>:</li>
+<li>Nutze Skripte, um <strong>Benutzer in großen Mengen</strong> zu verwalten (z. B. für neue Mitarbeiter).</li>
+<li><strong>Nutze <code>finger</code> für detaillierte Benutzerinformationen</strong>:</li>
+<li>Installiere <code>finger</code>, um <strong>detaillierte Informationen</strong> zu Benutzern anzuzeigen.</li>
+</ol>
+<h3 id="73-haufige-fallstricke">7.3 Häufige Fallstricke<a class="headerlink" href="#73-haufige-fallstricke" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Problem</th>
+<th>Lösung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Benutzer kann sich nicht anmelden</strong></td>
+<td>Überprüfe, ob die <strong>Shell</strong> in <code>/etc/passwd</code> korrekt ist (z. B. <code>/bin/bash</code>).</td>
+</tr>
+<tr>
+<td><strong>Benutzer hat keine Berechtigungen</strong></td>
+<td>Überprüfe, ob der Benutzer in den <strong>richtigen Gruppen</strong> ist (<code>id benutzername</code>).</td>
+</tr>
+<tr>
+<td><strong>Passwort kann nicht geändert werden</strong></td>
+<td>Überprüfe die <strong>Passwortrichtlinien</strong> (<code>chage -l benutzername</code>).</td>
+</tr>
+<tr>
+<td><strong>Home-Verzeichnis wird nicht erstellt</strong></td>
+<td>Nutze <code>useradd -m</code>, um das <strong>Home-Verzeichnis zu erstellen</strong>.</td>
+</tr>
+<tr>
+<td><strong>Benutzer kann <code>sudo</code> nicht verwenden</strong></td>
+<td>Füge den Benutzer zur <code>**sudo</code>-Gruppe** hinzu (<code>usermod -aG sudo benutzername</code>).</td>
+</tr>
+<tr>
+<td><strong>Gruppe kann nicht gelöscht werden</strong></td>
+<td>Entferne <strong>alle Mitglieder</strong> aus der Gruppe (<code>gpasswd -d benutzername gruppe</code>).</td>
+</tr>
+<tr>
+<td><strong>Benutzerkonto ist gesperrt</strong></td>
+<td>Entsperre den Benutzer mit <code>usermod -U benutzername</code>.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="weiterfuhrende-themen">Weiterführende Themen<a class="headerlink" href="#weiterfuhrende-themen" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>LDAP-Integration</strong>: Verwalte Benutzer <strong>zentral über LDAP</strong> (z. B. mit <code>OpenLDAP</code>).</li>
+<li><strong>SSH-Zugriff verwalten</strong>: Konfiguriere <strong>SSH-Schlüssel</strong> für sichere Anmeldungen.</li>
+<li><strong>Sudo-Konfiguration</strong>: Passe die <code>**/etc/sudoers</code>-Datei<strong> an, um </strong>feingranulare Berechtigungen** zu vergeben.</li>
+<li><strong>PAM (Pluggable Authentication Modules)</strong>: Konfiguriere <strong>Authentifizierungsrichtlinien</strong> (z. B. Passwortkomplexität).</li>
+<li><strong>Automatisierung mit Skripten</strong>: Erstelle <strong>Skripte</strong>, um Benutzer und Gruppen <strong>automatisch zu verwalten</strong> (z. B. für neue Mitarbeiter).</li>
+</ul>
+<p>w</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Qualidy GmbH
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.kununu.com/de/qualidy" target="_blank" rel="noopener" title="www.kununu.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M311 86.3c12.3-12.7 12-32.9-.7-45.2s-32.9-12-45.2.7C143.4 167.2 76.4 236.3 64 249V64c0-17.7-14.3-32-32-32S0 46.3 0 64v384c0 17.7 14.3 32 32 32s32-14.3 32-32V341l64.7-66.7 133 192c10.1 14.5 30 18.1 44.5 8.1s18.1-30 8.1-44.5L174.1 227.4z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://de.linkedin.com/company/qualidy" target="_blank" rel="noopener" title="de.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.google.com/search?sca_esv=7e6ba2047fcb60f3&uds=AMwkrPtyB8MsmozA4Lwzqy2G2HCu-abqzc6moOG48q3gP5dtjTRzC2Ws0eSwcyLXDfZNuYCrZ7ByIreHLG9th3vKLekPoVeey0tumAbet4cVLQRLzdRFhUbOGbnyp3xo1V0hzzaNmkCN&si=AKbGX_rcuucMgom2rba1cdwsvM2SVoIkP2btyqGMV4t0GuHIs4sGV_1tpuqR0YHG4Rzd9SdJcL-lW6E-2aJA5azZLTKkIOrZ2j2aWwoBkVbdEJ0o0GPcQhs%3D&q=Qualidy+GmbH+Rezensionen&sa=X&ved=2ahUKEwibsbnSgcmFAxXNQvEDHaVYCiAQ3PALegQIRxAF" target="_blank" rel="noopener" title="www.google.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.35 11.1h-9.17v2.73h6.51c-.33 3.81-3.5 5.44-6.5 5.44C8.36 19.27 5 16.25 5 12c0-4.1 3.2-7.27 7.2-7.27 3.09 0 4.9 1.97 4.9 1.97L19 4.72S16.56 2 12.1 2C6.42 2 2.03 6.8 2.03 12c0 5.05 4.13 10 10.22 10 5.35 0 9.25-3.67 9.25-9.09 0-1.15-.15-1.81-.15-1.81"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://qualidy.de" target="_blank" rel="noopener" title="qualidy.de" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M351.9 280H161c2.9 64.5 17.2 123.9 37.5 167.4 11.4 24.5 23.7 41.8 35.1 52.4 11.2 10.5 18.9 12.2 22.9 12.2s11.7-1.7 22.9-12.2c11.4-10.6 23.7-28 35.1-52.4 20.3-43.5 34.6-102.9 37.5-167.4zm-191-48h190.9c-2.8-64.5-17.1-123.9-37.4-167.4-11.4-24.4-23.7-41.8-35.1-52.4C268.1 1.7 260.4 0 256.4 0s-11.7 1.7-22.9 12.2c-11.4 10.6-23.7 28-35.1 52.4-20.3 43.5-34.6 102.9-37.5 167.4m-48 0c3.5-85.6 25.6-165.1 57.9-217.3C78.7 47.3 10.9 131.2 1.5 232zM1.5 280c9.4 100.8 77.2 184.7 169.3 217.3-32.3-52.2-54.4-131.7-57.9-217.3zm398.4 0c-3.5 85.6-25.6 165.1-57.9 217.3 92.1-32.7 159.9-116.5 169.3-217.3zm111.4-48C501.9 131.2 434.1 47.3 342 14.7c32.3 52.2 54.4 131.7 57.9 217.3z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tracking", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,2265 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>Software - Basis Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/logo.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/grid.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/video_admonition.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/python_tutor_admonition.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/mermaid.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="amber" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#modul-iv-systemadministration-und-sicherheit" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Basis Wiki" class="md-header__button md-logo" aria-label="Basis Wiki" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Basis Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Software
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Basis Wiki" class="md-nav__button md-logo" aria-label="Basis Wiki" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    Basis Wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übersicht
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module I Das Konzept und die Theorie
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Module I Das Konzept und die Theorie
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module1/OpenSource%26Linux-Community/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Open Source & Proprietäre Software
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module1/opensource_lizenzen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Open-Source-Software und Lizenzierung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module1/linux_evolution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Linux Evolution und beliebte Betriebssysteme
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module1/das_linux_betriebssystem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Das Linux-Betriebssystem
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../7.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dateisystem-Hierarchie
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../8.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Netzwerk
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module II Die Grundlagen der Command-Line
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Module II Die Grundlagen der Command-Line
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Grundlagen der Kommandozeile
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Die Kommandozeile zur Hilfe nutzen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Verzeichnissen und Anzeigen von Dateien
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Erstellen, Verschieben und Löschen von Dateien
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module III Automatisierung und Skripting
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Module III Automatisierung und Skripting
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Verknüpfung von Befehlen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Archivierung von Dateien in der Kommandozeile
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Suchen und Extrahieren von Daten aus Dateien
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Befehle in ein Skript umwandeln
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Automatisierung von Aufgaben mit Cron
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fortgeschrittenes Skripting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module IV Systemadministration und Sicherheit
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Module IV Systemadministration und Sicherheit
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Benutzer- und Gruppenverwaltung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Verwalten von Dateiberechtigungen und Eigentum
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Systemüberwachung und Protokollierung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Softwareinstallation und -verwaltung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Netzwerksicherheit und Firewall-Konfiguration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Backup-Strategien und Wiederherstellung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module V Zusammenführung und Zielsetzung
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Module V Zusammenführung und Zielsetzung
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Wichtige Open-Source-Anwendungen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ICT-Fähigkeiten und Arbeiten in Linux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Software</h1>
+
+<h3 id="modul-iv-systemadministration-und-sicherheit"><strong>Modul IV: Systemadministration und Sicherheit</strong><a class="headerlink" href="#modul-iv-systemadministration-und-sicherheit" title="Permanent link">&para;</a></h3>
+<h3 id="thema-softwareinstallation-und-verwaltung"><strong>Thema: Softwareinstallation und -verwaltung</strong><a class="headerlink" href="#thema-softwareinstallation-und-verwaltung" title="Permanent link">&para;</a></h3>
+<hr />
+<h4 id="1-einfuhrung-in-die-softwareverwaltung-unter-linux"><strong>1. Einführung in die Softwareverwaltung unter Linux</strong><a class="headerlink" href="#1-einfuhrung-in-die-softwareverwaltung-unter-linux" title="Permanent link">&para;</a></h4>
+<p>Die <strong>Softwareverwaltung</strong> ist ein zentraler Bestandteil der Systemadministration. Linux bietet verschiedene <strong>Paketverwaltungssysteme</strong>, um Software zu installieren, zu aktualisieren und zu entfernen. Die wichtigsten Systeme sind:
+- <strong>Debian/Ubuntu:</strong> <code>apt</code> und <code>dpkg</code>
+- <strong>RHEL/CentOS/Fedora:</strong> <code>yum</code> und <code>dnf</code> (neuer) sowie <code>rpm</code>
+- <strong>Arch Linux:</strong> <code>pacman</code>
+- <strong>openSUSE:</strong> <code>zypper</code></p>
+<p>Jedes System verwendet <strong>Paketquellen (Repositories)</strong>, aus denen Software heruntergeladen und installiert wird.</p>
+<hr />
+<hr />
+<h4 id="2-paketverwaltung-unter-debianubuntu-apt-und-dpkg"><strong>2. Paketverwaltung unter Debian/Ubuntu (<code>apt</code> und <code>dpkg</code>)</strong><a class="headerlink" href="#2-paketverwaltung-unter-debianubuntu-apt-und-dpkg" title="Permanent link">&para;</a></h4>
+<h5 id="21-apt-advanced-package-tool"><strong>2.1 <code>apt</code> – Advanced Package Tool</strong><a class="headerlink" href="#21-apt-advanced-package-tool" title="Permanent link">&para;</a></h5>
+<p><code>apt</code> ist das <strong>Hauptwerkzeug</strong> für die Paketverwaltung unter Debian und Ubuntu. Es vereinfacht die Installation, Aktualisierung und Entfernung von Paketen.</p>
+<p><strong>Wichtige Befehle:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Befehl</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sudo apt update</code></td>
+<td>Aktualisiert die <strong>Paketlisten</strong> aus den Repositories.</td>
+</tr>
+<tr>
+<td><code>sudo apt upgrade</code></td>
+<td>Aktualisiert <strong>alle installierten Pakete</strong>.</td>
+</tr>
+<tr>
+<td><code>sudo apt install [paketname]</code></td>
+<td>Installiert ein <strong>neues Paket</strong>.</td>
+</tr>
+<tr>
+<td><code>sudo apt remove [paketname]</code></td>
+<td>Entfernt ein <strong>Paket</strong>, behält aber Konfigurationsdateien.</td>
+</tr>
+<tr>
+<td><code>sudo apt purge [paketname]</code></td>
+<td>Entfernt ein <strong>Paket inklusive Konfigurationsdateien</strong>.</td>
+</tr>
+<tr>
+<td><code>sudo apt autoremove</code></td>
+<td>Entfernt <strong>nicht mehr benötigte Abhängigkeiten</strong>.</td>
+</tr>
+<tr>
+<td><code>sudo apt search [suchbegriff]</code></td>
+<td>Durchsucht die <strong>Paketdatenbank</strong> nach einem Paket.</td>
+</tr>
+<tr>
+<td><code>sudo apt show [paketname]</code></td>
+<td>Zeigt <strong>Detaillierte Informationen</strong> zu einem Paket an.</td>
+</tr>
+<tr>
+<td><code>sudo apt list --installed</code></td>
+<td>Listet <strong>alle installierten Pakete</strong> auf.</td>
+</tr>
+<tr>
+<td><code>sudo apt list --upgradable</code></td>
+<td>Listet <strong>verfügbare Updates</strong> auf.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Beispiele:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Paketlisten aktualisieren</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>update
+
+<span class="c1"># Ein Paket installieren (z. B. `htop`)</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>htop
+
+<span class="c1"># Ein Paket entfernen (z. B. `htop`)</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>remove<span class="w"> </span>htop
+
+<span class="c1"># Ein Paket inklusive Konfiguration entfernen</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>purge<span class="w"> </span>htop
+
+<span class="c1"># Alle Pakete aktualisieren</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>upgrade
+
+<span class="c1"># Nicht mehr benötigte Pakete entfernen</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>autoremove
+
+<span class="c1"># Nach einem Paket suchen (z. B. `nginx`)</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>search<span class="w"> </span>nginx
+
+<span class="c1"># Informationen zu einem Paket anzeigen (z. B. `nginx`)</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>show<span class="w"> </span>nginx
+</code></pre></div></td></tr></table></div></p>
+<hr />
+<h5 id="22-dpkg-debian-package-manager"><strong>2.2 <code>dpkg</code> – Debian Package Manager</strong><a class="headerlink" href="#22-dpkg-debian-package-manager" title="Permanent link">&para;</a></h5>
+<p><code>dpkg</code> ist das <strong>niedrigere Werkzeug</strong> für die Paketverwaltung unter Debian/Ubuntu. Es arbeitet direkt mit <code>.deb</code>-Paketdateien.</p>
+<p><strong>Wichtige Befehle:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Befehl</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sudo dpkg -i [paketname.deb]</code></td>
+<td>Installiert ein <strong>lokal gespeichertes <code>.deb</code>-Paket</strong>.</td>
+</tr>
+<tr>
+<td><code>sudo dpkg -r [paketname]</code></td>
+<td>Entfernt ein <strong>Paket</strong>.</td>
+</tr>
+<tr>
+<td><code>sudo dpkg -l</code></td>
+<td>Listet <strong>alle installierten Pakete</strong> auf.</td>
+</tr>
+<tr>
+<td><code>sudo dpkg -s [paketname]</code></td>
+<td>Zeigt den <strong>Status eines Pakets</strong> an.</td>
+</tr>
+<tr>
+<td><code>sudo dpkg -L [paketname]</code></td>
+<td>Listet <strong>alle Dateien</strong> auf, die zu einem Paket gehören.</td>
+</tr>
+<tr>
+<td><code>sudo dpkg --configure -a</code></td>
+<td>Behebt <strong>unterbrochene Paketkonfigurationen</strong>.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Beispiele:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Ein .deb-Paket installieren</span>
+sudo<span class="w"> </span>dpkg<span class="w"> </span>-i<span class="w"> </span>/pfad/zur/datei.deb
+
+<span class="c1"># Ein Paket entfernen</span>
+sudo<span class="w"> </span>dpkg<span class="w"> </span>-r<span class="w"> </span>htop
+
+<span class="c1"># Alle installierten Pakete auflisten</span>
+sudo<span class="w"> </span>dpkg<span class="w"> </span>-l
+
+<span class="c1"># Dateien eines Pakets auflisten (z. B. `nginx`)</span>
+sudo<span class="w"> </span>dpkg<span class="w"> </span>-L<span class="w"> </span>nginx
+</code></pre></div></td></tr></table></div></p>
+<hr />
+<h5 id="23-abhangigkeiten-manuell-auflosen"><strong>2.3 Abhängigkeiten manuell auflösen</strong><a class="headerlink" href="#23-abhangigkeiten-manuell-auflosen" title="Permanent link">&para;</a></h5>
+<p>Falls <code>dpkg</code> eine Fehlermeldung wegen <strong>unbefriedigter Abhängigkeiten</strong> ausgibt, können Sie diese mit <code>apt</code> beheben:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>--fix-broken<span class="w"> </span>install
+</code></pre></div></td></tr></table></div></p>
+<h2 id="-">---<a class="headerlink" href="#-" title="Permanent link">&para;</a></h2>
+<h4 id="3-paketverwaltung-unter-rhelcentosfedora-yum-dnf-und-rpm"><strong>3. Paketverwaltung unter RHEL/CentOS/Fedora (<code>yum</code>, <code>dnf</code> und <code>rpm</code>)</strong><a class="headerlink" href="#3-paketverwaltung-unter-rhelcentosfedora-yum-dnf-und-rpm" title="Permanent link">&para;</a></h4>
+<h5 id="31-yum-yellowdog-updater-modified"><strong>3.1 <code>yum</code> – Yellowdog Updater Modified</strong><a class="headerlink" href="#31-yum-yellowdog-updater-modified" title="Permanent link">&para;</a></h5>
+<p><code>yum</code> ist das <strong>Hauptwerkzeug</strong> für die Paketverwaltung unter RHEL, CentOS und älteren Fedora-Versionen.</p>
+<p><strong>Wichtige Befehle:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Befehl</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sudo yum update</code></td>
+<td>Aktualisiert <strong>alle Pakete</strong>.</td>
+</tr>
+<tr>
+<td><code>sudo yum install [paketname]</code></td>
+<td>Installiert ein <strong>neues Paket</strong>.</td>
+</tr>
+<tr>
+<td><code>sudo yum remove [paketname]</code></td>
+<td>Entfernt ein <strong>Paket</strong>.</td>
+</tr>
+<tr>
+<td><code>sudo yum search [suchbegriff]</code></td>
+<td>Durchsucht die <strong>Paketdatenbank</strong>.</td>
+</tr>
+<tr>
+<td><code>sudo yum info [paketname]</code></td>
+<td>Zeigt <strong>Informationen zu einem Paket</strong> an.</td>
+</tr>
+<tr>
+<td><code>sudo yum list installed</code></td>
+<td>Listet <strong>alle installierten Pakete</strong> auf.</td>
+</tr>
+<tr>
+<td><code>sudo yum clean all</code></td>
+<td><strong>Bereinigt den Cache</strong> von <code>yum</code>.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Beispiele:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Alle Pakete aktualisieren</span>
+sudo<span class="w"> </span>yum<span class="w"> </span>update
+
+<span class="c1"># Ein Paket installieren (z. B. `htop`)</span>
+sudo<span class="w"> </span>yum<span class="w"> </span>install<span class="w"> </span>htop
+
+<span class="c1"># Ein Paket entfernen</span>
+sudo<span class="w"> </span>yum<span class="w"> </span>remove<span class="w"> </span>htop
+
+<span class="c1"># Nach einem Paket suchen</span>
+sudo<span class="w"> </span>yum<span class="w"> </span>search<span class="w"> </span>nginx
+
+<span class="c1"># Informationen zu einem Paket anzeigen</span>
+sudo<span class="w"> </span>yum<span class="w"> </span>info<span class="w"> </span>nginx
+</code></pre></div></td></tr></table></div></p>
+<hr />
+<h5 id="32-dnf-dandified-yum"><strong>3.2 <code>dnf</code> – Dandified YUM</strong><a class="headerlink" href="#32-dnf-dandified-yum" title="Permanent link">&para;</a></h5>
+<p><code>dnf</code> ist der <strong>Nachfolger von <code>yum</code></strong> und wird in neueren Fedora-Versionen und RHEL 8+ verwendet. Es ist schneller und bietet bessere Abhängigkeitsauflösung.</p>
+<p><strong>Wichtige Befehle:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Befehl</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sudo dnf update</code></td>
+<td>Aktualisiert <strong>alle Pakete</strong>.</td>
+</tr>
+<tr>
+<td><code>sudo dnf install [paketname]</code></td>
+<td>Installiert ein <strong>neues Paket</strong>.</td>
+</tr>
+<tr>
+<td><code>sudo dnf remove [paketname]</code></td>
+<td>Entfernt ein <strong>Paket</strong>.</td>
+</tr>
+<tr>
+<td><code>sudo dnf search [suchbegriff]</code></td>
+<td>Durchsucht die <strong>Paketdatenbank</strong>.</td>
+</tr>
+<tr>
+<td><code>sudo dnf info [paketname]</code></td>
+<td>Zeigt <strong>Informationen zu einem Paket</strong> an.</td>
+</tr>
+<tr>
+<td><code>sudo dnf list installed</code></td>
+<td>Listet <strong>alle installierten Pakete</strong> auf.</td>
+</tr>
+<tr>
+<td><code>sudo dnf autoremove</code></td>
+<td>Entfernt <strong>nicht mehr benötigte Abhängigkeiten</strong>.</td>
+</tr>
+<tr>
+<td><code>sudo dnf clean all</code></td>
+<td><strong>Bereinigt den Cache</strong> von <code>dnf</code>.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Beispiele:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Alle Pakete aktualisieren</span>
+sudo<span class="w"> </span>dnf<span class="w"> </span>update
+
+<span class="c1"># Ein Paket installieren (z. B. `htop`)</span>
+sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>htop
+
+<span class="c1"># Ein Paket entfernen</span>
+sudo<span class="w"> </span>dnf<span class="w"> </span>remove<span class="w"> </span>htop
+
+<span class="c1"># Nicht mehr benötigte Pakete entfernen</span>
+sudo<span class="w"> </span>dnf<span class="w"> </span>autoremove
+</code></pre></div></td></tr></table></div></p>
+<hr />
+<h5 id="33-rpm-red-hat-package-manager"><strong>3.3 <code>rpm</code> – Red Hat Package Manager</strong><a class="headerlink" href="#33-rpm-red-hat-package-manager" title="Permanent link">&para;</a></h5>
+<p><code>rpm</code> ist das <strong>niedrigere Werkzeug</strong> für die Paketverwaltung unter RHEL/CentOS/Fedora. Es arbeitet direkt mit <code>.rpm</code>-Paketdateien.</p>
+<p><strong>Wichtige Befehle:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Befehl</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sudo rpm -i [paketname.rpm]</code></td>
+<td>Installiert ein <strong>lokal gespeichertes <code>.rpm</code>-Paket</strong>.</td>
+</tr>
+<tr>
+<td><code>sudo rpm -e [paketname]</code></td>
+<td>Entfernt ein <strong>Paket</strong>.</td>
+</tr>
+<tr>
+<td><code>rpm -qa</code></td>
+<td>Listet <strong>alle installierten Pakete</strong> auf.</td>
+</tr>
+<tr>
+<td><code>rpm -ql [paketname]</code></td>
+<td>Listet <strong>alle Dateien</strong> eines Pakets auf.</td>
+</tr>
+<tr>
+<td><code>rpm -qi [paketname]</code></td>
+<td>Zeigt <strong>Informationen zu einem Paket</strong> an.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Beispiele:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Ein .rpm-Paket installieren</span>
+sudo<span class="w"> </span>rpm<span class="w"> </span>-i<span class="w"> </span>/pfad/zur/datei.rpm
+
+<span class="c1"># Ein Paket entfernen</span>
+sudo<span class="w"> </span>rpm<span class="w"> </span>-e<span class="w"> </span>htop
+
+<span class="c1"># Alle installierten Pakete auflisten</span>
+rpm<span class="w"> </span>-qa
+
+<span class="c1"># Dateien eines Pakets auflisten (z. B. `nginx`)</span>
+rpm<span class="w"> </span>-ql<span class="w"> </span>nginx
+</code></pre></div></td></tr></table></div></p>
+<h2 id="-_1">---<a class="headerlink" href="#-_1" title="Permanent link">&para;</a></h2>
+<h4 id="4-paketverwaltung-unter-arch-linux-pacman"><strong>4. Paketverwaltung unter Arch Linux (<code>pacman</code>)</strong><a class="headerlink" href="#4-paketverwaltung-unter-arch-linux-pacman" title="Permanent link">&para;</a></h4>
+<h5 id="41-pacman-package-manager"><strong>4.1 <code>pacman</code> – Package Manager</strong><a class="headerlink" href="#41-pacman-package-manager" title="Permanent link">&para;</a></h5>
+<p><code>pacman</code> ist das <strong>Hauptwerkzeug</strong> für die Paketverwaltung unter Arch Linux.</p>
+<p><strong>Wichtige Befehle:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Befehl</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sudo pacman -Syu</code></td>
+<td>Aktualisiert <strong>alle Pakete und die Paketdatenbank</strong>.</td>
+</tr>
+<tr>
+<td><code>sudo pacman -S [paketname]</code></td>
+<td>Installiert ein <strong>neues Paket</strong>.</td>
+</tr>
+<tr>
+<td><code>sudo pacman -R [paketname]</code></td>
+<td>Entfernt ein <strong>Paket</strong>.</td>
+</tr>
+<tr>
+<td><code>sudo pacman -Rs [paketname]</code></td>
+<td>Entfernt ein <strong>Paket inklusive Abhängigkeiten</strong>.</td>
+</tr>
+<tr>
+<td><code>sudo pacman -Q</code></td>
+<td>Listet <strong>alle installierten Pakete</strong> auf.</td>
+</tr>
+<tr>
+<td><code>sudo pacman -Qs [suchbegriff]</code></td>
+<td>Durchsucht <strong>installierte Pakete</strong> nach einem Suchbegriff.</td>
+</tr>
+<tr>
+<td><code>sudo pacman -Si [paketname]</code></td>
+<td>Zeigt <strong>Informationen zu einem Paket</strong> an.</td>
+</tr>
+<tr>
+<td><code>sudo pacman -F [dateiname]</code></td>
+<td>Sucht nach einer <strong>Datei in allen Paketen</strong>.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Beispiele:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Paketdatenbank aktualisieren und alle Pakete updaten</span>
+sudo<span class="w"> </span>pacman<span class="w"> </span>-Syu
+
+<span class="c1"># Ein Paket installieren (z. B. `htop`)</span>
+sudo<span class="w"> </span>pacman<span class="w"> </span>-S<span class="w"> </span>htop
+
+<span class="c1"># Ein Paket entfernen</span>
+sudo<span class="w"> </span>pacman<span class="w"> </span>-R<span class="w"> </span>htop
+
+<span class="c1"># Ein Paket inklusive Abhängigkeiten entfernen</span>
+sudo<span class="w"> </span>pacman<span class="w"> </span>-Rs<span class="w"> </span>htop
+
+<span class="c1"># Alle installierten Pakete auflisten</span>
+sudo<span class="w"> </span>pacman<span class="w"> </span>-Q
+</code></pre></div></td></tr></table></div></p>
+<h2 id="-_2">---<a class="headerlink" href="#-_2" title="Permanent link">&para;</a></h2>
+<h4 id="5-paketverwaltung-unter-opensuse-zypper"><strong>5. Paketverwaltung unter openSUSE (<code>zypper</code>)</strong><a class="headerlink" href="#5-paketverwaltung-unter-opensuse-zypper" title="Permanent link">&para;</a></h4>
+<h5 id="51-zypper-zypp-package-manager"><strong>5.1 <code>zypper</code> – ZYpp Package Manager</strong><a class="headerlink" href="#51-zypper-zypp-package-manager" title="Permanent link">&para;</a></h5>
+<p><code>zypper</code> ist das <strong>Hauptwerkzeug</strong> für die Paketverwaltung unter openSUSE.</p>
+<p><strong>Wichtige Befehle:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Befehl</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sudo zypper refresh</code></td>
+<td>Aktualisiert die <strong>Paketdatenbank</strong>.</td>
+</tr>
+<tr>
+<td><code>sudo zypper update</code></td>
+<td>Aktualisiert <strong>alle installierten Pakete</strong>.</td>
+</tr>
+<tr>
+<td><code>sudo zypper install [paketname]</code></td>
+<td>Installiert ein <strong>neues Paket</strong>.</td>
+</tr>
+<tr>
+<td><code>sudo zypper remove [paketname]</code></td>
+<td>Entfernt ein <strong>Paket</strong>.</td>
+</tr>
+<tr>
+<td><code>sudo zypper search [suchbegriff]</code></td>
+<td>Durchsucht die <strong>Paketdatenbank</strong>.</td>
+</tr>
+<tr>
+<td><code>sudo zypper info [paketname]</code></td>
+<td>Zeigt <strong>Informationen zu einem Paket</strong> an.</td>
+</tr>
+<tr>
+<td><code>sudo zypper packages</code></td>
+<td>Listet <strong>alle installierten Pakete</strong> auf.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Beispiele:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Paketdatenbank aktualisieren</span>
+sudo<span class="w"> </span>zypper<span class="w"> </span>refresh
+
+<span class="c1"># Alle Pakete aktualisieren</span>
+sudo<span class="w"> </span>zypper<span class="w"> </span>update
+
+<span class="c1"># Ein Paket installieren (z. B. `htop`)</span>
+sudo<span class="w"> </span>zypper<span class="w"> </span>install<span class="w"> </span>htop
+
+<span class="c1"># Ein Paket entfernen</span>
+sudo<span class="w"> </span>zypper<span class="w"> </span>remove<span class="w"> </span>htop
+</code></pre></div></td></tr></table></div></p>
+<h2 id="-_3">---<a class="headerlink" href="#-_3" title="Permanent link">&para;</a></h2>
+<h4 id="6-paketquellen-repositories-verwalten"><strong>6. Paketquellen (Repositories) verwalten</strong><a class="headerlink" href="#6-paketquellen-repositories-verwalten" title="Permanent link">&para;</a></h4>
+<h5 id="61-repositories-unter-debianubuntu"><strong>6.1 Repositories unter Debian/Ubuntu</strong><a class="headerlink" href="#61-repositories-unter-debianubuntu" title="Permanent link">&para;</a></h5>
+<ul>
+<li><strong>Standard-Repositories</strong> sind in <code>/etc/apt/sources.list</code> und <code>/etc/apt/sources.list.d/</code> definiert.</li>
+<li><strong>Neue Repository hinzufügen:</strong>
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>add-apt-repository<span class="w"> </span>ppa:<span class="o">[</span>ppa-name<span class="o">]</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>update
+</code></pre></div></td></tr></table></div></li>
+<li><strong>Repository manuell hinzufügen:</strong>
+  Bearbeiten Sie <code>/etc/apt/sources.list</code> oder erstellen Sie eine neue Datei in <code>/etc/apt/sources.list.d/</code>.</li>
+</ul>
+<p><strong>Beispiel:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Ein PPA (Personal Package Archive) hinzufügen</span>
+sudo<span class="w"> </span>add-apt-repository<span class="w"> </span>ppa:ondrej/php
+sudo<span class="w"> </span>apt<span class="w"> </span>update
+</code></pre></div></td></tr></table></div></p>
+<hr />
+<h5 id="62-repositories-unter-rhelcentosfedora"><strong>6.2 Repositories unter RHEL/CentOS/Fedora</strong><a class="headerlink" href="#62-repositories-unter-rhelcentosfedora" title="Permanent link">&para;</a></h5>
+<ul>
+<li><strong>Standard-Repositories</strong> sind in <code>/etc/yum.repos.d/</code> definiert.</li>
+<li><strong>Neues Repository hinzufügen:</strong>
+  Erstellen Sie eine <code>.repo</code>-Datei in <code>/etc/yum.repos.d/</code>.</li>
+</ul>
+<p><strong>Beispiel:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Beispiel für ein EPEL-Repository unter CentOS</span>
+sudo<span class="w"> </span>yum<span class="w"> </span>install<span class="w"> </span>epel-release
+</code></pre></div></td></tr></table></div>
+oder manuell:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>vi<span class="w"> </span>/etc/yum.repos.d/epel.repo
+</code></pre></div></td></tr></table></div>
+Inhalt:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">[epel]</span>
+<span class="na">name</span><span class="o">=</span><span class="s">Extra Packages for Enterprise Linux</span>
+<span class="na">baseurl</span><span class="o">=</span><span class="s">https://download.fedoraproject.org/pub/epel/$releasever/$basearch/</span>
+<span class="na">enabled</span><span class="o">=</span><span class="s">1</span>
+<span class="na">gpgcheck</span><span class="o">=</span><span class="s">1</span>
+<span class="na">gpgkey</span><span class="o">=</span><span class="s">file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL</span>
+</code></pre></div></td></tr></table></div></p>
+<hr />
+<h5 id="63-repositories-unter-arch-linux"><strong>6.3 Repositories unter Arch Linux</strong><a class="headerlink" href="#63-repositories-unter-arch-linux" title="Permanent link">&para;</a></h5>
+<ul>
+<li><strong>Standard-Repositories</strong> sind in <code>/etc/pacman.conf</code> definiert.</li>
+<li><strong>Neues Repository hinzufügen:</strong>
+  Bearbeiten Sie <code>/etc/pacman.conf</code> und fügen Sie das Repository hinzu.</li>
+</ul>
+<p><strong>Beispiel:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># AUR (Arch User Repository) aktivieren</span>
+sudo<span class="w"> </span>vi<span class="w"> </span>/etc/pacman.conf
+</code></pre></div></td></tr></table></div>
+Fügen Sie folgende Zeilen hinzu:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">[archlinuxfr]</span>
+<span class="na">SigLevel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">Never</span>
+<span class="na">Server</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">http://repo.archlinux.fr/$arch</span>
+</code></pre></div></td></tr></table></div>
+Dann aktualisieren:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>pacman<span class="w"> </span>-Syu
+</code></pre></div></td></tr></table></div></p>
+<h2 id="-_4">---<a class="headerlink" href="#-_4" title="Permanent link">&para;</a></h2>
+<h4 id="7-software-aus-dem-quellcode-installieren"><strong>7. Software aus dem Quellcode installieren</strong><a class="headerlink" href="#7-software-aus-dem-quellcode-installieren" title="Permanent link">&para;</a></h4>
+<p>Manchmal müssen Sie Software <strong>direkt aus dem Quellcode</strong> installieren. Dies erfordert in der Regel folgende Schritte:</p>
+<ol>
+<li><strong>Abhängigkeiten installieren</strong> (z. B. <code>build-essential</code>, <code>gcc</code>, <code>make</code>).</li>
+<li><strong>Quellcode herunterladen</strong> (z. B. von <a href="https://github.com/">GitHub</a> oder der offiziellen Website).</li>
+<li><strong>Quellcode entpacken</strong>.</li>
+<li><strong>Konfigurieren, Kompilieren und Installieren</strong>.</li>
+</ol>
+<p><strong>Beispiel: Installation von <code>nginx</code> aus dem Quellcode</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># 1. Abhängigkeiten installieren</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>build-essential<span class="w"> </span>libpcre3<span class="w"> </span>libpcre3-dev<span class="w"> </span>zlib1g<span class="w"> </span>zlib1g-dev<span class="w"> </span>libssl-dev
+
+<span class="c1"># 2. Quellcode herunterladen</span>
+wget<span class="w"> </span>https://nginx.org/download/nginx-1.25.3.tar.gz
+tar<span class="w"> </span>-xzvf<span class="w"> </span>nginx-1.25.3.tar.gz
+<span class="nb">cd</span><span class="w"> </span>nginx-1.25.3
+
+<span class="c1"># 3. Konfigurieren</span>
+./configure
+
+<span class="c1"># 4. Kompilieren</span>
+make
+
+<span class="c1"># 5. Installieren</span>
+sudo<span class="w"> </span>make<span class="w"> </span>install
+</code></pre></div></td></tr></table></div></p>
+<h2 id="-_5">---<a class="headerlink" href="#-_5" title="Permanent link">&para;</a></h2>
+<h4 id="8-paketabhangigkeiten-verwalten"><strong>8. Paketabhängigkeiten verwalten</strong><a class="headerlink" href="#8-paketabhangigkeiten-verwalten" title="Permanent link">&para;</a></h4>
+<h5 id="81-abhangigkeiten-anzeigen"><strong>8.1 Abhängigkeiten anzeigen</strong><a class="headerlink" href="#81-abhangigkeiten-anzeigen" title="Permanent link">&para;</a></h5>
+<ul>
+<li>
+<p><strong>Debian/Ubuntu:</strong>
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>apt<span class="w"> </span>depends<span class="w"> </span><span class="o">[</span>paketname<span class="o">]</span>
+</code></pre></div></td></tr></table></div>
+  oder
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>apt-cache<span class="w"> </span>depends<span class="w"> </span><span class="o">[</span>paketname<span class="o">]</span>
+</code></pre></div></td></tr></table></div></p>
+</li>
+<li>
+<p><strong>RHEL/CentOS/Fedora:</strong>
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>yum<span class="w"> </span>deplist<span class="w"> </span><span class="o">[</span>paketname<span class="o">]</span>
+</code></pre></div></td></tr></table></div>
+  oder
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dnf<span class="w"> </span>deplist<span class="w"> </span><span class="o">[</span>paketname<span class="o">]</span>
+</code></pre></div></td></tr></table></div></p>
+</li>
+<li>
+<p><strong>Arch Linux:</strong>
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>pacman<span class="w"> </span>-Si<span class="w"> </span><span class="o">[</span>paketname<span class="o">]</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>Depends
+</code></pre></div></td></tr></table></div></p>
+</li>
+</ul>
+<hr />
+<h5 id="82-abhangigkeiten-manuell-installieren"><strong>8.2 Abhängigkeiten manuell installieren</strong><a class="headerlink" href="#82-abhangigkeiten-manuell-installieren" title="Permanent link">&para;</a></h5>
+<p>Falls ein Paket <strong>fehlende Abhängigkeiten</strong> hat, können Sie diese manuell installieren:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Debian/Ubuntu</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span><span class="o">[</span>abhängigkeit1<span class="o">]</span><span class="w"> </span><span class="o">[</span>abhängigkeit2<span class="o">]</span>
+
+<span class="c1"># RHEL/CentOS/Fedora</span>
+sudo<span class="w"> </span>yum<span class="w"> </span>install<span class="w"> </span><span class="o">[</span>abhängigkeit1<span class="o">]</span><span class="w"> </span><span class="o">[</span>abhängigkeit2<span class="o">]</span>
+</code></pre></div></td></tr></table></div></p>
+<h2 id="-_6">---<a class="headerlink" href="#-_6" title="Permanent link">&para;</a></h2>
+<h4 id="9-software-deinstallieren-und-bereinigen"><strong>9. Software deinstallieren und bereinigen</strong><a class="headerlink" href="#9-software-deinstallieren-und-bereinigen" title="Permanent link">&para;</a></h4>
+<h5 id="91-vollstandige-deinstallation"><strong>9.1 Vollständige Deinstallation</strong><a class="headerlink" href="#91-vollstandige-deinstallation" title="Permanent link">&para;</a></h5>
+<ul>
+<li>
+<p><strong>Debian/Ubuntu:</strong>
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>purge<span class="w"> </span><span class="o">[</span>paketname<span class="o">]</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>autoremove
+</code></pre></div></td></tr></table></div></p>
+</li>
+<li>
+<p><strong>RHEL/CentOS/Fedora:</strong>
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>yum<span class="w"> </span>remove<span class="w"> </span><span class="o">[</span>paketname<span class="o">]</span>
+sudo<span class="w"> </span>yum<span class="w"> </span>autoremove
+</code></pre></div></td></tr></table></div></p>
+</li>
+<li>
+<p><strong>Arch Linux:</strong>
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>pacman<span class="w"> </span>-Rs<span class="w"> </span><span class="o">[</span>paketname<span class="o">]</span>
+</code></pre></div></td></tr></table></div></p>
+</li>
+</ul>
+<hr />
+<h5 id="92-konfigurationsdateien-bereinigen"><strong>9.2 Konfigurationsdateien bereinigen</strong><a class="headerlink" href="#92-konfigurationsdateien-bereinigen" title="Permanent link">&para;</a></h5>
+<p>Manchmal bleiben <strong>Konfigurationsdateien</strong> nach der Deinstallation erhalten. Um diese zu entfernen:
+- <strong>Debian/Ubuntu:</strong>
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>purge<span class="w"> </span><span class="o">[</span>paketname<span class="o">]</span>
+</code></pre></div></td></tr></table></div>
+- <strong>RHEL/CentOS/Fedora:</strong>
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>yum<span class="w"> </span>remove<span class="w"> </span><span class="o">[</span>paketname<span class="o">]</span><span class="w"> </span>--purge
+</code></pre></div></td></tr></table></div>
+  (Hinweis: <code>yum</code> entfernt standardmäßig keine Konfigurationsdateien. Verwenden Sie <code>rpm -e --nodeps</code> mit Vorsicht.)</p>
+<h2 id="-_7">---<a class="headerlink" href="#-_7" title="Permanent link">&para;</a></h2>
+<h4 id="10-ubungsaufgaben"><strong>10. Übungsaufgaben</strong><a class="headerlink" href="#10-ubungsaufgaben" title="Permanent link">&para;</a></h4>
+<hr />
+<h5 id="frage-1"><strong>Frage 1</strong><a class="headerlink" href="#frage-1" title="Permanent link">&para;</a></h5>
+<p>Wie installieren Sie das Paket <code>htop</code> unter <strong>Debian/Ubuntu</strong>?</p>
+<details class="success">
+<summary>Antwort</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>update
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>htop
+</code></pre></div></td></tr></table></div>
+</details>
+<hr />
+<h5 id="frage-2"><strong>Frage 2</strong><a class="headerlink" href="#frage-2" title="Permanent link">&para;</a></h5>
+<p>Wie aktualisieren Sie <strong>alle Pakete</strong> unter <strong>RHEL/CentOS</strong>?</p>
+<details class="success">
+<summary>Antwort</summary>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>yum<span class="w"> </span>update
+</code></pre></div></td></tr></table></div>
+oder für neuere Versionen:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>dnf<span class="w"> </span>update
+</code></pre></div></td></tr></table></div></p>
+</details>
+<hr />
+<h5 id="frage-3"><strong>Frage 3</strong><a class="headerlink" href="#frage-3" title="Permanent link">&para;</a></h5>
+<p>Wie zeigen Sie <strong>alle installierten Pakete</strong> unter <strong>Arch Linux</strong> an?</p>
+<details class="success">
+<summary>Antwort</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>pacman<span class="w"> </span>-Q
+</code></pre></div></td></tr></table></div>
+</details>
+<hr />
+<h5 id="frage-4"><strong>Frage 4</strong><a class="headerlink" href="#frage-4" title="Permanent link">&para;</a></h5>
+<p>Wie entfernen Sie ein Paket <strong>inklusive seiner Konfigurationsdateien</strong> unter <strong>Debian/Ubuntu</strong>?</p>
+<details class="success">
+<summary>Antwort</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>purge<span class="w"> </span><span class="o">[</span>paketname<span class="o">]</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<hr />
+<h5 id="frage-5"><strong>Frage 5</strong><a class="headerlink" href="#frage-5" title="Permanent link">&para;</a></h5>
+<p>Wie fügen Sie ein <strong>neues Repository</strong> unter <strong>Debian/Ubuntu</strong> hinzu (z. B. das PPA <code>ondrej/php</code>)?</p>
+<details class="success">
+<summary>Antwort</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>add-apt-repository<span class="w"> </span>ppa:ondrej/php
+sudo<span class="w"> </span>apt<span class="w"> </span>update
+</code></pre></div></td></tr></table></div>
+</details>
+<hr />
+<h5 id="frage-6"><strong>Frage 6</strong><a class="headerlink" href="#frage-6" title="Permanent link">&para;</a></h5>
+<p>Wie installieren Sie ein <strong><code>.deb</code>-Paket</strong> manuell unter Debian/Ubuntu?</p>
+<details class="success">
+<summary>Antwort</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>dpkg<span class="w"> </span>-i<span class="w"> </span>/pfad/zur/datei.deb
+sudo<span class="w"> </span>apt<span class="w"> </span>--fix-broken<span class="w"> </span>install<span class="w">  </span><span class="c1"># Falls Abhängigkeiten fehlen</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<hr />
+<h5 id="frage-7"><strong>Frage 7</strong><a class="headerlink" href="#frage-7" title="Permanent link">&para;</a></h5>
+<p>Wie zeigen Sie <strong>alle Dateien</strong> an, die zu einem Paket gehören (z. B. <code>nginx</code>) unter <strong>RHEL/CentOS</strong>?</p>
+<details class="success">
+<summary>Antwort</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>rpm<span class="w"> </span>-ql<span class="w"> </span>nginx
+</code></pre></div></td></tr></table></div>
+</details>
+<hr />
+<h5 id="frage-8"><strong>Frage 8</strong><a class="headerlink" href="#frage-8" title="Permanent link">&para;</a></h5>
+<p>Wie aktualisieren Sie die <strong>Paketdatenbank</strong> und <strong>alle Pakete</strong> unter <strong>openSUSE</strong>?</p>
+<details class="success">
+<summary>Antwort</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>zypper<span class="w"> </span>refresh
+sudo<span class="w"> </span>zypper<span class="w"> </span>update
+</code></pre></div></td></tr></table></div>
+</details>
+<hr />
+<h5 id="frage-9"><strong>Frage 9</strong><a class="headerlink" href="#frage-9" title="Permanent link">&para;</a></h5>
+<p>Wie installieren Sie Software <strong>aus dem Quellcode</strong>? Nennen Sie die 5 Schritte.</p>
+<details class="success">
+<summary>Antwort</summary>
+<ol>
+<li><strong>Abhängigkeiten installieren</strong> (z. B. <code>build-essential</code>).</li>
+<li><strong>Quellcode herunterladen</strong> (z. B. mit <code>wget</code> oder <code>git clone</code>).</li>
+<li><strong>Quellcode entpacken</strong> (z. B. mit <code>tar -xzvf</code>).</li>
+<li><strong>Konfigurieren</strong> (mit <code>./configure</code>).</li>
+<li><strong>Kompilieren und installieren</strong> (mit <code>make</code> und <code>sudo make install</code>).</li>
+</ol>
+</details>
+<hr />
+<h5 id="frage-10"><strong>Frage 10</strong><a class="headerlink" href="#frage-10" title="Permanent link">&para;</a></h5>
+<p>Wie entfernen Sie <strong>nicht mehr benötigte Abhängigkeiten</strong> unter <strong>Debian/Ubuntu</strong>?</p>
+<details class="success">
+<summary>Antwort</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>autoremove
+</code></pre></div></td></tr></table></div>
+</details>
+<h2 id="-_8">---<a class="headerlink" href="#-_8" title="Permanent link">&para;</a></h2>
+<h4 id="11-praktische-beispiele"><strong>11. Praktische Beispiele</strong><a class="headerlink" href="#11-praktische-beispiele" title="Permanent link">&para;</a></h4>
+<hr />
+<h5 id="beispiel-1-installation-eines-webservers-nginx"><strong>Beispiel 1: Installation eines Webservers (Nginx)</strong><a class="headerlink" href="#beispiel-1-installation-eines-webservers-nginx" title="Permanent link">&para;</a></h5>
+<p><strong>Debian/Ubuntu:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>update
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>nginx
+sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>nginx
+sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>nginx
+</code></pre></div></td></tr></table></div></p>
+<p><strong>RHEL/CentOS:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>yum<span class="w"> </span>install<span class="w"> </span>epel-release
+sudo<span class="w"> </span>yum<span class="w"> </span>install<span class="w"> </span>nginx
+sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>nginx
+sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>nginx
+</code></pre></div></td></tr></table></div></p>
+<hr />
+<h5 id="beispiel-2-installation-von-python-310-unter-ubuntu-2204"><strong>Beispiel 2: Installation von Python 3.10 unter Ubuntu 22.04</strong><a class="headerlink" href="#beispiel-2-installation-von-python-310-unter-ubuntu-2204" title="Permanent link">&para;</a></h5>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># 1. Abhängigkeiten installieren</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>update
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>software-properties-common
+
+<span class="c1"># 2. PPA für Python 3.10 hinzufügen</span>
+sudo<span class="w"> </span>add-apt-repository<span class="w"> </span>ppa:deadsnakes/ppa
+sudo<span class="w"> </span>apt<span class="w"> </span>update
+
+<span class="c1"># 3. Python 3.10 installieren</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>python3.10
+</code></pre></div></td></tr></table></div>
+<hr />
+<h5 id="beispiel-3-installation-von-docker-unter-centos-7"><strong>Beispiel 3: Installation von Docker unter CentOS 7</strong><a class="headerlink" href="#beispiel-3-installation-von-docker-unter-centos-7" title="Permanent link">&para;</a></h5>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># 1. Altes Docker-Paket entfernen (falls vorhanden)</span>
+sudo<span class="w"> </span>yum<span class="w"> </span>remove<span class="w"> </span>docker<span class="w"> </span>docker-client<span class="w"> </span>docker-client-latest<span class="w"> </span>docker-common<span class="w"> </span>docker-latest<span class="w"> </span>docker-latest-logrotate<span class="w"> </span>docker-logrotate<span class="w"> </span>docker-engine
+
+<span class="c1"># 2. Abhängigkeiten installieren</span>
+sudo<span class="w"> </span>yum<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>yum-utils<span class="w"> </span>device-mapper-persistent-data<span class="w"> </span>lvm2
+
+<span class="c1"># 3. Docker-Repository hinzufügen</span>
+sudo<span class="w"> </span>yum-config-manager<span class="w"> </span>--add-repo<span class="w"> </span>https://download.docker.com/linux/centos/docker-ce.repo
+
+<span class="c1"># 4. Docker installieren</span>
+sudo<span class="w"> </span>yum<span class="w"> </span>install<span class="w"> </span>docker-ce<span class="w"> </span>docker-ce-cli<span class="w"> </span>containerd.io
+
+<span class="c1"># 5. Docker starten und aktivieren</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>docker
+sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>docker
+</code></pre></div></td></tr></table></div>
+<hr />
+<h5 id="beispiel-4-installation-von-htop-aus-dem-quellcode"><strong>Beispiel 4: Installation von <code>htop</code> aus dem Quellcode</strong><a class="headerlink" href="#beispiel-4-installation-von-htop-aus-dem-quellcode" title="Permanent link">&para;</a></h5>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># 1. Abhängigkeiten installieren</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>build-essential<span class="w"> </span>autoconf<span class="w"> </span>automake<span class="w"> </span>libncurses5-dev
+
+<span class="c1"># 2. Quellcode herunterladen</span>
+wget<span class="w"> </span>https://github.com/htop-dev/htop/archive/refs/tags/3.2.2.tar.gz
+tar<span class="w"> </span>-xzvf<span class="w"> </span><span class="m">3</span>.2.2.tar.gz
+<span class="nb">cd</span><span class="w"> </span>htop-3.2.2
+
+<span class="c1"># 3. Konfigurieren, kompilieren und installieren</span>
+./autogen.sh
+./configure
+make
+sudo<span class="w"> </span>make<span class="w"> </span>install
+</code></pre></div></td></tr></table></div>
+<h2 id="-_9">---<a class="headerlink" href="#-_9" title="Permanent link">&para;</a></h2>
+<h4 id="12-haufige-fehler-und-losungen"><strong>12. Häufige Fehler und Lösungen</strong><a class="headerlink" href="#12-haufige-fehler-und-losungen" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th><strong>Problem</strong></th>
+<th><strong>Ursache</strong></th>
+<th><strong>Lösung</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>"Package not found"</strong></td>
+<td>Paket ist nicht in den Repositories verfügbar.</td>
+<td>Repository hinzufügen oder Paket manuell installieren.</td>
+</tr>
+<tr>
+<td><strong>"Unmet dependencies"</strong></td>
+<td>Fehlende Abhängigkeiten.</td>
+<td><code>sudo apt --fix-broken install</code> (Debian/Ubuntu) oder <code>sudo yum install [abhängigkeit]</code> (RHEL/CentOS).</td>
+</tr>
+<tr>
+<td><strong>"Permission denied"</strong></td>
+<td>Keine Berechtigung für die Installation.</td>
+<td><code>sudo</code> verwenden.</td>
+</tr>
+<tr>
+<td><strong>"Failed to fetch"</strong></td>
+<td>Netzwerkprobleme oder falsche Repository-URL.</td>
+<td>Internetverbindung prüfen oder Repository-URL korrigieren.</td>
+</tr>
+<tr>
+<td><strong>"No space left on device"</strong></td>
+<td>Nicht genug Speicherplatz.</td>
+<td>Festplattenplatz freigeben oder <code>apt clean</code>/<code>yum clean all</code> ausführen.</td>
+</tr>
+<tr>
+<td><strong>Kompilierungsfehler</strong></td>
+<td>Fehlende Abhängigkeiten für die Kompilierung.</td>
+<td><code>build-essential</code> und andere Entwicklertools installieren.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="-_10">---<a class="headerlink" href="#-_10" title="Permanent link">&para;</a></h2>
+<h4 id="13-vertiefung-paketverwaltung-mit-snap-und-flatpak"><strong>13. Vertiefung: Paketverwaltung mit <code>snap</code> und <code>flatpak</code></strong><a class="headerlink" href="#13-vertiefung-paketverwaltung-mit-snap-und-flatpak" title="Permanent link">&para;</a></h4>
+<h5 id="131-snap-universelle-paketverwaltung"><strong>13.1 <code>snap</code> – Universelle Paketverwaltung</strong><a class="headerlink" href="#131-snap-universelle-paketverwaltung" title="Permanent link">&para;</a></h5>
+<p><code>snap</code> ist ein <strong>plattformunabhängiges Paketformat</strong>, das von Canonical entwickelt wurde. Es ermöglicht die Installation von Software in <strong>isolierten Containern</strong>.</p>
+<p><strong>Wichtige Befehle:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Befehl</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sudo snap install [paketname]</code></td>
+<td>Installiert ein <strong>Snap-Paket</strong>.</td>
+</tr>
+<tr>
+<td><code>sudo snap remove [paketname]</code></td>
+<td>Entfernt ein <strong>Snap-Paket</strong>.</td>
+</tr>
+<tr>
+<td><code>snap list</code></td>
+<td>Listet <strong>alle installierten Snap-Pakete</strong> auf.</td>
+</tr>
+<tr>
+<td><code>snap info [paketname]</code></td>
+<td>Zeigt <strong>Informationen zu einem Snap-Paket</strong> an.</td>
+</tr>
+<tr>
+<td><code>sudo snap refresh</code></td>
+<td>Aktualisiert <strong>alle Snap-Pakete</strong>.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Beispiel:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Snap installieren (falls nicht vorhanden)</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>snapd
+
+<span class="c1"># Ein Snap-Paket installieren (z. B. `vlc`)</span>
+sudo<span class="w"> </span>snap<span class="w"> </span>install<span class="w"> </span>vlc
+</code></pre></div></td></tr></table></div></p>
+<hr />
+<h5 id="132-flatpak-universelle-paketverwaltung"><strong>13.2 <code>flatpak</code> – Universelle Paketverwaltung</strong><a class="headerlink" href="#132-flatpak-universelle-paketverwaltung" title="Permanent link">&para;</a></h5>
+<p><code>flatpak</code> ist ein <strong>weiteres plattformunabhängiges Paketformat</strong>, das von der <strong>Flatpak-Community</strong> entwickelt wurde.</p>
+<p><strong>Wichtige Befehle:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Befehl</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>flatpak install [paketname]</code></td>
+<td>Installiert ein <strong>Flatpak-Paket</strong>.</td>
+</tr>
+<tr>
+<td><code>flatpak remove [paketname]</code></td>
+<td>Entfernt ein <strong>Flatpak-Paket</strong>.</td>
+</tr>
+<tr>
+<td><code>flatpak list</code></td>
+<td>Listet <strong>alle installierten Flatpak-Pakete</strong> auf.</td>
+</tr>
+<tr>
+<td><code>flatpak info [paketname]</code></td>
+<td>Zeigt <strong>Informationen zu einem Flatpak-Paket</strong> an.</td>
+</tr>
+<tr>
+<td><code>flatpak update</code></td>
+<td>Aktualisiert <strong>alle Flatpak-Pakete</strong>.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Beispiel:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Flatpak installieren (falls nicht vorhanden)</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>flatpak
+
+<span class="c1"># Flathub-Repository hinzufügen</span>
+flatpak<span class="w"> </span>remote-add<span class="w"> </span>--if-not-exists<span class="w"> </span>flathub<span class="w"> </span>https://flathub.org/repo/flathub.flatpakrepo
+
+<span class="c1"># Ein Flatpak-Paket installieren (z. B. `spotify`)</span>
+flatpak<span class="w"> </span>install<span class="w"> </span>flathub<span class="w"> </span>com.spotify.Client
+</code></pre></div></td></tr></table></div></p>
+<h2 id="-_11">---<a class="headerlink" href="#-_11" title="Permanent link">&para;</a></h2>
+<h4 id="14-zusammenfassung-der-wichtigsten-befehle"><strong>14. Zusammenfassung der wichtigsten Befehle</strong><a class="headerlink" href="#14-zusammenfassung-der-wichtigsten-befehle" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th><strong>Aktion</strong></th>
+<th><strong>Debian/Ubuntu (<code>apt</code>/<code>dpkg</code>)</strong></th>
+<th><strong>RHEL/CentOS (<code>yum</code>/<code>dnf</code>/<code>rpm</code>)</strong></th>
+<th><strong>Arch Linux (<code>pacman</code>)</strong></th>
+<th><strong>openSUSE (<code>zypper</code>)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Paketlisten aktualisieren</strong></td>
+<td><code>sudo apt update</code></td>
+<td><code>sudo yum makecache</code> / <code>sudo dnf makecache</code></td>
+<td><code>sudo pacman -Sy</code></td>
+<td><code>sudo zypper refresh</code></td>
+</tr>
+<tr>
+<td><strong>Paket installieren</strong></td>
+<td><code>sudo apt install [paket]</code></td>
+<td><code>sudo yum install [paket]</code> / <code>sudo dnf install [paket]</code></td>
+<td><code>sudo pacman -S [paket]</code></td>
+<td><code>sudo zypper install [paket]</code></td>
+</tr>
+<tr>
+<td><strong>Paket entfernen</strong></td>
+<td><code>sudo apt remove [paket]</code></td>
+<td><code>sudo yum remove [paket]</code> / <code>sudo dnf remove [paket]</code></td>
+<td><code>sudo pacman -R [paket]</code></td>
+<td><code>sudo zypper remove [paket]</code></td>
+</tr>
+<tr>
+<td><strong>Paket inkl. Konfig entfernen</strong></td>
+<td><code>sudo apt purge [paket]</code></td>
+<td><code>sudo yum remove [paket]</code> (manuell Konfig löschen)</td>
+<td><code>sudo pacman -Rs [paket]</code></td>
+<td><code>sudo zypper remove --purge [paket]</code></td>
+</tr>
+<tr>
+<td><strong>Alle Pakete aktualisieren</strong></td>
+<td><code>sudo apt upgrade</code></td>
+<td><code>sudo yum update</code> / <code>sudo dnf update</code></td>
+<td><code>sudo pacman -Syu</code></td>
+<td><code>sudo zypper update</code></td>
+</tr>
+<tr>
+<td><strong>Nach Paketen suchen</strong></td>
+<td><code>sudo apt search [suchbegriff]</code></td>
+<td><code>sudo yum search [suchbegriff]</code> / <code>sudo dnf search [suchbegriff]</code></td>
+<td><code>sudo pacman -Ss [suchbegriff]</code></td>
+<td><code>sudo zypper search [suchbegriff]</code></td>
+</tr>
+<tr>
+<td><strong>Installierte Pakete auflisten</strong></td>
+<td><code>sudo apt list --installed</code></td>
+<td><code>sudo yum list installed</code> / <code>sudo dnf list installed</code></td>
+<td><code>sudo pacman -Q</code></td>
+<td><code>sudo zypper packages</code></td>
+</tr>
+<tr>
+<td><strong>Abhängigkeiten anzeigen</strong></td>
+<td><code>apt depends [paket]</code></td>
+<td><code>sudo yum deplist [paket]</code> / <code>sudo dnf deplist [paket]</code></td>
+<td><code>pacman -Si [paket]</code></td>
+<td><code>sudo zypper info [paket]</code></td>
+</tr>
+<tr>
+<td><strong>Lokales Paket installieren</strong></td>
+<td><code>sudo dpkg -i [paket.deb]</code></td>
+<td><code>sudo rpm -i [paket.rpm]</code></td>
+<td><code>sudo pacman -U [paket.pkg.tar.zst]</code></td>
+<td><code>sudo zypper install [paket.rpm]</code></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Qualidy GmbH
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.kununu.com/de/qualidy" target="_blank" rel="noopener" title="www.kununu.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M311 86.3c12.3-12.7 12-32.9-.7-45.2s-32.9-12-45.2.7C143.4 167.2 76.4 236.3 64 249V64c0-17.7-14.3-32-32-32S0 46.3 0 64v384c0 17.7 14.3 32 32 32s32-14.3 32-32V341l64.7-66.7 133 192c10.1 14.5 30 18.1 44.5 8.1s18.1-30 8.1-44.5L174.1 227.4z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://de.linkedin.com/company/qualidy" target="_blank" rel="noopener" title="de.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.google.com/search?sca_esv=7e6ba2047fcb60f3&uds=AMwkrPtyB8MsmozA4Lwzqy2G2HCu-abqzc6moOG48q3gP5dtjTRzC2Ws0eSwcyLXDfZNuYCrZ7ByIreHLG9th3vKLekPoVeey0tumAbet4cVLQRLzdRFhUbOGbnyp3xo1V0hzzaNmkCN&si=AKbGX_rcuucMgom2rba1cdwsvM2SVoIkP2btyqGMV4t0GuHIs4sGV_1tpuqR0YHG4Rzd9SdJcL-lW6E-2aJA5azZLTKkIOrZ2j2aWwoBkVbdEJ0o0GPcQhs%3D&q=Qualidy+GmbH+Rezensionen&sa=X&ved=2ahUKEwibsbnSgcmFAxXNQvEDHaVYCiAQ3PALegQIRxAF" target="_blank" rel="noopener" title="www.google.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.35 11.1h-9.17v2.73h6.51c-.33 3.81-3.5 5.44-6.5 5.44C8.36 19.27 5 16.25 5 12c0-4.1 3.2-7.27 7.2-7.27 3.09 0 4.9 1.97 4.9 1.97L19 4.72S16.56 2 12.1 2C6.42 2 2.03 6.8 2.03 12c0 5.05 4.13 10 10.22 10 5.35 0 9.25-3.67 9.25-9.09 0-1.15-.15-1.81-.15-1.81"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://qualidy.de" target="_blank" rel="noopener" title="qualidy.de" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M351.9 280H161c2.9 64.5 17.2 123.9 37.5 167.4 11.4 24.5 23.7 41.8 35.1 52.4 11.2 10.5 18.9 12.2 22.9 12.2s11.7-1.7 22.9-12.2c11.4-10.6 23.7-28 35.1-52.4 20.3-43.5 34.6-102.9 37.5-167.4zm-191-48h190.9c-2.8-64.5-17.1-123.9-37.4-167.4-11.4-24.4-23.7-41.8-35.1-52.4C268.1 1.7 260.4 0 256.4 0s-11.7 1.7-22.9 12.2c-11.4 10.6-23.7 28-35.1 52.4-20.3 43.5-34.6 102.9-37.5 167.4m-48 0c3.5-85.6 25.6-165.1 57.9-217.3C78.7 47.3 10.9 131.2 1.5 232zM1.5 280c9.4 100.8 77.2 184.7 169.3 217.3-32.3-52.2-54.4-131.7-57.9-217.3zm398.4 0c-3.5 85.6-25.6 165.1-57.9 217.3 92.1-32.7 159.9-116.5 169.3-217.3zm111.4-48C501.9 131.2 434.1 47.3 342 14.7c32.3 52.2 54.4 131.7 57.9 217.3z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tracking", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

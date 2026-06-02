@@ -1,0 +1,1961 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>Systemueberwachung - Basis Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/logo.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/grid.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/video_admonition.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/python_tutor_admonition.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/mermaid.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="amber" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#modul-iv-systemadministration-und-sicherheit" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Basis Wiki" class="md-header__button md-logo" aria-label="Basis Wiki" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Basis Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Systemueberwachung
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Basis Wiki" class="md-nav__button md-logo" aria-label="Basis Wiki" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    Basis Wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übersicht
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module I Das Konzept und die Theorie
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Module I Das Konzept und die Theorie
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module1/OpenSource%26Linux-Community/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Open Source & Proprietäre Software
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module1/opensource_lizenzen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Open-Source-Software und Lizenzierung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module1/linux_evolution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Linux Evolution und beliebte Betriebssysteme
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module1/das_linux_betriebssystem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Das Linux-Betriebssystem
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../7.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dateisystem-Hierarchie
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../8.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Netzwerk
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module II Die Grundlagen der Command-Line
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Module II Die Grundlagen der Command-Line
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Grundlagen der Kommandozeile
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Die Kommandozeile zur Hilfe nutzen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Verzeichnissen und Anzeigen von Dateien
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Erstellen, Verschieben und Löschen von Dateien
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module III Automatisierung und Skripting
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Module III Automatisierung und Skripting
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Verknüpfung von Befehlen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Archivierung von Dateien in der Kommandozeile
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Suchen und Extrahieren von Daten aus Dateien
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Befehle in ein Skript umwandeln
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Automatisierung von Aufgaben mit Cron
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fortgeschrittenes Skripting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module IV Systemadministration und Sicherheit
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Module IV Systemadministration und Sicherheit
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Benutzer- und Gruppenverwaltung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Verwalten von Dateiberechtigungen und Eigentum
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Systemüberwachung und Protokollierung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Softwareinstallation und -verwaltung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Netzwerksicherheit und Firewall-Konfiguration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Backup-Strategien und Wiederherstellung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module V Zusammenführung und Zielsetzung
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Module V Zusammenführung und Zielsetzung
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Wichtige Open-Source-Anwendungen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ICT-Fähigkeiten und Arbeiten in Linux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Systemueberwachung</h1>
+
+<h3 id="modul-iv-systemadministration-und-sicherheit"><strong>Modul IV: Systemadministration und Sicherheit</strong><a class="headerlink" href="#modul-iv-systemadministration-und-sicherheit" title="Permanent link">&para;</a></h3>
+<h3 id="thema-systemuberwachung-und-protokollierung"><strong>Thema: Systemüberwachung und Protokollierung</strong><a class="headerlink" href="#thema-systemuberwachung-und-protokollierung" title="Permanent link">&para;</a></h3>
+<hr />
+<h4 id="1-einfuhrung-in-systemuberwachung-und-protokollierung"><strong>1. Einführung in Systemüberwachung und Protokollierung</strong><a class="headerlink" href="#1-einfuhrung-in-systemuberwachung-und-protokollierung" title="Permanent link">&para;</a></h4>
+<p>Die <strong>Systemüberwachung</strong> und <strong>Protokollierung (Logging)</strong> sind essenziell, um:
+- <strong>Systemzustand</strong> zu überwachen (CPU, Speicher, Festplatten, Netzwerk).
+- <strong>Fehler und Probleme</strong> zu identifizieren.
+- <strong>Sicherheitsvorfälle</strong> zu erkennen und zu analysieren.
+- <strong>Leistungsengpässe</strong> zu finden.</p>
+<p>Linux bietet eine Vielzahl von Tools und Mechanismen, um diese Aufgaben zu erfüllen.</p>
+<hr />
+<hr />
+<h4 id="2-wichtige-protokolldateien-und-verzeichnisse"><strong>2. Wichtige Protokolldateien und Verzeichnisse</strong><a class="headerlink" href="#2-wichtige-protokolldateien-und-verzeichnisse" title="Permanent link">&para;</a></h4>
+<p>Linux speichert Protokolldateien (Logs) typischerweise im Verzeichnis <strong><code>/var/log/</code></strong>. Hier sind die wichtigsten Dateien:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Protokolldatei</strong></th>
+<th><strong>Beschreibung</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/var/log/syslog</code></td>
+<td>Systemweite Protokolle (Allgemeine Systemmeldungen).</td>
+</tr>
+<tr>
+<td><code>/var/log/auth.log</code></td>
+<td>Authentifizierungsprotokolle (Login-Versuche, SSH, sudo).</td>
+</tr>
+<tr>
+<td><code>/var/log/kern.log</code></td>
+<td>Kernel-Protokolle (Hardware- und Treibermeldungen).</td>
+</tr>
+<tr>
+<td><code>/var/log/dmesg</code></td>
+<td>Kernel-Nachrichten beim Systemstart.</td>
+</tr>
+<tr>
+<td><code>/var/log/cron.log</code></td>
+<td>Protokolle für Cron-Jobs.</td>
+</tr>
+<tr>
+<td><code>/var/log/mail.log</code></td>
+<td>E-Mail-Server-Protokolle (z. B. Postfix, Sendmail).</td>
+</tr>
+<tr>
+<td><code>/var/log/apache2/</code></td>
+<td>Protokolle für den Apache-Webserver (z. B. <code>access.log</code>, <code>error.log</code>).</td>
+</tr>
+<tr>
+<td><code>/var/log/nginx/</code></td>
+<td>Protokolle für den Nginx-Webserver.</td>
+</tr>
+<tr>
+<td><code>/var/log/boot.log</code></td>
+<td>Protokolle des Boot-Vorgangs.</td>
+</tr>
+<tr>
+<td><code>/var/log/dpkg.log</code></td>
+<td>Protokolle für Paketinstallationen (Debian/Ubuntu).</td>
+</tr>
+<tr>
+<td><code>/var/log/yum.log</code></td>
+<td>Protokolle für Paketinstallationen (RHEL/CentOS).</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="3-protokolldateien-anzeigen-und-analysieren"><strong>3. Protokolldateien anzeigen und analysieren</strong><a class="headerlink" href="#3-protokolldateien-anzeigen-und-analysieren" title="Permanent link">&para;</a></h4>
+<h5 id="31-cat-less-und-tail"><strong>3.1 <code>cat</code>, <code>less</code> und <code>tail</code></strong><a class="headerlink" href="#31-cat-less-und-tail" title="Permanent link">&para;</a></h5>
+<ul>
+<li><strong><code>cat</code></strong>: Zeigt den gesamten Inhalt einer Datei an.
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>cat<span class="w"> </span>/var/log/syslog
+</code></pre></div></td></tr></table></div></li>
+<li><strong><code>less</code></strong>: Ermöglicht das Scrollen durch große Dateien.
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>less<span class="w"> </span>/var/log/syslog
+</code></pre></div></td></tr></table></div></li>
+<li><strong><code>tail</code></strong>: Zeigt die letzten Zeilen einer Datei an (nützlich für Echtzeit-Überwachung).
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>tail<span class="w"> </span>/var/log/syslog
+</code></pre></div></td></tr></table></div>
+  <strong>Echtzeit-Überwachung mit <code>-f</code> (follow):</strong>
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>tail<span class="w"> </span>-f<span class="w"> </span>/var/log/syslog
+</code></pre></div></td></tr></table></div></li>
+</ul>
+<h5 id="32-grep-fur-die-suche-in-protokollen"><strong>3.2 <code>grep</code> für die Suche in Protokollen</strong><a class="headerlink" href="#32-grep-fur-die-suche-in-protokollen" title="Permanent link">&para;</a></h5>
+<p>Mit <code>grep</code> können Sie nach bestimmten Mustern in Protokolldateien suchen.</p>
+<p><strong>Beispiele:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Befehl</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>grep "error" /var/log/syslog</code></td>
+<td>Sucht nach dem Wort "error" in <code>syslog</code>.</td>
+</tr>
+<tr>
+<td><code>grep -i "fail" /var/log/auth.log</code></td>
+<td>Sucht nach "fail" (groß-/kleinschreibung ignorieren).</td>
+</tr>
+<tr>
+<td><code>grep -n "ssh" /var/log/auth.log</code></td>
+<td>Zeigt Zeilennummern an, in denen "ssh" vorkommt.</td>
+</tr>
+<tr>
+<td><code>grep -A 5 -B 5 "connection refused" /var/log/syslog</code></td>
+<td>Zeigt 5 Zeilen <strong>vor</strong> und <strong>nach</strong> dem Suchbegriff an.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="33-journalctl-fur-systemd-protokolle"><strong>3.3 <code>journalctl</code> für Systemd-Protokolle</strong><a class="headerlink" href="#33-journalctl-fur-systemd-protokolle" title="Permanent link">&para;</a></h5>
+<p>Moderne Linux-Distributionen verwenden <strong><code>systemd</code></strong> und speichern Protokolle im <strong>Binary Journal</strong>. Mit <code>journalctl</code> können Sie diese Protokolle abrufen.</p>
+<p><strong>Wichtige Optionen:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Befehl</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>journalctl</code></td>
+<td>Zeigt alle Protokolle an.</td>
+</tr>
+<tr>
+<td><code>journalctl -u nginx</code></td>
+<td>Zeigt Protokolle für den Dienst <code>nginx</code>.</td>
+</tr>
+<tr>
+<td><code>journalctl -f</code></td>
+<td>Verfolgt Protokolle in Echtzeit.</td>
+</tr>
+<tr>
+<td><code>journalctl --since "2026-06-01"</code></td>
+<td>Zeigt Protokolle ab einem bestimmten Datum an.</td>
+</tr>
+<tr>
+<td><code>journalctl --until "2026-06-01 12:00"</code></td>
+<td>Zeigt Protokolle bis zu einem bestimmten Zeitpunkt an.</td>
+</tr>
+<tr>
+<td><code>journalctl -p err</code></td>
+<td>Zeigt nur Protokolle mit der Priorität <strong>Error</strong> an.</td>
+</tr>
+<tr>
+<td><code>journalctl -b</code></td>
+<td>Zeigt Protokolle seit dem letzten Systemstart an.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Prioritäten (Log Levels):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Priorität</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0</code> (emerg)</td>
+<td>System ist unbrauchbar.</td>
+</tr>
+<tr>
+<td><code>1</code> (alert)</td>
+<td>Sofortige Aktion erforderlich.</td>
+</tr>
+<tr>
+<td><code>2</code> (crit)</td>
+<td>Kritische Bedingungen.</td>
+</tr>
+<tr>
+<td><code>3</code> (err)</td>
+<td>Fehlerbedingungen.</td>
+</tr>
+<tr>
+<td><code>4</code> (warning)</td>
+<td>Warnungen.</td>
+</tr>
+<tr>
+<td><code>5</code> (notice)</td>
+<td>Normale, aber wichtige Meldungen.</td>
+</tr>
+<tr>
+<td><code>6</code> (info)</td>
+<td>Informative Meldungen.</td>
+</tr>
+<tr>
+<td><code>7</code> (debug)</td>
+<td>Debug-Meldungen.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="4-systemuberwachung-mit-top-htop-und-vmstat"><strong>4. Systemüberwachung mit <code>top</code>, <code>htop</code> und <code>vmstat</code></strong><a class="headerlink" href="#4-systemuberwachung-mit-top-htop-und-vmstat" title="Permanent link">&para;</a></h4>
+<h5 id="41-top-echtzeit-systemuberwachung"><strong>4.1 <code>top</code> – Echtzeit-Systemüberwachung</strong><a class="headerlink" href="#41-top-echtzeit-systemuberwachung" title="Permanent link">&para;</a></h5>
+<p><code>top</code> zeigt eine <strong>Echtzeit-Übersicht</strong> der laufenden Prozesse und der Systemauslastung.</p>
+<p><strong>Beispielausgabe:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>top
+</code></pre></div></td></tr></table></div>
+- <strong><code>PID</code></strong>: Prozess-ID.
+- <strong><code>USER</code></strong>: Benutzer, der den Prozess ausführt.
+- <strong><code>%CPU</code></strong>: CPU-Auslastung des Prozesses.
+- <strong><code>%MEM</code></strong>: Speichernutzung des Prozesses.
+- <strong><code>COMMAND</code></strong>: Name des Prozesses.</p>
+<p><strong>Nützliche Tastenkombinationen in <code>top</code>:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Taste</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>q</code></td>
+<td>Beendet <code>top</code>.</td>
+</tr>
+<tr>
+<td><code>P</code></td>
+<td>Sortiert nach CPU-Auslastung.</td>
+</tr>
+<tr>
+<td><code>M</code></td>
+<td>Sortiert nach Speichernutzung.</td>
+</tr>
+<tr>
+<td><code>k</code></td>
+<td>Beendet einen Prozess (mit <code>PID</code> angeben).</td>
+</tr>
+<tr>
+<td><code>1</code></td>
+<td>Zeigt die Auslastung aller CPU-Kerne an.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="42-htop-interaktive-systemuberwachung"><strong>4.2 <code>htop</code> – Interaktive Systemüberwachung</strong><a class="headerlink" href="#42-htop-interaktive-systemuberwachung" title="Permanent link">&para;</a></h5>
+<p><code>htop</code> ist eine <strong>benutzerfreundlichere Alternative</strong> zu <code>top</code> mit einer grafischen Oberfläche.</p>
+<p><strong>Installation:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>htop<span class="w">  </span><span class="c1"># Debian/Ubuntu</span>
+sudo<span class="w"> </span>yum<span class="w"> </span>install<span class="w"> </span>htop<span class="w">  </span><span class="c1"># RHEL/CentOS</span>
+</code></pre></div></td></tr></table></div>
+<strong>Starten:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>htop
+</code></pre></div></td></tr></table></div>
+<strong>Vorteile von <code>htop</code>:</strong>
+- Farbige Darstellung.
+- Einfache Navigation mit den Pfeiltasten.
+- Prozesse können direkt aus der Oberfläche beendet werden.</p>
+<h5 id="43-vmstat-virtueller-speicher-und-systemleistung"><strong>4.3 <code>vmstat</code> – Virtueller Speicher und Systemleistung</strong><a class="headerlink" href="#43-vmstat-virtueller-speicher-und-systemleistung" title="Permanent link">&para;</a></h5>
+<p><code>vmstat</code> zeigt Informationen über <strong>Prozesse, Speicher, Paging, Block-I/O, Traps und CPU-Aktivität</strong> an.</p>
+<p><strong>Beispiel:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>vmstat<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">5</span>
+</code></pre></div></td></tr></table></div>
+- <strong><code>1</code></strong>: Aktualisierungsintervall in Sekunden.
+- <strong><code>5</code></strong>: Anzahl der Ausgaben.</p>
+<p><strong>Ausgabe:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Spalte</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>r</code></td>
+<td>Anzahl der laufenden Prozesse.</td>
+</tr>
+<tr>
+<td><code>b</code></td>
+<td>Anzahl der blockierten Prozesse.</td>
+</tr>
+<tr>
+<td><code>swpd</code></td>
+<td>Ausgelagerter Speicher (Swap).</td>
+</tr>
+<tr>
+<td><code>free</code></td>
+<td>Freier physikalischer Speicher.</td>
+</tr>
+<tr>
+<td><code>buff</code></td>
+<td>Puffer-Speicher.</td>
+</tr>
+<tr>
+<td><code>cache</code></td>
+<td>Cache-Speicher.</td>
+</tr>
+<tr>
+<td><code>si</code></td>
+<td>Speicher, der pro Sekunde vom Swap eingelesen wird.</td>
+</tr>
+<tr>
+<td><code>so</code></td>
+<td>Speicher, der pro Sekunde in den Swap geschrieben wird.</td>
+</tr>
+<tr>
+<td><code>bi</code></td>
+<td>Blöcke, die pro Sekunde von einem Blockgerät eingelesen werden.</td>
+</tr>
+<tr>
+<td><code>bo</code></td>
+<td>Blöcke, die pro Sekunde auf ein Blockgerät geschrieben werden.</td>
+</tr>
+<tr>
+<td><code>in</code></td>
+<td>Anzahl der Interrupts pro Sekunde.</td>
+</tr>
+<tr>
+<td><code>cs</code></td>
+<td>Anzahl der Kontextwechsel pro Sekunde.</td>
+</tr>
+<tr>
+<td><code>us</code></td>
+<td>Zeitanteil, den die CPU im Benutzermodus verbringt.</td>
+</tr>
+<tr>
+<td><code>sy</code></td>
+<td>Zeitanteil, den die CPU im Kernel-Modus verbringt.</td>
+</tr>
+<tr>
+<td><code>id</code></td>
+<td>Zeitanteil, den die CPU im Leerlauf verbringt.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="5-netzwerkuberwachung-mit-netstat-ss-und-iftop"><strong>5. Netzwerküberwachung mit <code>netstat</code>, <code>ss</code> und <code>iftop</code></strong><a class="headerlink" href="#5-netzwerkuberwachung-mit-netstat-ss-und-iftop" title="Permanent link">&para;</a></h4>
+<h5 id="51-netstat-netzwerkverbindungen-und-statistiken"><strong>5.1 <code>netstat</code> – Netzwerkverbindungen und Statistiken</strong><a class="headerlink" href="#51-netstat-netzwerkverbindungen-und-statistiken" title="Permanent link">&para;</a></h5>
+<p><code>netstat</code> zeigt <strong>Netzwerkverbindungen, Routing-Tabellen und Interface-Statistiken</strong> an.</p>
+<p><strong>Wichtige Optionen:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Befehl</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>netstat -tuln</code></td>
+<td>Zeigt alle <strong>TCP- und UDP-Ports</strong> an, die auf dem System geöffnet sind.</td>
+</tr>
+<tr>
+<td><code>netstat -r</code></td>
+<td>Zeigt die <strong>Routing-Tabelle</strong> an.</td>
+</tr>
+<tr>
+<td><code>netstat -i</code></td>
+<td>Zeigt <strong>Netzwerk-Interface-Statistiken</strong> an.</td>
+</tr>
+<tr>
+<td><code>netstat -s</code></td>
+<td>Zeigt <strong>Netzwerk-Statistiken</strong> (z. B. gesendete/empfangene Pakete).</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Beispiel:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>netstat<span class="w"> </span>-tuln
+</code></pre></div></td></tr></table></div>
+- <strong><code>-t</code></strong>: Zeigt TCP-Ports an.
+- <strong><code>-u</code></strong>: Zeigt UDP-Ports an.
+- <strong><code>-l</code></strong>: Zeigt nur <strong>listening</strong> Ports an.
+- <strong><code>-n</code></strong>: Zeigt IP-Adressen statt Hostnamen an.</p>
+<h5 id="52-ss-moderner-ersatz-fur-netstat"><strong>5.2 <code>ss</code> – Moderner Ersatz für <code>netstat</code></strong><a class="headerlink" href="#52-ss-moderner-ersatz-fur-netstat" title="Permanent link">&para;</a></h5>
+<p><code>ss</code> (Socket Statistics) ist ein <strong>schnellerer und modernerer Ersatz</strong> für <code>netstat</code>.</p>
+<p><strong>Beispiele:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Befehl</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ss -tuln</code></td>
+<td>Zeigt alle TCP- und UDP-Ports an.</td>
+</tr>
+<tr>
+<td><code>ss -l</code></td>
+<td>Zeigt alle <strong>listening</strong> Ports an.</td>
+</tr>
+<tr>
+<td><code>ss -s</code></td>
+<td>Zeigt eine <strong>Zusammenfassung</strong> der Socket-Statistiken an.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="53-iftop-echtzeit-netzwerkverkehr"><strong>5.3 <code>iftop</code> – Echtzeit-Netzwerkverkehr</strong><a class="headerlink" href="#53-iftop-echtzeit-netzwerkverkehr" title="Permanent link">&para;</a></h5>
+<p><code>iftop</code> zeigt den <strong>Echtzeit-Netzwerkverkehr</strong> pro Verbindung an.</p>
+<p><strong>Installation:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>iftop<span class="w">  </span><span class="c1"># Debian/Ubuntu</span>
+sudo<span class="w"> </span>yum<span class="w"> </span>install<span class="w"> </span>iftop<span class="w">  </span><span class="c1"># RHEL/CentOS</span>
+</code></pre></div></td></tr></table></div>
+<strong>Starten:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>iftop
+</code></pre></div></td></tr></table></div>
+<strong>Ausgabe:</strong>
+- Zeigt <strong>Quell- und Ziel-IP-Adressen</strong> an.
+- Zeigt <strong>Datenübertragungsraten</strong> (in KB/s, MB/s) an.
+- Zeigt <strong>Ports und Protokolle</strong> an.</p>
+<hr />
+<h4 id="6-festplattenuberwachung-mit-df-du-und-iostat"><strong>6. Festplattenüberwachung mit <code>df</code>, <code>du</code> und <code>iostat</code></strong><a class="headerlink" href="#6-festplattenuberwachung-mit-df-du-und-iostat" title="Permanent link">&para;</a></h4>
+<h5 id="61-df-festplattenbelegung-anzeigen"><strong>6.1 <code>df</code> – Festplattenbelegung anzeigen</strong><a class="headerlink" href="#61-df-festplattenbelegung-anzeigen" title="Permanent link">&para;</a></h5>
+<p><code>df</code> (Disk Free) zeigt die <strong>Belegung von Festplatten und Partitionen</strong> an.</p>
+<p><strong>Beispiel:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>df<span class="w"> </span>-h
+</code></pre></div></td></tr></table></div>
+- <strong><code>-h</code></strong>: Zeigt die Größen in <strong>menschlich lesbarer Form</strong> (KB, MB, GB) an.</p>
+<p><strong>Ausgabe:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Spalte</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Filesystem</code></td>
+<td>Dateisystem (z. B. <code>/dev/sda1</code>).</td>
+</tr>
+<tr>
+<td><code>Size</code></td>
+<td>Größe der Partition.</td>
+</tr>
+<tr>
+<td><code>Used</code></td>
+<td>Belegter Speicher.</td>
+</tr>
+<tr>
+<td><code>Avail</code></td>
+<td>Verfügbarer Speicher.</td>
+</tr>
+<tr>
+<td><code>Use%</code></td>
+<td>Auslastung in Prozent.</td>
+</tr>
+<tr>
+<td><code>Mounted on</code></td>
+<td>Einhängepunkt.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="62-du-verzeichnisgroen-anzeigen"><strong>6.2 <code>du</code> – Verzeichnisgrößen anzeigen</strong><a class="headerlink" href="#62-du-verzeichnisgroen-anzeigen" title="Permanent link">&para;</a></h5>
+<p><code>du</code> (Disk Usage) zeigt die <strong>Größe von Verzeichnissen und Dateien</strong> an.</p>
+<p><strong>Beispiele:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Befehl</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>du -sh /home</code></td>
+<td>Zeigt die <strong>Gesamtgröße</strong> des <code>/home</code>-Verzeichnisses an.</td>
+</tr>
+<tr>
+<td><code>du -h --max-depth=1 /var</code></td>
+<td>Zeigt die Größen der <strong>ersten Ebene</strong> im <code>/var</code>-Verzeichnis an.</td>
+</tr>
+<tr>
+<td><code>du -ah /pfad</code></td>
+<td>Zeigt die Größen <strong>aller Dateien und Verzeichnisse</strong> an.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="63-iostat-ea-statistiken-io"><strong>6.3 <code>iostat</code> – E/A-Statistiken (I/O)</strong><a class="headerlink" href="#63-iostat-ea-statistiken-io" title="Permanent link">&para;</a></h5>
+<p><code>iostat</code> zeigt <strong>Eingabe-/Ausgabe-Statistiken (I/O)</strong> für Festplatten und Partitionen an.</p>
+<p><strong>Installation:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>sysstat<span class="w">  </span><span class="c1"># Debian/Ubuntu</span>
+sudo<span class="w"> </span>yum<span class="w"> </span>install<span class="w"> </span>sysstat<span class="w">  </span><span class="c1"># RHEL/CentOS</span>
+</code></pre></div></td></tr></table></div>
+<strong>Beispiel:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>iostat<span class="w"> </span>-x<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">3</span>
+</code></pre></div></td></tr></table></div>
+- <strong><code>-x</code></strong>: Zeigt <strong>erweiterte Statistiken</strong> an.
+- <strong><code>1</code></strong>: Aktualisierungsintervall in Sekunden.
+- <strong><code>3</code></strong>: Anzahl der Ausgaben.</p>
+<p><strong>Ausgabe:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Spalte</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Device</code></td>
+<td>Gerätename (z. B. <code>sda</code>).</td>
+</tr>
+<tr>
+<td><code>r/s</code></td>
+<td>Leseoperationen pro Sekunde.</td>
+</tr>
+<tr>
+<td><code>w/s</code></td>
+<td>Schreiboperationen pro Sekunde.</td>
+</tr>
+<tr>
+<td><code>rMB/s</code></td>
+<td>Gelesene Daten pro Sekunde (in MB).</td>
+</tr>
+<tr>
+<td><code>wMB/s</code></td>
+<td>Geschriebene Daten pro Sekunde (in MB).</td>
+</tr>
+<tr>
+<td><code>%util</code></td>
+<td>Auslastung der Festplatte in Prozent.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="7-log-rotation-mit-logrotate"><strong>7. Log-Rotation mit <code>logrotate</code></strong><a class="headerlink" href="#7-log-rotation-mit-logrotate" title="Permanent link">&para;</a></h4>
+<p>Protokolldateien können sehr groß werden. <strong><code>logrotate</code></strong> hilft dabei, sie <strong>automatisch zu rotieren, zu komprimieren und zu löschen</strong>.</p>
+<h5 id="71-logrotate-konfigurieren"><strong>7.1 <code>logrotate</code> konfigurieren</strong><a class="headerlink" href="#71-logrotate-konfigurieren" title="Permanent link">&para;</a></h5>
+<p>Die Konfiguration von <code>logrotate</code> erfolgt in der Datei <strong><code>/etc/logrotate.conf</code></strong> und in den Dateien im Verzeichnis <strong><code>/etc/logrotate.d/</code></strong>.</p>
+<p><strong>Beispielkonfiguration für <code>/var/log/syslog</code>:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code>/var/log/syslog<span class="w"> </span><span class="o">{</span>
+<span class="w">    </span>daily<span class="w">           </span><span class="c1"># Rotiert täglich</span>
+<span class="w">    </span>missingok<span class="w">       </span><span class="c1"># Ignoriert, wenn die Datei nicht existiert</span>
+<span class="w">    </span>rotate<span class="w"> </span><span class="m">7</span><span class="w">        </span><span class="c1"># Behält 7 rotierte Dateien</span>
+<span class="w">    </span>compress<span class="w">        </span><span class="c1"># Komprimiert die rotierten Dateien</span>
+<span class="w">    </span>delaycompress<span class="w">   </span><span class="c1"># Komprimiert nicht die aktuellste rotierte Datei</span>
+<span class="w">    </span>notifempty<span class="w">      </span><span class="c1"># Rotiert nicht, wenn die Datei leer ist</span>
+<span class="w">    </span>create<span class="w"> </span><span class="m">0640</span><span class="w"> </span>root<span class="w"> </span>adm<span class="w">  </span><span class="c1"># Erstellt eine neue Datei mit diesen Berechtigungen</span>
+<span class="o">}</span>
+</code></pre></div></td></tr></table></div></p>
+<h5 id="72-logrotate-manuell-ausfuhren"><strong>7.2 <code>logrotate</code> manuell ausführen</strong><a class="headerlink" href="#72-logrotate-manuell-ausfuhren" title="Permanent link">&para;</a></h5>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>logrotate<span class="w"> </span>-f<span class="w"> </span>/etc/logrotate.conf
+</code></pre></div></td></tr></table></div>
+- <strong><code>-f</code></strong>: Erzwingt die Rotation, auch wenn sie nicht fällig ist.</p>
+<hr />
+<h4 id="8-ubungsaufgaben"><strong>8. Übungsaufgaben</strong><a class="headerlink" href="#8-ubungsaufgaben" title="Permanent link">&para;</a></h4>
+<h5 id="frage-1"><strong>Frage 1</strong><a class="headerlink" href="#frage-1" title="Permanent link">&para;</a></h5>
+<p>Wie können Sie die letzten 20 Zeilen der Datei <code>/var/log/syslog</code> in Echtzeit überwachen?</p>
+<details class="success">
+<summary>Antwort</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>tail<span class="w"> </span>-f<span class="w"> </span>-n<span class="w"> </span><span class="m">20</span><span class="w"> </span>/var/log/syslog
+</code></pre></div></td></tr></table></div>
+</details>
+<hr />
+<h5 id="frage-2"><strong>Frage 2</strong><a class="headerlink" href="#frage-2" title="Permanent link">&para;</a></h5>
+<p>Welcher Befehl zeigt alle geöffneten TCP-Ports auf Ihrem System an?</p>
+<details class="success">
+<summary>Antwort</summary>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>ss<span class="w"> </span>-tuln
+</code></pre></div></td></tr></table></div>
+oder
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>netstat<span class="w"> </span>-tuln
+</code></pre></div></td></tr></table></div></p>
+</details>
+<hr />
+<h5 id="frage-3"><strong>Frage 3</strong><a class="headerlink" href="#frage-3" title="Permanent link">&para;</a></h5>
+<p>Wie können Sie die CPU-Auslastung aller Prozesse in Echtzeit anzeigen?</p>
+<details class="success">
+<summary>Antwort</summary>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>top
+</code></pre></div></td></tr></table></div>
+oder
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>htop
+</code></pre></div></td></tr></table></div></p>
+</details>
+<hr />
+<h5 id="frage-4"><strong>Frage 4</strong><a class="headerlink" href="#frage-4" title="Permanent link">&para;</a></h5>
+<p>Welcher Befehl zeigt die Belegung aller Festplattenpartitionen in menschlich lesbarer Form an?</p>
+<details class="success">
+<summary>Antwort</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>df<span class="w"> </span>-h
+</code></pre></div></td></tr></table></div>
+</details>
+<hr />
+<h5 id="frage-5"><strong>Frage 5</strong><a class="headerlink" href="#frage-5" title="Permanent link">&para;</a></h5>
+<p>Wie können Sie die Größe des <code>/var</code>-Verzeichnisses anzeigen, ohne Unterverzeichnisse zu durchsuchen?</p>
+<details class="success">
+<summary>Antwort</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>du<span class="w"> </span>-sh<span class="w"> </span>/var
+</code></pre></div></td></tr></table></div>
+</details>
+<hr />
+<h5 id="frage-6"><strong>Frage 6</strong><a class="headerlink" href="#frage-6" title="Permanent link">&para;</a></h5>
+<p>Welcher Befehl zeigt die E/A-Statistiken (I/O) für alle Festplatten an?</p>
+<details class="success">
+<summary>Antwort</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>iostat<span class="w"> </span>-x
+</code></pre></div></td></tr></table></div>
+</details>
+<hr />
+<h5 id="frage-7"><strong>Frage 7</strong><a class="headerlink" href="#frage-7" title="Permanent link">&para;</a></h5>
+<p>Wie können Sie die Protokolle des Dienstes <code>nginx</code> seit dem letzten Systemstart anzeigen?</p>
+<details class="success">
+<summary>Antwort</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>journalctl<span class="w"> </span>-u<span class="w"> </span>nginx<span class="w"> </span>-b
+</code></pre></div></td></tr></table></div>
+</details>
+<hr />
+<h5 id="frage-8"><strong>Frage 8</strong><a class="headerlink" href="#frage-8" title="Permanent link">&para;</a></h5>
+<p>Wie können Sie eine Log-Rotation für <code>/var/log/auth.log</code> einrichten, die:
+- <strong>Wöchentlich</strong> rotiert,
+- <strong>4 rotierte Dateien</strong> behält,
+- <strong>Komprimiert</strong> wird?</p>
+<details class="success">
+<summary>Antwort</summary>
+<p>Erstellen Sie eine Datei <code>/etc/logrotate.d/auth.log</code> mit folgendem Inhalt:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>/var/log/auth.log<span class="w"> </span><span class="o">{</span>
+<span class="w">    </span>weekly
+<span class="w">    </span>rotate<span class="w"> </span><span class="m">4</span>
+<span class="w">    </span>compress
+<span class="w">    </span>missingok
+<span class="w">    </span>notifempty
+<span class="w">    </span>create<span class="w"> </span><span class="m">0640</span><span class="w"> </span>root<span class="w"> </span>adm
+<span class="o">}</span>
+</code></pre></div></td></tr></table></div></p>
+</details>
+<hr />
+<h4 id="9-praktische-beispiele"><strong>9. Praktische Beispiele</strong><a class="headerlink" href="#9-praktische-beispiele" title="Permanent link">&para;</a></h4>
+<h5 id="beispiel-1-echtzeit-uberwachung-von-systemprotokollen"><strong>Beispiel 1: Echtzeit-Überwachung von Systemprotokollen</strong><a class="headerlink" href="#beispiel-1-echtzeit-uberwachung-von-systemprotokollen" title="Permanent link">&para;</a></h5>
+<p>Überwachen Sie die <strong>Authentifizierungsprotokolle</strong> in Echtzeit, um verdächtige Login-Versuche zu erkennen:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>tail<span class="w"> </span>-f<span class="w"> </span>/var/log/auth.log<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s2">&quot;Failed password&quot;</span>
+</code></pre></div></td></tr></table></div></p>
+<h5 id="beispiel-2-netzwerkverkehr-analysieren"><strong>Beispiel 2: Netzwerkverkehr analysieren</strong><a class="headerlink" href="#beispiel-2-netzwerkverkehr-analysieren" title="Permanent link">&para;</a></h5>
+<p>Zeigen Sie die <strong>Top 10 Netzwerkverbindungen</strong> nach Datenverkehr an:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>iftop<span class="w"> </span>-n<span class="w"> </span>-N<span class="w"> </span>-P<span class="w"> </span>-T<span class="w"> </span>-t<span class="w"> </span>-s<span class="w"> </span><span class="m">10</span>
+</code></pre></div></td></tr></table></div>
+- <strong><code>-n</code></strong>: Zeigt IP-Adressen statt Hostnamen an.
+- <strong><code>-N</code></strong>: Zeigt Portnummern statt Dienstnamen an.
+- <strong><code>-P</code></strong>: Zeigt Ports an.
+- <strong><code>-T</code></strong>: Zeigt cumulative Totals an.
+- <strong><code>-t</code></strong>: Textmodus (ohne Farbausgabe).
+- <strong><code>-s 10</code></strong>: Zeigt die Top 10 Verbindungen an.</p>
+<h5 id="beispiel-3-festplattenbelegung-prufen"><strong>Beispiel 3: Festplattenbelegung prüfen</strong><a class="headerlink" href="#beispiel-3-festplattenbelegung-prufen" title="Permanent link">&para;</a></h5>
+<p>Prüfen Sie, welche Verzeichnisse im <strong>Root-Dateisystem</strong> am meisten Speicher verbrauchen:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>du<span class="w"> </span>-h<span class="w"> </span>--max-depth<span class="o">=</span><span class="m">1</span><span class="w"> </span>/<span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span>-h
+</code></pre></div></td></tr></table></div>
+- <strong><code>sort -h</code></strong>: Sortiert die Ausgabe nach menschlich lesbaren Größen.</p>
+<h5 id="beispiel-4-protokolle-nach-fehlern-durchsuchen"><strong>Beispiel 4: Protokolle nach Fehlern durchsuchen</strong><a class="headerlink" href="#beispiel-4-protokolle-nach-fehlern-durchsuchen" title="Permanent link">&para;</a></h5>
+<p>Durchsuchen Sie die <strong>Systemprotokolle</strong> der letzten 24 Stunden nach Fehlern:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>journalctl<span class="w"> </span>--since<span class="w"> </span><span class="s2">&quot;24 hours ago&quot;</span><span class="w"> </span>-p<span class="w"> </span>err
+</code></pre></div></td></tr></table></div></p>
+<hr />
+<h4 id="10-zusammenfassung-der-wichtigsten-befehle"><strong>10. Zusammenfassung der wichtigsten Befehle</strong><a class="headerlink" href="#10-zusammenfassung-der-wichtigsten-befehle" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th><strong>Kategorie</strong></th>
+<th><strong>Befehl</strong></th>
+<th><strong>Beschreibung</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Protokolle anzeigen</strong></td>
+<td><code>cat /var/log/syslog</code></td>
+<td>Zeigt den Inhalt von <code>syslog</code> an.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>less /var/log/auth.log</code></td>
+<td>Ermöglicht das Scrollen durch <code>auth.log</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>tail -f /var/log/kern.log</code></td>
+<td>Verfolgt <code>kern.log</code> in Echtzeit.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>journalctl -u nginx</code></td>
+<td>Zeigt Protokolle für den Dienst <code>nginx</code>.</td>
+</tr>
+<tr>
+<td><strong>Protokolle durchsuchen</strong></td>
+<td><code>grep "error" /var/log/syslog</code></td>
+<td>Sucht nach "error" in <code>syslog</code>.</td>
+</tr>
+<tr>
+<td><strong>Systemüberwachung</strong></td>
+<td><code>top</code></td>
+<td>Zeigt laufende Prozesse und Systemauslastung an.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>htop</code></td>
+<td>Interaktive Systemüberwachung.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>vmstat 1 5</code></td>
+<td>Zeigt Systemleistung (CPU, Speicher, I/O) an.</td>
+</tr>
+<tr>
+<td><strong>Netzwerküberwachung</strong></td>
+<td><code>ss -tuln</code></td>
+<td>Zeigt alle geöffneten TCP- und UDP-Ports an.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>netstat -r</code></td>
+<td>Zeigt die Routing-Tabelle an.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>iftop</code></td>
+<td>Zeigt Echtzeit-Netzwerkverkehr an.</td>
+</tr>
+<tr>
+<td><strong>Festplattenüberwachung</strong></td>
+<td><code>df -h</code></td>
+<td>Zeigt Festplattenbelegung in menschlich lesbarer Form an.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>du -sh /home</code></td>
+<td>Zeigt die Größe des <code>/home</code>-Verzeichnisses an.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>iostat -x</code></td>
+<td>Zeigt E/A-Statistiken für Festplatten an.</td>
+</tr>
+<tr>
+<td><strong>Log-Rotation</strong></td>
+<td><code>logrotate -f /etc/logrotate.conf</code></td>
+<td>Erzwingt die Rotation der Protokolle.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="11-haufige-fehler-und-losungen"><strong>11. Häufige Fehler und Lösungen</strong><a class="headerlink" href="#11-haufige-fehler-und-losungen" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th><strong>Problem</strong></th>
+<th><strong>Ursache</strong></th>
+<th><strong>Lösung</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><code>Permission denied</code> beim Lesen von <code>/var/log/syslog</code></strong></td>
+<td>Keine Leseberechtigung für die Datei.</td>
+<td><code>sudo</code> verwenden oder Benutzer zur Gruppe <code>adm</code> hinzufügen.</td>
+</tr>
+<tr>
+<td><strong><code>command not found</code> für <code>htop</code> oder <code>iftop</code></strong></td>
+<td>Tool ist nicht installiert.</td>
+<td><code>sudo apt install htop iftop</code> (Debian/Ubuntu) oder <code>sudo yum install htop iftop</code> (RHEL/CentOS).</td>
+</tr>
+<tr>
+<td><strong><code>journalctl</code> zeigt keine Protokolle an</strong></td>
+<td><code>systemd</code> ist nicht aktiv oder Protokolle sind deaktiviert.</td>
+<td>Prüfen, ob <code>systemd</code> läuft: <code>systemctl status systemd-journald</code>.</td>
+</tr>
+<tr>
+<td><strong>Festplatte ist voll, aber <code>df -h</code> zeigt freien Speicher an</strong></td>
+<td>Gelöschte Dateien werden von laufenden Prozessen gehalten.</td>
+<td>Prozesse identifizieren, die Dateien halten: <code>lsof +L1</code>.</td>
+</tr>
+<tr>
+<td><strong><code>logrotate</code> funktioniert nicht</strong></td>
+<td>Falsche Konfiguration oder Berechtigungen.</td>
+<td>Konfiguration prüfen: <code>logrotate -d /etc/logrotate.conf</code> (Debug-Modus).</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="12-vertiefung-rsyslog-und-syslog-ng"><strong>12. Vertiefung: <code>rsyslog</code> und <code>syslog-ng</code></strong><a class="headerlink" href="#12-vertiefung-rsyslog-und-syslog-ng" title="Permanent link">&para;</a></h4>
+<p>Für <strong>fortgeschrittene Protokollierung</strong> können Sie <strong><code>rsyslog</code></strong> oder <strong><code>syslog-ng</code></strong> verwenden, um Protokolle zu <strong>filtern, weiterzuleiten und zu speichern</strong>.</p>
+<h5 id="121-rsyslog-konfigurieren"><strong>12.1 <code>rsyslog</code> konfigurieren</strong><a class="headerlink" href="#121-rsyslog-konfigurieren" title="Permanent link">&para;</a></h5>
+<p>Die Hauptkonfigurationsdatei ist <strong><code>/etc/rsyslog.conf</code></strong>. Hier können Sie <strong>Regeln für die Protokollierung</strong> definieren.</p>
+<p><strong>Beispiel: Protokolle in separate Dateien schreiben</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># /etc/rsyslog.conf</span>
+auth.*<span class="w">      </span>/var/log/auth.log
+kern.*<span class="w">      </span>/var/log/kern.log
+mail.*<span class="w">      </span>/var/log/mail.log
+</code></pre></div></td></tr></table></div>
+- <strong><code>auth.*</code></strong>: Alle Authentifizierungsprotokolle.
+- <strong><code>kern.*</code></strong>: Alle Kernel-Protokolle.
+- <strong><code>mail.*</code></strong>: Alle E-Mail-Protokolle.</p>
+<p><strong>Neustart von <code>rsyslog</code>:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>rsyslog
+</code></pre></div></td></tr></table></div></p>
+<h5 id="122-protokolle-an-einen-entfernten-server-senden"><strong>12.2 Protokolle an einen entfernten Server senden</strong><a class="headerlink" href="#122-protokolle-an-einen-entfernten-server-senden" title="Permanent link">&para;</a></h5>
+<p>Um Protokolle an einen <strong>zentralen Log-Server</strong> zu senden, fügen Sie folgende Zeile zu <code>/etc/rsyslog.conf</code> hinzu:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>*.*<span class="w"> </span>@192.168.1.100:514
+</code></pre></div></td></tr></table></div>
+- <strong><code>*.*</code></strong>: Alle Protokolle.
+- <strong><code>@192.168.1.100:514</code></strong>: IP-Adresse und Port des Log-Servers.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Qualidy GmbH
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.kununu.com/de/qualidy" target="_blank" rel="noopener" title="www.kununu.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M311 86.3c12.3-12.7 12-32.9-.7-45.2s-32.9-12-45.2.7C143.4 167.2 76.4 236.3 64 249V64c0-17.7-14.3-32-32-32S0 46.3 0 64v384c0 17.7 14.3 32 32 32s32-14.3 32-32V341l64.7-66.7 133 192c10.1 14.5 30 18.1 44.5 8.1s18.1-30 8.1-44.5L174.1 227.4z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://de.linkedin.com/company/qualidy" target="_blank" rel="noopener" title="de.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.google.com/search?sca_esv=7e6ba2047fcb60f3&uds=AMwkrPtyB8MsmozA4Lwzqy2G2HCu-abqzc6moOG48q3gP5dtjTRzC2Ws0eSwcyLXDfZNuYCrZ7ByIreHLG9th3vKLekPoVeey0tumAbet4cVLQRLzdRFhUbOGbnyp3xo1V0hzzaNmkCN&si=AKbGX_rcuucMgom2rba1cdwsvM2SVoIkP2btyqGMV4t0GuHIs4sGV_1tpuqR0YHG4Rzd9SdJcL-lW6E-2aJA5azZLTKkIOrZ2j2aWwoBkVbdEJ0o0GPcQhs%3D&q=Qualidy+GmbH+Rezensionen&sa=X&ved=2ahUKEwibsbnSgcmFAxXNQvEDHaVYCiAQ3PALegQIRxAF" target="_blank" rel="noopener" title="www.google.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.35 11.1h-9.17v2.73h6.51c-.33 3.81-3.5 5.44-6.5 5.44C8.36 19.27 5 16.25 5 12c0-4.1 3.2-7.27 7.2-7.27 3.09 0 4.9 1.97 4.9 1.97L19 4.72S16.56 2 12.1 2C6.42 2 2.03 6.8 2.03 12c0 5.05 4.13 10 10.22 10 5.35 0 9.25-3.67 9.25-9.09 0-1.15-.15-1.81-.15-1.81"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://qualidy.de" target="_blank" rel="noopener" title="qualidy.de" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M351.9 280H161c2.9 64.5 17.2 123.9 37.5 167.4 11.4 24.5 23.7 41.8 35.1 52.4 11.2 10.5 18.9 12.2 22.9 12.2s11.7-1.7 22.9-12.2c11.4-10.6 23.7-28 35.1-52.4 20.3-43.5 34.6-102.9 37.5-167.4zm-191-48h190.9c-2.8-64.5-17.1-123.9-37.4-167.4-11.4-24.4-23.7-41.8-35.1-52.4C268.1 1.7 260.4 0 256.4 0s-11.7 1.7-22.9 12.2c-11.4 10.6-23.7 28-35.1 52.4-20.3 43.5-34.6 102.9-37.5 167.4m-48 0c3.5-85.6 25.6-165.1 57.9-217.3C78.7 47.3 10.9 131.2 1.5 232zM1.5 280c9.4 100.8 77.2 184.7 169.3 217.3-32.3-52.2-54.4-131.7-57.9-217.3zm398.4 0c-3.5 85.6-25.6 165.1-57.9 217.3 92.1-32.7 159.9-116.5 169.3-217.3zm111.4-48C501.9 131.2 434.1 47.3 342 14.7c32.3 52.2 54.4 131.7 57.9 217.3z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tracking", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,2458 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>Netzwerk - Basis Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/logo.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/grid.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/video_admonition.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/python_tutor_admonition.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/mermaid.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="amber" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#modul-iv-systemadministration-und-sicherheit" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Basis Wiki" class="md-header__button md-logo" aria-label="Basis Wiki" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Basis Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Netzwerk
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Basis Wiki" class="md-nav__button md-logo" aria-label="Basis Wiki" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    Basis Wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übersicht
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module I Das Konzept und die Theorie
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Module I Das Konzept und die Theorie
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module1/OpenSource%26Linux-Community/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Open Source & Proprietäre Software
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module1/opensource_lizenzen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Open-Source-Software und Lizenzierung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module1/linux_evolution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Linux Evolution und beliebte Betriebssysteme
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module1/das_linux_betriebssystem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Das Linux-Betriebssystem
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../7.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dateisystem-Hierarchie
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../8.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Netzwerk
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module II Die Grundlagen der Command-Line
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Module II Die Grundlagen der Command-Line
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Grundlagen der Kommandozeile
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Die Kommandozeile zur Hilfe nutzen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Verzeichnissen und Anzeigen von Dateien
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Erstellen, Verschieben und Löschen von Dateien
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module III Automatisierung und Skripting
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Module III Automatisierung und Skripting
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Verknüpfung von Befehlen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Archivierung von Dateien in der Kommandozeile
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Suchen und Extrahieren von Daten aus Dateien
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Befehle in ein Skript umwandeln
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Automatisierung von Aufgaben mit Cron
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fortgeschrittenes Skripting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module IV Systemadministration und Sicherheit
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Module IV Systemadministration und Sicherheit
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Benutzer- und Gruppenverwaltung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Verwalten von Dateiberechtigungen und Eigentum
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Systemüberwachung und Protokollierung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Softwareinstallation und -verwaltung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Netzwerksicherheit und Firewall-Konfiguration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Backup-Strategien und Wiederherstellung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module V Zusammenführung und Zielsetzung
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Module V Zusammenführung und Zielsetzung
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Wichtige Open-Source-Anwendungen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ICT-Fähigkeiten und Arbeiten in Linux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Netzwerk</h1>
+
+<h3 id="modul-iv-systemadministration-und-sicherheit"><strong>Modul IV: Systemadministration und Sicherheit</strong><a class="headerlink" href="#modul-iv-systemadministration-und-sicherheit" title="Permanent link">&para;</a></h3>
+<h3 id="thema-netzwerksicherheit-und-firewall-konfiguration"><strong>Thema: Netzwerksicherheit und Firewall-Konfiguration</strong><a class="headerlink" href="#thema-netzwerksicherheit-und-firewall-konfiguration" title="Permanent link">&para;</a></h3>
+<hr />
+<h4 id="1-einfuhrung-in-netzwerksicherheit"><strong>1. Einführung in Netzwerksicherheit</strong><a class="headerlink" href="#1-einfuhrung-in-netzwerksicherheit" title="Permanent link">&para;</a></h4>
+<p>Netzwerksicherheit ist ein <strong>kritischer Bestandteil</strong> der Systemadministration. Sie umfasst:
+- <strong>Zugangskontrolle</strong> (Wer darf auf das Netzwerk zugreifen?)
+- <strong>Datenintegrität</strong> (Sind die Daten unverändert?)
+- <strong>Vertraulichkeit</strong> (Sind die Daten geschützt?)
+- <strong>Verfügbarkeit</strong> (Ist das Netzwerk verfügbar, wenn es gebraucht wird?)</p>
+<p>Die <strong>Firewall</strong> ist ein zentrales Werkzeug, um <strong>unautorisierten Zugriff</strong> zu blockieren und den <strong>Netzwerkverkehr</strong> zu kontrollieren.</p>
+<hr />
+<h4 id="2-grundlagen-der-firewall"><strong>2. Grundlagen der Firewall</strong><a class="headerlink" href="#2-grundlagen-der-firewall" title="Permanent link">&para;</a></h4>
+<p>Eine <strong>Firewall</strong> ist eine <strong>Netzwerkkomponente</strong>, die den <strong>Datenverkehr</strong> zwischen Netzwerken oder Hosts <strong>filtert und überwacht</strong>. Sie kann:
+- <strong>Erlaubten Verkehr</strong> durchlassen.
+- <strong>Blockierten Verkehr</strong> abweisen.
+- <strong>Protokolle und Ports</strong> steuern.
+- <strong>IP-Adressen und Subnetze</strong> filtern.</p>
+<hr />
+<h5 id="21-firewall-typen"><strong>2.1 Firewall-Typen</strong><a class="headerlink" href="#21-firewall-typen" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th><strong>Typ</strong></th>
+<th><strong>Beschreibung</strong></th>
+<th><strong>Beispiele</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Paketfilter-Firewall</strong></td>
+<td>Filtert Datenpakete basierend auf <strong>IP-Adressen, Ports und Protokollen</strong>.</td>
+<td><code>iptables</code>, <code>nftables</code></td>
+</tr>
+<tr>
+<td><strong>Stateful Firewall</strong></td>
+<td>Verfolgt den <strong>Zustand von Verbindungen</strong> (z. B. TCP-Handshake).</td>
+<td><code>iptables</code> (mit Stateful Rules), <code>nftables</code></td>
+</tr>
+<tr>
+<td><strong>Application-Layer Firewall</strong></td>
+<td>Filtert basierend auf <strong>Anwendungsdaten</strong> (z. B. HTTP, FTP).</td>
+<td><code>ufw</code> (mit Erweiterungen), <code>pf</code> (OpenBSD)</td>
+</tr>
+<tr>
+<td><strong>Proxy-Firewall</strong></td>
+<td>Agiert als <strong>Vermittler</strong> zwischen Client und Server.</td>
+<td>Squid, Nginx (als Reverse Proxy)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h5 id="22-firewall-regeln"><strong>2.2 Firewall-Regeln</strong><a class="headerlink" href="#22-firewall-regeln" title="Permanent link">&para;</a></h5>
+<p>Firewall-Regeln bestehen aus:
+- <strong>Aktion</strong> (z. B. <code>ACCEPT</code>, <code>DROP</code>, <code>REJECT</code>).
+- <strong>Protokoll</strong> (z. B. <code>TCP</code>, <code>UDP</code>, <code>ICMP</code>).
+- <strong>Quell-IP</strong> (z. B. <code>192.168.1.0/24</code>).
+- <strong>Ziel-IP</strong> (z. B. <code>10.0.0.1</code>).
+- <strong>Quell-Port</strong> (z. B. <code>80</code>).
+- <strong>Ziel-Port</strong> (z. B. <code>443</code>).</p>
+<hr />
+<h4 id="3-iptables-klassische-firewall-unter-linux"><strong>3. <code>iptables</code> – Klassische Firewall unter Linux</strong><a class="headerlink" href="#3-iptables-klassische-firewall-unter-linux" title="Permanent link">&para;</a></h4>
+<p><code>iptables</code> ist das <strong>traditionelle Firewall-Tool</strong> unter Linux. Es arbeitet mit <strong>Netfilter</strong>, dem Firewall-Subsystem des Linux-Kernels.</p>
+<hr />
+<h5 id="31-grundlagen-von-iptables"><strong>3.1 Grundlagen von <code>iptables</code></strong><a class="headerlink" href="#31-grundlagen-von-iptables" title="Permanent link">&para;</a></h5>
+<p><code>iptables</code> verwendet <strong>Tabellen</strong> und <strong>Ketten (Chains)</strong>, um Regeln zu organisieren:
+- <strong>Tabellen:</strong>
+  - <code>filter</code> (Standardtabelle für Paketfilterung).
+  - <code>nat</code> (für Network Address Translation).
+  - <code>mangle</code> (für Paketmodifikation).
+  - <code>raw</code> (für spezielle Verarbeitung).</p>
+<ul>
+<li><strong>Ketten (Chains):</strong></li>
+<li><code>INPUT</code> (Eingehender Verkehr).</li>
+<li><code>OUTPUT</code> (Ausgehender Verkehr).</li>
+<li><code>FORWARD</code> (Weitergeleiteter Verkehr).</li>
+</ul>
+<hr />
+<h5 id="32-wichtige-iptables-befehle"><strong>3.2 Wichtige <code>iptables</code>-Befehle</strong><a class="headerlink" href="#32-wichtige-iptables-befehle" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th><strong>Befehl</strong></th>
+<th><strong>Beschreibung</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sudo iptables -L</code></td>
+<td>Listet <strong>alle Regeln</strong> in der <code>filter</code>-Tabelle auf.</td>
+</tr>
+<tr>
+<td><code>sudo iptables -L -n -v</code></td>
+<td>Listet Regeln mit <strong>IP-Adressen (nicht aufgelöst)</strong> und <strong>Zählern</strong> auf.</td>
+</tr>
+<tr>
+<td><code>sudo iptables -F</code></td>
+<td><strong>Löscht alle Regeln</strong> in der <code>filter</code>-Tabelle.</td>
+</tr>
+<tr>
+<td><code>sudo iptables -X</code></td>
+<td><strong>Löscht alle benutzerdefinierten Ketten</strong>.</td>
+</tr>
+<tr>
+<td><code>sudo iptables -Z</code></td>
+<td>Setzt <strong>alle Zähler</strong> auf Null zurück.</td>
+</tr>
+<tr>
+<td><code>sudo iptables -A [chain] [regel]</code></td>
+<td><strong>Fügt eine Regel</strong> zu einer Kette hinzu.</td>
+</tr>
+<tr>
+<td><code>sudo iptables -D [chain] [regel]</code></td>
+<td><strong>Löscht eine Regel</strong> aus einer Kette.</td>
+</tr>
+<tr>
+<td><code>sudo iptables -I [chain] [position] [regel]</code></td>
+<td><strong>Fügt eine Regel an einer bestimmten Position</strong> ein.</td>
+</tr>
+<tr>
+<td><code>sudo iptables -P [chain] [aktion]</code></td>
+<td>Setzt die <strong>Standardaktion</strong> für eine Kette (z. B. <code>DROP</code>).</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h5 id="33-beispiele-fur-iptables-regeln"><strong>3.3 Beispiele für <code>iptables</code>-Regeln</strong><a class="headerlink" href="#33-beispiele-fur-iptables-regeln" title="Permanent link">&para;</a></h5>
+<h6 id="331-standardrichtlinien-setzen"><strong>3.3.1 Standardrichtlinien setzen</strong><a class="headerlink" href="#331-standardrichtlinien-setzen" title="Permanent link">&para;</a></h6>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Alle eingehenden Pakete standardmäßig blockieren</span>
+sudo<span class="w"> </span>iptables<span class="w"> </span>-P<span class="w"> </span>INPUT<span class="w"> </span>DROP
+
+<span class="c1"># Alle ausgehenden Pakete standardmäßig erlauben</span>
+sudo<span class="w"> </span>iptables<span class="w"> </span>-P<span class="w"> </span>OUTPUT<span class="w"> </span>ACCEPT
+
+<span class="c1"># Weitergeleitete Pakete standardmäßig blockieren</span>
+sudo<span class="w"> </span>iptables<span class="w"> </span>-P<span class="w"> </span>FORWARD<span class="w"> </span>DROP
+</code></pre></div></td></tr></table></div>
+<h6 id="332-erlauben-von-ssh-zugriff-port-22"><strong>3.3.2 Erlauben von SSH-Zugriff (Port 22)</strong><a class="headerlink" href="#332-erlauben-von-ssh-zugriff-port-22" title="Permanent link">&para;</a></h6>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">22</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
+</code></pre></div></td></tr></table></div>
+<h6 id="333-erlauben-von-httphttps-ports-80-und-443"><strong>3.3.3 Erlauben von HTTP/HTTPS (Ports 80 und 443)</strong><a class="headerlink" href="#333-erlauben-von-httphttps-ports-80-und-443" title="Permanent link">&para;</a></h6>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">80</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
+sudo<span class="w"> </span>iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">443</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
+</code></pre></div></td></tr></table></div>
+<h6 id="334-erlauben-von-icmp-ping"><strong>3.3.4 Erlauben von ICMP (Ping)</strong><a class="headerlink" href="#334-erlauben-von-icmp-ping" title="Permanent link">&para;</a></h6>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-p<span class="w"> </span>icmp<span class="w"> </span>--icmp-type<span class="w"> </span>echo-request<span class="w"> </span>-j<span class="w"> </span>ACCEPT
+</code></pre></div></td></tr></table></div>
+<h6 id="335-erlauben-von-verbindungen-aus-einem-bestimmten-subnetz"><strong>3.3.5 Erlauben von Verbindungen aus einem bestimmten Subnetz</strong><a class="headerlink" href="#335-erlauben-von-verbindungen-aus-einem-bestimmten-subnetz" title="Permanent link">&para;</a></h6>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-s<span class="w"> </span><span class="m">192</span>.168.1.0/24<span class="w"> </span>-j<span class="w"> </span>ACCEPT
+</code></pre></div></td></tr></table></div>
+<h6 id="336-blockieren-einer-bestimmten-ip-adresse"><strong>3.3.6 Blockieren einer bestimmten IP-Adresse</strong><a class="headerlink" href="#336-blockieren-einer-bestimmten-ip-adresse" title="Permanent link">&para;</a></h6>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-s<span class="w"> </span><span class="m">192</span>.168.1.100<span class="w"> </span>-j<span class="w"> </span>DROP
+</code></pre></div></td></tr></table></div>
+<h6 id="337-port-weiterleitung-port-forwarding"><strong>3.3.7 Port-Weiterleitung (Port Forwarding)</strong><a class="headerlink" href="#337-port-weiterleitung-port-forwarding" title="Permanent link">&para;</a></h6>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Aktiviert NAT für die Weiterleitung</span>
+sudo<span class="w"> </span>iptables<span class="w"> </span>-t<span class="w"> </span>nat<span class="w"> </span>-A<span class="w"> </span>PREROUTING<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">80</span><span class="w"> </span>-j<span class="w"> </span>DNAT<span class="w"> </span>--to-destination<span class="w"> </span><span class="m">192</span>.168.1.10:80
+sudo<span class="w"> </span>iptables<span class="w"> </span>-t<span class="w"> </span>nat<span class="w"> </span>-A<span class="w"> </span>POSTROUTING<span class="w"> </span>-j<span class="w"> </span>MASQUERADE
+</code></pre></div></td></tr></table></div>
+<h6 id="338-speichern-und-wiederherstellen-von-regeln"><strong>3.3.8 Speichern und Wiederherstellen von Regeln</strong><a class="headerlink" href="#338-speichern-und-wiederherstellen-von-regeln" title="Permanent link">&para;</a></h6>
+<p><code>iptables</code>-Regeln gehen nach einem <strong>Neustart verloren</strong>. Um sie dauerhaft zu speichern:
+- <strong>Debian/Ubuntu:</strong>
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>iptables-persistent
+sudo<span class="w"> </span>netfilter-persistent<span class="w"> </span>save
+</code></pre></div></td></tr></table></div>
+- <strong>RHEL/CentOS:</strong>
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>yum<span class="w"> </span>install<span class="w"> </span>iptables-services
+sudo<span class="w"> </span>service<span class="w"> </span>iptables<span class="w"> </span>save
+sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>iptables
+sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>iptables
+</code></pre></div></td></tr></table></div></p>
+<hr />
+<h4 id="4-nftables-moderner-ersatz-fur-iptables"><strong>4. <code>nftables</code> – Moderner Ersatz für <code>iptables</code></strong><a class="headerlink" href="#4-nftables-moderner-ersatz-fur-iptables" title="Permanent link">&para;</a></h4>
+<p><code>nftables</code> ist der <strong>Nachfolger von <code>iptables</code></strong> und bietet eine <strong>einfachere Syntax</strong> und <strong>bessere Leistung</strong>. Es wird ab <strong>Linux Kernel 3.13</strong> unterstützt.</p>
+<hr />
+<h5 id="41-grundlagen-von-nftables"><strong>4.1 Grundlagen von <code>nftables</code></strong><a class="headerlink" href="#41-grundlagen-von-nftables" title="Permanent link">&para;</a></h5>
+<p><code>nftables</code> verwendet <strong>eine einzige Tabelle</strong> für alle Firewall-Regeln und unterstützt:
+- <strong>IPv4 und IPv6</strong> in einer Regel.
+- <strong>Vereinfachte Syntax</strong> (keine separaten Tabellen für <code>filter</code>, <code>nat</code>, etc.).
+- <strong>Bessere Performance</strong> (weniger Overhead).</p>
+<hr />
+<h5 id="42-wichtige-nft-befehle"><strong>4.2 Wichtige <code>nft</code>-Befehle</strong><a class="headerlink" href="#42-wichtige-nft-befehle" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th><strong>Befehl</strong></th>
+<th><strong>Beschreibung</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sudo nft list ruleset</code></td>
+<td>Listet <strong>alle Regeln</strong> auf.</td>
+</tr>
+<tr>
+<td><code>sudo nft flush ruleset</code></td>
+<td><strong>Löscht alle Regeln</strong>.</td>
+</tr>
+<tr>
+<td><code>sudo nft add table [name]</code></td>
+<td>Erstellt eine <strong>neue Tabelle</strong>.</td>
+</tr>
+<tr>
+<td><code>sudo nft add chain [table] [name] [type]</code></td>
+<td>Erstellt eine <strong>neue Kette</strong>.</td>
+</tr>
+<tr>
+<td><code>sudo nft add rule [table] [chain] [regel]</code></td>
+<td><strong>Fügt eine Regel</strong> hinzu.</td>
+</tr>
+<tr>
+<td><code>sudo nft delete rule [table] [chain] [handle]</code></td>
+<td><strong>Löscht eine Regel</strong>.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h5 id="43-beispiele-fur-nftables-regeln"><strong>4.3 Beispiele für <code>nftables</code>-Regeln</strong><a class="headerlink" href="#43-beispiele-fur-nftables-regeln" title="Permanent link">&para;</a></h5>
+<h6 id="431-tabelle-und-ketten-erstellen"><strong>4.3.1 Tabelle und Ketten erstellen</strong><a class="headerlink" href="#431-tabelle-und-ketten-erstellen" title="Permanent link">&para;</a></h6>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Tabelle erstellen</span>
+sudo<span class="w"> </span>nft<span class="w"> </span>add<span class="w"> </span>table<span class="w"> </span>inet<span class="w"> </span>filter
+
+<span class="c1"># Ketten erstellen</span>
+sudo<span class="w"> </span>nft<span class="w"> </span>add<span class="w"> </span>chain<span class="w"> </span>inet<span class="w"> </span>filter<span class="w"> </span>input<span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="nb">type</span><span class="w"> </span>filter<span class="w"> </span>hook<span class="w"> </span>input<span class="w"> </span>priority<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="se">\;</span><span class="w"> </span><span class="o">}</span>
+sudo<span class="w"> </span>nft<span class="w"> </span>add<span class="w"> </span>chain<span class="w"> </span>inet<span class="w"> </span>filter<span class="w"> </span>output<span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="nb">type</span><span class="w"> </span>filter<span class="w"> </span>hook<span class="w"> </span>output<span class="w"> </span>priority<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="se">\;</span><span class="w"> </span><span class="o">}</span>
+sudo<span class="w"> </span>nft<span class="w"> </span>add<span class="w"> </span>chain<span class="w"> </span>inet<span class="w"> </span>filter<span class="w"> </span>forward<span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="nb">type</span><span class="w"> </span>filter<span class="w"> </span>hook<span class="w"> </span>forward<span class="w"> </span>priority<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="se">\;</span><span class="w"> </span><span class="o">}</span>
+</code></pre></div></td></tr></table></div>
+<h6 id="432-standardrichtlinien-setzen"><strong>4.3.2 Standardrichtlinien setzen</strong><a class="headerlink" href="#432-standardrichtlinien-setzen" title="Permanent link">&para;</a></h6>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Alle eingehenden Pakete standardmäßig blockieren</span>
+sudo<span class="w"> </span>nft<span class="w"> </span>add<span class="w"> </span>rule<span class="w"> </span>inet<span class="w"> </span>filter<span class="w"> </span>input<span class="w"> </span>counter<span class="w"> </span>drop
+
+<span class="c1"># Alle ausgehenden Pakete standardmäßig erlauben</span>
+sudo<span class="w"> </span>nft<span class="w"> </span>add<span class="w"> </span>rule<span class="w"> </span>inet<span class="w"> </span>filter<span class="w"> </span>output<span class="w"> </span>counter<span class="w"> </span>accept
+
+<span class="c1"># Weitergeleitete Pakete standardmäßig blockieren</span>
+sudo<span class="w"> </span>nft<span class="w"> </span>add<span class="w"> </span>rule<span class="w"> </span>inet<span class="w"> </span>filter<span class="w"> </span>forward<span class="w"> </span>counter<span class="w"> </span>drop
+</code></pre></div></td></tr></table></div>
+<h6 id="433-erlauben-von-ssh-zugriff-port-22"><strong>4.3.3 Erlauben von SSH-Zugriff (Port 22)</strong><a class="headerlink" href="#433-erlauben-von-ssh-zugriff-port-22" title="Permanent link">&para;</a></h6>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>nft<span class="w"> </span>add<span class="w"> </span>rule<span class="w"> </span>inet<span class="w"> </span>filter<span class="w"> </span>input<span class="w"> </span>tcp<span class="w"> </span>dport<span class="w"> </span><span class="m">22</span><span class="w"> </span>counter<span class="w"> </span>accept
+</code></pre></div></td></tr></table></div>
+<h6 id="434-erlauben-von-httphttps-ports-80-und-443"><strong>4.3.4 Erlauben von HTTP/HTTPS (Ports 80 und 443)</strong><a class="headerlink" href="#434-erlauben-von-httphttps-ports-80-und-443" title="Permanent link">&para;</a></h6>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>nft<span class="w"> </span>add<span class="w"> </span>rule<span class="w"> </span>inet<span class="w"> </span>filter<span class="w"> </span>input<span class="w"> </span>tcp<span class="w"> </span>dport<span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="m">80</span>,<span class="w"> </span><span class="m">443</span><span class="w"> </span><span class="o">}</span><span class="w"> </span>counter<span class="w"> </span>accept
+</code></pre></div></td></tr></table></div>
+<h6 id="435-erlauben-von-icmp-ping"><strong>4.3.5 Erlauben von ICMP (Ping)</strong><a class="headerlink" href="#435-erlauben-von-icmp-ping" title="Permanent link">&para;</a></h6>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>nft<span class="w"> </span>add<span class="w"> </span>rule<span class="w"> </span>inet<span class="w"> </span>filter<span class="w"> </span>input<span class="w"> </span>icmp<span class="w"> </span><span class="nb">type</span><span class="w"> </span>echo-request<span class="w"> </span>counter<span class="w"> </span>accept
+</code></pre></div></td></tr></table></div>
+<h6 id="436-blockieren-einer-bestimmten-ip-adresse"><strong>4.3.6 Blockieren einer bestimmten IP-Adresse</strong><a class="headerlink" href="#436-blockieren-einer-bestimmten-ip-adresse" title="Permanent link">&para;</a></h6>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>nft<span class="w"> </span>add<span class="w"> </span>rule<span class="w"> </span>inet<span class="w"> </span>filter<span class="w"> </span>input<span class="w"> </span>ip<span class="w"> </span>saddr<span class="w"> </span><span class="m">192</span>.168.1.100<span class="w"> </span>counter<span class="w"> </span>drop
+</code></pre></div></td></tr></table></div>
+<h6 id="437-speichern-und-wiederherstellen-von-regeln"><strong>4.3.7 Speichern und Wiederherstellen von Regeln</strong><a class="headerlink" href="#437-speichern-und-wiederherstellen-von-regeln" title="Permanent link">&para;</a></h6>
+<p><code>nftables</code>-Regeln können in einer <strong>Konfigurationsdatei</strong> gespeichert werden (z. B. <code>/etc/nftables.conf</code>).</p>
+<p><strong>Beispielkonfiguration (<code>/etc/nftables.conf</code>):</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/usr/sbin/nft -f</span>
+
+flush<span class="w"> </span>ruleset
+
+table<span class="w"> </span>inet<span class="w"> </span>filter<span class="w"> </span><span class="o">{</span>
+<span class="w">    </span>chain<span class="w"> </span>input<span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="nb">type</span><span class="w"> </span>filter<span class="w"> </span>hook<span class="w"> </span>input<span class="w"> </span>priority<span class="w"> </span><span class="m">0</span><span class="p">;</span>
+<span class="w">        </span>policy<span class="w"> </span>drop<span class="p">;</span>
+
+<span class="w">        </span><span class="c1"># Erlaube SSH</span>
+<span class="w">        </span>tcp<span class="w"> </span>dport<span class="w"> </span><span class="m">22</span><span class="w"> </span>accept
+
+<span class="w">        </span><span class="c1"># Erlaube HTTP/HTTPS</span>
+<span class="w">        </span>tcp<span class="w"> </span>dport<span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="m">80</span>,<span class="w"> </span><span class="m">443</span><span class="w"> </span><span class="o">}</span><span class="w"> </span>accept
+
+<span class="w">        </span><span class="c1"># Erlaube ICMP (Ping)</span>
+<span class="w">        </span>icmp<span class="w"> </span><span class="nb">type</span><span class="w"> </span>echo-request<span class="w"> </span>accept
+
+<span class="w">        </span><span class="c1"># Erlaube Verbindungen aus dem lokalen Netzwerk</span>
+<span class="w">        </span>ip<span class="w"> </span>saddr<span class="w"> </span><span class="m">192</span>.168.1.0/24<span class="w"> </span>accept
+<span class="w">    </span><span class="o">}</span>
+
+<span class="w">    </span>chain<span class="w"> </span>output<span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="nb">type</span><span class="w"> </span>filter<span class="w"> </span>hook<span class="w"> </span>output<span class="w"> </span>priority<span class="w"> </span><span class="m">0</span><span class="p">;</span>
+<span class="w">        </span>policy<span class="w"> </span>accept<span class="p">;</span>
+<span class="w">    </span><span class="o">}</span>
+
+<span class="w">    </span>chain<span class="w"> </span>forward<span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="nb">type</span><span class="w"> </span>filter<span class="w"> </span>hook<span class="w"> </span>forward<span class="w"> </span>priority<span class="w"> </span><span class="m">0</span><span class="p">;</span>
+<span class="w">        </span>policy<span class="w"> </span>drop<span class="p">;</span>
+<span class="w">    </span><span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></td></tr></table></div>
+<strong>Regeln laden:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>nft<span class="w"> </span>-f<span class="w"> </span>/etc/nftables.conf
+</code></pre></div></td></tr></table></div>
+<strong>Regeln dauerhaft speichern:</strong>
+- <strong>Debian/Ubuntu:</strong>
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>nftables
+sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>nftables
+</code></pre></div></td></tr></table></div>
+- <strong>RHEL/CentOS:</strong>
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>nftables
+sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>nftables
+</code></pre></div></td></tr></table></div></p>
+<hr />
+<h4 id="5-ufw-benutzerfreundliche-firewall"><strong>5. <code>ufw</code> – Benutzerfreundliche Firewall</strong><a class="headerlink" href="#5-ufw-benutzerfreundliche-firewall" title="Permanent link">&para;</a></h4>
+<p><code>ufw</code> (<strong>Uncomplicated Firewall</strong>) ist eine <strong>einfache Frontend-Oberfläche</strong> für <code>iptables</code> und <code>nftables</code>. Es ist besonders für <strong>Einsteiger</strong> geeignet.</p>
+<hr />
+<h5 id="51-installation-von-ufw"><strong>5.1 Installation von <code>ufw</code></strong><a class="headerlink" href="#51-installation-von-ufw" title="Permanent link">&para;</a></h5>
+<ul>
+<li><strong>Debian/Ubuntu:</strong>
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>ufw
+</code></pre></div></td></tr></table></div></li>
+<li><strong>RHEL/CentOS:</strong>
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>yum<span class="w"> </span>install<span class="w"> </span>ufw
+</code></pre></div></td></tr></table></div></li>
+<li><strong>Arch Linux:</strong>
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>pacman<span class="w"> </span>-S<span class="w"> </span>ufw
+</code></pre></div></td></tr></table></div></li>
+</ul>
+<hr />
+<h5 id="52-wichtige-ufw-befehle"><strong>5.2 Wichtige <code>ufw</code>-Befehle</strong><a class="headerlink" href="#52-wichtige-ufw-befehle" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th><strong>Befehl</strong></th>
+<th><strong>Beschreibung</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sudo ufw enable</code></td>
+<td><strong>Aktiviert</strong> die Firewall.</td>
+</tr>
+<tr>
+<td><code>sudo ufw disable</code></td>
+<td><strong>Deaktiviert</strong> die Firewall.</td>
+</tr>
+<tr>
+<td><code>sudo ufw status</code></td>
+<td>Zeigt den <strong>Status der Firewall</strong> an.</td>
+</tr>
+<tr>
+<td><code>sudo ufw status verbose</code></td>
+<td>Zeigt <strong>detaillierte Informationen</strong> an.</td>
+</tr>
+<tr>
+<td><code>sudo ufw default deny incoming</code></td>
+<td>Setzt die <strong>Standardrichtlinie für eingehenden Verkehr</strong> auf <code>deny</code>.</td>
+</tr>
+<tr>
+<td><code>sudo ufw default allow outgoing</code></td>
+<td>Setzt die <strong>Standardrichtlinie für ausgehenden Verkehr</strong> auf <code>allow</code>.</td>
+</tr>
+<tr>
+<td><code>sudo ufw allow [port]</code></td>
+<td><strong>Erlaubt</strong> einen Port (z. B. <code>22</code>).</td>
+</tr>
+<tr>
+<td><code>sudo ufw deny [port]</code></td>
+<td><strong>Blockiert</strong> einen Port.</td>
+</tr>
+<tr>
+<td><code>sudo ufw allow from [ip] to any port [port]</code></td>
+<td>Erlaubt <strong>Verbindungen von einer bestimmten IP</strong> zu einem Port.</td>
+</tr>
+<tr>
+<td><code>sudo ufw delete [regel]</code></td>
+<td><strong>Löscht eine Regel</strong>.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h5 id="53-beispiele-fur-ufw-regeln"><strong>5.3 Beispiele für <code>ufw</code>-Regeln</strong><a class="headerlink" href="#53-beispiele-fur-ufw-regeln" title="Permanent link">&para;</a></h5>
+<h6 id="531-firewall-aktivieren-und-status-prufen"><strong>5.3.1 Firewall aktivieren und Status prüfen</strong><a class="headerlink" href="#531-firewall-aktivieren-und-status-prufen" title="Permanent link">&para;</a></h6>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>ufw<span class="w"> </span><span class="nb">enable</span>
+sudo<span class="w"> </span>ufw<span class="w"> </span>status
+</code></pre></div></td></tr></table></div>
+<h6 id="532-standardrichtlinien-setzen"><strong>5.3.2 Standardrichtlinien setzen</strong><a class="headerlink" href="#532-standardrichtlinien-setzen" title="Permanent link">&para;</a></h6>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>ufw<span class="w"> </span>default<span class="w"> </span>deny<span class="w"> </span>incoming
+sudo<span class="w"> </span>ufw<span class="w"> </span>default<span class="w"> </span>allow<span class="w"> </span>outgoing
+</code></pre></div></td></tr></table></div>
+<h6 id="533-erlauben-von-ssh-port-22"><strong>5.3.3 Erlauben von SSH (Port 22)</strong><a class="headerlink" href="#533-erlauben-von-ssh-port-22" title="Permanent link">&para;</a></h6>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span><span class="m">22</span>
+</code></pre></div></td></tr></table></div>
+oder explizit für TCP:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span><span class="m">22</span>/tcp
+</code></pre></div></td></tr></table></div></p>
+<h6 id="534-erlauben-von-httphttps-ports-80-und-443"><strong>5.3.4 Erlauben von HTTP/HTTPS (Ports 80 und 443)</strong><a class="headerlink" href="#534-erlauben-von-httphttps-ports-80-und-443" title="Permanent link">&para;</a></h6>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span><span class="m">80</span>
+sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span><span class="m">443</span>
+</code></pre></div></td></tr></table></div>
+oder als Bereich:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span><span class="m">80</span>:443/tcp
+</code></pre></div></td></tr></table></div></p>
+<h6 id="535-erlauben-von-verbindungen-aus-einem-bestimmten-subnetz"><strong>5.3.5 Erlauben von Verbindungen aus einem bestimmten Subnetz</strong><a class="headerlink" href="#535-erlauben-von-verbindungen-aus-einem-bestimmten-subnetz" title="Permanent link">&para;</a></h6>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span>from<span class="w"> </span><span class="m">192</span>.168.1.0/24
+</code></pre></div></td></tr></table></div>
+<h6 id="536-blockieren-einer-bestimmten-ip-adresse"><strong>5.3.6 Blockieren einer bestimmten IP-Adresse</strong><a class="headerlink" href="#536-blockieren-einer-bestimmten-ip-adresse" title="Permanent link">&para;</a></h6>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>ufw<span class="w"> </span>deny<span class="w"> </span>from<span class="w"> </span><span class="m">192</span>.168.1.100
+</code></pre></div></td></tr></table></div>
+<h6 id="537-erlauben-von-ping-icmp"><strong>5.3.7 Erlauben von Ping (ICMP)</strong><a class="headerlink" href="#537-erlauben-von-ping-icmp" title="Permanent link">&para;</a></h6>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span><span class="k">in</span><span class="w"> </span>icmp
+</code></pre></div></td></tr></table></div>
+<h6 id="538-loschen-einer-regel"><strong>5.3.8 Löschen einer Regel</strong><a class="headerlink" href="#538-loschen-einer-regel" title="Permanent link">&para;</a></h6>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Regelnummern anzeigen</span>
+sudo<span class="w"> </span>ufw<span class="w"> </span>status<span class="w"> </span>numbered
+
+<span class="c1"># Regel löschen (z. B. Regel 1)</span>
+sudo<span class="w"> </span>ufw<span class="w"> </span>delete<span class="w"> </span><span class="m">1</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="-">---<a class="headerlink" href="#-" title="Permanent link">&para;</a></h2>
+<h4 id="6-firewalld-dynamische-firewall-unter-rhelcentosfedora"><strong>6. <code>firewalld</code> – Dynamische Firewall unter RHEL/CentOS/Fedora</strong><a class="headerlink" href="#6-firewalld-dynamische-firewall-unter-rhelcentosfedora" title="Permanent link">&para;</a></h4>
+<p><code>firewalld</code> ist die <strong>Standard-Firewall</strong> unter RHEL, CentOS und Fedora. Sie bietet <strong>dynamische Zonen</strong> und <strong>Dienstprofile</strong>, um Regeln flexibel zu verwalten.</p>
+<hr />
+<h5 id="61-grundlagen-von-firewalld"><strong>6.1 Grundlagen von <code>firewalld</code></strong><a class="headerlink" href="#61-grundlagen-von-firewalld" title="Permanent link">&para;</a></h5>
+<ul>
+<li><strong>Zonen:</strong> Definieren <strong>Vertrauensstufen</strong> für Netzwerkverbindungen (z. B. <code>public</code>, <code>internal</code>, <code>trusted</code>).</li>
+<li><strong>Dienste:</strong> Vordefinierte <strong>Dienstprofile</strong> (z. B. <code>http</code>, <code>ssh</code>, <code>ftp</code>).</li>
+<li><strong>Rich Rules:</strong> <strong>Erweiterte Regeln</strong> für feinere Steuerung.</li>
+</ul>
+<hr />
+<h5 id="62-wichtige-firewalld-befehle"><strong>6.2 Wichtige <code>firewalld</code>-Befehle</strong><a class="headerlink" href="#62-wichtige-firewalld-befehle" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th><strong>Befehl</strong></th>
+<th><strong>Beschreibung</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sudo systemctl start firewalld</code></td>
+<td>Startet <code>firewalld</code>.</td>
+</tr>
+<tr>
+<td><code>sudo systemctl enable firewalld</code></td>
+<td>Aktiviert <code>firewalld</code> beim Systemstart.</td>
+</tr>
+<tr>
+<td><code>sudo firewall-cmd --state</code></td>
+<td>Zeigt den <strong>Status von <code>firewalld</code></strong> an.</td>
+</tr>
+<tr>
+<td><code>sudo firewall-cmd --reload</code></td>
+<td><strong>Lädt die Konfiguration neu</strong>, ohne die Firewall zu stoppen.</td>
+</tr>
+<tr>
+<td><code>sudo firewall-cmd --list-all</code></td>
+<td>Zeigt <strong>alle Regeln</strong> für die Standardzone an.</td>
+</tr>
+<tr>
+<td><code>sudo firewall-cmd --get-zones</code></td>
+<td>Listet <strong>alle Zonen</strong> auf.</td>
+</tr>
+<tr>
+<td><code>sudo firewall-cmd --set-default-zone=[zone]</code></td>
+<td>Setzt die <strong>Standardzone</strong>.</td>
+</tr>
+<tr>
+<td><code>sudo firewall-cmd --zone=[zone] --add-service=[dienst]</code></td>
+<td><strong>Fügt einen Dienst</strong> zu einer Zone hinzu.</td>
+</tr>
+<tr>
+<td><code>sudo firewall-cmd --zone=[zone] --add-port=[port]/[protokoll]</code></td>
+<td><strong>Fügt einen Port</strong> zu einer Zone hinzu.</td>
+</tr>
+<tr>
+<td><code>sudo firewall-cmd --zone=[zone] --add-source=[ip/subnetz]</code></td>
+<td><strong>Fügt eine IP/Subnetz</strong> zu einer Zone hinzu.</td>
+</tr>
+<tr>
+<td><code>sudo firewall-cmd --zone=[zone] --remove-service=[dienst]</code></td>
+<td><strong>Entfernt einen Dienst</strong> aus einer Zone.</td>
+</tr>
+<tr>
+<td><code>sudo firewall-cmd --permanent --zone=[zone] --add-service=[dienst]</code></td>
+<td><strong>Fügt einen Dienst dauerhaft</strong> hinzu.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h5 id="63-beispiele-fur-firewalld-regeln"><strong>6.3 Beispiele für <code>firewalld</code>-Regeln</strong><a class="headerlink" href="#63-beispiele-fur-firewalld-regeln" title="Permanent link">&para;</a></h5>
+<h6 id="631-firewall-starten-und-aktivieren"><strong>6.3.1 Firewall starten und aktivieren</strong><a class="headerlink" href="#631-firewall-starten-und-aktivieren" title="Permanent link">&para;</a></h6>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>firewalld
+sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>firewalld
+</code></pre></div></td></tr></table></div>
+<h6 id="632-standardzone-prufen-und-andern"><strong>6.3.2 Standardzone prüfen und ändern</strong><a class="headerlink" href="#632-standardzone-prufen-und-andern" title="Permanent link">&para;</a></h6>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Aktuelle Standardzone anzeigen</span>
+sudo<span class="w"> </span>firewall-cmd<span class="w"> </span>--get-default-zone
+
+<span class="c1"># Standardzone auf &quot;public&quot; setzen</span>
+sudo<span class="w"> </span>firewall-cmd<span class="w"> </span>--set-default-zone<span class="o">=</span>public
+</code></pre></div></td></tr></table></div>
+<h6 id="633-erlauben-von-ssh-port-22"><strong>6.3.3 Erlauben von SSH (Port 22)</strong><a class="headerlink" href="#633-erlauben-von-ssh-port-22" title="Permanent link">&para;</a></h6>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>firewall-cmd<span class="w"> </span>--add-service<span class="o">=</span>ssh<span class="w"> </span>--permanent
+sudo<span class="w"> </span>firewall-cmd<span class="w"> </span>--reload
+</code></pre></div></td></tr></table></div>
+<h6 id="634-erlauben-von-httphttps-ports-80-und-443"><strong>6.3.4 Erlauben von HTTP/HTTPS (Ports 80 und 443)</strong><a class="headerlink" href="#634-erlauben-von-httphttps-ports-80-und-443" title="Permanent link">&para;</a></h6>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>firewall-cmd<span class="w"> </span>--add-service<span class="o">=</span>http<span class="w"> </span>--permanent
+sudo<span class="w"> </span>firewall-cmd<span class="w"> </span>--add-service<span class="o">=</span>https<span class="w"> </span>--permanent
+sudo<span class="w"> </span>firewall-cmd<span class="w"> </span>--reload
+</code></pre></div></td></tr></table></div>
+<h6 id="635-erlauben-eines-bestimmten-ports-z-b-8080"><strong>6.3.5 Erlauben eines bestimmten Ports (z. B. 8080)</strong><a class="headerlink" href="#635-erlauben-eines-bestimmten-ports-z-b-8080" title="Permanent link">&para;</a></h6>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>firewall-cmd<span class="w"> </span>--add-port<span class="o">=</span><span class="m">8080</span>/tcp<span class="w"> </span>--permanent
+sudo<span class="w"> </span>firewall-cmd<span class="w"> </span>--reload
+</code></pre></div></td></tr></table></div>
+<h6 id="636-erlauben-von-verbindungen-aus-einem-bestimmten-subnetz"><strong>6.3.6 Erlauben von Verbindungen aus einem bestimmten Subnetz</strong><a class="headerlink" href="#636-erlauben-von-verbindungen-aus-einem-bestimmten-subnetz" title="Permanent link">&para;</a></h6>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>firewall-cmd<span class="w"> </span>--zone<span class="o">=</span>public<span class="w"> </span>--add-source<span class="o">=</span><span class="m">192</span>.168.1.0/24<span class="w"> </span>--permanent
+sudo<span class="w"> </span>firewall-cmd<span class="w"> </span>--reload
+</code></pre></div></td></tr></table></div>
+<h6 id="637-blockieren-einer-bestimmten-ip-adresse"><strong>6.3.7 Blockieren einer bestimmten IP-Adresse</strong><a class="headerlink" href="#637-blockieren-einer-bestimmten-ip-adresse" title="Permanent link">&para;</a></h6>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>firewall-cmd<span class="w"> </span>--zone<span class="o">=</span>public<span class="w"> </span>--add-rich-rule<span class="o">=</span><span class="s1">&#39;rule family=&quot;ipv4&quot; source address=&quot;192.168.1.100&quot; reject&#39;</span><span class="w"> </span>--permanent
+sudo<span class="w"> </span>firewall-cmd<span class="w"> </span>--reload
+</code></pre></div></td></tr></table></div>
+<h6 id="638-erlauben-von-ping-icmp"><strong>6.3.8 Erlauben von Ping (ICMP)</strong><a class="headerlink" href="#638-erlauben-von-ping-icmp" title="Permanent link">&para;</a></h6>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>firewall-cmd<span class="w"> </span>--add-icmp-block<span class="o">=</span>echo-request<span class="w"> </span>--permanent
+sudo<span class="w"> </span>firewall-cmd<span class="w"> </span>--reload
+</code></pre></div></td></tr></table></div>
+<h6 id="639-alle-regeln-anzeigen"><strong>6.3.9 Alle Regeln anzeigen</strong><a class="headerlink" href="#639-alle-regeln-anzeigen" title="Permanent link">&para;</a></h6>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>firewall-cmd<span class="w"> </span>--list-all
+</code></pre></div></td></tr></table></div>
+<h2 id="-_1">---<a class="headerlink" href="#-_1" title="Permanent link">&para;</a></h2>
+<h4 id="7-netzwerksicherheit-weitere-tools-und-techniken"><strong>7. Netzwerksicherheit: Weitere Tools und Techniken</strong><a class="headerlink" href="#7-netzwerksicherheit-weitere-tools-und-techniken" title="Permanent link">&para;</a></h4>
+<hr />
+<h5 id="71-fail2ban-schutz-vor-brute-force-angriffen"><strong>7.1 <code>fail2ban</code> – Schutz vor Brute-Force-Angriffen</strong><a class="headerlink" href="#71-fail2ban-schutz-vor-brute-force-angriffen" title="Permanent link">&para;</a></h5>
+<p><code>fail2ban</code> ist ein Tool, das <strong>automatisch IP-Adressen blockiert</strong>, die <strong>wiederholte fehlgeschlagene Login-Versuche</strong> unternehmen (z. B. SSH, FTP, Web-Formulare).</p>
+<p><strong>Installation:</strong>
+- <strong>Debian/Ubuntu:</strong>
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>fail2ban
+</code></pre></div></td></tr></table></div>
+- <strong>RHEL/CentOS:</strong>
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>yum<span class="w"> </span>install<span class="w"> </span>fail2ban
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Konfiguration:</strong>
+Die Hauptkonfigurationsdatei ist <code>/etc/fail2ban/jail.local</code>. Hier können Sie <strong>Jails</strong> (Gefängnisse) für verschiedene Dienste definieren.</p>
+<p><strong>Beispielkonfiguration (<code>/etc/fail2ban/jail.local</code>):</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">[DEFAULT]</span>
+<span class="na">bantime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">3600</span><span class="w">      </span><span class="c1"># Blockierungsdauer in Sekunden (1 Stunde)</span>
+<span class="na">findtime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">600</span><span class="w">       </span><span class="c1"># Zeitfenster für fehlgeschlagene Versuche (10 Minuten)</span>
+<span class="na">maxretry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">5</span><span class="w">        </span><span class="c1"># Maximale Anzahl fehlgeschlagener Versuche</span>
+
+<span class="k">[sshd]</span>
+<span class="na">enabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">true</span><span class="w">      </span><span class="c1"># SSH-Jail aktivieren</span>
+<span class="na">port</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">ssh</span>
+<span class="na">filter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">sshd</span>
+<span class="na">logpath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/var/log/auth.log</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Dienst starten und aktivieren:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>fail2ban
+sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>fail2ban
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Status prüfen:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>fail2ban-client<span class="w"> </span>status
+sudo<span class="w"> </span>fail2ban-client<span class="w"> </span>status<span class="w"> </span>sshd
+</code></pre></div></td></tr></table></div></p>
+<hr />
+<h5 id="72-ssh-sichere-remote-verbindungen"><strong>7.2 <code>ssh</code> – Sichere Remote-Verbindungen</strong><a class="headerlink" href="#72-ssh-sichere-remote-verbindungen" title="Permanent link">&para;</a></h5>
+<p>SSH (<strong>Secure Shell</strong>) ist ein <strong>Protokoll für sichere Remote-Verbindungen</strong>. Es verschlüsselt den gesamten Datenverkehr zwischen Client und Server.</p>
+<p><strong>Installation:</strong>
+- <strong>Debian/Ubuntu:</strong>
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>openssh-server
+</code></pre></div></td></tr></table></div>
+- <strong>RHEL/CentOS:</strong>
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>yum<span class="w"> </span>install<span class="w"> </span>openssh-server
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Konfiguration:</strong>
+Die Hauptkonfigurationsdatei ist <code>/etc/ssh/sshd_config</code>.</p>
+<p><strong>Wichtige Einstellungen:</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>Einstellung</strong></th>
+<th><strong>Beschreibung</strong></th>
+<th><strong>Empfohlener Wert</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Port</code></td>
+<td>Port für SSH-Verbindungen.</td>
+<td><code>22</code> (Standard) oder ein <strong>benutzerdefinierter Port</strong> (z. B. <code>2222</code>).</td>
+</tr>
+<tr>
+<td><code>PermitRootLogin</code></td>
+<td>Erlaubt Root-Login.</td>
+<td><code>no</code> (aus Sicherheitsgründen).</td>
+</tr>
+<tr>
+<td><code>PasswordAuthentication</code></td>
+<td>Erlaubt Passwort-Authentifizierung.</td>
+<td><code>no</code> (verwenden Sie stattdessen <strong>SSH-Schlüssel</strong>).</td>
+</tr>
+<tr>
+<td><code>AllowUsers</code></td>
+<td>Erlaubt nur bestimmte Benutzer.</td>
+<td><code>AllowUsers alice bob</code></td>
+</tr>
+<tr>
+<td><code>MaxAuthTries</code></td>
+<td>Maximale Anzahl fehlgeschlagener Login-Versuche.</td>
+<td><code>3</code></td>
+</tr>
+<tr>
+<td><code>LoginGraceTime</code></td>
+<td>Zeitfenster für Login-Versuche.</td>
+<td><code>60</code> (Sekunden).</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Beispielkonfiguration (<code>/etc/ssh/sshd_config</code>):</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="na">Port 2222</span>
+<span class="na">PermitRootLogin no</span>
+<span class="na">PasswordAuthentication no</span>
+<span class="na">AllowUsers alice bob</span>
+<span class="na">MaxAuthTries 3</span>
+<span class="na">LoginGraceTime 60</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Dienst neu starten:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>sshd
+</code></pre></div></td></tr></table></div></p>
+<p><strong>SSH-Schlüssel generieren und verwenden:</strong>
+1. <strong>Schlüsselpaar generieren (auf dem Client):</strong>
+   <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>ssh-keygen<span class="w"> </span>-t<span class="w"> </span>ed25519<span class="w"> </span>-C<span class="w"> </span><span class="s2">&quot;your_email@example.com&quot;</span>
+</code></pre></div></td></tr></table></div>
+   - <strong><code>-t ed25519</code></strong>: Verwenden Sie den <strong>Ed25519-Algorithmus</strong> (sicherer als RSA).
+   - <strong><code>-C</code></strong>: Kommentar (z. B. Ihre E-Mail-Adresse).</p>
+<ol>
+<li><strong>Öffentlichen Schlüssel auf den Server kopieren:</strong>
+   <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>ssh-copy-id<span class="w"> </span>-i<span class="w"> </span>~/.ssh/id_ed25519.pub<span class="w"> </span>alice@192.168.1.100<span class="w"> </span>-p<span class="w"> </span><span class="m">2222</span>
+</code></pre></div></td></tr></table></div></li>
+<li><strong><code>-i</code></strong>: Gibt den <strong>öffentlichen Schlüssel</strong> an.</li>
+<li>
+<p><strong><code>-p</code></strong>: Gibt den <strong>SSH-Port</strong> an (falls nicht Standard).</p>
+</li>
+<li>
+<p><strong>Verbindung herstellen:</strong>
+   <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>ssh<span class="w"> </span>-p<span class="w"> </span><span class="m">2222</span><span class="w"> </span>alice@192.168.1.100
+</code></pre></div></td></tr></table></div></p>
+</li>
+</ol>
+<hr />
+<h5 id="73-tcpdump-netzwerkverkehr-analysieren"><strong>7.3 <code>tcpdump</code> – Netzwerkverkehr analysieren</strong><a class="headerlink" href="#73-tcpdump-netzwerkverkehr-analysieren" title="Permanent link">&para;</a></h5>
+<p><code>tcpdump</code> ist ein <strong>Kommandozeilen-Tool</strong>, um <strong>Netzwerkverkehr zu erfassen und zu analysieren</strong>.</p>
+<p><strong>Installation:</strong>
+- <strong>Debian/Ubuntu:</strong>
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>tcpdump
+</code></pre></div></td></tr></table></div>
+- <strong>RHEL/CentOS:</strong>
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>yum<span class="w"> </span>install<span class="w"> </span>tcpdump
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Wichtige Optionen:</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>Option</strong></th>
+<th><strong>Beschreibung</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-i [interface]</code></td>
+<td>Gibt das <strong>Netzwerkinterface</strong> an (z. B. <code>eth0</code>, <code>ens33</code>).</td>
+</tr>
+<tr>
+<td><code>-n</code></td>
+<td>Zeigt <strong>IP-Adressen</strong> statt Hostnamen an.</td>
+</tr>
+<tr>
+<td><code>-c [anzahl]</code></td>
+<td>Begrenzt die Anzahl der <strong>erfassten Pakete</strong>.</td>
+</tr>
+<tr>
+<td><code>-w [datei]</code></td>
+<td>Speichert die <strong>erfassten Pakete</strong> in einer Datei.</td>
+</tr>
+<tr>
+<td><code>-r [datei]</code></td>
+<td>Liest <strong>erfasste Pakete</strong> aus einer Datei.</td>
+</tr>
+<tr>
+<td><code>port [port]</code></td>
+<td>Filtert nach <strong>Port</strong> (z. B. <code>port 80</code>).</td>
+</tr>
+<tr>
+<td><code>host [ip]</code></td>
+<td>Filtert nach <strong>IP-Adresse</strong> (z. B. <code>host 192.168.1.100</code>).</td>
+</tr>
+<tr>
+<td><code>icmp</code></td>
+<td>Filtert nach <strong>ICMP-Paketen</strong> (Ping).</td>
+</tr>
+<tr>
+<td><code>tcp</code></td>
+<td>Filtert nach <strong>TCP-Paketen</strong>.</td>
+</tr>
+<tr>
+<td><code>udp</code></td>
+<td>Filtert nach <strong>UDP-Paketen</strong>.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Beispiele:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Erfasse alle Pakete auf dem Interface `eth0`</span>
+sudo<span class="w"> </span>tcpdump<span class="w"> </span>-i<span class="w"> </span>eth0
+
+<span class="c1"># Erfasse nur TCP-Pakete auf Port 80</span>
+sudo<span class="w"> </span>tcpdump<span class="w"> </span>-i<span class="w"> </span>eth0<span class="w"> </span>tcp<span class="w"> </span>port<span class="w"> </span><span class="m">80</span>
+
+<span class="c1"># Erfasse nur Pakete von/bis 192.168.1.100</span>
+sudo<span class="w"> </span>tcpdump<span class="w"> </span>-i<span class="w"> </span>eth0<span class="w"> </span>host<span class="w"> </span><span class="m">192</span>.168.1.100
+
+<span class="c1"># Erfasse 100 Pakete und speichere sie in einer Datei</span>
+sudo<span class="w"> </span>tcpdump<span class="w"> </span>-i<span class="w"> </span>eth0<span class="w"> </span>-c<span class="w"> </span><span class="m">100</span><span class="w"> </span>-w<span class="w"> </span>capture.pcap
+
+<span class="c1"># Lese eine erfasste Datei</span>
+sudo<span class="w"> </span>tcpdump<span class="w"> </span>-r<span class="w"> </span>capture.pcap
+</code></pre></div></td></tr></table></div></p>
+<hr />
+<h5 id="74-netstat-und-ss-netzwerkverbindungen-uberwachen"><strong>7.4 <code>netstat</code> und <code>ss</code> – Netzwerkverbindungen überwachen</strong><a class="headerlink" href="#74-netstat-und-ss-netzwerkverbindungen-uberwachen" title="Permanent link">&para;</a></h5>
+<ul>
+<li>
+<p><strong><code>netstat</code></strong> (veraltet, aber noch weit verbreitet):
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>netstat<span class="w"> </span>-tuln<span class="w">  </span><span class="c1"># Zeigt alle TCP/UDP-Ports an</span>
+netstat<span class="w"> </span>-r<span class="w">     </span><span class="c1"># Zeigt die Routing-Tabelle an</span>
+</code></pre></div></td></tr></table></div></p>
+</li>
+<li>
+<p><strong><code>ss</code></strong> (modernere Alternative zu <code>netstat</code>):
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>ss<span class="w"> </span>-tuln<span class="w">       </span><span class="c1"># Zeigt alle TCP/UDP-Ports an</span>
+ss<span class="w"> </span>-l<span class="w">          </span><span class="c1"># Zeigt alle listening Ports an</span>
+ss<span class="w"> </span>-s<span class="w">          </span><span class="c1"># Zeigt eine Zusammenfassung der Socket-Statistiken an</span>
+</code></pre></div></td></tr></table></div></p>
+</li>
+</ul>
+<hr />
+<h5 id="75-nmap-netzwerk-scanning"><strong>7.5 <code>nmap</code> – Netzwerk-Scanning</strong><a class="headerlink" href="#75-nmap-netzwerk-scanning" title="Permanent link">&para;</a></h5>
+<p><code>nmap</code> ist ein <strong>leistungsstarkes Tool</strong> zum <strong>Scannen von Netzwerken</strong>, um offene Ports, Dienste und Sicherheitslücken zu identifizieren.</p>
+<p><strong>Installation:</strong>
+- <strong>Debian/Ubuntu:</strong>
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>nmap
+</code></pre></div></td></tr></table></div>
+- <strong>RHEL/CentOS:</strong>
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>yum<span class="w"> </span>install<span class="w"> </span>nmap
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Wichtige Optionen:</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>Option</strong></th>
+<th><strong>Beschreibung</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-sS</code></td>
+<td><strong>TCP SYN Scan</strong> (schnell und unauffällig).</td>
+</tr>
+<tr>
+<td><code>-sT</code></td>
+<td><strong>TCP Connect Scan</strong> (langsamer, aber zuverlässiger).</td>
+</tr>
+<tr>
+<td><code>-sU</code></td>
+<td><strong>UDP Scan</strong>.</td>
+</tr>
+<tr>
+<td><code>-p [port(s)]</code></td>
+<td>Gibt <strong>Ports</strong> an (z. B. <code>-p 80,443</code> oder <code>-p 1-1000</code>).</td>
+</tr>
+<tr>
+<td><code>-O</code></td>
+<td><strong>Betriebssystem-Erkennung</strong>.</td>
+</tr>
+<tr>
+<td><code>-sV</code></td>
+<td><strong>Dienstversionen erkennen</strong>.</td>
+</tr>
+<tr>
+<td><code>-A</code></td>
+<td><strong>Aggressives Scanning</strong> (kombiniert <code>-O</code> und <code>-sV</code>).</td>
+</tr>
+<tr>
+<td><code>-T4</code></td>
+<td><strong>Schnelleres Scanning</strong> (1-5, wobei 5 am schnellsten ist).</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Beispiele:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Scan eines einzelnen Hosts</span>
+nmap<span class="w"> </span><span class="m">192</span>.168.1.100
+
+<span class="c1"># Scan eines Subnetzes</span>
+nmap<span class="w"> </span><span class="m">192</span>.168.1.0/24
+
+<span class="c1"># Scan mit Dienstversionen und Betriebssystem-Erkennung</span>
+nmap<span class="w"> </span>-sV<span class="w"> </span>-O<span class="w"> </span><span class="m">192</span>.168.1.100
+
+<span class="c1"># Scan aller Ports (1-65535)</span>
+nmap<span class="w"> </span>-p-<span class="w"> </span><span class="m">192</span>.168.1.100
+
+<span class="c1"># Aggressiver Scan</span>
+nmap<span class="w"> </span>-A<span class="w"> </span><span class="m">192</span>.168.1.100
+</code></pre></div></td></tr></table></div></p>
+<h2 id="-_2">---<a class="headerlink" href="#-_2" title="Permanent link">&para;</a></h2>
+<h4 id="8-ubungsaufgaben"><strong>8. Übungsaufgaben</strong><a class="headerlink" href="#8-ubungsaufgaben" title="Permanent link">&para;</a></h4>
+<hr />
+<h5 id="frage-1"><strong>Frage 1</strong><a class="headerlink" href="#frage-1" title="Permanent link">&para;</a></h5>
+<p>Wie können Sie mit <code>iptables</code> <strong>alle eingehenden Pakete standardmäßig blockieren</strong>, aber <strong>SSH (Port 22) erlauben</strong>?</p>
+<details class="success">
+<summary>Antwort</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>iptables<span class="w"> </span>-P<span class="w"> </span>INPUT<span class="w"> </span>DROP
+sudo<span class="w"> </span>iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">22</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
+</code></pre></div></td></tr></table></div>
+</details>
+<hr />
+<h5 id="frage-2"><strong>Frage 2</strong><a class="headerlink" href="#frage-2" title="Permanent link">&para;</a></h5>
+<p>Wie können Sie mit <code>ufw</code> <strong>HTTP (Port 80) und HTTPS (Port 443) erlauben</strong>?</p>
+<details class="success">
+<summary>Antwort</summary>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span><span class="m">80</span>/tcp
+sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span><span class="m">443</span>/tcp
+</code></pre></div></td></tr></table></div>
+oder:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span>http
+sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span>https
+</code></pre></div></td></tr></table></div></p>
+</details>
+<hr />
+<h5 id="frage-3"><strong>Frage 3</strong><a class="headerlink" href="#frage-3" title="Permanent link">&para;</a></h5>
+<p>Wie können Sie mit <code>firewalld</code> <strong>SSH (Port 22) dauerhaft erlauben</strong>?</p>
+<details class="success">
+<summary>Antwort</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>firewall-cmd<span class="w"> </span>--add-service<span class="o">=</span>ssh<span class="w"> </span>--permanent
+sudo<span class="w"> </span>firewall-cmd<span class="w"> </span>--reload
+</code></pre></div></td></tr></table></div>
+</details>
+<hr />
+<h5 id="frage-4"><strong>Frage 4</strong><a class="headerlink" href="#frage-4" title="Permanent link">&para;</a></h5>
+<p>Wie können Sie eine <strong>IP-Adresse (z. B. 192.168.1.100) mit <code>iptables</code> blockieren</strong>?</p>
+<details class="success">
+<summary>Antwort</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-s<span class="w"> </span><span class="m">192</span>.168.1.100<span class="w"> </span>-j<span class="w"> </span>DROP
+</code></pre></div></td></tr></table></div>
+</details>
+<hr />
+<h5 id="frage-5"><strong>Frage 5</strong><a class="headerlink" href="#frage-5" title="Permanent link">&para;</a></h5>
+<p>Wie können Sie mit <code>nftables</code> eine <strong>Regel erstellen, die ICMP (Ping) erlaubt</strong>?</p>
+<details class="success">
+<summary>Antwort</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>nft<span class="w"> </span>add<span class="w"> </span>rule<span class="w"> </span>inet<span class="w"> </span>filter<span class="w"> </span>input<span class="w"> </span>icmp<span class="w"> </span><span class="nb">type</span><span class="w"> </span>echo-request<span class="w"> </span>counter<span class="w"> </span>accept
+</code></pre></div></td></tr></table></div>
+</details>
+<hr />
+<h5 id="frage-6"><strong>Frage 6</strong><a class="headerlink" href="#frage-6" title="Permanent link">&para;</a></h5>
+<p>Wie können Sie mit <code>fail2ban</code> <strong>SSH-Login-Versuche nach 3 fehlgeschlagenen Versuchen für 1 Stunde blockieren</strong>?</p>
+<details class="success">
+<summary>Antwort</summary>
+<p>Bearbeiten Sie <code>/etc/fail2ban/jail.local</code>:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">[sshd]</span>
+<span class="na">enabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">true</span>
+<span class="na">maxretry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">3</span>
+<span class="na">bantime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">3600</span>
+</code></pre></div></td></tr></table></div>
+Dann:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>fail2ban
+</code></pre></div></td></tr></table></div></p>
+</details>
+<hr />
+<h5 id="frage-7"><strong>Frage 7</strong><a class="headerlink" href="#frage-7" title="Permanent link">&para;</a></h5>
+<p>Wie können Sie den <strong>SSH-Port auf 2222 ändern</strong> und <strong>Root-Login deaktivieren</strong>?</p>
+<details class="success">
+<summary>Antwort</summary>
+<p>Bearbeiten Sie <code>/etc/ssh/sshd_config</code>:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="na">Port 2222</span>
+<span class="na">PermitRootLogin no</span>
+</code></pre></div></td></tr></table></div>
+Dann:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>sshd
+</code></pre></div></td></tr></table></div></p>
+</details>
+<hr />
+<h5 id="frage-8"><strong>Frage 8</strong><a class="headerlink" href="#frage-8" title="Permanent link">&para;</a></h5>
+<p>Wie können Sie mit <code>tcpdump</code> <strong>alle TCP-Pakete auf Port 80 erfassen</strong>?</p>
+<details class="success">
+<summary>Antwort</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>tcpdump<span class="w"> </span>-i<span class="w"> </span>eth0<span class="w"> </span>tcp<span class="w"> </span>port<span class="w"> </span><span class="m">80</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<hr />
+<h5 id="frage-9"><strong>Frage 9</strong><a class="headerlink" href="#frage-9" title="Permanent link">&para;</a></h5>
+<p>Wie können Sie mit <code>nmap</code> <strong>alle offenen Ports auf einem Host (192.168.1.100) scannen</strong>?</p>
+<details class="success">
+<summary>Antwort</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>nmap<span class="w"> </span>-p-<span class="w"> </span><span class="m">192</span>.168.1.100
+</code></pre></div></td></tr></table></div>
+</details>
+<hr />
+<h5 id="frage-10"><strong>Frage 10</strong><a class="headerlink" href="#frage-10" title="Permanent link">&para;</a></h5>
+<p>Wie können Sie mit <code>firewalld</code> <strong>eine benutzerdefinierte Zone namens <code>trusted</code> erstellen</strong> und <strong>alle eingehenden Verbindungen erlauben</strong>?</p>
+<details class="success">
+<summary>Antwort</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>firewall-cmd<span class="w"> </span>--new-zone<span class="o">=</span>trusted<span class="w"> </span>--permanent
+sudo<span class="w"> </span>firewall-cmd<span class="w"> </span>--zone<span class="o">=</span>trusted<span class="w"> </span>--set-target<span class="o">=</span>ACCEPT<span class="w"> </span>--permanent
+sudo<span class="w"> </span>firewall-cmd<span class="w"> </span>--reload
+</code></pre></div></td></tr></table></div>
+</details>
+<h2 id="-_3">---<a class="headerlink" href="#-_3" title="Permanent link">&para;</a></h2>
+<h4 id="9-praktische-beispiele"><strong>9. Praktische Beispiele</strong><a class="headerlink" href="#9-praktische-beispiele" title="Permanent link">&para;</a></h4>
+<hr />
+<h5 id="beispiel-1-firewall-regeln-fur-einen-webserver"><strong>Beispiel 1: Firewall-Regeln für einen Webserver</strong><a class="headerlink" href="#beispiel-1-firewall-regeln-fur-einen-webserver" title="Permanent link">&para;</a></h5>
+<p><strong>Szenario:</strong> Ein Webserver soll <strong>HTTP (80)</strong>, <strong>HTTPS (443)</strong> und <strong>SSH (22)</strong> erlauben, aber <strong>alle anderen eingehenden Verbindungen blockieren</strong>.</p>
+<p><strong>Lösung mit <code>ufw</code>:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>ufw<span class="w"> </span>default<span class="w"> </span>deny<span class="w"> </span>incoming
+sudo<span class="w"> </span>ufw<span class="w"> </span>default<span class="w"> </span>allow<span class="w"> </span>outgoing
+sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span><span class="m">22</span>/tcp
+sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span><span class="m">80</span>/tcp
+sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span><span class="m">443</span>/tcp
+sudo<span class="w"> </span>ufw<span class="w"> </span><span class="nb">enable</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Lösung mit <code>firewalld</code>:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>firewall-cmd<span class="w"> </span>--zone<span class="o">=</span>public<span class="w"> </span>--add-service<span class="o">=</span>ssh<span class="w"> </span>--permanent
+sudo<span class="w"> </span>firewall-cmd<span class="w"> </span>--zone<span class="o">=</span>public<span class="w"> </span>--add-service<span class="o">=</span>http<span class="w"> </span>--permanent
+sudo<span class="w"> </span>firewall-cmd<span class="w"> </span>--zone<span class="o">=</span>public<span class="w"> </span>--add-service<span class="o">=</span>https<span class="w"> </span>--permanent
+sudo<span class="w"> </span>firewall-cmd<span class="w"> </span>--zone<span class="o">=</span>public<span class="w"> </span>--set-target<span class="o">=</span>DROP<span class="w"> </span>--permanent
+sudo<span class="w"> </span>firewall-cmd<span class="w"> </span>--reload
+</code></pre></div></td></tr></table></div></p>
+<hr />
+<h5 id="beispiel-2-schutz-vor-brute-force-angriffen-mit-fail2ban"><strong>Beispiel 2: Schutz vor Brute-Force-Angriffen mit <code>fail2ban</code></strong><a class="headerlink" href="#beispiel-2-schutz-vor-brute-force-angriffen-mit-fail2ban" title="Permanent link">&para;</a></h5>
+<p><strong>Szenario:</strong> Ein Server wird <strong>häufig von unbekannten IPs angegriffen</strong>, die versuchen, sich per SSH einzuloggen.</p>
+<p><strong>Lösung:</strong>
+1. Installieren Sie <code>fail2ban</code>:
+   <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>fail2ban
+</code></pre></div></td></tr></table></div>
+2. Konfigurieren Sie <code>/etc/fail2ban/jail.local</code>:
+   <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">[sshd]</span>
+<span class="na">enabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">true</span>
+<span class="na">port</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">ssh</span>
+<span class="na">filter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">sshd</span>
+<span class="na">logpath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/var/log/auth.log</span>
+<span class="na">maxretry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">3</span>
+<span class="na">bantime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">3600</span>
+</code></pre></div></td></tr></table></div>
+3. Starten Sie <code>fail2ban</code>:
+   <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>fail2ban
+sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>fail2ban
+</code></pre></div></td></tr></table></div></p>
+<hr />
+<h5 id="beispiel-3-netzwerkverkehr-analysieren-mit-tcpdump"><strong>Beispiel 3: Netzwerkverkehr analysieren mit <code>tcpdump</code></strong><a class="headerlink" href="#beispiel-3-netzwerkverkehr-analysieren-mit-tcpdump" title="Permanent link">&para;</a></h5>
+<p><strong>Szenario:</strong> Sie möchten <strong>verdächtigen Netzwerkverkehr</strong> auf Port 443 (HTTPS) überwachen.</p>
+<p><strong>Lösung:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>tcpdump<span class="w"> </span>-i<span class="w"> </span>eth0<span class="w"> </span>-n<span class="w"> </span>port<span class="w"> </span><span class="m">443</span><span class="w"> </span>-w<span class="w"> </span>https_traffic.pcap
+</code></pre></div></td></tr></table></div>
+- <strong><code>-i eth0</code></strong>: Erfasse Verkehr auf dem Interface <code>eth0</code>.
+- <strong><code>-n</code></strong>: Zeige IP-Adressen statt Hostnamen an.
+- <strong><code>port 443</code></strong>: Filtere nach Port 443.
+- <strong><code>-w https_traffic.pcap</code></strong>: Speichere die erfassten Pakete in einer Datei.</p>
+<hr />
+<h5 id="beispiel-4-netzwerk-scan-mit-nmap"><strong>Beispiel 4: Netzwerk-Scan mit <code>nmap</code></strong><a class="headerlink" href="#beispiel-4-netzwerk-scan-mit-nmap" title="Permanent link">&para;</a></h5>
+<p><strong>Szenario:</strong> Sie möchten <strong>alle offenen Ports und Dienste</strong> auf einem Server (192.168.1.100) identifizieren.</p>
+<p><strong>Lösung:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>nmap<span class="w"> </span>-sS<span class="w"> </span>-sV<span class="w"> </span>-O<span class="w"> </span>-T4<span class="w"> </span><span class="m">192</span>.168.1.100
+</code></pre></div></td></tr></table></div>
+- <strong><code>-sS</code></strong>: TCP SYN Scan (schnell und unauffällig).
+- <strong><code>-sV</code></strong>: Dienstversionen erkennen.
+- <strong><code>-O</code></strong>: Betriebssystem-Erkennung.
+- <strong><code>-T4</code></strong>: Schnelleres Scanning.</p>
+<hr />
+<h5 id="beispiel-5-port-weiterleitung-mit-iptables"><strong>Beispiel 5: Port-Weiterleitung mit <code>iptables</code></strong><a class="headerlink" href="#beispiel-5-port-weiterleitung-mit-iptables" title="Permanent link">&para;</a></h5>
+<p><strong>Szenario:</strong> Sie möchten <strong>Port 8080 auf dem Host auf Port 80 eines internen Servers (192.168.1.10) weiterleiten</strong>.</p>
+<p><strong>Lösung:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Aktiviert NAT für die Weiterleitung</span>
+sudo<span class="w"> </span>iptables<span class="w"> </span>-t<span class="w"> </span>nat<span class="w"> </span>-A<span class="w"> </span>PREROUTING<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">8080</span><span class="w"> </span>-j<span class="w"> </span>DNAT<span class="w"> </span>--to-destination<span class="w"> </span><span class="m">192</span>.168.1.10:80
+sudo<span class="w"> </span>iptables<span class="w"> </span>-t<span class="w"> </span>nat<span class="w"> </span>-A<span class="w"> </span>POSTROUTING<span class="w"> </span>-j<span class="w"> </span>MASQUERADE
+
+<span class="c1"># Erlaubt die Weiterleitung in der FORWARD-Kette</span>
+sudo<span class="w"> </span>iptables<span class="w"> </span>-A<span class="w"> </span>FORWARD<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>-d<span class="w"> </span><span class="m">192</span>.168.1.10<span class="w"> </span>--dport<span class="w"> </span><span class="m">80</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
+</code></pre></div></td></tr></table></div></p>
+<h2 id="-_4">---<a class="headerlink" href="#-_4" title="Permanent link">&para;</a></h2>
+<h4 id="10-zusammenfassung-der-wichtigsten-befehle"><strong>10. Zusammenfassung der wichtigsten Befehle</strong><a class="headerlink" href="#10-zusammenfassung-der-wichtigsten-befehle" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th><strong>Aktion</strong></th>
+<th><strong><code>iptables</code></strong></th>
+<th><strong><code>nftables</code></strong></th>
+<th><strong><code>ufw</code></strong></th>
+<th><strong><code>firewalld</code></strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Regeln anzeigen</strong></td>
+<td><code>sudo iptables -L -n -v</code></td>
+<td><code>sudo nft list ruleset</code></td>
+<td><code>sudo ufw status</code></td>
+<td><code>sudo firewall-cmd --list-all</code></td>
+</tr>
+<tr>
+<td><strong>Standardrichtlinie setzen</strong></td>
+<td><code>sudo iptables -P INPUT DROP</code></td>
+<td><code>sudo nft add rule inet filter input counter drop</code></td>
+<td><code>sudo ufw default deny incoming</code></td>
+<td><code>sudo firewall-cmd --zone=public --set-target=DROP</code></td>
+</tr>
+<tr>
+<td><strong>Port erlauben (z. B. 22)</strong></td>
+<td><code>sudo iptables -A INPUT -p tcp --dport 22 -j ACCEPT</code></td>
+<td><code>sudo nft add rule inet filter input tcp dport 22 counter accept</code></td>
+<td><code>sudo ufw allow 22</code></td>
+<td><code>sudo firewall-cmd --add-port=22/tcp --permanent</code></td>
+</tr>
+<tr>
+<td><strong>IP blockieren (z. B. 192.168.1.100)</strong></td>
+<td><code>sudo iptables -A INPUT -s 192.168.1.100 -j DROP</code></td>
+<td><code>sudo nft add rule inet filter input ip saddr 192.168.1.100 counter drop</code></td>
+<td><code>sudo ufw deny from 192.168.1.100</code></td>
+<td><code>sudo firewall-cmd --zone=public --add-rich-rule='rule family="ipv4" source address="192.168.1.100" reject' --permanent</code></td>
+</tr>
+<tr>
+<td><strong>Regeln speichern</strong></td>
+<td><code>sudo iptables-save &gt; /etc/iptables.rules</code></td>
+<td><code>sudo nft -f /etc/nftables.conf</code></td>
+<td><code>sudo ufw enable</code></td>
+<td><code>sudo firewall-cmd --reload</code></td>
+</tr>
+<tr>
+<td><strong>Dienst erlauben (z. B. HTTP)</strong></td>
+<td><code>sudo iptables -A INPUT -p tcp --dport 80 -j ACCEPT</code></td>
+<td><code>sudo nft add rule inet filter input tcp dport 80 counter accept</code></td>
+<td><code>sudo ufw allow http</code></td>
+<td><code>sudo firewall-cmd --add-service=http --permanent</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="-_5">---<a class="headerlink" href="#-_5" title="Permanent link">&para;</a></h2>
+<h4 id="11-haufige-fehler-und-losungen"><strong>11. Häufige Fehler und Lösungen</strong><a class="headerlink" href="#11-haufige-fehler-und-losungen" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th><strong>Problem</strong></th>
+<th><strong>Ursache</strong></th>
+<th><strong>Lösung</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><code>iptables: No chain/target/match by that name</code></strong></td>
+<td>Falsche Syntax oder nicht existierende Kette.</td>
+<td>Überprüfen Sie die Syntax und Kettennamen.</td>
+</tr>
+<tr>
+<td><strong><code>ufw: command not found</code></strong></td>
+<td><code>ufw</code> ist nicht installiert.</td>
+<td>Installieren Sie <code>ufw</code> mit <code>sudo apt install ufw</code>.</td>
+</tr>
+<tr>
+<td><strong><code>firewalld: not running</code></strong></td>
+<td><code>firewalld</code> ist nicht aktiviert.</td>
+<td>Starten Sie <code>firewalld</code> mit <code>sudo systemctl start firewalld</code>.</td>
+</tr>
+<tr>
+<td><strong><code>fail2ban: not blocking IPs</code></strong></td>
+<td>Falsche Konfiguration oder Log-Pfad.</td>
+<td>Überprüfen Sie <code>/etc/fail2ban/jail.local</code> und den Log-Pfad.</td>
+</tr>
+<tr>
+<td><strong><code>nmap: Host seems down</code></strong></td>
+<td>Host ist nicht erreichbar oder Firewall blockiert Scans.</td>
+<td>Überprüfen Sie die Netzwerkverbindung und Firewall-Regeln.</td>
+</tr>
+<tr>
+<td><strong><code>tcpdump: permission denied</code></strong></td>
+<td>Keine Berechtigung für das Interface.</td>
+<td>Verwenden Sie <code>sudo</code>.</td>
+</tr>
+<tr>
+<td><strong>SSH-Verbindung wird abgelehnt</strong></td>
+<td>Falscher Port oder Firewall blockiert SSH.</td>
+<td>Überprüfen Sie den SSH-Port und Firewall-Regeln.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="-_6">---<a class="headerlink" href="#-_6" title="Permanent link">&para;</a></h2>
+<h4 id="12-vertiefung-netzwerksicherheit-mit-selinux-und-apparmor"><strong>12. Vertiefung: Netzwerksicherheit mit <code>SELinux</code> und <code>AppArmor</code></strong><a class="headerlink" href="#12-vertiefung-netzwerksicherheit-mit-selinux-und-apparmor" title="Permanent link">&para;</a></h4>
+<h5 id="121-selinux-security-enhanced-linux"><strong>12.1 <code>SELinux</code> – Security-Enhanced Linux</strong><a class="headerlink" href="#121-selinux-security-enhanced-linux" title="Permanent link">&para;</a></h5>
+<p><code>SELinux</code> ist ein <strong>Mandatory Access Control (MAC)</strong>-System, das <strong>Zugangsrichtlinien</strong> auf Dateien, Prozesse und Ports erzwingt. Es ist standardmäßig in <strong>RHEL/CentOS/Fedora</strong> aktiviert.</p>
+<p><strong>Wichtige Befehle:</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>Befehl</strong></th>
+<th><strong>Beschreibung</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>getenforce</code></td>
+<td>Zeigt den <strong>Aktuellen Modus</strong> von SELinux an (<code>Enforcing</code>, <code>Permissive</code>, <code>Disabled</code>).</td>
+</tr>
+<tr>
+<td><code>setenforce 0</code></td>
+<td>Setzt SELinux in den <strong>Permissive-Modus</strong> (nur für die aktuelle Sitzung).</td>
+</tr>
+<tr>
+<td><code>setenforce 1</code></td>
+<td>Setzt SELinux in den <strong>Enforcing-Modus</strong> (nur für die aktuelle Sitzung).</td>
+</tr>
+<tr>
+<td><code>sestatus</code></td>
+<td>Zeigt den <strong>Status von SELinux</strong> an.</td>
+</tr>
+<tr>
+<td><code>chcon -t [typ] [datei]</code></td>
+<td>Ändert den <strong>SELinux-Kontext</strong> einer Datei.</td>
+</tr>
+<tr>
+<td><code>restorecon -v [datei]</code></td>
+<td>Setzt den <strong>Standard-Kontext</strong> für eine Datei zurück.</td>
+</tr>
+<tr>
+<td><code>ausearch -m avc -ts recent</code></td>
+<td>Durchsucht <strong>Audit-Logs</strong> nach SELinux-Zugriffsverletzungen.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Beispiel: SELinux-Modus ändern (dauerhaft)</strong>
+Bearbeiten Sie <code>/etc/selinux/config</code>:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="na">SELINUX</span><span class="o">=</span><span class="s">enforcing</span><span class="w">  </span><span class="c1"># oder &quot;permissive&quot; oder &quot;disabled&quot;</span>
+</code></pre></div></td></tr></table></div>
+Dann:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>reboot
+</code></pre></div></td></tr></table></div></p>
+<hr />
+<h5 id="122-apparmor-application-armor"><strong>12.2 <code>AppArmor</code> – Application Armor</strong><a class="headerlink" href="#122-apparmor-application-armor" title="Permanent link">&para;</a></h5>
+<p><code>AppArmor</code> ist ein <strong>Mandatory Access Control (MAC)</strong>-System für <strong>Debian/Ubuntu</strong>. Es beschränkt die <strong>Aktionen von Anwendungen</strong>.</p>
+<p><strong>Wichtige Befehle:</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>Befehl</strong></th>
+<th><strong>Beschreibung</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sudo aa-status</code></td>
+<td>Zeigt den <strong>Status von AppArmor</strong> an.</td>
+</tr>
+<tr>
+<td><code>sudo aa-enforce [profil]</code></td>
+<td>Erzwingt ein <strong>Profil</strong>.</td>
+</tr>
+<tr>
+<td><code>sudo aa-complain [profil]</code></td>
+<td>Setzt ein Profil in den <strong>Complain-Modus</strong> (Logs, aber blockiert nicht).</td>
+</tr>
+<tr>
+<td><code>sudo aa-disable [profil]</code></td>
+<td><strong>Deaktiviert ein Profil</strong>.</td>
+</tr>
+<tr>
+<td><code>sudo aa-genprof [pfad/zur/anwendung]</code></td>
+<td>Erstellt ein <strong>neues Profil</strong> für eine Anwendung.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Beispiel: AppArmor-Profil für <code>nginx</code> erstellen</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>aa-genprof<span class="w"> </span>/usr/sbin/nginx
+</code></pre></div></td></tr></table></div>
+Folgen Sie den Anweisungen, um das Profil zu erstellen.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Qualidy GmbH
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.kununu.com/de/qualidy" target="_blank" rel="noopener" title="www.kununu.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M311 86.3c12.3-12.7 12-32.9-.7-45.2s-32.9-12-45.2.7C143.4 167.2 76.4 236.3 64 249V64c0-17.7-14.3-32-32-32S0 46.3 0 64v384c0 17.7 14.3 32 32 32s32-14.3 32-32V341l64.7-66.7 133 192c10.1 14.5 30 18.1 44.5 8.1s18.1-30 8.1-44.5L174.1 227.4z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://de.linkedin.com/company/qualidy" target="_blank" rel="noopener" title="de.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.google.com/search?sca_esv=7e6ba2047fcb60f3&uds=AMwkrPtyB8MsmozA4Lwzqy2G2HCu-abqzc6moOG48q3gP5dtjTRzC2Ws0eSwcyLXDfZNuYCrZ7ByIreHLG9th3vKLekPoVeey0tumAbet4cVLQRLzdRFhUbOGbnyp3xo1V0hzzaNmkCN&si=AKbGX_rcuucMgom2rba1cdwsvM2SVoIkP2btyqGMV4t0GuHIs4sGV_1tpuqR0YHG4Rzd9SdJcL-lW6E-2aJA5azZLTKkIOrZ2j2aWwoBkVbdEJ0o0GPcQhs%3D&q=Qualidy+GmbH+Rezensionen&sa=X&ved=2ahUKEwibsbnSgcmFAxXNQvEDHaVYCiAQ3PALegQIRxAF" target="_blank" rel="noopener" title="www.google.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.35 11.1h-9.17v2.73h6.51c-.33 3.81-3.5 5.44-6.5 5.44C8.36 19.27 5 16.25 5 12c0-4.1 3.2-7.27 7.2-7.27 3.09 0 4.9 1.97 4.9 1.97L19 4.72S16.56 2 12.1 2C6.42 2 2.03 6.8 2.03 12c0 5.05 4.13 10 10.22 10 5.35 0 9.25-3.67 9.25-9.09 0-1.15-.15-1.81-.15-1.81"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://qualidy.de" target="_blank" rel="noopener" title="qualidy.de" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M351.9 280H161c2.9 64.5 17.2 123.9 37.5 167.4 11.4 24.5 23.7 41.8 35.1 52.4 11.2 10.5 18.9 12.2 22.9 12.2s11.7-1.7 22.9-12.2c11.4-10.6 23.7-28 35.1-52.4 20.3-43.5 34.6-102.9 37.5-167.4zm-191-48h190.9c-2.8-64.5-17.1-123.9-37.4-167.4-11.4-24.4-23.7-41.8-35.1-52.4C268.1 1.7 260.4 0 256.4 0s-11.7 1.7-22.9 12.2c-11.4 10.6-23.7 28-35.1 52.4-20.3 43.5-34.6 102.9-37.5 167.4m-48 0c3.5-85.6 25.6-165.1 57.9-217.3C78.7 47.3 10.9 131.2 1.5 232zM1.5 280c9.4 100.8 77.2 184.7 169.3 217.3-32.3-52.2-54.4-131.7-57.9-217.3zm398.4 0c-3.5 85.6-25.6 165.1-57.9 217.3 92.1-32.7 159.9-116.5 169.3-217.3zm111.4-48C501.9 131.2 434.1 47.3 342 14.7c32.3 52.2 54.4 131.7 57.9 217.3z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tracking", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
