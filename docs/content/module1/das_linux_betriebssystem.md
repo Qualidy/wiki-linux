@@ -493,16 +493,3 @@ In Linux haben **alle** Dateien und Ordner spezifische Berechtigungen. Diese bes
 | **write** | `w` | Dateien verändern oder neue Dateien in Ordnern erstellen. |
 | **execute** | `x` | Programme oder Skripte ausführen bzw. Ordner betreten. |
 
----
-
-## Wissenscheck
-
-### Frage: Was macht ein System zu einem "Multi-User Betriebssystem"?
-
-??? success "Antwort"
-    Dass mehrere Benutzer gleichzeitig auf einem System arbeiten können, wobei jeder seine eigenen Dateien besitzt und die Rechte (Lesen, Schreiben, Ausführen) den Zugriff auf die Daten der anderen kontrollieren.
-
-### Frage: Was ist der Unterschied zwischen einem normalen Benutzer und `root`?
-
-??? success "Antwort"
-    Ein normaler Benutzer hat eingeschränkte Rechte und kann nur seine eigenen Daten verwalten. Der `root`-Benutzer ist der Administrator und hat vollständige Kontrolle über das gesamte System.

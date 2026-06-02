@@ -642,12 +642,5 @@ sha256sum backup.tar.gz
 
 
 
-##  Fazit
 
-Die **Archivierung von Dateien in der Kommandozeile** ist ein **unverzichtbares Werkzeug** für jeden Linux-Benutzer. Mit den Tools `tar`, `gzip`, `bzip2`, `xz`, `zip` und `gpg` kannst du:
-
-- **Dateien und Verzeichnisse bündeln und komprimieren**.
-- **Backups erstellen und verwalten**.
-- **Daten sicher übertragen und speichern**.
-- **Archive verschlüsseln und aufteilen**.
 

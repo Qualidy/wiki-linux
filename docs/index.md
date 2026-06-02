@@ -15,10 +15,10 @@ hide:
 
 <div class="grid cards fancy grid--cols-1" markdown >
 - [:material-call-split: **Module I: Das Konzept und die Theorie**](content/module1/OpenSource&Linux-Community.md)
-- [:material-call-split: **Module II: Die Grundlagen der Command-Line**](content/module2.md)
-- [:material-call-split: **Module III: Die Automatisierung**](content/module3.md)
-- [:material-call-split: **Module IV: Systemadministration und Sicherheit**](content/module4.md)
-- [:material-call-split: **Module V: Zusammenführung und Zielsetzung**](content/module5.md)
+- [:material-call-split: **Module II: Die Grundlagen der Command-Line**](content/module2/grundlagen.md)
+- [:material-call-split: **Module III: Die Automatisierung**](content/module3/verknuepfung.md)
+- [:material-call-split: **Module IV: Systemadministration und Sicherheit**](content/module4/benutzer.md)
+- [:material-call-split: **Module V: Zusammenführung und Zielsetzung**](content/module5/opensource.md)
 </div>
 
 </div>

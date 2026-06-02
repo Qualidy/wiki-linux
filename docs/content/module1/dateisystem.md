@@ -1,5 +1,4 @@
 
-***
 
 #  Dateisystem-Hierarchie in Linux 
 
@@ -59,7 +58,6 @@ Diese Verzeichnisse zeigen, wie das System "at the moment" arbeitet.
 
 ##  III. Zusammenfassende Übersicht 
 
-*(Dieser Block eignet sich ideal für eine zusammenfassende Tafelbild oder eine Quiz-Übung.)*
 
 | Verzeichnis | Zweck | Was ist dort? | Beispiel-Anwendungsfall |
 | :--- | :--- | :--- | :--- |
